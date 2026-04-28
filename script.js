@@ -207,129 +207,109 @@ const courseData = {
         children: [],
         parent: "nature_regle"
     },
-    // --- 4. LES SOURCES DU DROIT (Version Intégrale et Harmonieuse) ---
+    // --- 4. LES SOURCES DU DROIT (Structure en Arbre Exhaustive) ---
     sources: {
         title: "4. Les sources du droit",
-        info: "Les sources du droit désignent l'origine des règles juridiques. On distingue les sources formelles (obligatoires) et les sources matérielles (aide à l'interprétation).",
+        info: "Les sources du droit sont les formes sous lesquelles les règles apparaissent et deviennent obligatoires. On distingue les sources formelles (obligatoires) des sources matérielles (interprétatives).",
         children: ["sources_formelles", "sources_materielles"],
         parent: "root"
     },
 
-    // --- SOUS-BRANCHE : SOURCES FORMELLES ---
+    // --- 4.1 SOURCES FORMELLES ---
     sources_formelles: {
-        title: "Sources formelles",
-        info: "Ce sont les formes obligatoires que doit revêtir la règle pour s'imposer comme droit positif.",
-        children: ["traites_internationaux", "loi", "coutume", "usages_commerciaux"],
+        title: "4.1 Sources formelles",
+        info: "Ce sont les sources directes et impératives du droit positif.",
+        children: ["traites_internationaux", "loi_large", "coutume", "usages_commerciaux"],
         parent: "sources"
     },
 
     traites_internationaux: {
-        title: "Les Traités internationaux",
-        info: "Accords conclus entre États ou avec des organisations internationales. <br><ul><li><strong>Rang :</strong> Ils ont un rang au moins équivalent, voire supérieur, aux lois fédérales.</li><li><strong>Exemple :</strong> La Convention européenne des droits de l'homme (CEDH).</li></ul>",
+        title: "Traités internationaux",
+        info: "Accords conclus entre États ou avec des organisations internationales. <br><br><strong>Détails du cours (p. 20) :</strong> <br><ul><li><strong>Primauté :</strong> Ils l'emportent en principe sur le droit national.</li><li><strong>Domaines :</strong> Droits de l'homme (CEDH), économie, environnement, etc.</li><li><strong>Exemple majeur :</strong> La Convention européenne des droits de l'homme (CEDH) garantit des libertés fondamentales que la Suisse doit respecter.</li></ul>",
         children: [],
         parent: "sources_formelles"
     },
 
-    loi: {
+    loi_large: {
         title: "La Loi (au sens large)",
-        info: "La loi écrite est la source prépondérante dans notre système de droit civiliste. Elle respecte une hiérarchie stricte.",
-        children: ["constitution", "loi_sens_etroit", "ordonnance"],
+        info: "La source écrite principale, structurée en pyramide.",
+        children: ["constitution", "loi_etroit", "ordonnance"],
         parent: "sources_formelles"
     },
 
-    // --- DÉVELOPPEMENT DE LA CONSTITUTION ---
+    // --- ZOOM : CONSTITUTION FÉDÉRALE (Arbre détaillé) ---
     constitution: {
         title: "La Constitution fédérale (Cst)",
-        info: "La Constitution est la loi fondamentale de l'État, située au sommet de la hiérarchie des normes. Elle est le socle de l'ordre juridique suisse.",
-        children: ["cst_adoption", "cst_droits", "cst_organisation_etat", "cst_separation_pouvoirs", "cst_primante"],
-        parent: "loi"
+        info: "Loi fondamentale au sommet de la hiérarchie (p. 22).",
+        children: ["cst_adoption", "cst_droits", "cst_organisation", "cst_separation", "cst_primante"],
+        parent: "loi_large"
     },
-
     cst_adoption: {
         title: "Adoption et Révision",
-        info: "La Constitution n'est pas figée, mais sa modification est strictement protégée. <br><ul><li><strong>Double majorité :</strong> Toute révision (totale ou partielle) nécessite impérativement la majorité du <span class='highlight'>Peuple</span> et la majorité des <span class='highlight'>Cantons</span>.</li><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent proposer une révision de la Constitution.</li><li><strong>Référendum obligatoire :</strong> Toute modification décidée par le Parlement est obligatoirement soumise au vote.</li></ul>",
-        children: [],
-        parent: "constitution"
+        info: "<strong>Révision totale ou partielle :</strong> Elle nécessite la <span class='highlight'>double majorité du Peuple et des Cantons</span>. <br><ul><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent demander une modification (p. 23).</li><li><strong>Référendum obligatoire :</strong> Toute révision décidée par le Parlement est soumise au vote.</li></ul>",
+        children: [], parent: "constitution"
     },
-
     cst_droits: {
-        title: "Les Droits Fondamentaux",
-        info: "Inscrits aux articles 7 à 36 de la Constitution, ils protègent l'individu contre les abus de l'État. <br><br><strong>Exemples essentiels :</strong> <br><ul><li><strong>Dignité humaine (Art. 7) :</strong> Le noyau de tous les droits.</li><li><strong>Égalité (Art. 8) :</strong> Nul ne doit subir de discrimination.</li><li><strong>Liberté personnelle (Art. 10) :</strong> Droit à la vie et à l'intégrité physique/psychique.</li><li><strong>Liberté économique (Art. 27) :</strong> Fondamental pour le droit de l'entreprise.</li><li><strong>Garantie de la propriété (Art. 26).</strong></li></ul>",
-        children: [],
-        parent: "constitution"
+        title: "Droits Fondamentaux",
+        info: "Articles 7 à 36 Cst. Protègent l'individu contre l'État. <br><ul><li><strong>Art. 7 :</strong> Dignité humaine (fondement).</li><li><strong>Art. 8 :</strong> Égalité devant la loi.</li><li><strong>Art. 27 :</strong> Liberté économique (crucial pour l'entreprise).</li><li><strong>Art. 26 :</strong> Garantie de la propriété.</li></ul>",
+        children: [], parent: "constitution"
     },
-
-    cst_organisation_etat: {
+    cst_organisation: {
         title: "Organisation de l'État",
-        info: "La Constitution définit la Suisse comme un État fédéral organisé sur trois niveaux. <br><ul><li><strong>La Confédération :</strong> Possède les compétences que la Constitution lui attribue (ex: monnaie, douanes, défense).</li><li><strong>Les Cantons (26) :</strong> Sont souverains pour toutes les compétences non attribuées à la Confédération (Art. 3 Cst). On parle de <span class='success'>compétence résiduelle</span>.</li><li><strong>Les Communes :</strong> Disposent d'une autonomie fixée par le droit cantonal.</li></ul>",
-        children: [],
-        parent: "constitution"
+        info: "La Suisse est un État fédéral à 3 niveaux (Confédération, Cantons, Communes). <br><strong>Art. 3 Cst :</strong> Les Cantons sont souverains en dehors des compétences expressément déléguées à la Confédération (<span class='success'>compétence résiduelle</span>).",
+        children: [], parent: "constitution"
     },
-
-    cst_separation_pouvoirs: {
+    cst_separation: {
         title: "Séparation des pouvoirs",
-        info: "Pour éviter la tyrannie, les pouvoirs sont divisés entre trois autorités distinctes et indépendantes. <br><br><ul><li><strong>Le Législatif (Parlement) :</strong> L'Assemblée fédérale (Conseil national + Conseil des États). Elle fait les lois.</li><li><strong>L'Exécutif (Gouvernement) :</strong> Le Conseil fédéral (7 membres). Il administre l'État et applique les lois.</li><li><strong>Le Judiciaire (Tribunaux) :</strong> Le Tribunal fédéral. Il tranche les litiges et applique le droit.</li></ul>",
-        children: [],
-        parent: "constitution"
+        info: "Trois pouvoirs indépendants : <br>1. <strong>Législatif :</strong> Assemblée fédérale (fait les lois). <br>2. <strong>Exécutif :</strong> Conseil fédéral (gouverne/administre). <br>3. <strong>Judiciaire :</strong> Tribunal fédéral (tranche les litiges).",
+        children: [], parent: "constitution"
     },
-
     cst_primante: {
-        title: "Primauté du droit fédéral",
-        info: "Principe crucial inscrit à l'<strong>Article 49 Cst</strong>. <br><br><strong>Règle :</strong> Le droit fédéral l'emporte sur le droit cantonal qui lui est contraire. Si une loi cantonale contredit une loi fédérale, la loi cantonale n'est pas applicable.",
-        children: [],
-        parent: "constitution"
+        title: "Primauté (Art. 49 Cst)",
+        info: "Le droit fédéral l'emporte sur le droit cantonal qui lui est contraire. 'La force dérogatoire du droit fédéral'.",
+        children: [], parent: "constitution"
     },
 
-    // --- LOIS ET ORDONNANCES ---
-    loi_sens_etroit: {
-        title: "La Loi (au sens étroit)",
-        info: "Il s'agit des actes édictés par le pouvoir législatif (le Parlement). <br><br><strong>Points clés :</strong> <br><ul><li><strong>Autorité :</strong> Assemblée fédérale.</li><li><strong>Rôle :</strong> Précise les principes de la Cst (ex: Code civil, CO).</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote dans les 100 jours.</li></ul>",
-        children: [],
-        parent: "loi"
+    // --- ZOOM : LOIS ET ORDONNANCES ---
+    loi_etroit: {
+        title: "Lois (au sens étroit)",
+        info: "Édictées par le Parlement (p. 24). <br><ul><li><strong>Exemples :</strong> Code Civil, Code des Obligations.</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote populaire.</li></ul>",
+        children: [], parent: "loi_large"
     },
-
     ordonnance: {
-        title: "L'Ordonnance",
-        info: "Règles de rang inférieur aux lois, édictées par l'exécutif. <br><br><strong>Détails :</strong> <br><ul><li><strong>Autorité :</strong> Conseil fédéral, départements ou offices.</li><li><strong>Fonction :</strong> Exécution des lois ou détails techniques.</li><li><strong>Particularité :</strong> <span class='highlight'>Jamais soumises au référendum</span>.</li></ul>",
-        children: [],
-        parent: "loi"
+        title: "Ordonnances",
+        info: "Édictées par le Conseil fédéral pour appliquer les lois (p. 25). <br><ul><li><strong>Nature :</strong> Rang inférieur à la loi.</li><li><strong>Sanction :</strong> Jamais de référendum possible contre une ordonnance.</li></ul>",
+        children: [], parent: "loi_large"
     },
 
-    // --- COUTUME ET USAGES ---
+    // --- ZOOM : COUTUME ET USAGES ---
     coutume: {
         title: "La Coutume",
-        info: "Source subsidiaire à la loi écrite. <br><br><strong>Conditions cumulatives :</strong> <br><ul><li><strong>Usage constant :</strong> Pratique répétée durant une longue période.</li><li><strong>Conviction juridique :</strong> Croyance que cet usage est obligatoire (<em>opinio iuris</em>).</li></ul>",
-        children: [],
-        parent: "sources_formelles"
+        info: "Usage constant et conviction juridique (p. 26). <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
+        children: [], parent: "sources_formelles"
     },
-
     usages_commerciaux: {
         title: "Usages et Autoréglementation",
-        info: "Sources spécifiques au droit des affaires. <br><br><ul><li><strong>Usages commerciaux :</strong> Pratiques professionnelles admises (ex: Incoterms).</li><li><strong>Autoréglementation :</strong> Normes créées par les organisations professionnelles (codes de déontologie).</li><li><strong>Rôle :</strong> Adaptation rapide aux évolutions économiques.</li></ul>",
-        children: [],
-        parent: "sources_formelles"
+        info: "Règles spécifiques au commerce (Incoterms, déontologie). <br>Elles permettent au droit de s'adapter vite aux besoins des entreprises sans passer par le Parlement.",
+        children: [], parent: "sources_formelles"
     },
 
-    // --- SOUS-BRANCHE : SOURCES MATÉRIELLES ---
+    // --- 4.2 SOURCES MATÉRIELLES ---
     sources_materielles: {
-        title: "Sources matérielles",
-        info: "Elles aident à interpréter ou combler les lacunes mais ne sont pas obligatoires en soi.",
+        title: "4.2 Sources matérielles",
+        info: "Aident à comprendre et combler les 'trous' de la loi.",
         children: ["jurisprudence", "doctrine"],
         parent: "sources"
     },
-
     jurisprudence: {
         title: "La Jurisprudence",
-        info: "Ensemble des décisions rendues par les tribunaux. <br><br><strong>Développements :</strong> <br><ul><li><strong>Comblement des lacunes (Art. 1 al. 2 CC) :</strong> Si la loi est muette, le juge prononce selon la règle qu'il établirait s'il faisait acte de législateur.</li><li><strong>Unification :</strong> Le <span class='highlight'>Tribunal fédéral (TF)</span> assure l'unité du droit en Suisse.</li><li><strong>Interprétation :</strong> Adaptation des textes aux réalités modernes.</li></ul>",
-        children: [],
-        parent: "sources_materielles"
+        info: "Ensemble des décisions des tribunaux (p. 27). <br><strong>Rôle crucial (Art. 1 al. 2 CC) :</strong> Si la loi est muette, le juge doit agir comme un législateur. <br><strong>Le Tribunal Fédéral (TF)</strong> assure l'unité de l'application du droit en Suisse.",
+        children: [], parent: "sources_materielles"
     },
-
     doctrine: {
         title: "La Doctrine",
-        info: "Ensemble des travaux et opinions des 'savants' du droit (professeurs, chercheurs). <br><br><strong>Rôle :</strong> <br><ul><li><strong>Inspiration :</strong> Influence les décisions des juges et les futures lois.</li><li><strong>Clarification :</strong> Analyse et critique les lois et la jurisprudence.</li></ul>",
-        children: [],
-        parent: "sources_materielles"
+        info: "Opinions des savants (p. 27). <br>Indispensable pour éclairer le juge sur des cas complexes, bien qu'elle n'ait pas de force obligatoire.",
+        children: [], parent: "sources_materielles"
     },
 
     // --- 5. DIVISIONS DU DROIT ---
