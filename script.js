@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "obligations"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7"]
     },
     
     // --- 1. NOTION ET FONCTION DU DROIT ---
@@ -680,62 +680,180 @@ const courseData = {
         parent: "droit_inter_public"
     },
     
-    // --- 7. LE DROIT DES OBLIGATIONS ---
-    obligations: {
-        title: "7. Le droit des obligations (CO)",
-        info: "Lien juridique entre créancier et débiteur.",
-        children: ["sources_ob", "conclusion", "forme", "objet", "vices", "execution", "extinction", "contrats_speciaux"],
-        parent: "root"
+    // --- 7. LE DROIT PRIVÉ (Dès page 48 du cours) ---
+    droit_prive_pt7: {
+        title: "7. Le droit privé",
+        info: "Cette section aborde les fondements des relations juridiques entre particuliers (ou entreprises) sur un pied d'égalité, principalement régies par le Code civil (CC) et le Code des obligations (CO).",
+        children: ["autonomie_volonte", "droit_personnes"],
+        parent: "root" 
     },
-    sources_ob: {
-        title: "Les 3 sources des obligations",
-        info: "Contrat, RC, Enrichissement illégitime.",
-        children: ["source_contrat", "rc", "enrichissement"],
-        parent: "obligations"
+
+    // --- BRANCHE : L'AUTONOMIE DE LA VOLONTÉ ---
+    autonomie_volonte: {
+        title: "L'autonomie de la volonté",
+        info: "C'est le principe fondamental et le moteur du droit privé. Il garantit aux individus la <strong>liberté d'aménager leurs relations juridiques</strong> comme ils l'entendent, par leur propre volonté.",
+        children: ["liberte_contractuelle", "limites_autonomie", "protection_faible"],
+        parent: "droit_prive_pt7"
     },
-    rc: {
-        title: "Responsabilité Civile (RC)",
-        info: "Obligation de réparer. Art. 41 (extracontractuelle) et Art. 97 (contractuelle).",
-        children: ["rc_extracontractuelle", "rc_contractuelle"], parent: "sources_ob"
+
+    liberte_contractuelle: {
+        title: "La liberté contractuelle",
+        info: "C'est la traduction concrète de l'autonomie de la volonté dans le domaine des contrats. Elle se décline en plusieurs libertés fondamentales : <br><br><ul><li><strong>Liberté de conclure :</strong> Chacun est libre de conclure ou de ne pas conclure un contrat.</li><li><strong>Liberté de choisir son partenaire :</strong> Chacun décide avec qui il veut s'engager.</li><li><strong>Liberté de la forme (Art. 11 CO) :</strong> En principe, les contrats ne sont soumis à <span class='success'>aucune exigence de forme</span> (un accord oral ou même tacite est parfaitement valable). L'exigence d'une forme écrite ou d'un acte authentique n'est qu'une exception prévue par la loi.</li><li><strong>Liberté de l'objet (Art. 19 CO) :</strong> Les parties peuvent en principe fixer le contenu du contrat <span class='highlight'>librement</span>. Elles peuvent même créer des contrats qui ne sont pas prévus par la loi (les contrats innommés, comme le leasing).</li><li><strong>Liberté de modifier ou d'annuler :</strong> Les parties peuvent toujours modifier ou mettre fin à un contrat par un accord mutuel.</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
     },
-    rc_extracontractuelle: {
-        title: "RC Extracontractuelle (Art. 41 CO)",
-        info: "4 conditions : Dommage, Illicéité, Causalité, Faute (à prouver).",
-        children: [], parent: "rc"
+
+    limites_autonomie: {
+        title: "Les limites : La nullité absolue (Art. 20 CO)",
+        info: "La liberté contractuelle n'est pas absolue. Pour protéger l'intérêt public, la loi pose des barrières infranchissables. <br><br>Un contrat est frappé de <span class='highlight'>nullité absolue</span> (il est considéré comme n'ayant jamais existé) si son objet remplit l'une de ces trois conditions :<br><ul><li><strong>Il est impossible :</strong> L'exécution du contrat est objectivement irréalisable pour tout le monde (ex: vendre un terrain sur Jupiter).</li><li><strong>Il est illicite :</strong> L'accord viole une règle de droit impérative (ex: contrat pour un assassinat, trafic de stupéfiants).</li><li><strong>Il est contraire aux mœurs :</strong> L'accord heurte les principes moraux fondamentaux de la société (ex: s'engager à ne jamais se marier, vendre son vote).</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
     },
-    rc_contractuelle: {
-        title: "RC Contractuelle (Art. 97 CO)",
-        info: "4 conditions : Dommage, Violation contrat, Causalité, Faute (présumée).",
-        children: [], parent: "rc"
+
+    protection_faible: {
+        title: "La protection de la partie faible",
+        info: "L'autonomie de la volonté part du principe que les parties sont égales. Dans la réalité, ce n'est pas toujours le cas (ex: un employé face à une multinationale). <br><br>Le législateur intervient donc avec des <strong>règles impératives</strong> pour rééquilibrer la relation et <span class='highlight'>protéger la partie présumée la plus faible</span> :<br><ul><li><strong>Le droit du travail :</strong> Règles strictes sur les vacances, les licenciements, la santé.</li><li><strong>Le droit du bail :</strong> Protection du locataire contre les congés abusifs ou les loyers excessifs.</li><li><strong>Le droit de la consommation :</strong> Protection de l'acheteur privé face aux professionnels.</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
     },
-    enrichissement: {
-        title: "Enrichissement illégitime (Art. 62 CO)",
-        info: "Recevoir sans cause légitime.",
-        children: [], parent: "sources_ob"
+
+    // --- 7.2 LE DROIT DES PERSONNES ET DES SOCIÉTÉS (Dès page 48 du cours) ---
+    droit_personnes: {
+        title: "Le droit des personnes",
+        info: "Cette branche du Code civil (CC) détermine qui peut être sujet de droits et d'obligations, et comment ces sujets s'organisent juridiquement.",
+        children: ["debut_fin_pers", "jouissance_exercice", "domicile", "protection_pers", "personnes_morales_structures"],
+        parent: "droit_prive_pt7" // À adapter selon ton point d'ancrage principal
     },
-    vices: {
-        title: "Les Vices du consentement",
-        info: "Contrat annulable. Erreur, Dol, Crainte, Lésion.",
-        children: ["erreur", "dol", "crainte", "lesion"],
-        parent: "obligations"
+
+    // --- PERSONNES PHYSIQUES ---
+    debut_fin_pers: {
+        title: "Le début et la fin de la personnalité",
+        info: "<ul><li><strong>Le début :</strong> La personnalité commence avec la <span class='highlight'>naissance accomplie de l'enfant vivant</span>. L'enfant conçu jouit des droits civils à condition qu'il naisse vivant.</li><li><strong>La fin :</strong> La personnalité se termine par la <strong>mort</strong> (ou la déclaration d'absence).</li></ul>",
+        children: [], parent: "droit_personnes"
     },
-    contrats_speciaux: {
-        title: "Les Contrats Spéciaux",
-        info: "Vente, Bail, Travail, Entreprise, Mandat.",
-        children: ["contrat_entreprise", "mandat"],
-        parent: "obligations"
+
+    jouissance_exercice: {
+        title: "La jouissance et l'exercice des droits civils",
+        info: "C'est une distinction fondamentale en droit civil suisse :<br><br><ul><li><strong>La jouissance des droits civils (capacité passive) :</strong> C'est l'aptitude à <em>avoir</em> des droits et des obligations. <strong>Tout être humain</strong> en bénéficie dès sa naissance, sans aucune condition d'âge ou de santé.</li><li><strong>L'exercice des droits civils (capacité active) :</strong> C'est l'aptitude à créer des droits et des obligations par ses <em>propres actes</em> (ex: signer un contrat). Pour l'avoir, il faut réunir deux conditions cumulatives : <strong>être majeur</strong> (18 ans révolus) ET <strong>avoir la capacité de discernement</strong> (faculté d'agir raisonnablement).</li></ul>",
+        children: [], parent: "droit_personnes"
     },
-    contrat_entreprise: {
-        title: "Contrat d'Entreprise (Art. 363 CO)",
-        info: "Obligation de résultat (ouvrage).",
-        children: [], parent: "contrats_speciaux"
+
+    domicile: {
+        title: "Le domicile",
+        info: "Le domicile de toute personne est le lieu où elle réside avec <strong>l'intention de s'y établir</strong> (Art. 23 CC). Toute personne ne peut avoir qu'un seul domicile civil à la fois. C'est essentiel pour déterminer quel tribunal est compétent ou où payer ses impôts.",
+        children: [], parent: "droit_personnes"
     },
-    mandat: {
-        title: "Le Mandat (Art. 394 CO)",
-        info: "Obligation de moyens (diligence).",
-        children: [], parent: "contrats_speciaux"
-    }
-};
+
+    protection_pers: {
+        title: "La protection de la personnalité",
+        info: "Le Code civil protège l'individu dans ses droits les plus intimes.",
+        children: ["prot_soimeme", "prot_tiers"], parent: "droit_personnes"
+    },
+    prot_soimeme: {
+        title: "La protection contre elle-même",
+        info: "Nul ne peut aliéner sa liberté ni s'en interdire l'usage dans une mesure contraire aux lois ou aux mœurs (Art. 27 CC). <br><br><strong>Exemple :</strong> On ne peut pas signer un contrat pour devenir esclave ou s'engager à ne jamais changer d'emploi.",
+        children: [], parent: "protection_pers"
+    },
+    prot_tiers: {
+        title: "La protection contre les tiers",
+        info: "Celui qui subit une <strong>atteinte illicite</strong> à sa personnalité peut agir en justice (Art. 28 CC). <br><br>Cela protège notamment la sphère privée, l'honneur, le nom et le droit à l'image. Le juge peut interdire l'atteinte, la faire cesser ou constater son caractère illicite.",
+        children: [], parent: "protection_pers"
+    },
+
+    // --- PERSONNES MORALES ET ENTREPRISES ---
+    personnes_morales_structures: {
+        title: "Les personnes morales et formes d'entreprises",
+        info: "Le droit permet à des entités abstraites d'agir sur la scène juridique comme des personnes physiques.",
+        children: ["notion_pm", "statut_pm", "formes_juridiques_pm", "association", "fondation", "entreprise_individuelle", "societes_personnes", "societes_capitaux"],
+        parent: "droit_personnes"
+    },
+
+    notion_pm: {
+        title: "La notion de personne morale",
+        info: "Les personnes morales sont des <strong>fictions juridiques</strong>. Ce sont des groupements de personnes (ex: SA) ou des masses de biens (ex: fondation) auxquels la loi accorde la personnalité juridique de manière indépendante des individus qui la composent.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    statut_pm: {
+        title: "Le statut des personnes morales",
+        info: "<ul><li><strong>Naissance :</strong> Elles acquièrent généralement la personnalité juridique par leur <strong>inscription au Registre du commerce (RC)</strong> (exception faite des associations à but non lucratif).</li><li><strong>Fonctionnement :</strong> Elles agissent par l'intermédiaire de leurs <strong>organes</strong> (Conseil d'administration, direction, assemblée générale). La volonté de l'organe engage la personne morale.</li></ul>",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    formes_juridiques_pm: {
+        title: "Les différentes formes juridiques",
+        info: "Le droit suisse est régi par le principe du <em>Numerus clausus</em> : on ne peut choisir qu'une des formes d'entreprises <strong>strictement prévues par la loi</strong>. On ne peut pas en inventer de nouvelles.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    association: {
+        title: "L'association (CC)",
+        info: "Groupement de personnes dédié à un <strong>but idéal</strong> (politique, religieux, scientifique, artistique, caritatif). Elle acquiert la personnalité juridique dès que ses statuts sont rédigés, sans obligation de s'inscrire au RC (sauf si elle exploite une industrie en la forme commerciale).",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    fondation: {
+        title: "La fondation (CC)",
+        info: "Ce n'est pas un groupement de personnes, mais une <strong>masse de biens affectée à un but spécial</strong> (souvent d'utilité publique). Elle doit obligatoirement être inscrite au Registre du commerce.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    entreprise_individuelle: {
+        title: "L’entreprise individuelle",
+        info: "Bien qu'étudiée ici, c'est juridiquement une <strong>personne physique</strong> qui exerce une activité économique indépendante. <br><br><ul><li><strong>Création :</strong> Très simple et sans capital minimum exigé.</li><li><strong>Responsabilité :</strong> L'entrepreneur répond des dettes de l'entreprise <strong>sur sa fortune privée, de manière illimitée</strong>. C'est le risque principal de cette forme.</li></ul>",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    // --- SOCIÉTÉS DE PERSONNES ---
+    societes_personnes: {
+        title: "Les sociétés de personnes",
+        info: "Dans ces sociétés, c'repose sur la confiance mutuelle (<em>intuitu personae</em>) et la personnalité des associés joue un rôle central.",
+        children: ["societe_simple", "snc", "soc_commandite", "soc_cooperative"],
+        parent: "personnes_morales_structures"
+    },
+    societe_simple: {
+        title: "La société simple",
+        info: "Contrat par lequel deux ou plusieurs personnes conviennent d'unir leurs efforts ou leurs ressources en vue d'atteindre un <strong>but commun</strong> (Art. 530 CO). <br>C'est la forme de base par défaut. Elle n'a <strong>pas de personnalité juridique propre</strong> et ne s'inscrit pas au RC. Les associés sont solidairement responsables.",
+        children: [], parent: "societes_personnes"
+    },
+    snc: {
+        title: "La société en nom collectif (SNC)",
+        info: "Constituée uniquement par des <strong>personnes physiques</strong> pour exploiter une entreprise commerciale. <br><br><strong>Caractéristique phare :</strong> Les associés contractent une responsabilité <strong>subsidiaire, illimitée et solidaire</strong>. Si la société fait faillite, les créanciers peuvent se retourner contre n'importe quel associé sur sa fortune privée.",
+        children: [], parent: "societes_personnes"
+    },
+    soc_commandite: {
+        title: "La société en commandite",
+        info: "Société composée de deux types d'associés :<br><ul><li><strong>Le(s) commandité(s) :</strong> Toujours une personne physique. Responsabilité <strong>illimitée</strong> et solidaire.</li><li><strong>Le(s) commanditaire(s) :</strong> Le 'bailleur de fonds'. Sa responsabilité est <strong>limitée</strong> à l'apport convenu (la commandite).</li></ul>",
+        children: [], parent: "societes_personnes"
+    },
+    soc_cooperative: {
+        title: "La société coopérative",
+        info: "Corporation formée d'un nombre variable de personnes ou sociétés, visant principalement à favoriser les <strong>intérêts économiques spécifiques de ses membres</strong> par une action d'entraide commune (ex: Migros, Coop, coopératives agricoles). Elle n'a pas de capital social fixe.",
+        children: [], parent: "societes_personnes"
+    },
+
+    // --- SOCIÉTÉS DE CAPITAUX ---
+    societes_capitaux: {
+        title: "Les sociétés de capitaux",
+        info: "Dans ces sociétés, l'apport financier (le capital) est plus important que la personne de l'associé. Elles sont des personnes morales à part entière.",
+        children: ["sa", "sarl", "sca"],
+        parent: "personnes_morales_structures"
+    },
+    sa: {
+        title: "La société anonyme (SA)",
+        info: "La forme juridique par excellence pour les grandes entreprises, mais aussi prisée par les PME.<br><br><ul><li><strong>Capital :</strong> Capital-actions minimum de <span class='highlight'>100'000 CHF</span> (dont au moins 20% ou 50'000 CHF libérés).</li><li><strong>Responsabilité :</strong> Exclusivement limitée au capital social. L'actionnaire ne risque pas sa fortune privée.</li><li><strong>Anonymat :</strong> Les actionnaires peuvent rester anonymes vis-à-vis du public (actions au porteur).</li></ul>",
+        children: [], parent: "societes_capitaux"
+    },
+    sarl: {
+        title: "La société à responsabilité limitée (Sàrl)",
+        info: "Forme mixte combinant des éléments de la SA et de la SNC, idéale pour les PME et les entreprises familiales.<br><br><ul><li><strong>Capital :</strong> Capital social minimum de <span class='highlight'>20'000 CHF</span> (entièrement libéré).</li><li><strong>Responsabilité :</strong> Limitée au capital social.</li><li><strong>Transparence :</strong> Pas d'anonymat. Les associés et le nombre de leurs parts sociales sont <strong>obligatoirement inscrits au Registre du commerce</strong> (public).</li></ul>",
+        children: [], parent: "societes_capitaux"
+    },
+    sca: {
+        title: "La société en commandite par actions",
+        info: "Société dont le capital est divisé en actions (comme la SA) mais dans laquelle un ou plusieurs associés répondent solidairement et indéfiniment des dettes sociales (comme les commandités). Très rare en pratique en Suisse.",
+        children: [], parent: "societes_capitaux"
+    },
 
 const mainContent = document.getElementById('main-content');
 const breadcrumb = document.getElementById('breadcrumb');
