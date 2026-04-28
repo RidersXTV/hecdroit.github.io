@@ -403,9 +403,9 @@ const courseData = {
 
     // --- 6. DROIT PUBLIC ---
     public: {
-        title: "6. Droit de l'entreprise",
+        title: "6. Droit public",
         info: "Le droit public est l’ensemble des règles juridiques régissant l’accomplissement de tâches publiques et poursuivant un intérêt public.",
-        children: ["droit_constitutionnel", "droit_administratif", "droit_penal"],
+        children: ["droit_constitutionnel", "droit_administratif", "droit_penal", "droit_inter_public"],
         parent: "root"
     },
     // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
@@ -462,7 +462,7 @@ const courseData = {
 
     // --- 6.2 LE DROIT ADMINISTRATIF (Dès page 35 du cours) ---
     droit_administratif: {
-        title: "6.2 Le droit administratif",
+        title: "Le droit administratif",
         info: "Ensemble des règles de droit public qui régissent l'organisation et l'activité de l'administration, ainsi que les rapports entre l'administration et les administrés.",
         children: ["admin_definition", "admin_organisation", "admin_activite", "admin_procedure"],
         parent: "public"
@@ -649,6 +649,35 @@ const courseData = {
         info: "Le processus pénal se divise en plusieurs phases successives :<br><ol><li><strong>La procédure préliminaire :</strong> Investigations de la police et instruction par le <span class='highlight'>Ministère public (Procureur)</span>. Le Procureur décide s'il classe l'affaire ou s'il dresse un acte d'accusation.</li><li><strong>La procédure de première instance :</strong> Le jugement devant le Tribunal compétent. Débats oraux et publics.</li><li><strong>Les voies de recours :</strong> Appel ou recours devant une juridiction supérieure (jusqu'au Tribunal fédéral).</li><li><strong>L'exécution :</strong> Mise en œuvre de la peine ou de la mesure prononcée.</li></ol>",
         children: [],
         parent: "penal_procedure"
+    },
+
+    // --- 6.4 LE DROIT INTERNATIONAL PUBLIC (Dès page 46 du cours) ---
+    droit_inter_public: {
+        title: "Le droit international public",
+        info: "Branche du droit qui régit les relations entre les différents acteurs de la communauté internationale. Contrairement au droit interne, il n'y a pas de 'gouvernement mondial' ou de législateur suprême pour imposer ces règles de manière centralisée.",
+        children: ["inter_definition", "inter_conventions", "inter_relation"],
+        parent: "public"
+    },
+
+    inter_definition: {
+        title: "Définition et notion",
+        info: "Le droit international public régit les relations entre les <strong>sujets de droit international</strong>. <br><br><strong>Acteurs principaux :</strong><br><ul><li><strong>Les États :</strong> Sujets originaires et principaux. Ils bénéficient du principe de l'<span class='highlight'>égalité souveraine</span> (aucun État n'est supérieur à un autre).</li><li><strong>Les organisations internationales :</strong> (ex: ONU, OMC). Elles ont des compétences d'attribution limitées aux buts pour lesquels elles ont été créées.</li></ul>",
+        children: [],
+        parent: "droit_inter_public"
+    },
+
+    inter_conventions: {
+        title: "Les conventions internationales",
+        info: "Aussi appelées <strong>traités</strong>, accords ou pactes, ce sont la source principale du droit international. <br><br><strong>Notions clés :</strong><br><ul><li><strong>Pacta sunt servanda :</strong> Principe fondamental selon lequel <span class='highlight'>les engagements doivent être respectés</span>. Tout traité en vigueur lie les parties et doit être exécuté de bonne foi.</li><li><strong>Bilatéral vs Multilatéral :</strong> Un traité peut lier deux États (bilatéral) ou plusieurs États (multilatéral, comme la CEDH).</li><li><strong>La Ratification :</strong> Étape cruciale. C'est l'acte formel par lequel un État <span class='success'>s'engage définitivement</span> au niveau international à respecter le traité (après l'avoir signé).</li></ul>",
+        children: [],
+        parent: "droit_inter_public"
+    },
+
+    inter_relation: {
+        title: "Relation avec le droit interne",
+        info: "Comment le droit international s'applique-t-il à l'intérieur de la Suisse ? Le cours met en avant des principes stricts : <br><br><ul><li><strong>Le système moniste :</strong> La Suisse applique ce système. Dès qu'un traité est ratifié, il s'intègre <span class='highlight'>automatiquement</span> à l'ordre juridique suisse. Il n'y a pas besoin de voter une loi nationale supplémentaire pour le rendre applicable.</li><li><strong>La primauté du droit international (Art. 5 al. 4 Cst.) :</strong> En cas de conflit entre une règle de droit suisse et une règle de droit international, <strong>le droit international l'emporte</strong> en principe sur le droit interne.</li><li><strong>Le Jus Cogens :</strong> Ce sont les normes impératives du droit international général (ex: interdiction de la torture, de l'esclavage, du génocide). <strong>Aucune dérogation</strong> n'est permise, et aucun traité ni aucune loi nationale ne peut aller à l'encontre du <em>jus cogens</em>.</li></ul>",
+        children: [],
+        parent: "droit_inter_public"
     },
     
     // --- 7. LE DROIT DES OBLIGATIONS ---
