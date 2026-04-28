@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "entreprise", "obligations"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "obligations"]
     },
     
     // --- 1. NOTION ET FONCTION DU DROIT ---
