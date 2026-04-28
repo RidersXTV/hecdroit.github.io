@@ -1130,15 +1130,78 @@ const courseData = {
         parent: "ob_sources"
     }
 };
+// [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
+// }; <-- Fin de ton objet courseData
+
 const mainContent = document.getElementById('main-content');
 const breadcrumb = document.getElementById('breadcrumb');
 const searchBar = document.getElementById('searchBar');
+const sidebarContent = document.getElementById('sidebar-content');
 
+// --- FONCTION POUR GÉNÉRER LA BARRE LATÉRALE ---
+function renderSidebar() {
+    let html = `<h3>Plan du cours</h3><ul class="nav-list">`;
+    
+    // On prend les branches principales définies dans la racine (root)
+    const mainBranches = courseData['root'].children;
+    
+    mainBranches.forEach(branchId => {
+        const branch = courseData[branchId];
+        if (branch) {
+            html += createSidebarItem(branchId, branch);
+        }
+    });
+    
+    html += `</ul>`;
+    sidebarContent.innerHTML = html;
+}
+
+// Fonction récursive pour construire l'arbre de la sidebar
+function createSidebarItem(id, item) {
+    let html = `<li class="nav-item">`;
+    
+    // Vérifier si cet élément a des sous-branches
+    if (item.children && item.children.length > 0) {
+        html += `<div class="nav-header" id="nav-${id}">
+                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
+                    <span class="toggle-btn" onclick="toggleSubmenu(this, event)">▼</span>
+                 </div>`;
+        // Créer la sous-liste (cachée par défaut)
+        html += `<ul class="sub-nav-list hidden">`;
+        item.children.forEach(childId => {
+            const child = courseData[childId];
+            if (child) {
+                html += createSidebarItem(childId, child);
+            }
+        });
+        html += `</ul>`;
+    } else {
+        // Pas d'enfants = juste un lien
+        html += `<div class="nav-header no-children" id="nav-${id}">
+                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
+                 </div>`;
+    }
+    
+    html += `</li>`;
+    return html;
+}
+
+// Ouvrir/Fermer les menus de la sidebar
+function toggleSubmenu(btn, event) {
+    event.stopPropagation(); // Empêche le clic de déclencher le renderTopic
+    const submenu = btn.parentElement.nextElementSibling;
+    if (submenu) {
+        submenu.classList.toggle('hidden');
+        btn.textContent = submenu.classList.contains('hidden') ? '▼' : '▲';
+    }
+}
+
+// --- FONCTION POUR AFFICHER LE CONTENU CENTRAL ---
 function renderTopic(id) {
     const topic = courseData[id];
     if (!topic) return;
 
-    // Mise à jour du fil d'Ariane
+    // 1. Mise à jour du fil d'Ariane
     let path = [];
     let currentId = id;
     while (currentId && currentId !== 'root') {
@@ -1152,7 +1215,7 @@ function renderTopic(id) {
     });
     breadcrumb.innerHTML = bcHtml;
 
-    // Génération du HTML
+    // 2. Génération du HTML principal
     let html = `
         <div class="info-box">
             <h2>${topic.title}</h2>
@@ -1160,8 +1223,9 @@ function renderTopic(id) {
         </div>
     `;
 
+    // Si on a des sous-thèmes, on affiche les gros boutons
     if (topic.children.length > 0) {
-        html += `<h3 style="color: var(--primary);">Sous-thèmes :</h3><div class="sub-branches-grid">`;
+        html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
         topic.children.forEach(childId => {
             const child = courseData[childId];
             if (child) {
@@ -1176,13 +1240,20 @@ function renderTopic(id) {
     }
 
     mainContent.innerHTML = html;
+    
+    // Remonter en haut de la page lors d'un clic
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// --- SYSTÈME DE RECHERCHE ---
 searchBar.addEventListener('input', (e) => {
     const val = e.target.value.toLowerCase().trim();
-    if (val.length < 2) return;
+    if (val.length < 2) {
+        if (val.length === 0) renderTopic('root'); // Retour accueil si vide
+        return;
+    }
     
-    let resultsHTML = `<div class="info-box"><h2>Recherche : "${val}"</h2></div><div class="sub-branches-grid">`;
+    let resultsHTML = `<div class="info-box"><h2>Résultats pour : "${val}"</h2></div><div class="sub-branches-grid">`;
     let count = 0;
 
     for (let key in courseData) {
@@ -1192,8 +1263,13 @@ searchBar.addEventListener('input', (e) => {
             count++;
         }
     }
-    mainContent.innerHTML = count > 0 ? resultsHTML + `</div>` : `<p>Aucun résultat.</p>`;
+    mainContent.innerHTML = count > 0 ? resultsHTML + `</div>` : `
+        <div class="info-box">
+            <h2>Aucun résultat</h2>
+            <p>Essayez d'autres mots-clés.</p>
+        </div>`;
 });
 
-// Lancement initial
+// --- LANCEMENT INITIAL ---
+renderSidebar();
 renderTopic('root');
