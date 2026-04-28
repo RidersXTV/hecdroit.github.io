@@ -237,11 +237,52 @@ const courseData = {
         parent: "sources_formelles"
     },
 
+    // --- DÉVELOPPEMENT DE LA CONSTITUTION FÉDÉRALE (Dès page 22 du cours) ---
     constitution: {
-        title: "La Constitution fédérale",
-        info: "C'est la loi fondamentale de l'État (la 'norme des normes'). <br><br><strong>Ses trois rôles essentiels :</strong> <br><ul><li><strong>Organisation :</strong> Elle fixe la structure de l'État (État fédéral) et de ses organes.</li><li><strong>Répartition des compétences :</strong> Elle définit les pouvoirs de la Confédération et des Cantons.</li><li><strong>Droits fondamentaux :</strong> Elle garantit les libertés individuelles des citoyens face à l'État.</li></ul><br><strong>Adoption/Révision :</strong> Elle nécessite la <span class='highlight'>double majorité du Peuple et des Cantons</span>.",
-        children: [],
+        title: "La Constitution fédérale (Cst)",
+        info: "La Constitution est la loi fondamentale de l'État, située au sommet de la hiérarchie des normes. Elle est le socle de l'ordre juridique suisse.",
+        children: ["cst_adoption", "cst_droits", "cst_organisation_etat", "cst_separation_pouvoirs", "cst_primante"],
         parent: "loi"
+    },
+
+    // SOUS-BRANCHE : ADOPTION ET RÉVISION
+    cst_adoption: {
+        title: "Adoption et Révision",
+        info: "La Constitution n'est pas figée, mais sa modification est strictement protégée. <br><ul><li><strong>Double majorité :</strong> Toute révision (totale ou partielle) nécessite impérativement la majorité du <span class='highlight'>Peuple</span> et la majorité des <span class='highlight'>Cantons</span>.</li><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent proposer une révision de la Constitution.</li><li><strong>Référendum obligatoire :</strong> Toute modification décidée par le Parlement est obligatoirement soumise au vote.</li></ul>",
+        children: [],
+        parent: "constitution"
+    },
+
+    // SOUS-BRANCHE : DROITS FONDAMENTAUX
+    cst_droits: {
+        title: "Les Droits Fondamentaux",
+        info: "Inscrits aux articles 7 à 36 de la Constitution, ils protègent l'individu contre les abus de l'État. <br><br><strong>Exemples essentiels :</strong> <br><ul><li><strong>Dignité humaine (Art. 7) :</strong> Le noyau de tous les droits.</li><li><strong>Égalité (Art. 8) :</strong> Nul ne doit subir de discrimination.</li><li><strong>Liberté personnelle (Art. 10) :</strong> Droit à la vie et à l'intégrité physique/psychique.</li><li><strong>Liberté économique (Art. 27) :</strong> Fondamental pour le droit de l'entreprise.</li><li><strong>Garantie de la propriété (Art. 26).</strong></li></ul>",
+        children: [],
+        parent: "constitution"
+    },
+
+    // SOUS-BRANCHE : ORGANISATION DE L'ÉTAT
+    cst_organisation_etat: {
+        title: "Organisation de l'État",
+        info: "La Constitution définit la Suisse comme un État fédéral organisé sur trois niveaux. <br><ul><li><strong>La Confédération :</strong> Possède les compétences que la Constitution lui attribue (ex: monnaie, douanes, défense).</li><li><strong>Les Cantons (26) :</strong> Sont souverains pour toutes les compétences non attribuées à la Confédération (Art. 3 Cst). On parle de <span class='success'>compétence résiduelle</span>.</li><li><strong>Les Communes :</strong> Disposent d'une autonomie fixée par le droit cantonal.</li></ul>",
+        children: [],
+        parent: "constitution"
+    },
+
+    // SOUS-BRANCHE : SÉPARATION DES POUVOIRS
+    cst_separation_pouvoirs: {
+        title: "Séparation des pouvoirs",
+        info: "Pour éviter la tyrannie, les pouvoirs sont divisés entre trois autorités distinctes et indépendantes. <br><br><ul><li><strong>Le Législatif (Parlement) :</strong> L'Assemblée fédérale (Conseil national + Conseil des États). Elle fait les lois.</li><li><strong>L'Exécutif (Gouvernement) :</strong> Le Conseil fédéral (7 membres). Il administre l'État et applique les lois.</li><li><strong>Le Judiciaire (Tribunaux) :</strong> Le Tribunal fédéral. Il tranche les litiges et applique le droit.</li></ul>",
+        children: [],
+        parent: "constitution"
+    },
+
+    // SOUS-BRANCHE : PRIMAUTÉ DU DROIT FÉDÉRAL
+    cst_primante: {
+        title: "Primauté du droit fédéral",
+        info: "Principe crucial inscrit à l'<strong>Article 49 Cst</strong>. <br><br><strong>Règle :</strong> Le droit fédéral l'emporte sur le droit cantonal qui lui est contraire. Si une loi cantonale contredit une loi fédérale, la loi cantonale n'est pas applicable.",
+        children: [],
+        parent: "constitution"
     },
 
     usages_commerciaux: {
