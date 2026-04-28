@@ -83,19 +83,49 @@ const courseData = {
     // --- 2. LES SUJETS DE DROIT ---
     sujets: {
         title: "2. Les sujets de droit",
-        info: "Entités aptes à avoir des droits et des obligations.",
-        children: ["personnes_physiques", "personnes_morales"],
+        info: "Un sujet de droit est un être ou une entité apte à être titulaire de droits et d'obligations. Le droit reconnaît deux catégories de sujets.",
+        children: ["pers_physique", "pers_morale"],
         parent: "root"
     },
-    personnes_physiques: {
-        title: "Personnes Physiques",
-        info: "Êtres humains. Requiert la jouissance et l'exercice des droits civils.",
-        children: [], parent: "sujets"
+
+    // SOUS-BRANCHE : PERSONNE PHYSIQUE
+    pers_physique: {
+        title: "La Personne physique",
+        info: "Concerne tous les êtres humains. La personnalité juridique commence par la naissance (si l'enfant naît vivant) et finit par la mort.",
+        children: ["phys_jouissance", "phys_exercice"],
+        parent: "sujets"
     },
-    personnes_morales: {
-        title: "Personnes Morales",
-        info: "Fictions juridiques (SA, Sàrl) agissant par leurs organes.",
-        children: [], parent: "sujets"
+    phys_jouissance: {
+        title: "Jouissance des droits civils (PP)",
+        info: "Tout être humain a la jouissance des droits civils. C'est l'aptitude d'une personne à devenir titulaire de droits et d'obligations (capacité passive). Elle est totale pour tous les êtres humains quel que soit leur âge ou leur santé d'esprit.",
+        children: [],
+        parent: "pers_physique"
+    },
+    phys_exercice: {
+        title: "Exercice des droits civils (PP)",
+        info: "C'est la capacité de produire des effets juridiques par ses propres actes (capacité active). <br><br><strong>Deux conditions cumulatives sont requises :</strong> <br><ul><li><strong>La Majorité :</strong> Avoir 18 ans révolus.</li><li><strong>La Capacité de discernement :</strong> Toute personne qui n'est pas dépourvue de la faculté d'agir raisonnablement (n'étant pas affectée par le bas âge, une déficience mentale, un trouble psychique, l'ivresse ou d'autres causes semblables).</li></ul>",
+        children: [],
+        parent: "pers_physique"
+    },
+
+    // SOUS-BRANCHE : PERSONNE MORALE
+    pers_morale: {
+        title: "La Personne morale",
+        info: "Ce sont des groupements de personnes (ex: SA, association) ou des masses de biens (ex: fondation) auxquels le droit accorde la personnalité juridique. Elles acquièrent la personnalité par l'inscription au registre du commerce (sauf exceptions).",
+        children: ["morale_jouissance", "morale_exercice"],
+        parent: "sujets"
+    },
+    morale_jouissance: {
+        title: "Jouissance des droits civils (PM)",
+        info: "La personne morale jouit de tous les droits qui ne sont pas inséparables de la nature humaine (elle ne peut pas se marier ou tester, par exemple). Elle a son propre nom, son siège et son patrimoine distinct de celui des membres qui la composent.",
+        children: [],
+        parent: "pers_morale"
+    },
+    morale_exercice: {
+        title: "Exercice des droits civils (PM)",
+        info: "La personne morale exerce ses droits par l'intermédiaire de ses <strong>organes</strong> (Conseil d'administration, direction, etc.). Elle possède l'exercice des droits civils dès qu'elle a nommé les organes prescrits par la loi et les statuts.",
+        children: [],
+        parent: "pers_morale"
     },
 
     // --- 3. LA RÈGLE DE DROIT ---
