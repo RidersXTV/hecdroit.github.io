@@ -684,7 +684,7 @@ const courseData = {
     droit_prive_pt7: {
         title: "7. Le droit privé",
         info: "Cette section aborde les fondements des relations juridiques entre particuliers (ou entreprises) sur un pied d'égalité, principalement régies par le Code civil (CC) et le Code des obligations (CO).",
-        children: ["autonomie_volonte", "droit_personnes"],
+        children: ["autonomie_volonte", "droit_personnes", "droit_successions"],
         parent: "root" 
     },
 
@@ -853,6 +853,60 @@ const courseData = {
         title: "La société en commandite par actions",
         info: "Société dont le capital est divisé en actions (comme la SA) mais dans laquelle un ou plusieurs associés répondent solidairement et indéfiniment des dettes sociales (comme les commandités). Très rare en pratique en Suisse.",
         children: [], parent: "societes_capitaux"
+    },
+
+    // --- 7.3 LE DROIT DES SUCCESSIONS (Dès page 63 du cours) ---
+    droit_successions: {
+        title: "Le droit des successions",
+        info: "Cette branche du Code civil (CC) règle le sort des biens, des créances et des dettes d'une personne après son décès.",
+        children: ["succ_definition", "succ_legale", "succ_volontaire", "succ_devolution"],
+        parent: "droit_prive_pt7" 
+    },
+
+    // --- CHAPITRE 1 : DÉFINITION ---
+    succ_definition: {
+        title: "Définition",
+        info: "Le droit des successions détermine qui hérite du patrimoine du défunt (appelé le <span class='highlight'>de cujus</span>). <br><br><strong>Principe fondamental :</strong> Il s'agit d'une <strong>succession universelle</strong>. Les héritiers reprennent l'ensemble du patrimoine du défunt, c'est-à-dire <span class='highlight'>aussi bien les actifs (biens, argent) que les passifs (dettes)</span>.",
+        children: [], 
+        parent: "droit_successions"
+    },
+
+    // --- CHAPITRE 2 : LA SUCCESSION LÉGALE ---
+    succ_legale: {
+        title: "La succession légale",
+        info: "C'est le régime qui s'applique par défaut <strong>lorsque le défunt n'a rien prévu</strong> (pas de testament, pas de pacte successoral). Le droit suisse utilise le <strong>système des parentèles</strong> pour déterminer l'ordre des héritiers :<br><br><ul><li><strong>1ère parentèle :</strong> Les descendants (enfants, petits-enfants). Ils excluent toutes les autres parentèles.</li><li><strong>2ème parentèle :</strong> S'il n'y a pas de descendants, on remonte aux père et mère et à leurs descendants (les frères et sœurs du défunt).</li><li><strong>3ème parentèle :</strong> S'il n'y a personne dans la 2ème, on remonte aux grands-parents et à leurs descendants (oncles, tantes, cousins).</li><li><strong>Le conjoint survivant (ou partenaire enregistré) :</strong> Il n'appartient à aucune parentèle mais <strong>partage l'héritage</strong> avec la parentèle qui vient à la succession (ex: il reçoit la moitié s'il partage avec les enfants).</li><li><strong>L'État :</strong> S'il n'y a aucun héritier légal, la succession revient au canton ou à la commune.</li></ul>",
+        children: [], 
+        parent: "droit_successions"
+    },
+
+    // --- CHAPITRE 3 : LA SUCCESSION VOLONTAIRE ---
+    succ_volontaire: {
+        title: "La succession volontaire",
+        info: "Le défunt a la liberté d'organiser sa succession autrement que ce que prévoit la loi par défaut, en respectant certaines formes et certaines limites.",
+        children: ["succ_formes", "succ_reserve"], 
+        parent: "droit_successions"
+    },
+
+    succ_formes: {
+        title: "La forme des dispositions pour cause de mort",
+        info: "Le défunt peut exprimer ses dernières volontés de deux manières principales :<br><br><strong>1. Le testament :</strong> Acte <strong>unilatéral</strong> et révocable en tout temps. Il existe sous plusieurs formes :<br><ul><li><em>Le testament olographe :</em> Doit être écrit en entier, daté et signé <span class='success'>de la main du testateur</span>.</li><li><em>Le testament public :</em> Rédigé par un notaire en présence de deux témoins.</li><li><em>Le testament oral :</em> Exceptionnel, uniquement en cas de danger de mort imminent.</li></ul><br><strong>2. Le pacte successoral :</strong> C'est un <strong>contrat</strong> passé entre le testateur et ses héritiers (ex: pour qu'un héritier renonce à sa part). Il nécessite la forme authentique (devant notaire) et ne peut être modifié qu'avec l'accord de toutes les parties.",
+        children: [], 
+        parent: "succ_volontaire"
+    },
+
+    succ_reserve: {
+        title: "La réserve (Les héritiers réservataires)",
+        info: "La liberté de tester n'est pas totale. La loi protège les héritiers les plus proches en leur garantissant une part minimale de l'héritage, appelée la <span class='highlight'>réserve héréditaire</span>.<br><br><ul><li><strong>Les héritiers réservataires :</strong> Ce sont les <strong>descendants</strong> (enfants) et le <strong>conjoint survivant</strong> (ou partenaire enregistré).</li><li><strong>Conséquence :</strong> Le testateur ne peut absolument pas les priver de cette part (sauf cas rarissimes d'exhérédation, ex: crime grave contre le défunt).</li><li><strong>La quotité disponible :</strong> C'est la partie du patrimoine qui reste <em>une fois les réserves déduites</em>. Le testateur peut la distribuer <strong>librement</strong> à qui il veut (amis, associations, etc.).</li></ul>",
+        children: [], 
+        parent: "succ_volontaire"
+    },
+
+    // --- CHAPITRE 4 : LA DÉVOLUTION ---
+    succ_devolution: {
+        title: "La dévolution",
+        info: "C'est le processus par lequel la succession passe concrètement du défunt aux héritiers.<br><br><strong>Étapes et principes clés :</strong><br><ul><li><strong>L'ouverture :</strong> La succession s'ouvre au moment exact du décès, au dernier domicile du défunt.</li><li><strong>L'acquisition de plein droit :</strong> Les héritiers deviennent <strong>immédiatement et solidairement</strong> propriétaires des biens et débiteurs des dettes, sans avoir besoin d'une décision du juge.</li><li><strong>La répudiation :</strong> Si la succession est déficitaire (plus de dettes que d'actifs), les héritiers ont le droit de <span class='highlight'>répudier la succession</span>. Ils ont généralement un délai de <strong>3 mois</strong> pour le faire. S'ils ne font rien, la succession est réputée acceptée (y compris les dettes).</li></ul>",
+        children: [], 
+        parent: "droit_successions"
     },
 
 const mainContent = document.getElementById('main-content');
