@@ -9,13 +9,24 @@
 <body>
 
     <header>
-        <h1>Droit de l'Entreprise</h1>
-        <p>Explorateur Interactif des Révisions</p>
+        <div class="header-content">
+            <button id="mobile-menu-btn" onclick="toggleMobileSidebar()">☰ Menu</button>
+            <div class="header-titles">
+                <h1>Droit de l'Entreprise</h1>
+                <p>Explorateur Interactif des Révisions</p>
+            </div>
+        </div>
     </header>
+
+    <div id="sidebar-overlay" onclick="toggleMobileSidebar()"></div>
 
     <div id="app-container">
         
         <aside id="sidebar">
+            <div class="sidebar-header-mobile">
+                <h3>Plan du cours</h3>
+                <button class="close-menu-btn" onclick="toggleMobileSidebar()">✖</button>
+            </div>
             <div id="sidebar-content">
                 </div>
         </aside>
