@@ -401,45 +401,58 @@ const courseData = {
         parent: "div_materiel_formel"
     },
 
-    // --- 6. DROIT DE L'ENTREPRISE ---
-    entreprise: {
-        title: "6. Droit de l'entreprise",
-        info: "Règles sur la création et gestion commerciale.",
-        children: ["registre_commerce", "formes_juridiques"],
-        parent: "root"
-    },
-    registre_commerce: {
-        title: "Le Registre du Commerce (RC)",
-        info: "Fonctions de publicité et de protection de la raison de commerce.",
-        children: [], parent: "entreprise"
-    },
-    formes_juridiques: {
-        title: "Les Formes Juridiques",
-        info: "Structures d'exploitation.",
-        children: ["raison_individuelle", "snc", "sa", "sarl"],
+    // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
+    droit_constitutionnel: {
+        title: "Le droit constitutionnel",
+        info: "Cette branche examine l'impact de la Constitution fédérale sur l'activité économique et les droits des entreprises.",
+        children: ["portee_cst", "libertes_fondamentales"],
         parent: "entreprise"
     },
-    raison_individuelle: {
-        title: "Raison Individuelle",
-        info: "Un propriétaire, responsabilité illimitée.",
-        children: [], parent: "formes_juridiques"
-    },
-    snc: {
-        title: "Société en Nom Collectif (SNC)",
-        info: "Associés responsables solidairement et illimitée.",
-        children: [], parent: "formes_juridiques"
-    },
-    sa: {
-        title: "Société Anonyme (SA)",
-        info: "Capital min. 100k, risque limité au capital.",
-        children: [], parent: "formes_juridiques"
-    },
-    sarl: {
-        title: "Société à Responsabilité Limitée (Sàrl)",
-        info: "Capital min. 20k, risque limité au capital.",
-        children: [], parent: "formes_juridiques"
+
+    // SOUS-BRANCHE : PORTÉE
+    portee_cst: {
+        title: "La portée du droit constitutionnel",
+        info: "Le droit constitutionnel définit le cadre dans lequel l'entreprise peut agir. <br><br><strong>Points clés soulignés :</strong> <br><ul><li>Il garantit la <span class='highlight'>liberté d'action</span> des acteurs économiques face à l'État.</li><li>Il fixe les limites de l'intervention étatique pour protéger l'initiative privée.</li><li>Il assure l'unité de l'espace économique suisse.</li></ul>",
+        children: [],
+        parent: "droit_constitutionnel"
     },
 
+    // SOUS-BRANCHE : LIBERTÉS FONDAMENTALES
+    libertes_fondamentales: {
+        title: "Les libertés fondamentales et leur restriction",
+        info: "Les libertés ne sont pas absolues ; l'État peut les limiter à des conditions très strictes fixées par la Constitution elle-même.",
+        children: ["principes_generaux_lib", "restriction_lib", "liberte_economique", "liberte_association"],
+        parent: "droit_constitutionnel"
+    },
+
+    principes_generaux_lib: {
+        title: "Les principes généraux",
+        info: "Les droits fondamentaux s'appliquent à toute personne physique ou morale (entreprise) se trouvant en Suisse. <br><br><strong>Règles soulignées :</strong> <br><ul><li>L'État a l'obligation de respecter, protéger et réaliser les droits fondamentaux.</li><li>Les particuliers doivent également respecter les droits fondamentaux d'autrui dans leurs relations privées (effet horizontal).</li></ul>",
+        children: [],
+        parent: "libertes_fondamentales"
+    },
+
+    restriction_lib: {
+        title: "La restriction des libertés fondamentales",
+        info: "Selon l'<strong>Article 36 Cst</strong>, toute restriction d'un droit fondamental doit remplir <span class='highlight'>quatre conditions cumulatives</span> soulignées dans le cours : <br><br><ol><li><strong>Base légale :</strong> La restriction doit être prévue par une loi.</li><li><strong>Intérêt public :</strong> Elle doit être justifiée par un intérêt public prépondérant ou par la protection des droits d'autrui.</li><li><strong>Proportionnalité :</strong> La mesure doit être apte, nécessaire et raisonnable pour atteindre le but visé.</li><li><strong>Essence du droit :</strong> L'essence du droit fondamental est inviolable.</li></ol>",
+        children: [],
+        parent: "libertes_fondamentales"
+    },
+
+    liberte_economique: {
+        title: "La liberté économique (Art. 27 Cst)",
+        info: "C'est la liberté fondamentale pivot pour le droit de l'entreprise. <br><br><strong>Contenu souligné (p. 35) :</strong> <br><ul><li>Elle comprend notamment le <span class='success'>libre choix de la profession</span> ainsi que le <span class='success'>libre accès à une activité économique lucrative privée</span> et son libre exercice.</li><li>Elle protège toute activité économique privée exercée en vue de l'obtention d'un gain.</li></ul><br><strong>Distinction importante :</strong> L'État ne peut prendre des mesures qui dérogent au principe de la liberté économique que si elles sont prévues par la Constitution ou fondées sur des prérogatives cantonales régulières.",
+        children: [],
+        parent: "libertes_fondamentales"
+    },
+
+    liberte_association: {
+        title: "Liberté d'association et syndicale",
+        info: "Ces libertés garantissent le droit de se regrouper pour défendre des intérêts communs. <br><br><ul><li><strong>Liberté d'association (Art. 23 Cst) :</strong> Toute personne a le droit de former des associations, d'y adhérer ou de ne pas y adhérer.</li><li><strong>Liberté syndicale (Art. 28 Cst) :</strong> Les travailleurs et les employeurs ont le droit de s'unir pour la défense de leurs intérêts, de former des associations professionnelles et d'y adhérer.</li></ul>",
+        children: [],
+        parent: "libertes_fondamentales"
+    },
+    
     // --- 7. LE DROIT DES OBLIGATIONS ---
     obligations: {
         title: "7. Le droit des obligations (CO)",
