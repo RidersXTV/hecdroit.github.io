@@ -237,7 +237,7 @@ const courseData = {
     loi_large: {
         title: "La Loi (au sens large)",
         info: "La source écrite principale, structurée en pyramide.",
-        children: ["constitution", "loi_etroit", "ordonnance","traites_internationaux"],
+        children: ["traites_internationaux", "constitution", "loi_etroit", "ordonnance", "application_loi"],
         parent: "sources"
     },
 
@@ -286,17 +286,61 @@ const courseData = {
         children: [], parent: "loi_large"
     },
 
-    jurisprudence: {
-        title: "La Jurisprudence",
-        info: "Ensemble des décisions des tribunaux (p. 27). <br><strong>Rôle crucial (Art. 1 al. 2 CC) :</strong> Si la loi est muette, le juge doit agir comme un législateur. <br><strong>Le Tribunal Fédéral (TF)</strong> assure l'unité de l'application du droit en Suisse.",
-        children: [], parent: "sources"
-    },
     doctrine: {
         title: "La Doctrine",
         info: "Opinions des savants (p. 27). <br>Indispensable pour éclairer le juge sur des cas complexes, bien qu'elle n'ait pas de force obligatoire.",
         children: [], parent: "sources"
     },
 
+    // --- NOUVELLE BRANCHE : L'APPLICATION DE LA LOI (Dès page 26) ---
+    application_loi: {
+        title: "L'application de la loi",
+        info: "L'application de la loi consiste à passer de la règle générale et abstraite au cas concret. Ce processus suit des règles strictes de temps, d'espace et d'interprétation.",
+        children: ["app_temps", "app_espace", "app_interpretation"],
+        parent: "loi_large"
+    },
+    app_temps: {
+        title: "Application dans le temps",
+        info: "<strong>Entrée en vigueur :</strong> Une loi ne s'applique qu'après sa publication officielle. <br><ul><li><strong>Non-rétroactivité :</strong> Principe selon lequel la loi ne s'applique pas aux faits nés avant son entrée en vigueur (sécurité juridique).</li><li><strong>Abrogation :</strong> La loi cesse de s'appliquer lorsqu'elle est supprimée par une nouvelle loi ou par un vote.</li></ul>",
+        children: [], parent: "application_loi"
+    },
+    app_espace: {
+        title: "Application dans l'espace",
+        info: "<strong>Principe de territorialité :</strong> La loi s'applique sur tout le territoire de l'État qui l'a édictée. <br> En Suisse, cela implique de distinguer si une règle relève du droit fédéral (tout le pays) ou du droit cantonal (uniquement le canton concerné).",
+        children: [], parent: "application_loi"
+    },
+    app_interpretation: {
+        title: "Interprétation de la loi",
+        info: "Le juge doit chercher le sens véritable de la loi. <br><strong>Méthodes d'interprétation :</strong> <br><ul><li><strong>Littérale (grammaticale) :</strong> Sens des mots dans les langues officielles.</li><li><strong>Historique :</strong> Intention du législateur au moment du vote.</li><li><strong>Téléologique :</strong> But et but social recherché par la règle.</li><li><strong>Systématique :</strong> Place de la règle dans l'ensemble de la loi.</li></ul>",
+        children: [], parent: "application_loi"
+    },
+
+    // --- DÉVELOPPEMENT DE LA JURISPRUDENCE (Dès page 28) ---
+    jurisprudence: {
+        title: "La Jurisprudence",
+        info: "Ensemble des décisions rendues par les tribunaux. Elle est une source matérielle de première importance.",
+        children: ["juris_role", "juris_effets", "juris_revirement"],
+        parent: "sources"
+    },
+
+    juris_role: {
+        title: "Rôle de la jurisprudence",
+        info: "Le juge ne peut pas refuser de juger sous prétexte que la loi est obscure ou incomplète (déni de justice). <br><br><strong>Ses missions :</strong> <br><ul><li><strong>Appliquer la loi :</strong> Adapter la règle abstraite au cas particulier.</li><li><strong>Préciser la loi :</strong> Définir les notions imprécises ou 'clauses générales' (ex: 'justes motifs', 'bonne foi').</li><li><strong>Combler les lacunes :</strong> Selon l'<strong>Art. 1 al. 2 CC</strong>, si la loi est muette, le juge doit créer la règle qu'il établirait s'il était législateur.</li></ul>",
+        children: [], parent: "jurisprudence"
+    },
+
+    juris_effets: {
+        title: "Effets de la jurisprudence",
+        info: "Contrairement à la loi, la jurisprudence n'a pas une portée générale immédiate, mais son influence est réelle. <br><br><ul><li><strong>Autorité relative :</strong> La décision ne lie formellement que les parties au procès (autorité de la chose jugée).</li><li><strong>Unification :</strong> Les décisions du <strong>Tribunal fédéral (TF)</strong> créent des précédents. Les tribunaux inférieurs s'y conforment pour éviter que leurs jugements ne soient annulés en appel.</li><li><strong>Sécurité juridique :</strong> Elle permet une application prévisible et uniforme du droit sur tout le territoire.</li></ul>",
+        children: [], parent: "jurisprudence"
+    },
+
+    juris_revirement: {
+        title: "Le Revirement de jurisprudence",
+        info: "Le Tribunal fédéral peut changer d'avis et modifier sa manière d'interpréter une règle. C'est ce qu'on appelle un revirement. <br><br><strong>Conditions et caractéristiques :</strong> <br><ul><li><strong>Raisons :</strong> Changement des mœurs, évolution technique ou prise de conscience d'une erreur passée.</li><li><strong>Stabilité vs Évolution :</strong> Le juge doit trouver un équilibre entre le besoin de stabilité (ne pas changer d'avis sans cesse) et la nécessité d'adapter le droit à la réalité.</li><li><strong>Conséquence :</strong> La nouvelle interprétation s'appliquera désormais à tous les cas futurs similaires.</li></ul>",
+        children: [], parent: "jurisprudence"
+    },
+    
     // --- 5. DIVISIONS DU DROIT ---
     divisions: {
         title: "5. Les grandes divisions du droit",
