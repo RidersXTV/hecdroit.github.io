@@ -13,13 +13,24 @@
         <p>Explorateur Interactif des Révisions</p>
     </header>
 
-    <div id="searchContainer">
-        <input type="text" id="searchBar" placeholder="Rechercher une notion (ex: Dol, SA, Acte illicite, Demeure...)">
-        <div id="breadcrumb" onclick="renderTopic('root')">🏠 Accueil</div>
-    </div>
+    <div id="app-container">
+        
+        <aside id="sidebar">
+            <div id="sidebar-content">
+                </div>
+        </aside>
 
-    <main id="main-content">
-        </main>
+        <div id="main-wrapper">
+            <div id="searchContainer">
+                <input type="text" id="searchBar" placeholder="Rechercher une notion (ex: Dol, SA, Acte illicite, Demeure...)">
+                <div id="breadcrumb" onclick="renderTopic('root')">🏠 Accueil</div>
+            </div>
+
+            <main id="main-content">
+                </main>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
