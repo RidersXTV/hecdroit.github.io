@@ -219,7 +219,7 @@ const courseData = {
     coutume: {
         title: "La Coutume",
         info: "Usage constant et conviction juridique (p. 26). <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
-        children: [], parent: "sources_formelles"
+        children: [], parent: "sources"
     },
     usages_commerciaux: {
         title: "Usages et Autoréglementation",
