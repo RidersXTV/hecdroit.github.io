@@ -405,7 +405,7 @@ const courseData = {
     public: {
         title: "6. Droit de l'entreprise",
         info: "Le droit public est l’ensemble des règles juridiques régissant l’accomplissement de tâches publiques et poursuivant un intérêt public.",
-        children: ["droit_constitutionnel"],
+        children: ["droit_constitutionnel", "droit_administratif"],
         parent: "root"
     },
     // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
@@ -458,6 +458,95 @@ const courseData = {
         info: "Ces libertés garantissent le droit de se regrouper pour défendre des intérêts communs. <br><br><ul><li><strong>Liberté d'association (Art. 23 Cst) :</strong> Toute personne a le droit de former des associations, d'y adhérer ou de ne pas y adhérer.</li><li><strong>Liberté syndicale (Art. 28 Cst) :</strong> Les travailleurs et les employeurs ont le droit de s'unir pour la défense de leurs intérêts, de former des associations professionnelles et d'y adhérer.</li></ul>",
         children: [],
         parent: "libertes_fondamentales"
+    },
+
+    // --- 6.2 LE DROIT ADMINISTRATIF (Dès page 35 du cours) ---
+    droit_administratif: {
+        title: "6.2 Le droit administratif",
+        info: "Ensemble des règles de droit public qui régissent l'organisation et l'activité de l'administration, ainsi que les rapports entre l'administration et les administrés.",
+        children: ["admin_definition", "admin_organisation", "admin_activite", "admin_procedure"],
+        parent: "public"
+    },
+
+    // SOUS-BRANCHE : DÉFINITION
+    admin_definition: {
+        title: "Définition et notion",
+        info: "Le droit administratif est le <strong>droit de l'action publique</strong>. <br><br><ul><li>Il s'agit d'un <span class='highlight'>droit interne</span> (propre à chaque État ou canton).</li><li>Il appartient au <span class='highlight'>droit public</span>, impliquant un rapport de subordination (l'intérêt général prime sur l'intérêt particulier).</li><li>Il règle les tâches concrètes de l'État (police, santé, éducation, infrastructures).</li></ul>",
+        children: [],
+        parent: "droit_administratif"
+    },
+
+    // SOUS-BRANCHE : ORGANISATION
+    admin_organisation: {
+        title: "L'organisation de l'administration",
+        info: "L'administration est structurée pour remplir les tâches de l'État à différents échelons. <br><br><strong>Notions clés :</strong> <br><ul><li><strong>Administration centralisée :</strong> Directement rattachée au pouvoir politique (Départements, Offices).</li><li><strong>Administration décentralisée :</strong> Entités autonomes chargées de tâches spécifiques (ex: CFF, La Poste, universités).</li><li><strong>Collectivités publiques :</strong> En Suisse, l'administration est répartie entre la Confédération, les Cantons et les Communes.</li></ul>",
+        children: [],
+        parent: "droit_administratif"
+    },
+
+    // SOUS-BRANCHE : ACTIVITÉ (BRANCHE DÉTAILLÉE)
+    admin_activite: {
+        title: "L'activité de l'administration",
+        info: "L'administration agit par des actes juridiques pour accomplir ses tâches.",
+        children: ["decision_vs_contrat", "principe_legalite", "principe_interet_public", "principe_proportionnalite", "principe_bonne_foi", "principe_non_retroactivite", "modalites_decision"],
+        parent: "droit_administratif"
+    },
+
+    decision_vs_contrat: {
+        title: "Décision vs Contrat administratif",
+        info: "<strong>1. La Décision administrative (Moyen principal) :</strong> Acte <span class='highlight'>unilatéral</span> et individuel par lequel une autorité règle un cas d'espèce de façon obligatoire et contraignante. <br><br><strong>2. Le Contrat de droit administratif :</strong> Accord entre l'administration et un particulier pour accomplir une tâche d'intérêt public. Il est plus rare car il suppose un pied d'égalité partiel.",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    principe_legalite: {
+        title: "Principe de la légalité (Art. 5 al. 1 Cst.)",
+        info: "<strong>'Le droit est la base et la limite de l'activité de l'État.'</strong> <br><br><ul><li>L'administration ne peut agir que si une loi l'y autorise expressément.</li><li>Elle doit respecter la hiérarchie des normes et ne peut pas agir arbitrairement.</li></ul>",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    principe_interet_public: {
+        title: "Intérêt public (Art. 5 al. 2 Cst.)",
+        info: "Toute activité de l'État doit répondre à un <span class='highlight'>intérêt public</span>. <br><br>L'administration ne peut pas agir pour satisfaire des intérêts privés ou purement politiques ; elle doit viser le bien de la collectivité (sécurité, santé publique, ordre public).",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    principe_proportionnalite: {
+        title: "Proportionnalité (Art. 5 al. 2 Cst.)",
+        info: "La mesure prise par l'État doit être <span class='highlight'>proportionnée au but visé</span>. <br><br><strong>Les 3 conditions :</strong> <br><ol><li><strong>Aptitude :</strong> La mesure doit permettre d'atteindre le but.</li><li><strong>Nécessité :</strong> On doit choisir la mesure la moins incisive possible.</li><li><strong>Proportionnalité au sens étroit :</strong> Il doit y avoir un équilibre raisonnable entre le but visé et la restriction imposée.</li></ol>",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    principe_bonne_foi: {
+        title: "Bonne foi (Art. 5 al. 3 Cst.)",
+        info: "L'État et les particuliers doivent agir de manière <strong>loyale</strong>. <br><br><strong>Conséquence majeure :</strong> <br><ul><li><strong>Protection de la confiance :</strong> Le citoyen doit pouvoir compter sur les informations ou promesses données par l'administration (si elles sont précises et que le citoyen a pris des dispositions sur cette base).</li><li>Interdiction du comportement contradictoire.</li></ul>",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    principe_non_retroactivite: {
+        title: "Principe de non-rétroactivité",
+        info: "En principe, une règle nouvelle ne s'applique pas à des faits qui se sont entièrement passés sous l'empire de l'ancienne loi. <br><br>Cela garantit la <span class='highlight'>sécurité juridique</span> : les entreprises doivent savoir à quelle sauce elles seront mangées au moment où elles agissent.",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    modalites_decision: {
+        title: "Modalités de la décision",
+        info: "Une décision administrative doit respecter certaines formes : <br><ul><li>Elle doit être <strong>notifiée</strong> (communiquée) par écrit.</li><li>Elle doit être <strong>motivée</strong> (expliquer pourquoi elle est prise).</li><li>Elle doit mentionner les <strong>voies de recours</strong> (délai et autorité auprès de laquelle on peut contester).</li></ul>",
+        children: [],
+        parent: "admin_activite"
+    },
+
+    // SOUS-BRANCHE : PROCÉDURE ET RECOURS
+    admin_procedure: {
+        title: "La procédure et les recours",
+        info: "Le citoyen n'est pas sans défense face à l'administration. <br><br><ul><li><strong>Droit d'être entendu :</strong> Avant toute décision, l'administré a le droit de s'exprimer et de consulter le dossier.</li><li><strong>Le Recours :</strong> Moyen de contester une décision devant une autorité supérieure ou un tribunal.</li><li><strong>Tribunaux administratifs :</strong> En Suisse, il existe le Tribunal administratif fédéral (TAF) et des tribunaux cantonaux spécialisés.</li></ul>",
+        children: [],
+        parent: "droit_administratif"
     },
     
     // --- 7. LE DROIT DES OBLIGATIONS ---
