@@ -1128,8 +1128,8 @@ const courseData = {
         info: "C'est également une <strong>source non volontaire</strong>. L'obligation naît lorsqu'une personne <strong>s'enrichit aux dépens d'autrui sans cause légitime</strong>. <br><br>Celui qui s'est enrichi injustement (le débiteur) a l'obligation de <span class='highlight'>restituer cet enrichissement</span>. <br><em>Exemple typique : Vous payez par erreur une facture deux fois. L'entreprise qui a reçu le double paiement a l'obligation de vous rembourser le trop-perçu.</em>",
         children: [],
         parent: "ob_sources"
-    },
-
+    }
+};
 const mainContent = document.getElementById('main-content');
 const breadcrumb = document.getElementById('breadcrumb');
 const searchBar = document.getElementById('searchBar');
