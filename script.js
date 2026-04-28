@@ -131,19 +131,49 @@ const courseData = {
     // --- 3. LA RÈGLE DE DROIT ---
     regle: {
         title: "3. La règle de droit",
-        info: "Générale, abstraite et obligatoire.",
-        children: ["regle_imperative", "regle_dispositive"],
+        info: "La règle de droit est l'unité de base du système juridique. Elle présente des caractéristiques propres qui la distinguent des autres règles de conduite (morales ou religieuses).",
+        children: ["caracteres_regle", "nature_regle"],
         parent: "root"
     },
-    regle_imperative: {
-        title: "Règle Impérative",
-        info: "On ne peut pas y déroger (Art. 19 CO).",
-        children: [], parent: "regle"
+
+    // SOUS-BRANCHE : CARACTÈRES
+    caracteres_regle: {
+        title: "Caractères de la règle de droit",
+        info: "Pour être qualifiée de 'juridique', une règle doit remplir plusieurs critères cumulatifs.",
+        children: ["regle_generale", "regle_obligatoire"],
+        parent: "regle"
     },
-    regle_dispositive: {
-        title: "Règle Dispositive",
-        info: "S'applique si rien n'est prévu par les parties.",
-        children: [], parent: "regle"
+    regle_generale: {
+        title: "Générale et abstraite",
+        info: "La règle de droit est <strong>générale</strong> car elle s'applique à un nombre indéterminé de personnes (et non à un individu désigné). <br> Elle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations (et non à un cas précis).",
+        children: [],
+        parent: "caracteres_regle"
+    },
+    regle_obligatoire: {
+        title: "Obligatoire et coercitive",
+        info: "La règle de droit est <strong>obligatoire</strong> : elle s'impose à tous ses destinataires qui ont le devoir de s'y conformer. <br> Elle est <strong>coercitive</strong> : l'État en garantit le respect, au besoin par la force, en appliquant des sanctions.",
+        children: [],
+        parent: "caracteres_regle"
+    },
+
+    // SOUS-BRANCHE : NATURE
+    nature_regle: {
+        title: "Nature des règles",
+        info: "Toutes les règles n'ont pas la même force contraignante vis-à-vis de la volonté des individus.",
+        children: ["regle_imperative_detail", "regle_dispositive_detail"],
+        parent: "regle"
+    },
+    regle_imperative_detail: {
+        title: "La Règle Impérative",
+        info: "Il s'agit d'une règle à laquelle les parties <span class='highlight'>ne peuvent pas déroger</span>. <br> Elle s'impose même si les individus souhaiteraient l'écarter (ex: règles de protection des travailleurs ou droit pénal).",
+        children: [],
+        parent: "nature_regle"
+    },
+    regle_dispositive_detail: {
+        title: "La Règle Dispositive (ou supplétive)",
+        info: "Il s'agit d'une règle à laquelle les parties <span class='success'>peuvent déroger</span> par une convention contraire. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre dans leur contrat ; elle vient alors 'suppléer' à l'absence de volonté exprimée.",
+        children: [],
+        parent: "nature_regle"
     },
 
     // --- 4. LES SOURCES DU DROIT ---
