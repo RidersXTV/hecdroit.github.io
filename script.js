@@ -6,22 +6,78 @@ const courseData = {
         children: ["notion", "sujets", "regle", "sources", "divisions", "entreprise", "obligations"]
     },
     
-    // --- 1. NOTION ET FONCTION ---
+    // --- 1. NOTION ET FONCTION DU DROIT ---
     notion: {
         title: "1. Notion et fonction du droit",
-        info: "Le droit a pour fonction de pacifier la société, de garantir l'ordre et d'assurer la prévisibilité.",
-        children: ["droit_objectif", "droit_subjectif"],
+        info: "Cette section définit le cadre fondamental du droit et son rôle essentiel au sein de la collectivité humaine.",
+        children: ["definition", "fonctions_droit", "sanctions"],
         parent: "root"
+    },
+
+    // SOUS-BRANCHE : DÉFINITION
+    definition: {
+        title: "Définition du droit",
+        info: "Le droit est défini comme l’ensemble des règles de conduite, socialement édictées et sanctionnées, qui s'imposent aux membres de la société. <br><br> L'adage latin <strong>'Ubi societas, ibi ius'</strong> signifie que là où il y a une société, il y a forcément du droit.",
+        children: ["droit_objectif", "droit_subjectif"],
+        parent: "notion"
     },
     droit_objectif: {
         title: "Droit Objectif",
-        info: "C'est 'LE' Droit. L'ensemble des règles de conduite générales et abstraites.",
-        children: [], parent: "notion"
+        info: "Désigné par 'le Droit', il s'agit de l'ensemble des règles de conduite, générales et abstraites, qui régissent les rapports des hommes entre eux et dont le respect est assuré, au besoin, par l’autorité publique.",
+        children: [],
+        parent: "definition"
     },
     droit_subjectif: {
         title: "Droit Subjectif",
-        info: "Ce sont 'LES' droits. Prérogative reconnue à une personne (ex: droit de propriété).",
-        children: [], parent: "notion"
+        info: "Désigné par 'les droits', il s'agit de la prérogative qu’une personne détient sur une chose (droit réel) ou contre une autre personne (droit de créance) et qui est reconnue et protégée par le droit objectif.",
+        children: [],
+        parent: "definition"
+    },
+
+    // SOUS-BRANCHE : FONCTIONS DU DROIT
+    fonctions_droit: {
+        title: "Fonctions du droit",
+        info: "Le droit remplit plusieurs missions vitales pour la collectivité.",
+        children: ["pacifier", "organiser"],
+        parent: "notion"
+    },
+    pacifier: {
+        title: "Pacifier la société",
+        info: "Le droit vise à instaurer la paix sociale (l'ordre) en remplaçant la force par la règle. Il garantit la <strong>sécurité juridique</strong> en permettant aux individus de prévoir les conséquences de leurs actes.",
+        children: [],
+        parent: "fonctions_droit"
+    },
+    organiser: {
+        title: "Organiser la vie en commun",
+        info: "Le droit définit les cadres dans lesquels s'exerce l'activité humaine. Il organise également le fonctionnement de l'État et de ses institutions.",
+        children: [],
+        parent: "fonctions_droit"
+    },
+
+    // SOUS-BRANCHE : SANCTIONS
+    sanctions: {
+        title: "Sanctions",
+        info: "La règle de droit est coercitive ; sa violation entraîne une sanction de la part de l'État.",
+        children: ["sanction_penale", "sanction_civile", "sanction_administrative"],
+        parent: "notion"
+    },
+    sanction_penale: {
+        title: "Sanction pénale",
+        info: "Elle punit l'auteur d'une infraction à l'ordre public. Les infractions sont classées selon leur gravité : <br><ul><li><strong>Crimes :</strong> Infractions passibles d'une peine privative de liberté de plus de 3 ans.</li><li><strong>Délits :</strong> Infractions passibles d'une peine privative de liberté n'excédant pas 3 ans ou d'une peine pécuniaire.</li><li><strong>Contraventions :</strong> Infractions passibles de l'amende.</li></ul>",
+        children: [],
+        parent: "sanctions"
+    },
+    sanction_civile: {
+        title: "Sanction civile",
+        info: "Elle vise à rétablir l'équilibre rompu entre particuliers ou à réparer un dommage. <br> Exemples : <br><ul><li><strong>Nullité :</strong> L'acte est considéré comme n'ayant jamais existé.</li><li><strong>Dommages-intérêts :</strong> Somme d'argent pour réparer un préjudice.</li><li><strong>Exécution forcée :</strong> Obligation physique ou financière de remplir son engagement.</li></ul>",
+        children: [],
+        parent: "sanctions"
+    },
+    sanction_administrative: {
+        title: "Sanction administrative",
+        info: "Mesure prise par une autorité administrative suite à la violation d'une règle de droit public. <br> Exemples : retrait du permis de conduire, retrait d'une licence, ou amendes administratives.",
+        children: [],
+        parent: "sanctions"
     },
 
     // --- 2. LES SUJETS DE DROIT ---
