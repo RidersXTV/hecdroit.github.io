@@ -401,7 +401,7 @@ const courseData = {
         parent: "div_materiel_formel"
     },
 
-    // --- 6. DROIT DE L'ENTREPRISE ---
+    // --- 6. DROIT PUBLIC ---
     public: {
         title: "6. Droit de l'entreprise",
         info: "Le droit public est l’ensemble des règles juridiques régissant l’accomplissement de tâches publiques et poursuivant un intérêt public.",
@@ -419,7 +419,7 @@ const courseData = {
     // SOUS-BRANCHE : PORTÉE
     portee_cst: {
         title: "La portée du droit constitutionnel",
-        info: "Le droit constitutionnel définit le cadre dans lequel l'entreprise peut agir. <br><br><strong>Points clés soulignés :</strong> <br><ul><li>Il garantit la <span class='highlight'>liberté d'action</span> des acteurs économiques face à l'État.</li><li>Il fixe les limites de l'intervention étatique pour protéger l'initiative privée.</li><li>Il assure l'unité de l'espace économique suisse.</li></ul>",
+        info: "Le droit constitutionnel définit le cadre dans lequel l'entreprise peut agir. <br><br><ul><li>Il garantit la <span class='highlight'>liberté d'action</span> des acteurs économiques face à l'État.</li><li>Il fixe les limites de l'intervention étatique pour protéger l'initiative privée.</li><li>Il assure l'unité de l'espace économique suisse.</li></ul>",
         children: [],
         parent: "droit_constitutionnel"
     },
@@ -434,7 +434,7 @@ const courseData = {
 
     principes_generaux_lib: {
         title: "Les principes généraux",
-        info: "Les droits fondamentaux s'appliquent à toute personne physique ou morale (entreprise) se trouvant en Suisse. <br><br><strong>Règles soulignées :</strong> <br><ul><li>L'État a l'obligation de respecter, protéger et réaliser les droits fondamentaux.</li><li>Les particuliers doivent également respecter les droits fondamentaux d'autrui dans leurs relations privées (effet horizontal).</li></ul>",
+        info: "Les droits fondamentaux s'appliquent à toute personne physique ou morale (entreprise) se trouvant en Suisse. <br><br><ul><li>L'État a l'obligation de respecter, protéger et réaliser les droits fondamentaux.</li><li>Les particuliers doivent également respecter les droits fondamentaux d'autrui dans leurs relations privées (effet horizontal).</li></ul>",
         children: [],
         parent: "libertes_fondamentales"
     },
@@ -448,7 +448,7 @@ const courseData = {
 
     liberte_economique: {
         title: "La liberté économique (Art. 27 Cst)",
-        info: "C'est la liberté fondamentale pivot pour le droit de l'entreprise. <br><br><strong>Contenu souligné (p. 35) :</strong> <br><ul><li>Elle comprend notamment le <span class='success'>libre choix de la profession</span> ainsi que le <span class='success'>libre accès à une activité économique lucrative privée</span> et son libre exercice.</li><li>Elle protège toute activité économique privée exercée en vue de l'obtention d'un gain.</li></ul><br><strong>Distinction importante :</strong> L'État ne peut prendre des mesures qui dérogent au principe de la liberté économique que si elles sont prévues par la Constitution ou fondées sur des prérogatives cantonales régulières.",
+        info: "C'est la liberté fondamentale pivot pour le droit de l'entreprise. <br><br><ul><li>Elle comprend notamment le <span class='success'>libre choix de la profession</span> ainsi que le <span class='success'>libre accès à une activité économique lucrative privée</span> et son libre exercice.</li><li>Elle protège toute activité économique privée exercée en vue de l'obtention d'un gain.</li></ul><br><strong>Distinction importante :</strong> L'État ne peut prendre des mesures qui dérogent au principe de la liberté économique que si elles sont prévues par la Constitution ou fondées sur des prérogatives cantonales régulières.",
         children: [],
         parent: "libertes_fondamentales"
     },
