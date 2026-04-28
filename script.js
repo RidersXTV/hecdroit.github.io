@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations"]
     },
     
     // --- 1. NOTION ET FONCTION DU DROIT ---
@@ -1075,6 +1075,59 @@ const courseData = {
         info: "L'arbitrage est le mode de résolution favori dans le commerce international pour plusieurs raisons majeures :<br><br><ul><li><strong>Confidentialité :</strong> Contrairement aux tribunaux de l'État où les audiences sont publiques, l'arbitrage se déroule à huis clos. Les secrets d'affaires sont protégés.</li><li><strong>Expertise :</strong> Les parties peuvent choisir des arbitres hyper-spécialisés dans le domaine technique de leur litige (ingénierie, finance, etc.).</li><li><strong>Flexibilité :</strong> Le choix de la langue, du lieu et des règles de procédure est libre.</li><li><strong>Le coût (Inconvénient) :</strong> L'arbitrage est généralement <strong>très onéreux</strong>, car les parties doivent payer elles-mêmes les honoraires souvent très élevés des arbitres (contrairement aux juges étatiques qui sont payés par nos impôts).</li></ul>",
         children: [], 
         parent: "arbitrage"
+    },
+
+    // --- 8. LE DROIT DES OBLIGATIONS (Dès page 80 du cours) ---
+    droit_obligations: {
+        title: "8. Le droit des obligations",
+        info: "Cette branche fondamentale du droit privé régit les relations juridiques entre créanciers et débiteurs. Elle est principalement codifiée dans le Code des obligations (CO).",
+        children: ["ob_definition", "ob_prestation", "ob_sources"],
+        parent: "root"
+    },
+
+    // --- CHAPITRE 1 : DÉFINITION ET NOTION ---
+    ob_definition: {
+        title: "Définition et notion d'obligation",
+        info: "Au sens juridique, une obligation est un <span class='highlight'>lien juridique</span> entre deux personnes au moins.<br><br>Dans cette relation bilatérale, on distingue :<br><ul><li><strong>Le créancier :</strong> C'est la partie active. Il est celui qui a le <strong>droit d'exiger</strong> l'exécution de la prestation (il détient une <em>créance</em>).</li><li><strong>Le débiteur :</strong> C'est la partie passive. Il est celui qui a le <strong>devoir d'exécuter</strong> la prestation (il a une <em>dette</em> envers le créancier).</li></ul>",
+        children: [],
+        parent: "droit_obligations"
+    },
+
+    // --- CHAPITRE 2 : LA PRESTATION ---
+    ob_prestation: {
+        title: "La prestation",
+        info: "C'est l'objet même de l'obligation, c'est-à-dire le comportement précis que le créancier peut exiger du débiteur.<br><br>La prestation peut prendre deux formes principales :<br><ul><li><strong>Prestation positive :</strong> Elle consiste à <span class='success'>donner</span> (ex: livrer une marchandise, transférer la propriété, payer une somme d'argent) ou à <span class='success'>faire</span> (ex: construire un mur, fournir un service, travailler).</li><li><strong>Prestation négative :</strong> Elle consiste à <span class='success'>ne pas faire</span> (une abstention, ex: respecter une clause de non-concurrence) ou à <span class='success'>tolérer</span> (ex: laisser un voisin passer sur son terrain).</li></ul>",
+        children: [],
+        parent: "droit_obligations"
+    },
+
+    // --- CHAPITRE 3 : LES SOURCES DES OBLIGATIONS ---
+    ob_sources: {
+        title: "Les sources des obligations",
+        info: "Comment naît une obligation ? Le droit suisse reconnaît <span class='highlight'>trois sources légales principales</span> qui créent ce lien juridique entre deux individus :",
+        children: ["ob_source_contrat", "ob_source_rc", "ob_source_enrichissement"],
+        parent: "droit_obligations"
+    },
+
+    ob_source_contrat: {
+        title: "1. Le contrat (Art. 1 ss CO)",
+        info: "C'est la <strong>source volontaire</strong> la plus courante. L'obligation naît de la <span class='highlight'>manifestation de volonté concordante</span> de deux ou plusieurs parties qui se mettent d'accord pour créer, modifier ou annuler un lien juridique (ex: contrat de vente, de bail, de travail). Les deux parties ont voulu s'engager.",
+        children: [],
+        parent: "ob_sources"
+    },
+
+    ob_source_rc: {
+        title: "2. La responsabilité civile / Acte illicite (Art. 41 ss CO)",
+        info: "C'est une <strong>source légale non volontaire</strong>. L'obligation naît du fait qu'une personne a <strong>causé sans droit un dommage à autrui</strong> (soit de manière intentionnelle, soit par négligence). <br><br>L'auteur du dommage devient immédiatement le débiteur : il a l'obligation légale de <span class='highlight'>réparer le préjudice</span> (souvent par le versement de dommages-intérêts). La victime devient le créancier.",
+        children: [],
+        parent: "ob_sources"
+    },
+
+    ob_source_enrichissement: {
+        title: "3. L'enrichissement illégitime (Art. 62 ss CO)",
+        info: "C'est également une <strong>source non volontaire</strong>. L'obligation naît lorsqu'une personne <strong>s'enrichit aux dépens d'autrui sans cause légitime</strong>. <br><br>Celui qui s'est enrichi injustement (le débiteur) a l'obligation de <span class='highlight'>restituer cet enrichissement</span>. <br><em>Exemple typique : Vous payez par erreur une facture deux fois. L'entreprise qui a reçu le double paiement a l'obligation de vous rembourser le trop-perçu.</em>",
+        children: [],
+        parent: "ob_sources"
     },
 
 const mainContent = document.getElementById('main-content');
