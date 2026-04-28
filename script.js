@@ -207,7 +207,7 @@ const courseData = {
         children: [],
         parent: "nature_regle"
     },
-    // --- 4. LES SOURCES DU DROIT (Mise à jour complète) ---
+    // --- 4. LES SOURCES DU DROIT (Version Intégrale et Harmonieuse) ---
     sources: {
         title: "4. Les sources du droit",
         info: "Les sources du droit désignent l'origine des règles juridiques. On distingue les sources formelles (obligatoires) et les sources matérielles (aide à l'interprétation).",
@@ -237,7 +237,7 @@ const courseData = {
         parent: "sources_formelles"
     },
 
-    // --- DÉVELOPPEMENT DE LA CONSTITUTION FÉDÉRALE (Dès page 22 du cours) ---
+    // --- DÉVELOPPEMENT DE LA CONSTITUTION ---
     constitution: {
         title: "La Constitution fédérale (Cst)",
         info: "La Constitution est la loi fondamentale de l'État, située au sommet de la hiérarchie des normes. Elle est le socle de l'ordre juridique suisse.",
@@ -245,7 +245,6 @@ const courseData = {
         parent: "loi"
     },
 
-    // SOUS-BRANCHE : ADOPTION ET RÉVISION
     cst_adoption: {
         title: "Adoption et Révision",
         info: "La Constitution n'est pas figée, mais sa modification est strictement protégée. <br><ul><li><strong>Double majorité :</strong> Toute révision (totale ou partielle) nécessite impérativement la majorité du <span class='highlight'>Peuple</span> et la majorité des <span class='highlight'>Cantons</span>.</li><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent proposer une révision de la Constitution.</li><li><strong>Référendum obligatoire :</strong> Toute modification décidée par le Parlement est obligatoirement soumise au vote.</li></ul>",
@@ -253,7 +252,6 @@ const courseData = {
         parent: "constitution"
     },
 
-    // SOUS-BRANCHE : DROITS FONDAMENTAUX
     cst_droits: {
         title: "Les Droits Fondamentaux",
         info: "Inscrits aux articles 7 à 36 de la Constitution, ils protègent l'individu contre les abus de l'État. <br><br><strong>Exemples essentiels :</strong> <br><ul><li><strong>Dignité humaine (Art. 7) :</strong> Le noyau de tous les droits.</li><li><strong>Égalité (Art. 8) :</strong> Nul ne doit subir de discrimination.</li><li><strong>Liberté personnelle (Art. 10) :</strong> Droit à la vie et à l'intégrité physique/psychique.</li><li><strong>Liberté économique (Art. 27) :</strong> Fondamental pour le droit de l'entreprise.</li><li><strong>Garantie de la propriété (Art. 26).</strong></li></ul>",
@@ -261,7 +259,6 @@ const courseData = {
         parent: "constitution"
     },
 
-    // SOUS-BRANCHE : ORGANISATION DE L'ÉTAT
     cst_organisation_etat: {
         title: "Organisation de l'État",
         info: "La Constitution définit la Suisse comme un État fédéral organisé sur trois niveaux. <br><ul><li><strong>La Confédération :</strong> Possède les compétences que la Constitution lui attribue (ex: monnaie, douanes, défense).</li><li><strong>Les Cantons (26) :</strong> Sont souverains pour toutes les compétences non attribuées à la Confédération (Art. 3 Cst). On parle de <span class='success'>compétence résiduelle</span>.</li><li><strong>Les Communes :</strong> Disposent d'une autonomie fixée par le droit cantonal.</li></ul>",
@@ -269,7 +266,6 @@ const courseData = {
         parent: "constitution"
     },
 
-    // SOUS-BRANCHE : SÉPARATION DES POUVOIRS
     cst_separation_pouvoirs: {
         title: "Séparation des pouvoirs",
         info: "Pour éviter la tyrannie, les pouvoirs sont divisés entre trois autorités distinctes et indépendantes. <br><br><ul><li><strong>Le Législatif (Parlement) :</strong> L'Assemblée fédérale (Conseil national + Conseil des États). Elle fait les lois.</li><li><strong>L'Exécutif (Gouvernement) :</strong> Le Conseil fédéral (7 membres). Il administre l'État et applique les lois.</li><li><strong>Le Judiciaire (Tribunaux) :</strong> Le Tribunal fédéral. Il tranche les litiges et applique le droit.</li></ul>",
@@ -277,7 +273,6 @@ const courseData = {
         parent: "constitution"
     },
 
-    // SOUS-BRANCHE : PRIMAUTÉ DU DROIT FÉDÉRAL
     cst_primante: {
         title: "Primauté du droit fédéral",
         info: "Principe crucial inscrit à l'<strong>Article 49 Cst</strong>. <br><br><strong>Règle :</strong> Le droit fédéral l'emporte sur le droit cantonal qui lui est contraire. Si une loi cantonale contredit une loi fédérale, la loi cantonale n'est pas applicable.",
@@ -285,47 +280,54 @@ const courseData = {
         parent: "constitution"
     },
 
-    // --- DÉVELOPPEMENT DE LA LOI AU SENS ÉTROIT ET DES ORDONNANCES ---
+    // --- LOIS ET ORDONNANCES ---
     loi_sens_etroit: {
         title: "La Loi (au sens étroit)",
-        info: "Il s'agit des actes édictés par le pouvoir législatif (le Parlement). <br><br><strong>Points clés du cours :</strong> <br><ul><li><strong>Autorité :</strong> En Suisse, il s'agit de l'Assemblée fédérale (Conseil national et Conseil des États).</li><li><strong>Rôle :</strong> Elles précisent les principes généraux posés par la Constitution (ex: Code civil, Code des obligations).</li><li><strong>Référendum facultatif :</strong> Contrairement à la Constitution, la loi est soumise au référendum facultatif. 50'000 citoyens ou 8 cantons peuvent demander un vote populaire dans les 100 jours suivant la publication.</li></ul>",
+        info: "Il s'agit des actes édictés par le pouvoir législatif (le Parlement). <br><br><strong>Points clés :</strong> <br><ul><li><strong>Autorité :</strong> Assemblée fédérale.</li><li><strong>Rôle :</strong> Précise les principes de la Cst (ex: Code civil, CO).</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote dans les 100 jours.</li></ul>",
         children: [],
         parent: "loi"
     },
 
     ordonnance: {
         title: "L'Ordonnance",
-        info: "Règles de droit de rang inférieur aux lois, édictées par le pouvoir exécutif (Gouvernement). <br><br><strong>Détails importants :</strong> <br><ul><li><strong>Autorité :</strong> Principalement le Conseil fédéral, mais aussi les départements ou offices.</li><li><strong>Fonction :</strong> Elles servent à l'exécution des lois ou à régler des détails techniques que le Parlement ne traite pas.</li><li><strong>Particularité :</strong> Elles ne sont <span class='highlight'>jamais soumises au référendum</span>.</li></ul>",
+        info: "Règles de rang inférieur aux lois, édictées par l'exécutif. <br><br><strong>Détails :</strong> <br><ul><li><strong>Autorité :</strong> Conseil fédéral, départements ou offices.</li><li><strong>Fonction :</strong> Exécution des lois ou détails techniques.</li><li><strong>Particularité :</strong> <span class='highlight'>Jamais soumises au référendum</span>.</li></ul>",
         children: [],
         parent: "loi"
     },
 
-    // --- DÉVELOPPEMENT DE LA COUTUME ET DES USAGES ---
+    // --- COUTUME ET USAGES ---
     coutume: {
         title: "La Coutume",
-        info: "C'est la plus ancienne source du droit, aujourd'hui subsidiaire à la loi écrite. <br><br><strong>Les deux conditions cumulatives d'existence :</strong> <br><ul><li><strong>L'usage constant (élément matériel) :</strong> Une pratique répétée de manière ininterrompue durant une longue période.</li><li><strong>La conviction juridique (élément psychologique) :</strong> La croyance que cet usage est une règle de droit obligatoire (<em>opinio iuris</em>).</li></ul>",
+        info: "Source subsidiaire à la loi écrite. <br><br><strong>Conditions cumulatives :</strong> <br><ul><li><strong>Usage constant :</strong> Pratique répétée durant une longue période.</li><li><strong>Conviction juridique :</strong> Croyance que cet usage est obligatoire (<em>opinio iuris</em>).</li></ul>",
         children: [],
         parent: "sources_formelles"
     },
 
     usages_commerciaux: {
         title: "Usages et Autoréglementation",
-        info: "Sources spécifiques au droit des affaires et de l'entreprise. <br><br><ul><li><strong>Usages commerciaux :</strong> Pratiques admises dans un milieu professionnel (ex: les Incoterms pour le transport).</li><li><strong>Autoréglementation :</strong> Normes créées par les organisations professionnelles pour leur propre secteur (ex: règles d'éthique bancaire, codes de déontologie).</li><li><strong>Rôle :</strong> Ils permettent une adaptation rapide du droit aux évolutions économiques sans passer par le Parlement.</li></ul>",
+        info: "Sources spécifiques au droit des affaires. <br><br><ul><li><strong>Usages commerciaux :</strong> Pratiques professionnelles admises (ex: Incoterms).</li><li><strong>Autoréglementation :</strong> Normes créées par les organisations professionnelles (codes de déontologie).</li><li><strong>Rôle :</strong> Adaptation rapide aux évolutions économiques.</li></ul>",
         children: [],
         parent: "sources_formelles"
     },
 
-    // --- DÉVELOPPEMENT DE LA JURISPRUDENCE ET DE LA DOCTRINE ---
+    // --- SOUS-BRANCHE : SOURCES MATÉRIELLES ---
+    sources_materielles: {
+        title: "Sources matérielles",
+        info: "Elles aident à interpréter ou combler les lacunes mais ne sont pas obligatoires en soi.",
+        children: ["jurisprudence", "doctrine"],
+        parent: "sources"
+    },
+
     jurisprudence: {
         title: "La Jurisprudence",
-        info: "Ensemble des décisions rendues par les tribunaux (le pouvoir judiciaire). <br><br><strong>Développements majeurs :</strong> <br><ul><li><strong>Comblement des lacunes (Art. 1 al. 2 CC) :</strong> Si la loi et la coutume sont muettes, le juge doit prononcer selon la règle qu'il établirait s'il avait à faire acte de législateur.</li><li><strong>Unification du droit :</strong> En Suisse, le <span class='highlight'>Tribunal fédéral (TF)</span> à Lausanne assure que le droit est appliqué de la même manière dans tous les cantons.</li><li><strong>Interprétation :</strong> Elle adapte les textes anciens aux réalités modernes.</li></ul>",
+        info: "Ensemble des décisions rendues par les tribunaux. <br><br><strong>Développements :</strong> <br><ul><li><strong>Comblement des lacunes (Art. 1 al. 2 CC) :</strong> Si la loi est muette, le juge prononce selon la règle qu'il établirait s'il faisait acte de législateur.</li><li><strong>Unification :</strong> Le <span class='highlight'>Tribunal fédéral (TF)</span> assure l'unité du droit en Suisse.</li><li><strong>Interprétation :</strong> Adaptation des textes aux réalités modernes.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
 
     doctrine: {
         title: "La Doctrine",
-        info: "Ensemble des travaux et opinions exprimés par les 'savants' du droit (professeurs, chercheurs, juristes). <br><br><strong>Son rôle :</strong> <br><ul><li><strong>Inspiration :</strong> Elle n'est pas obligatoire pour le juge, mais elle influence grandement ses décisions et les futures lois.</li><li><strong>Clarification :</strong> Elle analyse, commente et critique les lois et la jurisprudence pour en extraire des principes logiques.</li></ul>",
+        info: "Ensemble des travaux et opinions des 'savants' du droit (professeurs, chercheurs). <br><br><strong>Rôle :</strong> <br><ul><li><strong>Inspiration :</strong> Influence les décisions des juges et les futures lois.</li><li><strong>Clarification :</strong> Analyse et critique les lois et la jurisprudence.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
