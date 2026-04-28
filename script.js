@@ -207,68 +207,68 @@ const courseData = {
         children: [],
         parent: "nature_regle"
     },
-    // --- 4. LES SOURCES DU DROIT (Branches Vertes) ---
+    // --- 4. LES SOURCES DU DROIT (Mise à jour complète) ---
     sources: {
         title: "4. Les sources du droit",
-        info: "Les sources du droit sont les formes sous lesquelles les règles apparaissent. On distingue les sources formelles (obligatoires) des sources matérielles (aide à l'interprétation). [cite: 1, 2]",
+        info: "Les sources du droit désignent l'origine des règles juridiques. On distingue les sources formelles (obligatoires) et les sources matérielles (aide à l'interprétation).",
         children: ["sources_formelles", "sources_materielles"],
         parent: "root"
     },
 
-    // SOUS-BRANCHE : SOURCES FORMELLES
+    // --- SOUS-BRANCHE : SOURCES FORMELLES ---
     sources_formelles: {
         title: "Sources formelles",
-        info: "Ce sont les formes obligatoires que doit revêtir la règle pour s'imposer comme droit positif. ",
-        children: ["loi", "coutume"],
+        info: "Ce sont les formes obligatoires que doit revêtir la règle pour s'imposer comme droit positif.",
+        children: ["traites_internationaux", "loi", "coutume", "usages_commerciaux"],
         parent: "sources"
     },
-    loi: {
-        title: "La Loi (au sens large)",
-        info: "La loi est la source principale, écrite et édictée par l'autorité publique. Elle est organisée selon une hiérarchie stricte. ",
-        children: ["constitution", "loi_sens_etroit", "ordonnance"],
-        parent: "sources_formelles"
-    },
-    constitution: {
-        title: "1. La Constitution",
-        info: "C'est la loi fondamentale de l'État située au sommet de la pyramide des normes.  <br><ul><li><strong>Contenu :</strong> Elle fixe l'organisation de l'État, ses organes et les droits fondamentaux des citoyens. </li><li><strong>Adoption :</strong> Toute modification nécessite l'accord du <span class='highlight'>Peuple et des Cantons</span> (double majorité). </li></ul>",
-        children: [],
-        parent: "loi"
-    },
-    loi_sens_etroit: {
-        title: "2. La Loi (au sens étroit)",
-        info: "Actes édictés par le pouvoir législatif. <br><ul><li><strong>Rôle :</strong> Elles précisent les principes posés par la Constitution (ex: Code civil, Code des obligations). </li><li><strong>Adoption :</strong> Elles sont votées par le <span class='highlight'>Parlement</span>. </li></ul>",
-        children: [],
-        parent: "loi"
-    },
-    ordonnance: {
-        title: "3. L'Ordonnance",
-        info: "Règles de rang inférieur servant à préciser les détails d'application d'une loi.  <br><ul><li><strong>Adoption :</strong> Elles sont édictées par le pouvoir exécutif, soit le <span class='highlight'>Gouvernement (Conseil Fédéral)</span>. </li></ul>",
-        children: [],
-        parent: "loi"
-    },
-    coutume: {
-        title: "La Coutume",
-        info: "Usage implanté de longue date qui finit par être considéré comme obligatoire.  <br><strong>Deux conditions cumulatives :</strong> <br><ul><li><strong>Usage constant :</strong> Une pratique répétée durant une longue période. </li><li><strong>Conviction juridique :</strong> La conviction des individus d'être liés par une règle de droit. </li></ul>",
+
+    traites_internationaux: {
+        title: "Les Traités internationaux",
+        info: "Accords conclus entre États ou avec des organisations internationales. <br><ul><li><strong>Rang :</strong> Ils ont un rang au moins équivalent, voire supérieur, aux lois fédérales.</li><li><strong>Exemple :</strong> La Convention européenne des droits de l'homme (CEDH).</li></ul>",
         children: [],
         parent: "sources_formelles"
     },
 
-    // SOUS-BRANCHE : SOURCES MATÉRIELLES
+    loi: {
+        title: "La Loi (au sens large)",
+        info: "La loi écrite est la source prépondérante dans notre système de droit civiliste. Elle respecte une hiérarchie stricte.",
+        children: ["constitution", "loi_sens_etroit", "ordonnance"],
+        parent: "sources_formelles"
+    },
+
+    constitution: {
+        title: "La Constitution fédérale",
+        info: "C'est la loi fondamentale de l'État (la 'norme des normes'). <br><br><strong>Ses trois rôles essentiels :</strong> <br><ul><li><strong>Organisation :</strong> Elle fixe la structure de l'État (État fédéral) et de ses organes.</li><li><strong>Répartition des compétences :</strong> Elle définit les pouvoirs de la Confédération et des Cantons.</li><li><strong>Droits fondamentaux :</strong> Elle garantit les libertés individuelles des citoyens face à l'État.</li></ul><br><strong>Adoption/Révision :</strong> Elle nécessite la <span class='highlight'>double majorité du Peuple et des Cantons</span>.",
+        children: [],
+        parent: "loi"
+    },
+
+    usages_commerciaux: {
+        title: "Usages et Autoréglementation",
+        info: "Sources spécifiques au monde de l'entreprise. <br><ul><li><strong>Usages commerciaux :</strong> Pratiques professionnelles admises dans un secteur d'activité donné (ex: Incoterms).</li><li><strong>Autoréglementation :</strong> Normes édictées par les acteurs économiques eux-mêmes (codes de conduite, règles déontologiques) pour réguler leur propre secteur.</li></ul>",
+        children: [],
+        parent: "sources_formelles"
+    },
+
+    // --- SOUS-BRANCHE : SOURCES MATÉRIELLES ---
     sources_materielles: {
         title: "Sources matérielles",
-        info: "Sources secondaires qui aident à comprendre et interpréter les règles, mais ne créent pas de droit directement. ",
+        info: "Elles ne créent pas de droit directement mais sont indispensables pour interpréter les textes ou combler les lacunes.",
         children: ["jurisprudence", "doctrine"],
         parent: "sources"
     },
+
     jurisprudence: {
         title: "La Jurisprudence",
-        info: "Ensemble des décisions rendues par les tribunaux.  <br><ul><li><strong>Rôle :</strong> Elle permet de préciser le sens des lois et de combler les lacunes législatives. </li><li><strong>Autorité :</strong> En Suisse, les décisions du <span class='highlight'>Tribunal Fédéral</span> font autorité. </li></ul>",
+        info: "Il s'agit de l'ensemble des décisions rendues par les tribunaux. <br><br><strong>Fonctions clés :</strong> <br><ul><li><strong>Interprétation :</strong> Elle précise le sens de termes vagues dans la loi.</li><li><strong>Comblement des lacunes :</strong> Selon l'<strong>Art. 1 al. 2 du Code civil</strong>, à défaut d'une disposition légale applicable, le juge doit prononcer selon le droit coutumier et, à défaut de coutume, selon la règle qu'il établirait s'il avait à faire acte de législateur.</li><li><strong>Autorité :</strong> En Suisse, les arrêts du <span class='highlight'>Tribunal Fédéral (TF)</span> servent de guide pour tous les tribunaux inférieurs afin d'assurer l'unité du droit.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
+
     doctrine: {
         title: "La Doctrine",
-        info: "Ensemble des travaux et opinions exprimés par les spécialistes du droit (professeurs, chercheurs).  <br><ul><li><strong>Forme :</strong> Elle s'exprime à travers des ouvrages, des commentaires de lois ou des articles scientifiques. </li></ul>",
+        info: "Ensemble des opinions exprimées par les juristes, professeurs et chercheurs dans leurs écrits. <br><br><strong>Importance :</strong> <br><ul><li>Elle n'est pas contraignante pour le juge, mais elle est une source d'inspiration majeure pour l'évolution de la loi et de la jurisprudence.</li><li>Le juge s'y réfère souvent pour comprendre des concepts juridiques complexes ou des points de vue divergents sur l'interprétation d'un texte.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
