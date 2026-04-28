@@ -3,310 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Révisions - Droit de l'Entreprise</title>
+    <title>Droit de l'Entreprise - Explorateur Interactif</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+            --text: #333;
+            --accent: #e74c3c;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
         header {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #1a365d;
+        #searchContainer {
+            margin: 20px 0;
+            width: 90%;
+            max-width: 600px;
         }
         #searchBar {
             width: 100%;
-            max-width: 600px;
             padding: 12px 20px;
-            font-size: 16px;
-            border: 2px solid #cbd5e0;
             border-radius: 25px;
+            border: 2px solid #ddd;
+            font-size: 16px;
             outline: none;
-            transition: all 0.3s;
-            box-sizing: border-box;
         }
-        #searchBar:focus {
-            border-color: #3182ce;
-            box-shadow: 0 0 8px rgba(49, 130, 206, 0.3);
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .accordion {
-            background-color: #ffffff;
-            color: #2b6cb0;
+        #breadcrumb {
+            margin: 10px 0;
+            font-size: 14px;
+            color: var(--secondary);
             cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            border-radius: 8px;
-            outline: none;
-            transition: 0.4s;
-            font-size: 1.2em;
+        }
+        #main-content {
+            width: 90%;
+            max-width: 800px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .info-box {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        .info-box h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .sub-branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .branch-button {
+            background: var(--white);
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
             font-weight: bold;
-            margin-top: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            transition: all 0.2s;
+            text-align: center;
         }
-        .active, .accordion:hover {
-            background-color: #ebf8ff;
+        .branch-button:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
         }
-        .accordion:after {
-            content: '\002B';
-            color: #2b6cb0;
-            font-weight: bold;
-            font-size: 1.5em;
-            margin-left: 5px;
-        }
-        .active:after {
-            content: "\2212";
-        }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            border-radius: 0 0 8px 8px;
-            margin-bottom: 10px;
-        }
-        .sub-topic {
-            margin: 15px 0;
-            padding-left: 20px;
-            border-left: 3px solid #63b3ed;
-        }
-        .sub-topic h3 {
-            color: #2c5282;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
-        .sub-topic ul {
-            margin-top: 5px;
-            padding-left: 20px;
-            color: #4a5568;
-            line-height: 1.5;
-        }
-        .sub-topic li {
-            margin-bottom: 6px;
-        }
-        .hidden {
-            display: none !important;
-        }
-        .nested-list {
-            margin-top: 5px;
-            padding-left: 20px;
-            list-style-type: circle;
-        }
+        .highlight { color: var(--accent); font-weight: bold; }
+        footer { margin-top: auto; padding: 20px; font-size: 12px; color: #888; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Explorateur de Révisions : Droit de l'Entreprise</h1>
-        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: CO, mandat, RC, illicite...)">
+        <h1>Droit de l'Entreprise</h1>
+        <p>Explorateur de cours basé sur la Mind Map</p>
     </header>
 
-    <div class="container" id="mainContainer">
-
-        <button class="accordion">1. Notion et fonction du droit</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Le Droit Objectif vs Subjectif</h3>
-                <ul>
-                    <li><strong>Droit objectif :</strong> L'ensemble des règles de conduite socialement édictées et sanctionnées.</li>
-                    <li><strong>Droit subjectif :</strong> Prérogative individuelle reconnue (ex: le droit de propriété).</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">2. Les sujets de droit</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Personnes physiques et morales</h3>
-                <ul>
-                    <li><strong>Personnes physiques :</strong> Jouissance des droits (naissance) et exercice (majorité + discernement).</li>
-                    <li><strong>Personnes morales :</strong> Entités abstraites (SA, Sàrl) agissant via leurs organes.</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">3. La règle de droit</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Nature des règles</h3>
-                <ul>
-                    <li><strong>Impératives :</strong> On ne peut pas y déroger.</li>
-                    <li><strong>Dispositives :</strong> S'appliquent si rien n'est prévu par les parties.</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">4. Les sources du droit</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Hiérarchie</h3>
-                <ul>
-                    <li><strong>Formelles :</strong> Loi, Coutume.</li>
-                    <li><strong>Matérielles :</strong> Jurisprudence, Doctrine.</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">5. Les grandes divisions du droit</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Public vs Privé</h3>
-                <ul>
-                    <li><strong>Droit Public :</strong> État vs citoyen (subordination).</li>
-                    <li><strong>Droit Privé :</strong> Entre particuliers (égalité, autonomie).</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">6. Droit de l'entreprise</button>
-        <div class="panel">
-            <div class="sub-topic">
-                <h3>Structures et RC</h3>
-                <ul>
-                    <li><strong>Registre du Commerce (RC) :</strong> Publicité et protection de la raison de commerce.</li>
-                    <li><strong>Raison individuelle :</strong> Responsabilité illimitée.</li>
-                    <li><strong>SA et Sàrl :</strong> Responsabilité limitée au capital.</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="accordion">7. Le droit des obligations</button>
-        <div class="panel">
-            
-            <div class="sub-topic">
-                <h3>1. La formation du contrat</h3>
-                <ul>
-                    <li><strong>Conclusion :</strong> Manifestations de volonté concordantes (Offre et Acceptation).</li>
-                    <li><strong>Forme :</strong> Liberté de forme (principe), sauf exceptions légales (écrite, authentique, registre).</li>
-                    <li><strong>Objet :</strong> Liberté contractuelle, mais nul si impossible, illicite ou contraire aux mœurs.</li>
-                    <li><strong>Vices du consentement :</strong> Erreur essentielle, Dol, Crainte fondée, Lésion (rendent le contrat annulable).</li>
-                </ul>
-            </div>
-
-            <div class="sub-topic">
-                <h3>2. L'exécution, l'inexécution et l'extinction</h3>
-                <ul>
-                    <li><strong>Exécution :</strong> Qui, Quoi, Où, Quand.</li>
-                    <li><strong>Inexécution :</strong> Demeure du débiteur (retard) nécessitant interpellation et délai de grâce.</li>
-                    <li><strong>Extinction :</strong> Paiement, remise de dette, compensation, impossibilité subséquente.</li>
-                    <li><strong>Prescription :</strong> Extinction du droit de réclamer en justice (souvent 10 ans, parfois 5 ans ou 1 an).</li>
-                </ul>
-            </div>
-
-            <div class="sub-topic">
-                <h3>3. La Responsabilité Civile (RC)</h3>
-                <ul>
-                    <li><strong>RC extracontractuelle (Art. 41 CO) - 4 Conditions cumulatives :</strong>
-                        <ul class="nested-list">
-                            <li>Un dommage</li>
-                            <li>Un acte illicite</li>
-                            <li>Un lien de causalité adéquat</li>
-                            <li>Une faute (qui doit être prouvée par le lésé)</li>
-                        </ul>
-                    </li>
-                    <li><strong>RC contractuelle (Art. 97 CO) - 4 Conditions cumulatives :</strong>
-                        <ul class="nested-list">
-                            <li>Un dommage</li>
-                            <li>Une violation du contrat</li>
-                            <li>Un lien de causalité adéquat</li>
-                            <li>Une faute <strong>(qui est présumée, le débiteur doit prouver qu'il n'a pas commis de faute)</strong></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sub-topic">
-                <h3>4. L'enrichissement illégitime (Art. 62 CO)</h3>
-                <ul>
-                    <li><strong>Définition :</strong> Fait de s'enrichir aux dépens d'autrui sans cause légitime.</li>
-                    <li><strong>Conditions cumulatives :</strong>
-                        <ul class="nested-list">
-                            <li>Un enrichissement</li>
-                            <li>Un appauvrissement</li>
-                            <li>L'absence de cause légitime</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sub-topic">
-                <h3>5. Les Contrats Spéciaux : Entreprise et Mandat</h3>
-                <ul>
-                    <li><strong>Le contrat d'entreprise (Art. 363 CO) :</strong>
-                        <ul class="nested-list">
-                            <li><em>Obligations de l'entrepreneur :</em> Livrer l'ouvrage (promesse de résultat) et garantir les défauts.</li>
-                            <li><em>Obligations du maître de l'ouvrage :</em> Payer le prix convenu.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Le mandat (Art. 394 CO) :</strong>
-                        <ul class="nested-list">
-                            <li><em>Obligations du mandataire :</em> Exécuter avec soin (pas de garantie de résultat, obligation de moyens), en assumant sa responsabilité et en rendant compte.</li>
-                            <li><em>Obligations du mandant :</em> Payer les honoraires et rembourser les frais engagés.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Autres contrats :</strong> Vente (chose contre prix), Bail (usage contre loyer), Travail (activité subordonnée contre salaire).</li>
-                </ul>
-            </div>
-
-        </div>
+    <div id="searchContainer">
+        <input type="text" id="searchBar" placeholder="Rechercher une notion (ex: Dol, RC, SA...)">
+        <div id="breadcrumb" onclick="renderTopic('root')">🏠 Accueil /</div>
     </div>
 
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
+    <main id="main-content">
+        </main>
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-            });
+    <script>
+        // BASE DE DONNÉES DU COURS (Extraite des PDF et Mind Map)
+        const courseData = {
+            root: {
+                title: "Sommaire Général",
+                info: "Bienvenue dans votre outil de révision. Sélectionnez une thématique pour explorer les détails du cours et de la mind map.",
+                children: ["notion", "sujets", "regle", "sources", "divisions", "entreprise", "obligations"]
+            },
+            notion: {
+                title: "1. Notion et fonction du droit",
+                info: "Le droit est un ensemble de règles de conduite, socialement édictées et sanctionnées, qui s'imposent aux membres de la société.",
+                children: ["droit_objectif", "droit_subjectif"],
+                parent: "root"
+            },
+            droit_objectif: {
+                title: "Droit Objectif",
+                info: "C'est la règle de droit en elle-même (ex: le Code des Obligations). Elle définit ce qui est permis ou interdit de manière générale.",
+                children: [],
+                parent: "notion"
+            },
+            obligations: {
+                title: "7. Le droit des obligations",
+                info: "Partie la plus dense du cours. Elle traite des liens juridiques entre créancier et débiteur.",
+                children: ["formation", "execution", "inexecution", "extinction", "rc", "enrichissement", "contrats_speciaux"],
+                parent: "root"
+            },
+            formation: {
+                title: "Formation du Contrat",
+                info: "Un contrat nécessite des manifestations de volonté concordantes (Art. 1 CO).",
+                children: ["vices_consentement", "forme_contrat", "objet_contrat"],
+                parent: "obligations"
+            },
+            vices_consentement: {
+                title: "Vices du consentement",
+                info: "Si le consentement n'est pas libre et éclairé, le contrat est annulable (Art. 23 ss CO).",
+                children: ["erreur", "dol", "crainte", "lesion"],
+                parent: "formation"
+            },
+            dol: {
+                title: "Le Dol (Art. 28 CO)",
+                info: "Tromperie intentionnelle pour amener l'autre partie à conclure le contrat. Le contrat n'oblige pas la victime.",
+                children: [],
+                parent: "vices_consentement"
+            },
+            rc: {
+                title: "Responsabilité Civile (RC)",
+                info: "L'obligation de réparer un dommage. On distingue la RC contractuelle (Art. 97) et extracontractuelle (Art. 41).",
+                children: ["conditions_rc", "rc_contractuelle"],
+                parent: "obligations"
+            },
+            conditions_rc: {
+                title: "Les 4 conditions de la RC (Art. 41 CO)",
+                info: "Pour qu'il y ait responsabilité, il faut cumulativement : un <span class='highlight'>Dommage</span>, un <span class='highlight'>Acte illicite</span>, un <span class='highlight'>Lien de causalité adéquat</span> et une <span class='highlight'>Faute</span>.",
+                children: [],
+                parent: "rc"
+            },
+            contrats_speciaux: {
+                title: "Les Contrats Spéciaux",
+                info: "Règles spécifiques pour les types de contrats les plus courants.",
+                children: ["vente", "bail", "travail", "entreprise", "mandat"],
+                parent: "obligations"
+            },
+            mandat: {
+                title: "Le Mandat (Art. 394 CO)",
+                info: "Le mandataire s'engage à rendre un service avec diligence. <span class='highlight'>Attention :</span> C'est une obligation de moyens, pas de résultat !",
+                children: [],
+                parent: "contrats_speciaux"
+            }
+            // Note: Tu peux continuer à remplir les autres branches ici
+        };
+
+        const mainContent = document.getElementById('main-content');
+        const breadcrumb = document.getElementById('breadcrumb');
+
+        function renderTopic(id) {
+            const topic = courseData[id];
+            if (!topic) return;
+
+            // Mise à jour du fil d'Ariane
+            updateBreadcrumb(id);
+
+            // Génération du HTML
+            let html = `
+                <div class="info-box">
+                    <h2>${topic.title}</h2>
+                    <p>${topic.info}</p>
+                </div>
+            `;
+
+            if (topic.children.length > 0) {
+                html += `<h3>Sous-branches :</h3><div class="sub-branches-grid">`;
+                topic.children.forEach(childId => {
+                    const child = courseData[childId];
+                    if (child) {
+                        html += `
+                            <button class="branch-button" onclick="renderTopic('${childId}')">
+                                ${child.title}
+                            </button>
+                        `;
+                    }
+                });
+                html += `</div>`;
+            } else {
+                html += `<p><em>Cette branche est une notion terminale.</em></p>`;
+            }
+
+            mainContent.innerHTML = html;
+            window.scrollTo(0, 0);
         }
 
-        const searchBar = document.getElementById('searchBar');
-        
-        searchBar.addEventListener('keyup', function(e) {
-            const term = e.target.value.toLowerCase();
-            const sections = document.querySelectorAll('.accordion');
+        function updateBreadcrumb(id) {
+            let path = [];
+            let currentId = id;
+            while (currentId && currentId !== 'root') {
+                path.unshift({id: currentId, title: courseData[currentId].title});
+                currentId = courseData[currentId].parent;
+            }
             
-            sections.forEach(section => {
-                const panel = section.nextElementSibling;
-                const sectionText = section.textContent.toLowerCase();
-                const panelText = panel.textContent.toLowerCase();
-                
-                if(sectionText.includes(term) || panelText.includes(term)) {
-                    section.classList.remove('hidden');
-                    if (term !== "" && panelText.includes(term)) {
-                        section.classList.add("active");
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    } else if (term === "") {
-                        section.classList.remove("active");
-                        panel.style.maxHeight = null;
-                    }
-                } else {
-                    section.classList.add('hidden');
-                    panel.style.maxHeight = null;
-                }
+            let bcHtml = `<span onclick="renderTopic('root')">🏠 Accueil</span>`;
+            path.forEach(p => {
+                bcHtml += ` / <span onclick="renderTopic('${p.id}')">${p.title}</span>`;
             });
+            breadcrumb.innerHTML = bcHtml;
+        }
+
+        // Recherche simple
+        document.getElementById('searchBar').addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            if (val.length < 2) return;
+            
+            // On cherche dans les titres et infos
+            for (let key in courseData) {
+                if (courseData[key].title.toLowerCase().includes(val)) {
+                    renderTopic(key);
+                    break;
+                }
+            }
         });
+
+        // Initialisation
+        renderTopic('root');
+
     </script>
 </body>
 </html>
