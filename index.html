@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Droit de l'Entreprise - Explorateur Interactif</title>
+    <title>Droit de l'Entreprise - Explorateur Complet</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --bg: #f8f9fa;
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --bg: #f0f4f8;
             --white: #ffffff;
-            --text: #333;
-            --accent: #e74c3c;
+            --text: #2d3748;
+            --accent: #e53e3e;
+            --success: #38a169;
         }
         body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -27,199 +28,420 @@
             width: 100%;
             background: var(--primary);
             color: white;
-            padding: 20px 0;
+            padding: 25px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        header h1 { margin: 0 0 10px 0; font-size: 2em; }
+        header p { margin: 0; color: #bee3f8; }
         #searchContainer {
-            margin: 20px 0;
+            margin: 30px 0 15px 0;
             width: 90%;
-            max-width: 600px;
+            max-width: 700px;
         }
         #searchBar {
             width: 100%;
-            padding: 12px 20px;
-            border-radius: 25px;
-            border: 2px solid #ddd;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 2px solid #e2e8f0;
             font-size: 16px;
             outline: none;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        #searchBar:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 10px rgba(43, 108, 176, 0.2);
         }
         #breadcrumb {
-            margin: 10px 0;
-            font-size: 14px;
+            margin: 15px 0;
+            font-size: 15px;
             color: var(--secondary);
             cursor: pointer;
+            font-weight: 500;
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
+        #breadcrumb span:hover { text-decoration: underline; }
         #main-content {
             width: 90%;
-            max-width: 800px;
+            max-width: 900px;
             background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
         }
         .info-box {
-            line-height: 1.6;
-            margin-bottom: 25px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 25px;
         }
         .info-box h2 {
             color: var(--primary);
             margin-top: 0;
+            font-size: 1.8em;
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
         }
+        .info-box p { font-size: 1.1em; }
         .sub-branches-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 15px;
+            margin-top: 20px;
         }
         .branch-button {
-            background: var(--white);
-            border: 2px solid var(--secondary);
+            background: #ebf8ff;
+            border: 1px solid #bee3f8;
             color: var(--secondary);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 18px 15px;
+            border-radius: 8px;
             cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.2s ease;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
         }
         .branch-button:hover {
             background: var(--secondary);
             color: white;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(43, 108, 176, 0.3);
         }
         .highlight { color: var(--accent); font-weight: bold; }
-        footer { margin-top: auto; padding: 20px; font-size: 12px; color: #888; }
+        .success { color: var(--success); font-weight: bold; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Droit de l'Entreprise</h1>
-        <p>Explorateur de cours basé sur la Mind Map</p>
+        <p>Explorateur Interactif des Révisions</p>
     </header>
 
     <div id="searchContainer">
-        <input type="text" id="searchBar" placeholder="Rechercher une notion (ex: Dol, RC, SA...)">
-        <div id="breadcrumb" onclick="renderTopic('root')">🏠 Accueil /</div>
+        <input type="text" id="searchBar" placeholder="Rechercher une notion (ex: Dol, SA, Acte illicite, Demeure...)">
+        <div id="breadcrumb" onclick="renderTopic('root')">🏠 Accueil</div>
     </div>
 
     <main id="main-content">
         </main>
 
     <script>
-        // BASE DE DONNÉES DU COURS (Extraite des PDF et Mind Map)
+        // BASE DE DONNÉES COMPLÈTE DU COURS
         const courseData = {
             root: {
                 title: "Sommaire Général",
-                info: "Bienvenue dans votre outil de révision. Sélectionnez une thématique pour explorer les détails du cours et de la mind map.",
+                info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
                 children: ["notion", "sujets", "regle", "sources", "divisions", "entreprise", "obligations"]
             },
+            
+            // --- 1. NOTION ET FONCTION ---
             notion: {
                 title: "1. Notion et fonction du droit",
-                info: "Le droit est un ensemble de règles de conduite, socialement édictées et sanctionnées, qui s'imposent aux membres de la société.",
+                info: "Le droit a pour fonction de pacifier la société, de garantir l'ordre et d'assurer la prévisibilité (sécurité juridique). Il se divise en deux grandes approches.",
                 children: ["droit_objectif", "droit_subjectif"],
                 parent: "root"
             },
             droit_objectif: {
                 title: "Droit Objectif",
-                info: "C'est la règle de droit en elle-même (ex: le Code des Obligations). Elle définit ce qui est permis ou interdit de manière générale.",
-                children: [],
-                parent: "notion"
+                info: "C'est 'LE' Droit. L'ensemble des règles de conduite, générales et abstraites, édictées et sanctionnées par l'État (ex: le Code Civil, le Code des Obligations).",
+                children: [], parent: "notion"
             },
-            obligations: {
-                title: "7. Le droit des obligations",
-                info: "Partie la plus dense du cours. Elle traite des liens juridiques entre créancier et débiteur.",
-                children: ["formation", "execution", "inexecution", "extinction", "rc", "enrichissement", "contrats_speciaux"],
+            droit_subjectif: {
+                title: "Droit Subjectif",
+                info: "Ce sont 'LES' droits. C'est la prérogative reconnue à une personne par le droit objectif (ex: mon droit de propriété sur ma voiture, mon droit de vote).",
+                children: [], parent: "notion"
+            },
+
+            // --- 2. LES SUJETS DE DROIT ---
+            sujets: {
+                title: "2. Les sujets de droit",
+                info: "Un sujet de droit est une entité apte à avoir des droits et des obligations. On en distingue deux types.",
+                children: ["personnes_physiques", "personnes_morales"],
                 parent: "root"
             },
-            formation: {
-                title: "Formation du Contrat",
-                info: "Un contrat nécessite des manifestations de volonté concordantes (Art. 1 CO).",
-                children: ["vices_consentement", "forme_contrat", "objet_contrat"],
+            personnes_physiques: {
+                title: "Personnes Physiques",
+                info: "Concerne les êtres humains. <br><br><ul><li><strong>Jouissance des droits civils :</strong> S'acquiert dès la naissance (voire la conception).</li><li><strong>Exercice des droits civils (capacité active) :</strong> Nécessite d'être <span class='highlight'>majeur</span> (18 ans) ET <span class='highlight'>capable de discernement</span> (agir raisonnablement).</li></ul>",
+                children: [], parent: "sujets"
+            },
+            personnes_morales: {
+                title: "Personnes Morales",
+                info: "Fictions juridiques (sociétés, associations, fondations) dotées de la personnalité juridique. Elles agissent par l'intermédiaire de leurs <span class='highlight'>organes</span> (ex: le Conseil d'administration).",
+                children: [], parent: "sujets"
+            },
+
+            // --- 3. LA RÈGLE DE DROIT ---
+            regle: {
+                title: "3. La règle de droit",
+                info: "La règle de droit est générale, abstraite, obligatoire et coercitive (sanctionnée par l'État).",
+                children: ["regle_imperative", "regle_dispositive"],
+                parent: "root"
+            },
+            regle_imperative: {
+                title: "Règle Impérative",
+                info: "Règle absolue à laquelle les parties ne peuvent <span class='highlight'>absolument pas déroger</span>, même si elles sont d'accord (ex: protection des travailleurs, droit pénal).",
+                children: [], parent: "regle"
+            },
+            regle_dispositive: {
+                title: "Règle Dispositive (ou supplétive)",
+                info: "Règle qui ne s'applique <span class='success'>que si les parties n'ont rien prévu d'autre</span> dans leur contrat. Elle comble les lacunes de l'accord.",
+                children: [], parent: "regle"
+            },
+
+            // --- 4. LES SOURCES DU DROIT ---
+            sources: {
+                title: "4. Les sources du droit",
+                info: "D'où vient le droit ? On distingue les sources formelles (officielles et contraignantes) et les sources matérielles (qui aident à interpréter).",
+                children: ["sources_formelles", "sources_materielles"],
+                parent: "root"
+            },
+            sources_formelles: {
+                title: "Sources Formelles",
+                info: "<ul><li><strong>La Loi :</strong> Hiérarchie : Constitution Fédérale > Lois Fédérales (CO, CC) > Ordonnances.</li><li><strong>La Coutume :</strong> Usage implanté de longue date et considéré comme obligatoire par la société.</li></ul>",
+                children: [], parent: "sources"
+            },
+            sources_materielles: {
+                title: "Sources Matérielles",
+                info: "<ul><li><strong>La Jurisprudence :</strong> Ensemble des décisions rendues par les tribunaux (notamment le Tribunal Fédéral).</li><li><strong>La Doctrine :</strong> Ouvrages et articles rédigés par les spécialistes du droit (professeurs, avocats).</li></ul>",
+                children: [], parent: "sources"
+            },
+
+            // --- 5. DIVISIONS DU DROIT ---
+            divisions: {
+                title: "5. Les grandes divisions du droit",
+                info: "Le système juridique sépare les règles selon les acteurs impliqués.",
+                children: ["droit_public", "droit_prive"],
+                parent: "root"
+            },
+            droit_public: {
+                title: "Le Droit Public",
+                info: "Régit les rapports entre l'État (qui a la puissance publique) et les citoyens. Il y a un <span class='highlight'>lien de subordination</span>. Comprend : Droit constitutionnel, administratif, pénal, fiscal.",
+                children: [], parent: "divisions"
+            },
+            droit_prive: {
+                title: "Le Droit Privé",
+                info: "Régit les rapports entre les individus ou entreprises sur un <span class='success'>pied d'égalité</span>. L'autonomie de la volonté prime. Comprend : Code civil (personnes, famille, successions, droits réels) et Code des obligations.",
+                children: [], parent: "divisions"
+            },
+
+            // --- 6. DROIT DE L'ENTREPRISE ---
+            entreprise: {
+                title: "6. Droit de l'entreprise",
+                info: "Concerne les règles applicables à la création et au fonctionnement des entités commerciales.",
+                children: ["registre_commerce", "formes_juridiques"],
+                parent: "root"
+            },
+            registre_commerce: {
+                title: "Le Registre du Commerce (RC)",
+                info: "Registre public qui rassemble les informations juridiques sur les entreprises. Il a une fonction de <span class='success'>publicité</span> (rendre les infos accessibles à tous) et de protection (protège la raison de commerce/le nom).",
+                children: [], parent: "entreprise"
+            },
+            formes_juridiques: {
+                title: "Les Formes Juridiques",
+                info: "Différents types de structures pour exploiter une entreprise.",
+                children: ["raison_individuelle", "snc", "sa", "sarl"],
+                parent: "entreprise"
+            },
+            raison_individuelle: {
+                title: "Raison Individuelle",
+                info: "Un seul propriétaire. Il engage sa <span class='highlight'>responsabilité personnelle et illimitée</span> (sur ses biens privés) pour les dettes de l'entreprise.",
+                children: [], parent: "formes_juridiques"
+            },
+            snc: {
+                title: "Société en Nom Collectif (SNC)",
+                info: "Plusieurs associés. Ils ont une responsabilité <span class='highlight'>personnelle, illimitée et solidaire</span> (le créancier peut demander 100% de la dette à un seul associé).",
+                children: [], parent: "formes_juridiques"
+            },
+            sa: {
+                title: "Société Anonyme (SA)",
+                info: "Personne morale. Capital-actions minimum de 100'000 CHF (dont 50'000 libérés). Les actionnaires peuvent rester anonymes. <span class='success'>Risque limité au montant du capital investi</span>.",
+                children: [], parent: "formes_juridiques"
+            },
+            sarl: {
+                title: "Société à Responsabilité Limitée (Sàrl)",
+                info: "Personne morale. Capital social minimum de 20'000 CHF (entièrement libéré). Les associés sont publics (inscrits au RC). <span class='success'>Risque limité au montant du capital investi</span>.",
+                children: [], parent: "formes_juridiques"
+            },
+
+            // --- 7. LE DROIT DES OBLIGATIONS (LA PARTIE MAJEURE) ---
+            obligations: {
+                title: "7. Le droit des obligations (CO)",
+                info: "Branche du droit privé qui régit les liens juridiques (créances et dettes) entre deux ou plusieurs personnes.",
+                children: ["sources_ob", "conclusion", "forme", "objet", "vices", "execution", "extinction", "contrats_speciaux"],
+                parent: "root"
+            },
+
+            // 7.1 Sources des obligations
+            sources_ob: {
+                title: "Les 3 sources des obligations",
+                info: "Comment naît une obligation juridique entre deux personnes ?",
+                children: ["source_contrat", "rc", "enrichissement"],
                 parent: "obligations"
             },
-            vices_consentement: {
-                title: "Vices du consentement",
-                info: "Si le consentement n'est pas libre et éclairé, le contrat est annulable (Art. 23 ss CO).",
+            source_contrat: {
+                title: "Le Contrat (Art. 1 ss CO)",
+                info: "Source volontaire. Obligation née de l'accord mutuel entre les parties.",
+                children: [], parent: "sources_ob"
+            },
+            rc: {
+                title: "La Responsabilité Civile (Art. 41 et 97 CO)",
+                info: "Source involontaire. Obligation de réparer un dommage causé de manière illicite ou en violant un contrat.",
+                children: ["rc_extracontractuelle", "rc_contractuelle"], parent: "sources_ob"
+            },
+            rc_extracontractuelle: {
+                title: "RC Extracontractuelle (Art. 41 CO)",
+                info: "Il n'y a pas de contrat entre les parties. <strong>4 conditions cumulatives :</strong> <br>1. Un Dommage <br>2. Un Acte illicite <br>3. Un Lien de causalité adéquat <br>4. Une Faute <span class='highlight'>(qui doit être PROUVÉE par la victime)</span>.",
+                children: [], parent: "rc"
+            },
+            rc_contractuelle: {
+                title: "RC Contractuelle (Art. 97 CO)",
+                info: "Violation d'un contrat existant. <strong>4 conditions cumulatives :</strong> <br>1. Un Dommage <br>2. Une Violation du contrat <br>3. Un Lien de causalité adéquat <br>4. Une Faute <span class='success'>(qui est PRÉSUMÉE : c'est au débiteur de prouver qu'il n'est pas en tort)</span>.",
+                children: [], parent: "rc"
+            },
+            enrichissement: {
+                title: "Enrichissement illégitime (Art. 62 CO)",
+                info: "Obligation de restituer ce qu'on a reçu sans motif valable. <strong>Conditions :</strong> Un enrichissement, un appauvrissement d'autrui, et l'absence de cause légitime.",
+                children: [], parent: "sources_ob"
+            },
+
+            // 7.2 Conclusion, Forme, Objet
+            conclusion: {
+                title: "La conclusion du contrat",
+                info: "Le contrat est parfait lorsque les parties ont, réciproquement et d'une manière concordante, manifesté leur volonté (Art. 1 CO). Il y a une <strong>Offre</strong> et une <strong>Acceptation</strong>.",
+                children: [], parent: "obligations"
+            },
+            forme: {
+                title: "La forme du contrat",
+                info: "<strong>Principe : Liberté de la forme</strong> (orale, voire tacite). <br><strong>Exceptions légales pour protéger ou clarifier :</strong> <br>- Forme écrite (ex: cession de créance) <br>- Forme authentique par un notaire (ex: vente immobilière) <br>- Inscription à un registre.",
+                children: [], parent: "obligations"
+            },
+            objet: {
+                title: "L'objet du contrat",
+                info: "<strong>Principe : Liberté contractuelle</strong>. <br><strong>Limites (Art. 20 CO - Contrat NUL) :</strong> L'objet ne doit pas être : <br>1. Impossible (ex: vendre la lune) <br>2. Illicite (contraire à la loi, ex: contrat de tueur à gages) <br>3. Contraire aux mœurs (immoral).",
+                children: [], parent: "obligations"
+            },
+
+            // 7.3 Vices du consentement
+            vices: {
+                title: "Les Vices du consentement",
+                info: "Le consentement a été donné, mais il était vicié (erreur, tromperie, peur). Le contrat est alors <span class='highlight'>annulable</span> dans un délai d'un an.",
                 children: ["erreur", "dol", "crainte", "lesion"],
-                parent: "formation"
+                parent: "obligations"
+            },
+            erreur: {
+                title: "L'Erreur essentielle (Art. 23 CO)",
+                info: "Se tromper lourdement sur un élément de fait si important que, sans cette erreur, on n'aurait pas signé (ex: acheter un tableau cru authentique mais qui est une copie).",
+                children: [], parent: "vices"
             },
             dol: {
                 title: "Le Dol (Art. 28 CO)",
-                info: "Tromperie intentionnelle pour amener l'autre partie à conclure le contrat. Le contrat n'oblige pas la victime.",
-                children: [],
-                parent: "vices_consentement"
+                info: "Tromperie intentionnelle. Une partie a volontairement induit l'autre en erreur pour l'amener à conclure.",
+                children: [], parent: "vices"
             },
-            rc: {
-                title: "Responsabilité Civile (RC)",
-                info: "L'obligation de réparer un dommage. On distingue la RC contractuelle (Art. 97) et extracontractuelle (Art. 41).",
-                children: ["conditions_rc", "rc_contractuelle"],
+            crainte: {
+                title: "La Crainte fondée / Menace (Art. 29 CO)",
+                info: "Une partie a signé sous la contrainte morale ou physique (menace pour sa vie, ses proches, son honneur).",
+                children: [], parent: "vices"
+            },
+            lesion: {
+                title: "La Lésion (Art. 21 CO)",
+                info: "Disproportion évidente entre les prestations (prix totalement abusif) + Exploitation de la gêne, de la légèreté ou de l'inexpérience de l'autre partie.",
+                children: [], parent: "vices"
+            },
+
+            // 7.4 Exécution et Inexécution
+            execution: {
+                title: "Exécution et Inexécution",
+                info: "Règles sur comment le contrat doit être accompli, et ce qui se passe si ça se passe mal.",
+                children: ["regles_execution", "demeure"],
                 parent: "obligations"
             },
-            conditions_rc: {
-                title: "Les 4 conditions de la RC (Art. 41 CO)",
-                info: "Pour qu'il y ait responsabilité, il faut cumulativement : un <span class='highlight'>Dommage</span>, un <span class='highlight'>Acte illicite</span>, un <span class='highlight'>Lien de causalité adéquat</span> et une <span class='highlight'>Faute</span>.",
-                children: [],
-                parent: "rc"
+            regles_execution: {
+                title: "Règles d'exécution",
+                info: "Il faut déterminer : <br>- <strong>Qui</strong> doit exécuter ? <br>- <strong>Quoi</strong> (l'objet exact) ? <br>- <strong>Où</strong> (le lieu d'exécution) ? <br>- <strong>Quand</strong> (exigibilité) ?",
+                children: [], parent: "execution"
             },
+            demeure: {
+                title: "La Demeure du débiteur",
+                info: "Le débiteur est en retard. Il faut généralement le mettre en demeure par une <strong>interpellation</strong> et lui fixer un <strong>délai de grâce</strong> pour s'exécuter avant de pouvoir résilier ou demander des dommages.",
+                children: [], parent: "execution"
+            },
+
+            // 7.5 Extinction et Prescription
+            extinction: {
+                title: "Extinction et Prescription",
+                info: "Comment une obligation meurt-elle ?",
+                children: ["modes_extinction", "prescription"],
+                parent: "obligations"
+            },
+            modes_extinction: {
+                title: "Modes d'extinction",
+                info: "L'obligation prend fin normalement par le <strong>Paiement / l'exécution</strong>. Autres modes : Remise de dette (le créancier efface la dette), Compensation (les deux se doivent de l'argent), Impossibilité subséquente sans faute.",
+                children: [], parent: "extinction"
+            },
+            prescription: {
+                title: "La Prescription",
+                info: "L'écoulement du temps fait perdre au créancier le droit d'exiger sa créance en justice. <br>- <strong>Délai ordinaire :</strong> 10 ans. <br>- <strong>Délai de 5 ans :</strong> Loyers, salaires, intérêts. <br>- <strong>Délai de 1 an :</strong> Dommages-intérêts liés à la RC extracontractuelle.",
+                children: [], parent: "extinction"
+            },
+
+            // 7.6 Contrats Spéciaux
             contrats_speciaux: {
                 title: "Les Contrats Spéciaux",
-                info: "Règles spécifiques pour les types de contrats les plus courants.",
-                children: ["vente", "bail", "travail", "entreprise", "mandat"],
+                info: "Le code prévoit des règles spécifiques pour les contrats les plus courants.",
+                children: ["vente", "bail", "travail", "contrat_entreprise", "mandat"],
                 parent: "obligations"
+            },
+            vente: {
+                title: "Le Contrat de Vente",
+                info: "Obligation de livrer une chose et d'en transférer la propriété contre le paiement d'un prix. Comprend les règles strictes sur la <strong>garantie pour les défauts</strong>.",
+                children: [], parent: "contrats_speciaux"
+            },
+            bail: {
+                title: "Le Contrat de Bail",
+                info: "Cession de l'usage d'une chose (appartement, local commercial) pour une certaine durée, moyennant un loyer. Règles très protectrices pour le locataire (protection contre les congés abusifs).",
+                children: [], parent: "contrats_speciaux"
+            },
+            travail: {
+                title: "Le Contrat de Travail",
+                info: "Le travailleur s'engage à travailler au service de l'employeur (lien de subordination) contre un salaire. Devoirs de diligence/fidélité pour l'employé, protection de la personnalité pour l'employeur.",
+                children: [], parent: "contrats_speciaux"
+            },
+            contrat_entreprise: {
+                title: "Le Contrat d'Entreprise (Art. 363 CO)",
+                info: "L'entrepreneur s'engage à livrer un <strong>ouvrage matériel ou immatériel</strong> (ex: construire une maison, créer un logiciel) contre un prix. <br><span class='highlight'>Attention : C'est une obligation de RÉSULTAT.</span> Si le mur s'effondre, l'entrepreneur est responsable.",
+                children: [], parent: "contrats_speciaux"
             },
             mandat: {
                 title: "Le Mandat (Art. 394 CO)",
-                info: "Le mandataire s'engage à rendre un service avec diligence. <span class='highlight'>Attention :</span> C'est une obligation de moyens, pas de résultat !",
-                children: [],
-                parent: "contrats_speciaux"
+                info: "Le mandataire (médecin, avocat, architecte) s'engage à rendre un service avec diligence. <br><span class='success'>Attention : C'est une obligation de MOYENS.</span> Le médecin promet de faire de son mieux pour soigner, mais ne garantit pas la guérison. Pas de résultat garanti.",
+                children: [], parent: "contrats_speciaux"
             }
-            // Note: Tu peux continuer à remplir les autres branches ici
         };
 
         const mainContent = document.getElementById('main-content');
         const breadcrumb = document.getElementById('breadcrumb');
+        const searchBar = document.getElementById('searchBar');
 
         function renderTopic(id) {
             const topic = courseData[id];
             if (!topic) return;
 
             // Mise à jour du fil d'Ariane
-            updateBreadcrumb(id);
-
-            // Génération du HTML
-            let html = `
-                <div class="info-box">
-                    <h2>${topic.title}</h2>
-                    <p>${topic.info}</p>
-                </div>
-            `;
-
-            if (topic.children.length > 0) {
-                html += `<h3>Sous-branches :</h3><div class="sub-branches-grid">`;
-                topic.children.forEach(childId => {
-                    const child = courseData[childId];
-                    if (child) {
-                        html += `
-                            <button class="branch-button" onclick="renderTopic('${childId}')">
-                                ${child.title}
-                            </button>
-                        `;
-                    }
-                });
-                html += `</div>`;
-            } else {
-                html += `<p><em>Cette branche est une notion terminale.</em></p>`;
-            }
-
-            mainContent.innerHTML = html;
-            window.scrollTo(0, 0);
-        }
-
-        function updateBreadcrumb(id) {
             let path = [];
             let currentId = id;
             while (currentId && currentId !== 'root') {
@@ -232,23 +454,69 @@
                 bcHtml += ` / <span onclick="renderTopic('${p.id}')">${p.title}</span>`;
             });
             breadcrumb.innerHTML = bcHtml;
+
+            // Génération du HTML
+            let html = `
+                <div class="info-box fade-in">
+                    <h2>${topic.title}</h2>
+                    <p>${topic.info}</p>
+                </div>
+            `;
+
+            if (topic.children.length > 0) {
+                html += `<h3 style="color: var(--primary);">Sous-thèmes à explorer :</h3><div class="sub-branches-grid">`;
+                topic.children.forEach(childId => {
+                    const child = courseData[childId];
+                    if (child) {
+                        html += `
+                            <div class="branch-button" onclick="renderTopic('${childId}')">
+                                ${child.title}
+                            </div>
+                        `;
+                    }
+                });
+                html += `</div>`;
+            } else {
+                html += `<p style="color: #718096; font-style: italic;">(Fin de la branche. Remontez via le fil d'Ariane ou utilisez la recherche).</p>`;
+            }
+
+            mainContent.innerHTML = html;
+            
+            // Animation et clear search
+            searchBar.value = '';
         }
 
-        // Recherche simple
-        document.getElementById('searchBar').addEventListener('input', (e) => {
-            const val = e.target.value.toLowerCase();
-            if (val.length < 2) return;
+        // Système de recherche
+        searchBar.addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase().trim();
+            if (val.length < 2) {
+                if(val.length === 0) renderTopic('root');
+                return;
+            }
             
-            // On cherche dans les titres et infos
+            let resultsHTML = `<div class="info-box"><h2>Résultats de recherche pour "${val}"</h2></div><div class="sub-branches-grid">`;
+            let count = 0;
+
             for (let key in courseData) {
-                if (courseData[key].title.toLowerCase().includes(val)) {
-                    renderTopic(key);
-                    break;
+                if (key === 'root') continue;
+                const t = courseData[key];
+                if (t.title.toLowerCase().includes(val) || t.info.toLowerCase().includes(val)) {
+                    resultsHTML += `
+                        <div class="branch-button" onclick="renderTopic('${key}')" style="border-left: 4px solid var(--accent);">
+                            ${t.title}
+                        </div>
+                    `;
+                    count++;
                 }
             }
+            
+            resultsHTML += `</div>`;
+            if(count === 0) resultsHTML += `<p>Aucun résultat trouvé.</p>`;
+            
+            mainContent.innerHTML = resultsHTML;
         });
 
-        // Initialisation
+        // Lancement initial
         renderTopic('root');
 
     </script>
