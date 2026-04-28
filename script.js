@@ -401,12 +401,19 @@ const courseData = {
         parent: "div_materiel_formel"
     },
 
+    // --- 6. DROIT DE L'ENTREPRISE ---
+    public: {
+        title: "6. Droit de l'entreprise",
+        info: "Le droit public est l’ensemble des règles juridiques régissant l’accomplissement de tâches publiques et poursuivant un intérêt public.",
+        children: ["droit_constitutionnel"],
+        parent: "root"
+    },
     // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
     droit_constitutionnel: {
         title: "Le droit constitutionnel",
         info: "Cette branche examine l'impact de la Constitution fédérale sur l'activité économique et les droits des entreprises.",
         children: ["portee_cst", "libertes_fondamentales"],
-        parent: "root"
+        parent: "public"
     },
 
     // SOUS-BRANCHE : PORTÉE
