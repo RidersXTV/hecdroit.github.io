@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Map Interactive - Droit de l'Entreprise</title>
+    <title>Révisions - Droit de l'Entreprise</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,7 +38,6 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        /* Style des accordéons */
         .accordion {
             background-color: #ffffff;
             color: #2b6cb0;
@@ -62,14 +61,14 @@
             background-color: #ebf8ff;
         }
         .accordion:after {
-            content: '\002B'; /* Signe plus */
+            content: '\002B';
             color: #2b6cb0;
             font-weight: bold;
             font-size: 1.5em;
             margin-left: 5px;
         }
         .active:after {
-            content: "\2212"; /* Signe moins */
+            content: "\2212";
         }
         .panel {
             padding: 0 18px;
@@ -94,12 +93,18 @@
             margin-top: 5px;
             padding-left: 20px;
             color: #4a5568;
+            line-height: 1.5;
         }
         .sub-topic li {
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
         .hidden {
             display: none !important;
+        }
+        .nested-list {
+            margin-top: 5px;
+            padding-left: 20px;
+            list-style-type: circle;
         }
     </style>
 </head>
@@ -107,7 +112,7 @@
 
     <header>
         <h1>Explorateur de Révisions : Droit de l'Entreprise</h1>
-        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: contrat, société anonyme, coutume...)">
+        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: CO, mandat, RC, illicite...)">
     </header>
 
     <div class="container" id="mainContainer">
@@ -115,17 +120,10 @@
         <button class="accordion">1. Notion et fonction du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Définition</h3>
+                <h3>Le Droit Objectif vs Subjectif</h3>
                 <ul>
-                    <li>Ensemble de règles régissant la vie en société.</li>
-                    <li>Droit objectif (la règle) vs Droit subjectif (la prérogative d'un individu).</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Fonctions</h3>
-                <ul>
-                    <li>Pacification et ordre social.</li>
-                    <li>Sécurité juridique et prévisibilité.</li>
+                    <li><strong>Droit objectif :</strong> L'ensemble des règles de conduite socialement édictées et sanctionnées.</li>
+                    <li><strong>Droit subjectif :</strong> Prérogative individuelle reconnue (ex: le droit de propriété).</li>
                 </ul>
             </div>
         </div>
@@ -133,17 +131,10 @@
         <button class="accordion">2. Les sujets de droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Personnes physiques</h3>
+                <h3>Personnes physiques et morales</h3>
                 <ul>
-                    <li>Jouissance des droits civils (dès la naissance).</li>
-                    <li>Exercice des droits civils (majorité + capacité de discernement).</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Personnes morales</h3>
-                <ul>
-                    <li>Fictions juridiques dotées de la personnalité (SA, Sàrl, associations...).</li>
-                    <li>Agissent par le biais de leurs organes (Conseil d'administration, direction).</li>
+                    <li><strong>Personnes physiques :</strong> Jouissance des droits (naissance) et exercice (majorité + discernement).</li>
+                    <li><strong>Personnes morales :</strong> Entités abstraites (SA, Sàrl) agissant via leurs organes.</li>
                 </ul>
             </div>
         </div>
@@ -151,18 +142,10 @@
         <button class="accordion">3. La règle de droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Caractéristiques</h3>
+                <h3>Nature des règles</h3>
                 <ul>
-                    <li>Générale et abstraite.</li>
-                    <li>Obligatoire et coercitive.</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Les sanctions</h3>
-                <ul>
-                    <li>Pénales (amende, privation de liberté).</li>
-                    <li>Civiles (dommages-intérêts, nullité d'un contrat).</li>
-                    <li>Administratives (retrait de permis, fermeture d'établissement).</li>
+                    <li><strong>Impératives :</strong> On ne peut pas y déroger.</li>
+                    <li><strong>Dispositives :</strong> S'appliquent si rien n'est prévu par les parties.</li>
                 </ul>
             </div>
         </div>
@@ -170,17 +153,10 @@
         <button class="accordion">4. Les sources du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Sources formelles (principales)</h3>
+                <h3>Hiérarchie</h3>
                 <ul>
-                    <li><strong>La Loi :</strong> Constitution, Lois ordinaires, Ordonnances.</li>
-                    <li><strong>La Coutume :</strong> Usage implanté de longue date et considéré comme obligatoire.</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Sources matérielles (secondaires/interprétatives)</h3>
-                <ul>
-                    <li><strong>La Jurisprudence :</strong> Ensemble des décisions rendues par les tribunaux (précédents).</li>
-                    <li><strong>La Doctrine :</strong> Ouvrages, articles et commentaires des spécialistes du droit.</li>
+                    <li><strong>Formelles :</strong> Loi, Coutume.</li>
+                    <li><strong>Matérielles :</strong> Jurisprudence, Doctrine.</li>
                 </ul>
             </div>
         </div>
@@ -188,20 +164,10 @@
         <button class="accordion">5. Les grandes divisions du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Le Droit Public (rapports État - citoyens)</h3>
+                <h3>Public vs Privé</h3>
                 <ul>
-                    <li>Droit constitutionnel (organisation de l'État).</li>
-                    <li>Droit administratif (impôts, permis de construire).</li>
-                    <li>Droit pénal (infractions et peines).</li>
-                    <li>Droit de procédure (déroulement des procès).</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Le Droit Privé (rapports entre individus/entreprises)</h3>
-                <ul>
-                    <li>Droit civil (personnes, famille, successions, droits réels).</li>
-                    <li>Droit des obligations (contrats, RC).</li>
-                    <li>Droit commercial et des sociétés.</li>
+                    <li><strong>Droit Public :</strong> État vs citoyen (subordination).</li>
+                    <li><strong>Droit Privé :</strong> Entre particuliers (égalité, autonomie).</li>
                 </ul>
             </div>
         </div>
@@ -209,55 +175,97 @@
         <button class="accordion">6. Droit de l'entreprise</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Institutions cadres</h3>
+                <h3>Structures et RC</h3>
                 <ul>
-                    <li>Le Registre du Commerce (RC) : publicité et protection.</li>
-                    <li>La raison de commerce (protection du nom de l'entreprise).</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Les formes juridiques (Choix de la structure)</h3>
-                <ul>
-                    <li><strong>Raison individuelle :</strong> Un seul propriétaire, responsabilité illimitée.</li>
-                    <li><strong>Société en nom collectif (SNC) :</strong> Plusieurs associés, responsabilité solidaire et illimitée.</li>
-                    <li><strong>Société Anonyme (SA) :</strong> Capital-actions, anonymat possible, risque limité au capital.</li>
-                    <li><strong>Société à responsabilité limitée (Sàrl) :</strong> Mix entre SNC et SA, associés connus, risque limité.</li>
+                    <li><strong>Registre du Commerce (RC) :</strong> Publicité et protection de la raison de commerce.</li>
+                    <li><strong>Raison individuelle :</strong> Responsabilité illimitée.</li>
+                    <li><strong>SA et Sàrl :</strong> Responsabilité limitée au capital.</li>
                 </ul>
             </div>
         </div>
 
-        <button class="accordion">7. Le droit des obligations (CO)</button>
+        <button class="accordion">7. Le droit des obligations</button>
         <div class="panel">
+            
             <div class="sub-topic">
-                <h3>Sources des obligations</h3>
+                <h3>1. La formation du contrat</h3>
                 <ul>
-                    <li><strong>Le Contrat :</strong> Accord de volontés (offre + acceptation).</li>
-                    <li><strong>La Responsabilité Civile (RC) :</strong> Obligation de réparer un dommage causé illicitement (Art. 41 CO).</li>
-                    <li><strong>L'enrichissement illégitime :</strong> Recevoir quelque chose sans cause valable.</li>
+                    <li><strong>Conclusion :</strong> Manifestations de volonté concordantes (Offre et Acceptation).</li>
+                    <li><strong>Forme :</strong> Liberté de forme (principe), sauf exceptions légales (écrite, authentique, registre).</li>
+                    <li><strong>Objet :</strong> Liberté contractuelle, mais nul si impossible, illicite ou contraire aux mœurs.</li>
+                    <li><strong>Vices du consentement :</strong> Erreur essentielle, Dol, Crainte fondée, Lésion (rendent le contrat annulable).</li>
                 </ul>
             </div>
-            <div class="sub-topic">
-                <h3>Conditions de validité du contrat</h3>
-                <ul>
-                    <li>Capacité des parties.</li>
-                    <li>Respect de la forme (orale, écrite, acte authentique).</li>
-                    <li>Objet licite, possible et conforme aux mœurs.</li>
-                    <li>Absence de vices du consentement (erreur essentielle, dol, crainte fondée, lésion).</li>
-                </ul>
-            </div>
-            <div class="sub-topic">
-                <h3>Exécution et inexécution</h3>
-                <ul>
-                    <li>Demeure du débiteur (retard).</li>
-                    <li>Inexécution fautive ou impossibilité d'exécution.</li>
-                </ul>
-            </div>
-        </div>
 
+            <div class="sub-topic">
+                <h3>2. L'exécution, l'inexécution et l'extinction</h3>
+                <ul>
+                    <li><strong>Exécution :</strong> Qui, Quoi, Où, Quand.</li>
+                    <li><strong>Inexécution :</strong> Demeure du débiteur (retard) nécessitant interpellation et délai de grâce.</li>
+                    <li><strong>Extinction :</strong> Paiement, remise de dette, compensation, impossibilité subséquente.</li>
+                    <li><strong>Prescription :</strong> Extinction du droit de réclamer en justice (souvent 10 ans, parfois 5 ans ou 1 an).</li>
+                </ul>
+            </div>
+
+            <div class="sub-topic">
+                <h3>3. La Responsabilité Civile (RC)</h3>
+                <ul>
+                    <li><strong>RC extracontractuelle (Art. 41 CO) - 4 Conditions cumulatives :</strong>
+                        <ul class="nested-list">
+                            <li>Un dommage</li>
+                            <li>Un acte illicite</li>
+                            <li>Un lien de causalité adéquat</li>
+                            <li>Une faute (qui doit être prouvée par le lésé)</li>
+                        </ul>
+                    </li>
+                    <li><strong>RC contractuelle (Art. 97 CO) - 4 Conditions cumulatives :</strong>
+                        <ul class="nested-list">
+                            <li>Un dommage</li>
+                            <li>Une violation du contrat</li>
+                            <li>Un lien de causalité adéquat</li>
+                            <li>Une faute <strong>(qui est présumée, le débiteur doit prouver qu'il n'a pas commis de faute)</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-topic">
+                <h3>4. L'enrichissement illégitime (Art. 62 CO)</h3>
+                <ul>
+                    <li><strong>Définition :</strong> Fait de s'enrichir aux dépens d'autrui sans cause légitime.</li>
+                    <li><strong>Conditions cumulatives :</strong>
+                        <ul class="nested-list">
+                            <li>Un enrichissement</li>
+                            <li>Un appauvrissement</li>
+                            <li>L'absence de cause légitime</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-topic">
+                <h3>5. Les Contrats Spéciaux : Entreprise et Mandat</h3>
+                <ul>
+                    <li><strong>Le contrat d'entreprise (Art. 363 CO) :</strong>
+                        <ul class="nested-list">
+                            <li><em>Obligations de l'entrepreneur :</em> Livrer l'ouvrage (promesse de résultat) et garantir les défauts.</li>
+                            <li><em>Obligations du maître de l'ouvrage :</em> Payer le prix convenu.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Le mandat (Art. 394 CO) :</strong>
+                        <ul class="nested-list">
+                            <li><em>Obligations du mandataire :</em> Exécuter avec soin (pas de garantie de résultat, obligation de moyens), en assumant sa responsabilité et en rendant compte.</li>
+                            <li><em>Obligations du mandant :</em> Payer les honoraires et rembourser les frais engagés.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Autres contrats :</strong> Vente (chose contre prix), Bail (usage contre loyer), Travail (activité subordonnée contre salaire).</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 
     <script>
-        // Logique pour les accordéons (Mind Map branches)
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -273,7 +281,6 @@
             });
         }
 
-        // Logique pour la barre de recherche
         const searchBar = document.getElementById('searchBar');
         
         searchBar.addEventListener('keyup', function(e) {
@@ -285,15 +292,12 @@
                 const sectionText = section.textContent.toLowerCase();
                 const panelText = panel.textContent.toLowerCase();
                 
-                // Si le terme de recherche est dans le titre de l'accordéon OU dans son contenu
                 if(sectionText.includes(term) || panelText.includes(term)) {
                     section.classList.remove('hidden');
-                    // Ouvre automatiquement le panneau si on cherche un terme à l'intérieur
                     if (term !== "" && panelText.includes(term)) {
                         section.classList.add("active");
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     } else if (term === "") {
-                        // Referme si la recherche est vide
                         section.classList.remove("active");
                         panel.style.maxHeight = null;
                     }
