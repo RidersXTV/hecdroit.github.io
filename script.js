@@ -684,7 +684,7 @@ const courseData = {
     droit_prive_pt7: {
         title: "7. Le droit privé",
         info: "Cette section aborde les fondements des relations juridiques entre particuliers (ou entreprises) sur un pied d'égalité, principalement régies par le Code civil (CC) et le Code des obligations (CO).",
-        children: ["autonomie_volonte", "droit_personnes", "droit_successions"],
+        children: ["autonomie_volonte", "droit_personnes", "droit_successions", "droits_reels"],
         parent: "root" 
     },
 
@@ -907,6 +907,90 @@ const courseData = {
         info: "C'est le processus par lequel la succession passe concrètement du défunt aux héritiers.<br><br><strong>Étapes et principes clés :</strong><br><ul><li><strong>L'ouverture :</strong> La succession s'ouvre au moment exact du décès, au dernier domicile du défunt.</li><li><strong>L'acquisition de plein droit :</strong> Les héritiers deviennent <strong>immédiatement et solidairement</strong> propriétaires des biens et débiteurs des dettes, sans avoir besoin d'une décision du juge.</li><li><strong>La répudiation :</strong> Si la succession est déficitaire (plus de dettes que d'actifs), les héritiers ont le droit de <span class='highlight'>répudier la succession</span>. Ils ont généralement un délai de <strong>3 mois</strong> pour le faire. S'ils ne font rien, la succession est réputée acceptée (y compris les dettes).</li></ul>",
         children: [], 
         parent: "droit_successions"
+    },
+
+    // --- 7.4 LES DROITS RÉELS (Dès page 68 du cours) ---
+    droits_reels: {
+        title: "Les droits réels",
+        info: "Cette branche du droit privé régit la maîtrise juridique et matérielle qu'une personne exerce sur les choses (les biens).",
+        children: ["reels_definition", "reels_meubles_immeubles", "reels_propriete", "reels_restreints", "reels_possession", "reels_acquisition_perte"],
+        parent: "droit_prive_pt7" 
+    },
+
+    // --- CHAPITRE 1 : DÉFINITION ---
+    reels_definition: {
+        title: "Définition",
+        info: "Un droit réel est un droit qui confère à son titulaire une <span class='highlight'>maîtrise directe et absolue sur une chose</span>. <br><br><strong>Caractère absolu :</strong> Contrairement à un droit de créance (qui ne lie que deux personnes), le droit réel est <strong>opposable à tous</strong> (<em>erga omnes</em>). Quiconque doit respecter ce droit.",
+        children: [], 
+        parent: "droits_reels"
+    },
+
+    // --- CHAPITRE 2 : LES MEUBLES ET LES IMMEUBLES ---
+    reels_meubles_immeubles: {
+        title: "Les meubles et les immeubles",
+        info: "La loi divise les choses en deux grandes catégories, soumises à des règles différentes :<br><br><ul><li><strong>Les meubles :</strong> Ce sont les choses corporelles qui <span class='success'>peuvent être transportées</span> d'un lieu à un autre sans être altérées (ex: une voiture, un livre, l'argent). Les forces naturelles (ex: électricité) sont aussi des meubles.</li><li><strong>Les immeubles :</strong> Ce sont les choses qui <strong>ne peuvent pas être déplacées</strong>. Le Code civil en distingue plusieurs sortes : les biens-fonds (terrains), les droits distincts et permanents immatriculés au registre foncier (ex: droit de superficie), les mines, et les parts de copropriété d'un immeuble (ex: appartement en PPE).</li></ul>",
+        children: [], 
+        parent: "droits_reels"
+    },
+
+    // --- CHAPITRE 3 : LA PROPRIÉTÉ ---
+    reels_propriete: {
+        title: "La propriété",
+        info: "C'est le droit réel le plus complet qu'une personne puisse avoir sur une chose.",
+        children: ["propriete_definition", "propriete_restrictions", "propriete_copropriete", "propriete_commune"], 
+        parent: "droits_reels"
+    },
+
+    propriete_definition: {
+        title: "Définition (Art. 641 CC)",
+        info: "Le propriétaire d'une chose a le droit d'en <span class='highlight'>disposer librement</span>, dans les limites de la loi. <br><br>Il possède deux prérogatives fondamentales :<br><ul><li>Le droit de l'utiliser, d'en percevoir les fruits et même de la détruire.</li><li>Le droit de <strong>revendiquer la chose</strong> contre quiconque la détient sans droit et de repousser toute usurpation.</li></ul>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_restrictions: {
+        title: "Les restrictions du droit de propriété",
+        info: "La propriété n'est pas un droit sans limites. Elle est restreinte par la loi pour protéger les autres.<br><br><ul><li><strong>Le droit de voisinage :</strong> Le propriétaire doit s'abstenir de tout excès au détriment de ses voisins (interdiction des <span class='highlight'>immissions excessives</span> comme le bruit, la fumée, les mauvaises odeurs).</li><li><strong>L'expropriation :</strong> L'État peut forcer un propriétaire à céder son bien pour cause d'<strong>utilité publique</strong> (ex: construire une route), moyennant une juste et entière indemnité.</li></ul>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_copropriete: {
+        title: "La copropriété",
+        info: "Plusieurs personnes sont propriétaires en commun de la même chose. <br><br><strong>Particularité :</strong> Chacun possède une <strong>quote-part idéale</strong> (une fraction mathématique, ex: 1/2 ou 1/4) dont il peut <span class='success'>disposer librement</span> (la vendre, la mettre en gage) sans l'accord des autres. <br><em>Exemple typique : La Propriété Par Étages (PPE).</em>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_commune: {
+        title: "La propriété commune",
+        info: "Plusieurs personnes forment une communauté préalable (ex: une communauté d'héritiers ou une société simple) et sont propriétaires d'un bien.<br><br><strong>Particularité :</strong> Il n'y a <strong>pas de quote-part indépendante</strong>. Aucun des propriétaires ne peut vendre sa part seul ; toutes les décisions doivent être prises à l'<span class='highlight'>unanimité</span>.",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    // --- CHAPITRE 4 : LES DROITS RÉELS RESTREINTS ---
+    reels_restreints: {
+        title: "Les droits réels restreints",
+        info: "Contrairement à la propriété, ils ne confèrent qu'une maîtrise <strong>partielle</strong> sur une chose qui appartient à quelqu'un d'autre.<br><br>On en distingue trois types :<br><ul><li><strong>Les servitudes :</strong> Obligent le propriétaire à <em>tolérer</em> un usage ou à <em>s'abstenir</em> d'exercer un droit (ex: droit de passage, usufruit).</li><li><strong>Les charges foncières :</strong> Obligent le propriétaire d'un immeuble à faire certaines prestations (ex: livrer du bois).</li><li><strong>Les droits de gage :</strong> Permettent au créancier de faire réaliser (vendre) la chose pour se payer sur le produit si le débiteur ne rembourse pas sa dette (ex: <span class='highlight'>hypothèque</span> pour un immeuble, droit de rétention pour un meuble).</li></ul>",
+        children: [], 
+        parent: "droits_reels"
+    },
+
+    // --- CHAPITRE 5 : LA POSSESSION ---
+    reels_possession: {
+        title: "La possession",
+        info: "<strong>Attention à la nuance :</strong> La possession n'est pas un droit, c'est une <strong>situation de fait</strong>. <br><br>Le possesseur est celui qui a la <span class='highlight'>maîtrise effective et corporelle</span> de la chose (Art. 919 CC). <br><em>Exemple : Le locataire d'une voiture est le possesseur (il a les clés et conduit), mais l'entreprise de leasing en reste la propriétaire.</em>",
+        children: [], 
+        parent: "droits_reels"
+    },
+
+    // --- CHAPITRE 6 : L'ACQUISITION ET LA PERTE ---
+    reels_acquisition_perte: {
+        title: "L'acquisition et la perte de la propriété",
+        info: "Les règles de transfert diffèrent fondamentalement selon la nature du bien :<br><br><strong>Pour les meubles :</strong><br><ul><li><em>Acquisition :</em> Se fait par le <strong>transfert de la possession</strong> (la tradition), c'est-à-dire la remise matérielle de l'objet.</li><li><em>Perte :</em> Par l'abandon volontaire (déréliction), le transfert à un tiers, ou la destruction de la chose.</li></ul><br><strong>Pour les immeubles :</strong><br><ul><li><em>Acquisition :</em> Ne devient effective que par l'<strong>inscription au Registre Foncier (RF)</strong>. Un contrat de vente immobilier (qui doit revêtir la forme authentique) ne suffit pas à lui seul pour transférer la propriété.</li><li><em>Perte :</em> Par la radiation au Registre Foncier.</li></ul>",
+        children: [], 
+        parent: "droits_reels"
     },
 
 const mainContent = document.getElementById('main-content');
