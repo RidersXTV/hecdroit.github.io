@@ -128,54 +128,85 @@ const courseData = {
         parent: "pers_morale"
     },
 
-    // --- 3. LA RÈGLE DE DROIT ---
+    // --- 3. LA RÈGLE DE DROIT (Version complète) ---
     regle: {
         title: "3. La règle de droit",
-        info: "La règle de droit est l'unité de base du système juridique. Elle présente des caractéristiques propres qui la distinguent des autres règles de conduite (morales ou religieuses).",
-        children: ["caracteres_regle", "nature_regle"],
+        info: "La règle de droit est une règle de conduite humaine dont le respect est assuré par l’autorité publique. Elle se distingue des autres règles (morales, religieuses) par son caractère coercitif.",
+        children: ["caracteres_regle", "nature_regle", "droit_vs_autres"],
         parent: "root"
     },
 
     // SOUS-BRANCHE : CARACTÈRES
     caracteres_regle: {
         title: "Caractères de la règle de droit",
-        info: "Pour être qualifiée de 'juridique', une règle doit remplir plusieurs critères cumulatifs.",
-        children: ["regle_generale", "regle_obligatoire"],
+        info: "Pour remplir sa fonction d'organisation sociale, la règle doit présenter quatre caractéristiques fondamentales.",
+        children: ["regle_generale_detail", "regle_abstraite_detail", "regle_obligatoire_detail", "regle_coercitive_detail"],
         parent: "regle"
     },
-    regle_generale: {
-        title: "Générale et abstraite",
-        info: "La règle de droit est <strong>générale</strong> car elle s'applique à un nombre indéterminé de personnes (et non à un individu désigné). <br> Elle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations (et non à un cas précis).",
+    regle_generale_detail: {
+        title: "Générale",
+        info: "La règle est <strong>générale</strong> car elle ne s'adresse pas à un individu nommé, mais à toutes les personnes qui se trouvent ou se trouveront dans la situation qu'elle prévoit. Elle garantit ainsi l'égalité de traitement.",
         children: [],
         parent: "caracteres_regle"
     },
-    regle_obligatoire: {
-        title: "Obligatoire et coercitive",
-        info: "La règle de droit est <strong>obligatoire</strong> : elle s'impose à tous ses destinataires qui ont le devoir de s'y conformer. <br> Elle est <strong>coercitive</strong> : l'État en garantit le respect, au besoin par la force, en appliquant des sanctions.",
+    regle_abstraite_detail: {
+        title: "Abstraite",
+        info: "La règle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations futures. Elle n'est pas édictée pour résoudre un cas particulier déjà survenu, mais pour régir tous les cas répondant à ses critères.",
+        children: [],
+        parent: "caracteres_regle"
+    },
+    regle_obligatoire_detail: {
+        title: "Obligatoire",
+        info: "La règle de droit n'est pas un simple conseil ou une recommandation ; elle est une <strong>prescription</strong>. Elle ordonne de faire, de ne pas faire ou de permettre quelque chose.",
+        children: [],
+        parent: "caracteres_regle"
+    },
+    regle_coercitive_detail: {
+        title: "Coercitive",
+        info: "C'est le trait distinctif majeur. Le respect de la règle est garanti par l'État. Si la règle est transgressée, l'autorité publique peut contraindre son auteur à la respecter ou le sanctionner, au besoin par la force.",
         children: [],
         parent: "caracteres_regle"
     },
 
-    // SOUS-BRANCHE : NATURE
+    // SOUS-BRANCHE : NATURE (FORCE OBLIGATOIRE)
     nature_regle: {
         title: "Nature des règles",
-        info: "Toutes les règles n'ont pas la même force contraignante vis-à-vis de la volonté des individus.",
-        children: ["regle_imperative_detail", "regle_dispositive_detail"],
+        info: "Selon l'importance de l'intérêt protégé, la règle s'impose avec plus ou moins de force à la volonté des particuliers.",
+        children: ["regle_imperative_complet", "regle_dispositive_complet"],
         parent: "regle"
     },
-    regle_imperative_detail: {
-        title: "La Règle Impérative",
-        info: "Il s'agit d'une règle à laquelle les parties <span class='highlight'>ne peuvent pas déroger</span>. <br> Elle s'impose même si les individus souhaiteraient l'écarter (ex: règles de protection des travailleurs ou droit pénal).",
+    regle_imperative_complet: {
+        title: "Règle Impérative (Droit impératif)",
+        info: "Règle à laquelle on ne peut <span class='highlight'>absolument pas déroger</span> par convention contraire. <br> Elle s'applique même si les parties souhaitent l'écarter. <br> <strong>Exemple :</strong> L'Art. 129 CO qui interdit de modifier par avance les délais de prescription.",
         children: [],
         parent: "nature_regle"
     },
-    regle_dispositive_detail: {
-        title: "La Règle Dispositive (ou supplétive)",
-        info: "Il s'agit d'une règle à laquelle les parties <span class='success'>peuvent déroger</span> par une convention contraire. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre dans leur contrat ; elle vient alors 'suppléer' à l'absence de volonté exprimée.",
+    regle_dispositive_complet: {
+        title: "Règle Dispositive (Droit supplétif)",
+        info: "Règle à laquelle les parties <span class='success'>peuvent déroger</span>. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre dans leur contrat. Elle sert à combler le silence des parties (rôle supplétif). <br> <strong>Exemple :</strong> L'Art. 189 CO qui prévoit que les frais de délivrance sont à la charge du vendeur, sauf accord contraire.",
         children: [],
         parent: "nature_regle"
     },
 
+    // SOUS-BRANCHE : DROIT ET AUTRES RÈGLES (Souvent dans ce chapitre du cours)
+    droit_vs_autres: {
+        title: "Droit, Morale et Moeurs",
+        info: "Le droit n'est pas le seul système de règles, mais il est le seul à être sanctionné par l'État.",
+        children: ["droit_morale", "droit_moeurs"],
+        parent: "regle"
+    },
+    droit_morale: {
+        title: "Droit vs Morale",
+        info: "La <strong>Morale</strong> dicte l'attitude intérieure de l'individu (conscience), alors que le <strong>Droit</strong> régit les comportements extérieurs (relations sociales). La sanction de la morale est intérieure (remords), celle du droit est extérieure (amende, prison).",
+        children: [],
+        parent: "droit_vs_autres"
+    },
+    droit_moeurs: {
+        title: "Droit vs Moeurs (Usages)",
+        info: "Les <strong>Moeurs</strong> (ou usages sociaux) sont des habitudes de comportement (politesse, courtoisie). Leur violation entraîne une réprobation sociale, mais pas de sanction juridique officielle.",
+        children: [],
+        parent: "droit_vs_autres"
+    },
     // --- 4. LES SOURCES DU DROIT ---
     sources: {
         title: "4. Les sources du droit",
