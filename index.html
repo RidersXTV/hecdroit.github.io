@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Révisions - Droit de l'Entreprise</title>
+    <title>Mind Map Interactive - Droit de l'Entreprise</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,6 +38,7 @@
             max-width: 900px;
             margin: 0 auto;
         }
+        /* Style des accordéons */
         .accordion {
             background-color: #ffffff;
             color: #2b6cb0;
@@ -61,14 +62,14 @@
             background-color: #ebf8ff;
         }
         .accordion:after {
-            content: '\002B';
+            content: '\002B'; /* Signe plus */
             color: #2b6cb0;
             font-weight: bold;
             font-size: 1.5em;
             margin-left: 5px;
         }
         .active:after {
-            content: "\2212";
+            content: "\2212"; /* Signe moins */
         }
         .panel {
             padding: 0 18px;
@@ -93,14 +94,9 @@
             margin-top: 5px;
             padding-left: 20px;
             color: #4a5568;
-            line-height: 1.5;
         }
         .sub-topic li {
-            margin-bottom: 6px;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #e53e3e;
+            margin-bottom: 4px;
         }
         .hidden {
             display: none !important;
@@ -111,7 +107,7 @@
 
     <header>
         <h1>Explorateur de Révisions : Droit de l'Entreprise</h1>
-        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: CO, impératif, SA, contrat...)">
+        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: contrat, société anonyme, coutume...)">
     </header>
 
     <div class="container" id="mainContainer">
@@ -119,17 +115,17 @@
         <button class="accordion">1. Notion et fonction du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Le Droit Objectif vs Subjectif</h3>
+                <h3>Définition</h3>
                 <ul>
-                    <li><strong>Droit objectif :</strong> L'ensemble des règles de conduite socialement édictées et sanctionnées, qui s'imposent aux membres de la société (ex: le Code Civil).</li>
-                    <li><strong>Droit subjectif :</strong> Prérogative individuelle reconnue et sanctionnée par le droit objectif permettant à une personne de faire, d'exiger ou d'interdire quelque chose (ex: le droit de propriété, le droit de vote).</li>
+                    <li>Ensemble de règles régissant la vie en société.</li>
+                    <li>Droit objectif (la règle) vs Droit subjectif (la prérogative d'un individu).</li>
                 </ul>
             </div>
             <div class="sub-topic">
-                <h3>Fonctions principales</h3>
+                <h3>Fonctions</h3>
                 <ul>
-                    <li>Organiser la société et garantir l'ordre pacifique.</li>
-                    <li>Assurer la sécurité juridique et la prévisibilité des relations commerciales.</li>
+                    <li>Pacification et ordre social.</li>
+                    <li>Sécurité juridique et prévisibilité.</li>
                 </ul>
             </div>
         </div>
@@ -139,15 +135,15 @@
             <div class="sub-topic">
                 <h3>Personnes physiques</h3>
                 <ul>
-                    <li><strong>Jouissance des droits civils :</strong> Tout être humain en bénéficie dès sa naissance (voire de sa conception s'il naît vivant).</li>
-                    <li><strong>Exercice des droits civils :</strong> Capacité de faire des actes juridiques valables. Conditions : être majeur (18 ans révolus) ET capable de discernement (agir raisonnablement, sans trouble psychique ou ivresse).</li>
+                    <li>Jouissance des droits civils (dès la naissance).</li>
+                    <li>Exercice des droits civils (majorité + capacité de discernement).</li>
                 </ul>
             </div>
             <div class="sub-topic">
                 <h3>Personnes morales</h3>
                 <ul>
-                    <li>Entités abstraites dotées de la personnalité juridique (SA, Sàrl, associations, fondations).</li>
-                    <li>Elles acquièrent l'exercice des droits civils dès que les organes prévus par la loi et les statuts sont constitués.</li>
+                    <li>Fictions juridiques dotées de la personnalité (SA, Sàrl, associations...).</li>
+                    <li>Agissent par le biais de leurs organes (Conseil d'administration, direction).</li>
                 </ul>
             </div>
         </div>
@@ -155,10 +151,18 @@
         <button class="accordion">3. La règle de droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Nature des règles</h3>
+                <h3>Caractéristiques</h3>
                 <ul>
-                    <li><strong>Règles impératives :</strong> On ne peut pas y déroger, même par accord mutuel (ex: protection des travailleurs, normes de sécurité).</li>
-                    <li><strong>Règles dispositives (ou supplétives) :</strong> S'appliquent uniquement si les parties n'ont rien prévu d'autre dans leur contrat.</li>
+                    <li>Générale et abstraite.</li>
+                    <li>Obligatoire et coercitive.</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Les sanctions</h3>
+                <ul>
+                    <li>Pénales (amende, privation de liberté).</li>
+                    <li>Civiles (dommages-intérêts, nullité d'un contrat).</li>
+                    <li>Administratives (retrait de permis, fermeture d'établissement).</li>
                 </ul>
             </div>
         </div>
@@ -166,12 +170,17 @@
         <button class="accordion">4. Les sources du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Hiérarchie des sources</h3>
+                <h3>Sources formelles (principales)</h3>
                 <ul>
-                    <li><strong>La Loi (source formelle écrite) :</strong> Constitution fédérale (loi fondamentale) > Lois fédérales (ex: CO, CC) > Ordonnances.</li>
-                    <li><strong>La Coutume :</strong> Pratique longue et ininterrompue considérée comme obligatoire par la société.</li>
-                    <li><strong>Jurisprudence (source matérielle) :</strong> L'ensemble des décisions des tribunaux (notamment du Tribunal Fédéral) qui précisent l'application de la loi.</li>
-                    <li><strong>Doctrine (source matérielle) :</strong> Avis des auteurs, professeurs et juristes.</li>
+                    <li><strong>La Loi :</strong> Constitution, Lois ordinaires, Ordonnances.</li>
+                    <li><strong>La Coutume :</strong> Usage implanté de longue date et considéré comme obligatoire.</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Sources matérielles (secondaires/interprétatives)</h3>
+                <ul>
+                    <li><strong>La Jurisprudence :</strong> Ensemble des décisions rendues par les tribunaux (précédents).</li>
+                    <li><strong>La Doctrine :</strong> Ouvrages, articles et commentaires des spécialistes du droit.</li>
                 </ul>
             </div>
         </div>
@@ -179,10 +188,20 @@
         <button class="accordion">5. Les grandes divisions du droit</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Droit Public vs Droit Privé</h3>
+                <h3>Le Droit Public (rapports État - citoyens)</h3>
                 <ul>
-                    <li><strong>Droit Public :</strong> Règle les rapports où l'État intervient avec puissance publique. Implique une relation de subordination (ex: impôts, permis de construire, droit pénal). Les règles sont <span class="highlight">impératives</span>.</li>
-                    <li><strong>Droit Privé :</strong> Règle les rapports entre particuliers (ou entreprises) sur un pied d'égalité. L'autonomie de la volonté domine (ex: Code civil, Code des obligations).</li>
+                    <li>Droit constitutionnel (organisation de l'État).</li>
+                    <li>Droit administratif (impôts, permis de construire).</li>
+                    <li>Droit pénal (infractions et peines).</li>
+                    <li>Droit de procédure (déroulement des procès).</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Le Droit Privé (rapports entre individus/entreprises)</h3>
+                <ul>
+                    <li>Droit civil (personnes, famille, successions, droits réels).</li>
+                    <li>Droit des obligations (contrats, RC).</li>
+                    <li>Droit commercial et des sociétés.</li>
                 </ul>
             </div>
         </div>
@@ -190,18 +209,19 @@
         <button class="accordion">6. Droit de l'entreprise</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Registre du Commerce (RC) et Raison de commerce</h3>
+                <h3>Institutions cadres</h3>
                 <ul>
-                    <li><strong>Raison de commerce :</strong> Le nom sous lequel l'entreprise exerce son activité. Doit être conforme à la vérité et ne pas induire en erreur.</li>
-                    <li><strong>Inscription au RC :</strong> Obligatoire pour la plupart des entreprises commerciales. Rend publics les faits juridiques importants et assure la protection de la raison de commerce.</li>
+                    <li>Le Registre du Commerce (RC) : publicité et protection.</li>
+                    <li>La raison de commerce (protection du nom de l'entreprise).</li>
                 </ul>
             </div>
             <div class="sub-topic">
-                <h3>Formes juridiques</h3>
+                <h3>Les formes juridiques (Choix de la structure)</h3>
                 <ul>
-                    <li><strong>Raison individuelle :</strong> Créée par une seule personne, responsabilité illimitée sur la fortune privée.</li>
-                    <li><strong>Société anonyme (SA) :</strong> Personne morale. Capital-actions minimum 100'000 CHF (dont 50'000 libérés). Responsabilité limitée au capital social. Anonymat des actionnaires.</li>
-                    <li><strong>Société à responsabilité limitée (Sàrl) :</strong> Personne morale. Capital social minimum 20'000 CHF (entièrement libéré). Associés inscrits au RC. Responsabilité limitée au capital.</li>
+                    <li><strong>Raison individuelle :</strong> Un seul propriétaire, responsabilité illimitée.</li>
+                    <li><strong>Société en nom collectif (SNC) :</strong> Plusieurs associés, responsabilité solidaire et illimitée.</li>
+                    <li><strong>Société Anonyme (SA) :</strong> Capital-actions, anonymat possible, risque limité au capital.</li>
+                    <li><strong>Société à responsabilité limitée (Sàrl) :</strong> Mix entre SNC et SA, associés connus, risque limité.</li>
                 </ul>
             </div>
         </div>
@@ -209,19 +229,27 @@
         <button class="accordion">7. Le droit des obligations (CO)</button>
         <div class="panel">
             <div class="sub-topic">
-                <h3>Les 3 sources des obligations</h3>
+                <h3>Sources des obligations</h3>
                 <ul>
-                    <li><strong>Le Contrat (art. 1 ss CO) :</strong> Accord des volontés (conclusion par l'offre et l'acceptation).</li>
-                    <li><strong>La Responsabilité Civile illicite (art. 41 ss CO) :</strong> Conditions : Dommage, Acte illicite, Faute, Lien de causalité adéquat.</li>
-                    <li><strong>L'enrichissement illégitime (art. 62 ss CO) :</strong> Acquisition d'un avantage patrimonial sans cause légitime aux dépens d'autrui.</li>
+                    <li><strong>Le Contrat :</strong> Accord de volontés (offre + acceptation).</li>
+                    <li><strong>La Responsabilité Civile (RC) :</strong> Obligation de réparer un dommage causé illicitement (Art. 41 CO).</li>
+                    <li><strong>L'enrichissement illégitime :</strong> Recevoir quelque chose sans cause valable.</li>
                 </ul>
             </div>
             <div class="sub-topic">
-                <h3>Le Contrat : validité et vices du consentement</h3>
+                <h3>Conditions de validité du contrat</h3>
                 <ul>
-                    <li><strong>Forme :</strong> Liberté de la forme en principe, sauf exigences légales (ex: vente immobilière = acte authentique).</li>
-                    <li><strong>Objet :</strong> Ne doit pas être impossible, illicite ou contraire aux mœurs.</li>
-                    <li><strong>Vices du consentement (art. 23 ss CO) :</strong> L'erreur essentielle, le dol (tromperie intentionnelle), la crainte fondée (menace) et la lésion (disproportion évidente avec exploitation de la gêne/légèreté). Le contrat est alors annulable.</li>
+                    <li>Capacité des parties.</li>
+                    <li>Respect de la forme (orale, écrite, acte authentique).</li>
+                    <li>Objet licite, possible et conforme aux mœurs.</li>
+                    <li>Absence de vices du consentement (erreur essentielle, dol, crainte fondée, lésion).</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Exécution et inexécution</h3>
+                <ul>
+                    <li>Demeure du débiteur (retard).</li>
+                    <li>Inexécution fautive ou impossibilité d'exécution.</li>
                 </ul>
             </div>
         </div>
@@ -229,6 +257,7 @@
     </div>
 
     <script>
+        // Logique pour les accordéons (Mind Map branches)
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -244,6 +273,7 @@
             });
         }
 
+        // Logique pour la barre de recherche
         const searchBar = document.getElementById('searchBar');
         
         searchBar.addEventListener('keyup', function(e) {
@@ -255,12 +285,15 @@
                 const sectionText = section.textContent.toLowerCase();
                 const panelText = panel.textContent.toLowerCase();
                 
+                // Si le terme de recherche est dans le titre de l'accordéon OU dans son contenu
                 if(sectionText.includes(term) || panelText.includes(term)) {
                     section.classList.remove('hidden');
+                    // Ouvre automatiquement le panneau si on cherche un terme à l'intérieur
                     if (term !== "" && panelText.includes(term)) {
                         section.classList.add("active");
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     } else if (term === "") {
+                        // Referme si la recherche est vide
                         section.classList.remove("active");
                         panel.style.maxHeight = null;
                     }
