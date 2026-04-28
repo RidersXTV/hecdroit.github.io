@@ -237,7 +237,7 @@ const courseData = {
     loi_large: {
         title: "La Loi (au sens large)",
         info: "La source écrite principale, structurée en pyramide.",
-        children: ["constitution", "loi_etroit", "ordonnance"],
+        children: ["constitution", "loi_etroit", "ordonnance","traites_internationaux"],
         parent: "sources"
     },
 
