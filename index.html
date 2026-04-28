@@ -7,124 +7,266 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            background-color: #f0f4f8;
             color: #333;
             margin: 0;
             padding: 20px;
         }
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         h1 {
-            color: #2c3e50;
+            color: #1a365d;
         }
         #searchBar {
-            width: 80%;
+            width: 100%;
             max-width: 600px;
-            padding: 15px;
+            padding: 12px 20px;
             font-size: 16px;
-            border: 2px solid #3498db;
+            border: 2px solid #cbd5e0;
             border-radius: 25px;
             outline: none;
             transition: all 0.3s;
+            box-sizing: border-box;
         }
         #searchBar:focus {
-            border-color: #2980b9;
-            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+            border-color: #3182ce;
+            box-shadow: 0 0 8px rgba(49, 130, 206, 0.3);
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid #3498db;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        .card h2 {
-            margin-top: 0;
+        .accordion {
+            background-color: #ffffff;
+            color: #2b6cb0;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.4s;
             font-size: 1.2em;
-            color: #2c3e50;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .card p {
-            color: #7f8c8d;
-            font-size: 0.9em;
+        .active, .accordion:hover {
+            background-color: #ebf8ff;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #2b6cb0;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 10px;
+        }
+        .sub-topic {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #63b3ed;
+        }
+        .sub-topic h3 {
+            color: #2c5282;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .sub-topic ul {
+            margin-top: 5px;
+            padding-left: 20px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .sub-topic li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e53e3e;
         }
         .hidden {
-            display: none;
+            display: none !important;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Droit de l'Entreprise - Mind Map Interactive</h1>
-        <input type="text" id="searchBar" placeholder="Rechercher un concept (ex: droit public, obligations...)">
+        <h1>Explorateur de Révisions : Droit de l'Entreprise</h1>
+        <input type="text" id="searchBar" placeholder="Rechercher un terme (ex: CO, impératif, SA, contrat...)">
     </header>
 
-    <div class="container" id="cardsContainer">
-        <div class="card">
-            <h2>Notion et fonction du droit</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+    <div class="container" id="mainContainer">
+
+        <button class="accordion">1. Notion et fonction du droit</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Le Droit Objectif vs Subjectif</h3>
+                <ul>
+                    <li><strong>Droit objectif :</strong> L'ensemble des règles de conduite socialement édictées et sanctionnées, qui s'imposent aux membres de la société (ex: le Code Civil).</li>
+                    <li><strong>Droit subjectif :</strong> Prérogative individuelle reconnue et sanctionnée par le droit objectif permettant à une personne de faire, d'exiger ou d'interdire quelque chose (ex: le droit de propriété, le droit de vote).</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Fonctions principales</h3>
+                <ul>
+                    <li>Organiser la société et garantir l'ordre pacifique.</li>
+                    <li>Assurer la sécurité juridique et la prévisibilité des relations commerciales.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Les sujets de droit</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">2. Les sujets de droit</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Personnes physiques</h3>
+                <ul>
+                    <li><strong>Jouissance des droits civils :</strong> Tout être humain en bénéficie dès sa naissance (voire de sa conception s'il naît vivant).</li>
+                    <li><strong>Exercice des droits civils :</strong> Capacité de faire des actes juridiques valables. Conditions : être majeur (18 ans révolus) ET capable de discernement (agir raisonnablement, sans trouble psychique ou ivresse).</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Personnes morales</h3>
+                <ul>
+                    <li>Entités abstraites dotées de la personnalité juridique (SA, Sàrl, associations, fondations).</li>
+                    <li>Elles acquièrent l'exercice des droits civils dès que les organes prévus par la loi et les statuts sont constitués.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>La règle de droit</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">3. La règle de droit</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Nature des règles</h3>
+                <ul>
+                    <li><strong>Règles impératives :</strong> On ne peut pas y déroger, même par accord mutuel (ex: protection des travailleurs, normes de sécurité).</li>
+                    <li><strong>Règles dispositives (ou supplétives) :</strong> S'appliquent uniquement si les parties n'ont rien prévu d'autre dans leur contrat.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Les sources du droit</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">4. Les sources du droit</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Hiérarchie des sources</h3>
+                <ul>
+                    <li><strong>La Loi (source formelle écrite) :</strong> Constitution fédérale (loi fondamentale) > Lois fédérales (ex: CO, CC) > Ordonnances.</li>
+                    <li><strong>La Coutume :</strong> Pratique longue et ininterrompue considérée comme obligatoire par la société.</li>
+                    <li><strong>Jurisprudence (source matérielle) :</strong> L'ensemble des décisions des tribunaux (notamment du Tribunal Fédéral) qui précisent l'application de la loi.</li>
+                    <li><strong>Doctrine (source matérielle) :</strong> Avis des auteurs, professeurs et juristes.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Les grandes divisions du droit</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">5. Les grandes divisions du droit</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Droit Public vs Droit Privé</h3>
+                <ul>
+                    <li><strong>Droit Public :</strong> Règle les rapports où l'État intervient avec puissance publique. Implique une relation de subordination (ex: impôts, permis de construire, droit pénal). Les règles sont <span class="highlight">impératives</span>.</li>
+                    <li><strong>Droit Privé :</strong> Règle les rapports entre particuliers (ou entreprises) sur un pied d'égalité. L'autonomie de la volonté domine (ex: Code civil, Code des obligations).</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Le droit public</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">6. Droit de l'entreprise</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Registre du Commerce (RC) et Raison de commerce</h3>
+                <ul>
+                    <li><strong>Raison de commerce :</strong> Le nom sous lequel l'entreprise exerce son activité. Doit être conforme à la vérité et ne pas induire en erreur.</li>
+                    <li><strong>Inscription au RC :</strong> Obligatoire pour la plupart des entreprises commerciales. Rend publics les faits juridiques importants et assure la protection de la raison de commerce.</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Formes juridiques</h3>
+                <ul>
+                    <li><strong>Raison individuelle :</strong> Créée par une seule personne, responsabilité illimitée sur la fortune privée.</li>
+                    <li><strong>Société anonyme (SA) :</strong> Personne morale. Capital-actions minimum 100'000 CHF (dont 50'000 libérés). Responsabilité limitée au capital social. Anonymat des actionnaires.</li>
+                    <li><strong>Société à responsabilité limitée (Sàrl) :</strong> Personne morale. Capital social minimum 20'000 CHF (entièrement libéré). Associés inscrits au RC. Responsabilité limitée au capital.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Le droit privé</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
+
+        <button class="accordion">7. Le droit des obligations (CO)</button>
+        <div class="panel">
+            <div class="sub-topic">
+                <h3>Les 3 sources des obligations</h3>
+                <ul>
+                    <li><strong>Le Contrat (art. 1 ss CO) :</strong> Accord des volontés (conclusion par l'offre et l'acceptation).</li>
+                    <li><strong>La Responsabilité Civile illicite (art. 41 ss CO) :</strong> Conditions : Dommage, Acte illicite, Faute, Lien de causalité adéquat.</li>
+                    <li><strong>L'enrichissement illégitime (art. 62 ss CO) :</strong> Acquisition d'un avantage patrimonial sans cause légitime aux dépens d'autrui.</li>
+                </ul>
+            </div>
+            <div class="sub-topic">
+                <h3>Le Contrat : validité et vices du consentement</h3>
+                <ul>
+                    <li><strong>Forme :</strong> Liberté de la forme en principe, sauf exigences légales (ex: vente immobilière = acte authentique).</li>
+                    <li><strong>Objet :</strong> Ne doit pas être impossible, illicite ou contraire aux mœurs.</li>
+                    <li><strong>Vices du consentement (art. 23 ss CO) :</strong> L'erreur essentielle, le dol (tromperie intentionnelle), la crainte fondée (menace) et la lésion (disproportion évidente avec exploitation de la gêne/légèreté). Le contrat est alors annulable.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Droit de l'entreprise</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
-        </div>
-        <div class="card">
-            <h2>Le droit des obligations</h2>
-            <p>Contenu à détailler avec les cours PO_DE et SDC_FR_DE_2026.</p>
-        </div>
+
     </div>
 
     <script>
-        const searchBar = document.getElementById('searchBar');
-        const cards = document.querySelectorAll('.card');
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+
+        const searchBar = document.getElementById('searchBar');
+        
         searchBar.addEventListener('keyup', function(e) {
             const term = e.target.value.toLowerCase();
+            const sections = document.querySelectorAll('.accordion');
             
-            cards.forEach(card => {
-                const title = card.querySelector('h2').textContent.toLowerCase();
-                if(title.includes(term)) {
-                    card.classList.remove('hidden');
+            sections.forEach(section => {
+                const panel = section.nextElementSibling;
+                const sectionText = section.textContent.toLowerCase();
+                const panelText = panel.textContent.toLowerCase();
+                
+                if(sectionText.includes(term) || panelText.includes(term)) {
+                    section.classList.remove('hidden');
+                    if (term !== "" && panelText.includes(term)) {
+                        section.classList.add("active");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } else if (term === "") {
+                        section.classList.remove("active");
+                        panel.style.maxHeight = null;
+                    }
                 } else {
-                    card.classList.add('hidden');
+                    section.classList.add('hidden');
+                    panel.style.maxHeight = null;
                 }
             });
         });
