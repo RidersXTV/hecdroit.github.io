@@ -1224,7 +1224,7 @@ function renderTopic(id, pushHistory = true) {
     `;
 
     if (topic.children.length > 0) {
-        html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
+        html += `<h3 style="color: var(--secondary);">Titres :</h3><div class="sub-branches-grid">`;
         topic.children.forEach(childId => {
             const child = courseData[childId];
             if (child) {
