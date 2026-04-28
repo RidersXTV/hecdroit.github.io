@@ -128,11 +128,11 @@ const courseData = {
         parent: "pers_morale"
     },
 
-    // --- 3. LA RÈGLE DE DROIT (Version complète) ---
+    // --- 3. LA RÈGLE DE DROIT ---
     regle: {
         title: "3. La règle de droit",
         info: "La règle de droit est une règle de conduite humaine dont le respect est assuré par l’autorité publique. Elle se distingue des autres règles (morales, religieuses) par son caractère coercitif.",
-        children: ["caracteres_regle", "nature_regle", "droit_vs_autres"],
+        children: ["caracteres_regle", "structure_double", "nature_regle"],
         parent: "root"
     },
 
@@ -145,27 +145,47 @@ const courseData = {
     },
     regle_generale_detail: {
         title: "Générale",
-        info: "La règle est <strong>générale</strong> car elle ne s'adresse pas à un individu nommé, mais à toutes les personnes qui se trouvent ou se trouveront dans la situation qu'elle prévoit. Elle garantit ainsi l'égalité de traitement.",
+        info: "La règle est <strong>générale</strong> car elle ne s'adresse pas à un individu nommé, mais à toutes les personnes qui se trouvent ou se trouveront dans la situation qu'elle prévoit. Elle garantit l'égalité de traitement.",
         children: [],
         parent: "caracteres_regle"
     },
     regle_abstraite_detail: {
         title: "Abstraite",
-        info: "La règle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations futures. Elle n'est pas édictée pour résoudre un cas particulier déjà survenu, mais pour régir tous les cas répondant à ses critères.",
+        info: "La règle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations futures.",
         children: [],
         parent: "caracteres_regle"
     },
     regle_obligatoire_detail: {
         title: "Obligatoire",
-        info: "La règle de droit n'est pas un simple conseil ou une recommandation ; elle est une <strong>prescription</strong>. Elle ordonne de faire, de ne pas faire ou de permettre quelque chose.",
+        info: "La règle de droit n'est pas un simple conseil ; elle est une <strong>prescription</strong>. Elle ordonne de faire, de ne pas faire ou de permettre quelque chose.",
         children: [],
         parent: "caracteres_regle"
     },
     regle_coercitive_detail: {
         title: "Coercitive",
-        info: "C'est le trait distinctif majeur. Le respect de la règle est garanti par l'État. Si la règle est transgressée, l'autorité publique peut contraindre son auteur à la respecter ou le sanctionner, au besoin par la force.",
+        info: "Le respect de la règle est garanti par l'État. Si la règle est transgressée, l'autorité publique peut sanctionner son auteur, au besoin par la force.",
         children: [],
         parent: "caracteres_regle"
+    },
+
+    // SOUS-BRANCHE : LA STRUCTURE DOUBLE (Nouveau)
+    structure_double: {
+        title: "La structure double",
+        info: "Toute règle de droit obéit à une structure logique à deux éléments fondamentaux.",
+        children: ["etat_de_fait", "consequence_juridique"],
+        parent: "regle"
+    },
+    etat_de_fait: {
+        title: "L'état de fait (L'hypothèse)",
+        info: "C'est la proposition conditionnelle. Il s'agit des conditions qui doivent être remplies (la situation de fait) pour que la règle s'applique. <br><br><em>Exemple (Art. 41 CO) : 'Celui qui cause sans droit un dommage à autrui...'</em>",
+        children: [],
+        parent: "structure_double"
+    },
+    consequence_juridique: {
+        title: "La conséquence juridique",
+        info: "C'est l'effet prévu par la loi lorsque les conditions de l'état de fait sont réalisées. <br><br><em>Exemple (suite Art. 41 CO) : '...est tenu de le réparer.'</em>",
+        children: [],
+        parent: "structure_double"
     },
 
     // SOUS-BRANCHE : NATURE (FORCE OBLIGATOIRE)
@@ -177,35 +197,15 @@ const courseData = {
     },
     regle_imperative_complet: {
         title: "Règle Impérative (Droit impératif)",
-        info: "Règle à laquelle on ne peut <span class='highlight'>absolument pas déroger</span> par convention contraire. <br> Elle s'applique même si les parties souhaitent l'écarter. <br> <strong>Exemple :</strong> L'Art. 129 CO qui interdit de modifier par avance les délais de prescription.",
+        info: "Règle à laquelle on ne peut <span class='highlight'>absolument pas déroger</span> par convention contraire. <br> <strong>Exemple :</strong> L'Art. 129 CO qui interdit de modifier par avance les délais de prescription.",
         children: [],
         parent: "nature_regle"
     },
     regle_dispositive_complet: {
         title: "Règle Dispositive (Droit supplétif)",
-        info: "Règle à laquelle les parties <span class='success'>peuvent déroger</span>. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre dans leur contrat. Elle sert à combler le silence des parties (rôle supplétif). <br> <strong>Exemple :</strong> L'Art. 189 CO qui prévoit que les frais de délivrance sont à la charge du vendeur, sauf accord contraire.",
+        info: "Règle à laquelle les parties <span class='success'>peuvent déroger</span>. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre. <br> <strong>Exemple :</strong> L'Art. 189 CO (frais de délivrance à la charge du vendeur, sauf accord contraire).",
         children: [],
         parent: "nature_regle"
-    },
-
-    // SOUS-BRANCHE : DROIT ET AUTRES RÈGLES (Souvent dans ce chapitre du cours)
-    droit_vs_autres: {
-        title: "Droit, Morale et Moeurs",
-        info: "Le droit n'est pas le seul système de règles, mais il est le seul à être sanctionné par l'État.",
-        children: ["droit_morale", "droit_moeurs"],
-        parent: "regle"
-    },
-    droit_morale: {
-        title: "Droit vs Morale",
-        info: "La <strong>Morale</strong> dicte l'attitude intérieure de l'individu (conscience), alors que le <strong>Droit</strong> régit les comportements extérieurs (relations sociales). La sanction de la morale est intérieure (remords), celle du droit est extérieure (amende, prison).",
-        children: [],
-        parent: "droit_vs_autres"
-    },
-    droit_moeurs: {
-        title: "Droit vs Moeurs (Usages)",
-        info: "Les <strong>Moeurs</strong> (ou usages sociaux) sont des habitudes de comportement (politesse, courtoisie). Leur violation entraîne une réprobation sociale, mais pas de sanction juridique officielle.",
-        children: [],
-        parent: "droit_vs_autres"
     },
     // --- 4. LES SOURCES DU DROIT ---
     sources: {
