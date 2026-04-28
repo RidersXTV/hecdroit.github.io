@@ -1140,55 +1140,40 @@ const sidebarContent = document.getElementById('sidebar-content');
 
 // --- FONCTION POUR GÉNÉRER LA BARRE LATÉRALE ---
 function renderSidebar() {
-    let html = `<h3>Plan du cours</h3><ul class="nav-list">`;
-    
-    // On prend les branches principales définies dans la racine (root)
+    let html = `<ul class="nav-list">`;
     const mainBranches = courseData['root'].children;
-    
     mainBranches.forEach(branchId => {
         const branch = courseData[branchId];
-        if (branch) {
-            html += createSidebarItem(branchId, branch);
-        }
+        if (branch) html += createSidebarItem(branchId, branch);
     });
-    
     html += `</ul>`;
     sidebarContent.innerHTML = html;
 }
 
-// Fonction récursive pour construire l'arbre de la sidebar
 function createSidebarItem(id, item) {
     let html = `<li class="nav-item">`;
-    
-    // Vérifier si cet élément a des sous-branches
     if (item.children && item.children.length > 0) {
         html += `<div class="nav-header" id="nav-${id}">
                     <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
                     <span class="toggle-btn" onclick="toggleSubmenu(this, event)">▼</span>
                  </div>`;
-        // Créer la sous-liste (cachée par défaut)
         html += `<ul class="sub-nav-list hidden">`;
         item.children.forEach(childId => {
             const child = courseData[childId];
-            if (child) {
-                html += createSidebarItem(childId, child);
-            }
+            if (child) html += createSidebarItem(childId, child);
         });
         html += `</ul>`;
     } else {
-        // Pas d'enfants = juste un lien
         html += `<div class="nav-header no-children" id="nav-${id}">
                     <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
                  </div>`;
     }
-    
     html += `</li>`;
     return html;
 }
 
-// Ouvrir/Fermer les menus de la sidebar
 function toggleSubmenu(btn, event) {
-    event.stopPropagation(); // Empêche le clic de déclencher le renderTopic
+    event.stopPropagation();
     const submenu = btn.parentElement.nextElementSibling;
     if (submenu) {
         submenu.classList.toggle('hidden');
@@ -1196,12 +1181,27 @@ function toggleSubmenu(btn, event) {
     }
 }
 
+// --- GESTION DU MENU MOBILE ---
+function toggleMobileSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
 // --- FONCTION POUR AFFICHER LE CONTENU CENTRAL ---
-function renderTopic(id) {
+// L'argument 'pushHistory' permet de savoir si on doit ajouter la page à l'historique ou non
+function renderTopic(id, pushHistory = true) {
     const topic = courseData[id];
     if (!topic) return;
 
-    // 1. Mise à jour du fil d'Ariane
+    // 1. Ajouter à l'historique du navigateur (pour le bouton retour)
+    if (pushHistory) {
+        // Enregistre l'état actuel dans le navigateur
+        history.pushState({ topicId: id }, topic.title, "?topic=" + id);
+    }
+
+    // 2. Mise à jour du fil d'Ariane
     let path = [];
     let currentId = id;
     while (currentId && currentId !== 'root') {
@@ -1215,7 +1215,7 @@ function renderTopic(id) {
     });
     breadcrumb.innerHTML = bcHtml;
 
-    // 2. Génération du HTML principal
+    // 3. Génération du HTML principal
     let html = `
         <div class="info-box">
             <h2>${topic.title}</h2>
@@ -1223,7 +1223,6 @@ function renderTopic(id) {
         </div>
     `;
 
-    // Si on a des sous-thèmes, on affiche les gros boutons
     if (topic.children.length > 0) {
         html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
         topic.children.forEach(childId => {
@@ -1241,15 +1240,31 @@ function renderTopic(id) {
 
     mainContent.innerHTML = html;
     
-    // Remonter en haut de la page lors d'un clic
+    // 4. Sur mobile, fermer le menu automatiquement après un clic
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.classList.contains('active')) {
+        toggleMobileSidebar();
+    }
+
+    // 5. Remonter en haut de la page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// --- GESTION DU BOUTON RETOUR DU NAVIGATEUR/TÉLÉPHONE ---
+window.addEventListener('popstate', (event) => {
+    // Si l'historique contient un ID sauvegardé, on l'affiche sans repousser dans l'historique
+    if (event.state && event.state.topicId) {
+        renderTopic(event.state.topicId, false);
+    } else {
+        renderTopic('root', false);
+    }
+});
 
 // --- SYSTÈME DE RECHERCHE ---
 searchBar.addEventListener('input', (e) => {
     const val = e.target.value.toLowerCase().trim();
     if (val.length < 2) {
-        if (val.length === 0) renderTopic('root'); // Retour accueil si vide
+        if (val.length === 0) renderTopic('root');
         return;
     }
     
@@ -1270,6 +1285,13 @@ searchBar.addEventListener('input', (e) => {
         </div>`;
 });
 
-// --- LANCEMENT INITIAL ---
+// --- LANCEMENT INITIAL DE L'APPLICATION ---
 renderSidebar();
-renderTopic('root');
+
+// Vérifie si on a rechargé la page sur un sujet précis (via l'URL ?topic=...)
+const urlParams = new URLSearchParams(window.location.search);
+const initialTopic = urlParams.get('topic') || 'root';
+
+// Remplace l'état initial pour que le tout premier bouton retour fonctionne bien
+history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
+renderTopic(initialTopic, false);
