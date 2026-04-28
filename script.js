@@ -179,19 +179,67 @@ const courseData = {
     // --- 4. LES SOURCES DU DROIT ---
     sources: {
         title: "4. Les sources du droit",
-        info: "Origines des règles juridiques.",
+        info: "Les sources du droit sont les formes sous lesquelles les règles de droit apparaissent et deviennent obligatoires.  On distingue les sources formelles des sources matérielles.",
         children: ["sources_formelles", "sources_materielles"],
         parent: "root"
     },
+
+    // SOUS-BRANCHE : SOURCES FORMELLES
     sources_formelles: {
-        title: "Sources Formelles",
-        info: "La Loi (Constitution > Lois > Ordonnances) et la Coutume.",
-        children: [], parent: "sources"
+        title: "Sources formelles",
+        info: "Ce sont les formes obligatoires que doit revêtir la règle pour s'imposer comme droit positif. ",
+        children: ["loi", "coutume"],
+        parent: "sources"
     },
+    loi: {
+        title: "La Loi (au sens large)",
+        info: "La loi est la source principale du droit. Elle est hiérarchisée selon trois niveaux de normes. ",
+        children: ["constitution", "loi_sens_etroit", "ordonnance"],
+        parent: "sources_formelles"
+    },
+    constitution: {
+        title: "1. La Constitution",
+        info: "C'est la loi fondamentale de l'État qui se trouve au sommet de la pyramide.  Elle définit l'organisation de l'État et les droits fondamentaux. En Suisse, toute modification doit être acceptée par le peuple et les cantons. ",
+        children: [],
+        parent: "loi"
+    },
+    loi_sens_etroit: {
+        title: "2. La Loi (au sens étroit)",
+        info: "Ce sont les actes votés par le pouvoir législatif (le Parlement).  Elles précisent les principes posés par la Constitution (ex: Code civil, Code des obligations). ",
+        children: [],
+        parent: "loi"
+    },
+    ordonnance: {
+        title: "3. L'Ordonnance",
+        info: "Ce sont des règles de droit de rang inférieur aux lois, édictées par le pouvoir exécutif (Gouvernement/Conseil fédéral).  Elles servent à préciser les détails d'application d'une loi. ",
+        children: [],
+        parent: "loi"
+    },
+    coutume: {
+        title: "La Coutume",
+        info: "C'est l'usage implanté de longue date dans une collectivité qui finit par être considéré comme obligatoire par celle-ci.  Pour exister, elle nécessite un usage constant et la conviction d'être lié par une règle de droit. ",
+        children: [],
+        parent: "sources_formelles"
+    },
+
+    // SOUS-BRANCHE : SOURCES MATÉRIELLES
     sources_materielles: {
-        title: "Sources Matérielles",
-        info: "Jurisprudence (Tribunal Fédéral) et Doctrine.",
-        children: [], parent: "sources"
+        title: "Sources matérielles",
+        info: "Ce sont les sources qui aident à l'interprétation et à la compréhension de la règle de droit, sans être directement obligatoires par elles-mêmes. ",
+        children: ["jurisprudence", "doctrine"],
+        parent: "sources"
+    },
+    jurisprudence: {
+        title: "La Jurisprudence",
+        info: "C'est l'ensemble des décisions rendues par les tribunaux (notamment le Tribunal Fédéral).  Elle permet de préciser le sens d'une loi et de combler ses éventuelles lacunes. ",
+        children: [],
+        parent: "sources_materielles"
+    },
+    doctrine: {
+        title: "La Doctrine",
+        info: "Il s'agit de l'ensemble des travaux et opinions exprimés par les spécialistes du droit (professeurs, chercheurs, avocats) dans des ouvrages ou articles scientifiques. ",
+        children: [],
+        parent: "sources_materielles"
     },
 
     // --- 5. DIVISIONS DU DROIT ---
