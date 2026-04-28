@@ -285,31 +285,47 @@ const courseData = {
         parent: "constitution"
     },
 
-    usages_commerciaux: {
-        title: "Usages et Autoréglementation",
-        info: "Sources spécifiques au monde de l'entreprise. <br><ul><li><strong>Usages commerciaux :</strong> Pratiques professionnelles admises dans un secteur d'activité donné (ex: Incoterms).</li><li><strong>Autoréglementation :</strong> Normes édictées par les acteurs économiques eux-mêmes (codes de conduite, règles déontologiques) pour réguler leur propre secteur.</li></ul>",
+    // --- DÉVELOPPEMENT DE LA LOI AU SENS ÉTROIT ET DES ORDONNANCES ---
+    loi_sens_etroit: {
+        title: "La Loi (au sens étroit)",
+        info: "Il s'agit des actes édictés par le pouvoir législatif (le Parlement). <br><br><strong>Points clés du cours :</strong> <br><ul><li><strong>Autorité :</strong> En Suisse, il s'agit de l'Assemblée fédérale (Conseil national et Conseil des États).</li><li><strong>Rôle :</strong> Elles précisent les principes généraux posés par la Constitution (ex: Code civil, Code des obligations).</li><li><strong>Référendum facultatif :</strong> Contrairement à la Constitution, la loi est soumise au référendum facultatif. 50'000 citoyens ou 8 cantons peuvent demander un vote populaire dans les 100 jours suivant la publication.</li></ul>",
+        children: [],
+        parent: "loi"
+    },
+
+    ordonnance: {
+        title: "L'Ordonnance",
+        info: "Règles de droit de rang inférieur aux lois, édictées par le pouvoir exécutif (Gouvernement). <br><br><strong>Détails importants :</strong> <br><ul><li><strong>Autorité :</strong> Principalement le Conseil fédéral, mais aussi les départements ou offices.</li><li><strong>Fonction :</strong> Elles servent à l'exécution des lois ou à régler des détails techniques que le Parlement ne traite pas.</li><li><strong>Particularité :</strong> Elles ne sont <span class='highlight'>jamais soumises au référendum</span>.</li></ul>",
+        children: [],
+        parent: "loi"
+    },
+
+    // --- DÉVELOPPEMENT DE LA COUTUME ET DES USAGES ---
+    coutume: {
+        title: "La Coutume",
+        info: "C'est la plus ancienne source du droit, aujourd'hui subsidiaire à la loi écrite. <br><br><strong>Les deux conditions cumulatives d'existence :</strong> <br><ul><li><strong>L'usage constant (élément matériel) :</strong> Une pratique répétée de manière ininterrompue durant une longue période.</li><li><strong>La conviction juridique (élément psychologique) :</strong> La croyance que cet usage est une règle de droit obligatoire (<em>opinio iuris</em>).</li></ul>",
         children: [],
         parent: "sources_formelles"
     },
 
-    // --- SOUS-BRANCHE : SOURCES MATÉRIELLES ---
-    sources_materielles: {
-        title: "Sources matérielles",
-        info: "Elles ne créent pas de droit directement mais sont indispensables pour interpréter les textes ou combler les lacunes.",
-        children: ["jurisprudence", "doctrine"],
-        parent: "sources"
+    usages_commerciaux: {
+        title: "Usages et Autoréglementation",
+        info: "Sources spécifiques au droit des affaires et de l'entreprise. <br><br><ul><li><strong>Usages commerciaux :</strong> Pratiques admises dans un milieu professionnel (ex: les Incoterms pour le transport).</li><li><strong>Autoréglementation :</strong> Normes créées par les organisations professionnelles pour leur propre secteur (ex: règles d'éthique bancaire, codes de déontologie).</li><li><strong>Rôle :</strong> Ils permettent une adaptation rapide du droit aux évolutions économiques sans passer par le Parlement.</li></ul>",
+        children: [],
+        parent: "sources_formelles"
     },
 
+    // --- DÉVELOPPEMENT DE LA JURISPRUDENCE ET DE LA DOCTRINE ---
     jurisprudence: {
         title: "La Jurisprudence",
-        info: "Il s'agit de l'ensemble des décisions rendues par les tribunaux. <br><br><strong>Fonctions clés :</strong> <br><ul><li><strong>Interprétation :</strong> Elle précise le sens de termes vagues dans la loi.</li><li><strong>Comblement des lacunes :</strong> Selon l'<strong>Art. 1 al. 2 du Code civil</strong>, à défaut d'une disposition légale applicable, le juge doit prononcer selon le droit coutumier et, à défaut de coutume, selon la règle qu'il établirait s'il avait à faire acte de législateur.</li><li><strong>Autorité :</strong> En Suisse, les arrêts du <span class='highlight'>Tribunal Fédéral (TF)</span> servent de guide pour tous les tribunaux inférieurs afin d'assurer l'unité du droit.</li></ul>",
+        info: "Ensemble des décisions rendues par les tribunaux (le pouvoir judiciaire). <br><br><strong>Développements majeurs :</strong> <br><ul><li><strong>Comblement des lacunes (Art. 1 al. 2 CC) :</strong> Si la loi et la coutume sont muettes, le juge doit prononcer selon la règle qu'il établirait s'il avait à faire acte de législateur.</li><li><strong>Unification du droit :</strong> En Suisse, le <span class='highlight'>Tribunal fédéral (TF)</span> à Lausanne assure que le droit est appliqué de la même manière dans tous les cantons.</li><li><strong>Interprétation :</strong> Elle adapte les textes anciens aux réalités modernes.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
 
     doctrine: {
         title: "La Doctrine",
-        info: "Ensemble des opinions exprimées par les juristes, professeurs et chercheurs dans leurs écrits. <br><br><strong>Importance :</strong> <br><ul><li>Elle n'est pas contraignante pour le juge, mais elle est une source d'inspiration majeure pour l'évolution de la loi et de la jurisprudence.</li><li>Le juge s'y réfère souvent pour comprendre des concepts juridiques complexes ou des points de vue divergents sur l'interprétation d'un texte.</li></ul>",
+        info: "Ensemble des travaux et opinions exprimés par les 'savants' du droit (professeurs, chercheurs, juristes). <br><br><strong>Son rôle :</strong> <br><ul><li><strong>Inspiration :</strong> Elle n'est pas obligatoire pour le juge, mais elle influence grandement ses décisions et les futures lois.</li><li><strong>Clarification :</strong> Elle analyse, commente et critique les lois et la jurisprudence pour en extraire des principes logiques.</li></ul>",
         children: [],
         parent: "sources_materielles"
     },
