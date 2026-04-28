@@ -684,7 +684,7 @@ const courseData = {
     droit_prive_pt7: {
         title: "7. Le droit privé",
         info: "Cette section aborde les fondements des relations juridiques entre particuliers (ou entreprises) sur un pied d'égalité, principalement régies par le Code civil (CC) et le Code des obligations (CO).",
-        children: ["autonomie_volonte", "droit_personnes", "droit_successions", "droits_reels"],
+        children: ["autonomie_volonte", "droit_personnes", "droit_successions", "droits_reels", "procedure_civile", "droit_inter_prive", "arbitrage"],
         parent: "root" 
     },
 
@@ -991,6 +991,90 @@ const courseData = {
         info: "Les règles de transfert diffèrent fondamentalement selon la nature du bien :<br><br><strong>Pour les meubles :</strong><br><ul><li><em>Acquisition :</em> Se fait par le <strong>transfert de la possession</strong> (la tradition), c'est-à-dire la remise matérielle de l'objet.</li><li><em>Perte :</em> Par l'abandon volontaire (déréliction), le transfert à un tiers, ou la destruction de la chose.</li></ul><br><strong>Pour les immeubles :</strong><br><ul><li><em>Acquisition :</em> Ne devient effective que par l'<strong>inscription au Registre Foncier (RF)</strong>. Un contrat de vente immobilier (qui doit revêtir la forme authentique) ne suffit pas à lui seul pour transférer la propriété.</li><li><em>Perte :</em> Par la radiation au Registre Foncier.</li></ul>",
         children: [], 
         parent: "droits_reels"
+    },
+
+    // --- 7.5 LA PROCÉDURE CIVILE (Dès page 72 du cours) ---
+    procedure_civile: {
+        title: "La procédure civile",
+        info: "Cette branche détermine les règles à suivre lorsqu'un litige de droit privé (entre particuliers ou entreprises) doit être tranché par un juge civil. Elle est régie au niveau national par le Code de procédure civile (CPC).",
+        children: ["proc_civ_definition", "proc_civ_competence", "proc_civ_deroulement", "proc_civ_execution"],
+        parent: "droit_prive_pt7" // À ajuster selon ton ancrage principal
+    },
+
+    // --- CHAPITRE 1 : DÉFINITION ET NOTIONS ---
+    proc_civ_definition: {
+        title: "Définition et notions générales",
+        info: "La procédure civile sert à faire reconnaître et exécuter des droits subjectifs privés. Contrairement à la procédure pénale où l'État poursuit d'office, le procès civil est <span class='highlight'>l'affaire des parties</span>.<br><br><strong>Principes fondamentaux :</strong><br><ul><li><strong>La maxime de disposition :</strong> Le juge ne s'occupe que de ce que les parties lui demandent. Il ne peut pas accorder plus, ni autre chose, que ce qui est réclamé.</li><li><strong>La maxime des débats :</strong> C'est aux parties de <span class='success'>présenter les faits et d'apporter les preuves</span>. Le juge civil ne mène pas d'enquête lui-même (contrairement au juge pénal).</li><li><strong>Le fardeau de la preuve (Art. 8 CC) :</strong> Quiconque allègue un fait pour en déduire un droit doit le prouver. Si on n'a pas de preuve, on perd le procès.</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
+    },
+
+    // --- CHAPITRE 2 : LA COMPÉTENCE DU TRIBUNAL ---
+    proc_civ_competence: {
+        title: "La compétence du tribunal",
+        info: "Avant d'entrer en matière, il faut déterminer quel tribunal a le droit de juger l'affaire (la juridiction compétente).<br><br><ul><li><strong>La compétence à raison de la matière :</strong> Dépend de l'objet du litige ou de la somme en jeu (ex: Tribunal des prud'hommes pour le droit du travail, Tribunal des baux pour les loyers, Tribunal d'arrondissement).</li><li><strong>La compétence territoriale (Le For) :</strong> Détermine le lieu géographique du tribunal. <strong>Principe de base :</strong> Le for ordinaire est au <span class='highlight'>domicile du défendeur</span> (la personne qui est attaquée en justice). Des exceptions existent (ex: for du lieu de situation de l'immeuble pour les droits réels).</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
+    },
+
+    // --- CHAPITRE 3 : LE DÉROULEMENT DE LA PROCÉDURE ---
+    proc_civ_deroulement: {
+        title: "Le déroulement de la procédure",
+        info: "Le procès civil obéit à un processus chronologique strict pour garantir un procès équitable.<br><br><strong>Les étapes clés :</strong><br><ol><li><strong>La tentative de conciliation :</strong> Dans la grande majorité des cas, il est <span class='highlight'>obligatoire de passer d'abord par une autorité de conciliation</span>. Le but est de trouver un accord à l'amiable et d'éviter d'engorger les tribunaux.</li><li><strong>La procédure de première instance :</strong> Si la conciliation échoue, le plaignant reçoit une autorisation de procéder. S'ensuivent l'échange des écritures (demande et réponse), les débats oraux, l'administration des preuves (audition de témoins, expertises) et enfin, le jugement.</li><li><strong>Les voies de recours :</strong> La partie perdante peut contester le jugement devant une instance supérieure (Appel ou recours au Tribunal cantonal), puis éventuellement au Tribunal fédéral en dernière instance.</li></ol>",
+        children: [], 
+        parent: "procedure_civile"
+    },
+
+    // --- CHAPITRE 4 : LE RÉGIME DE L'EXÉCUTION FORCÉE ---
+    proc_civ_execution: {
+        title: "Le régime de l'exécution forcée",
+        info: "Si la partie perdante refuse d'exécuter volontairement le jugement, le gagnant peut recourir à la force de l'État.<br><br>Il faut distinguer deux systèmes distincts :<br><ul><li><strong>Si la condamnation porte sur une somme d'argent :</strong> L'exécution est régie exclusivement par la <span class='highlight'>Loi fédérale sur la poursuite pour dettes et la faillite (LP)</span>. On s'adresse à l'Office des poursuites (saisie de salaire, faillite).</li><li><strong>Si la condamnation porte sur autre chose (faire, donner, tolérer, s'abstenir) :</strong> L'exécution est régie par le Code de procédure civile (CPC). Le juge de l'exécution peut prononcer des <span class='success'>amendes disciplinaires</span>, une menace de peine pénale (Art. 292 CP), ou ordonner l'intervention de la police (ex: pour une expulsion de locataire).</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
+    },
+
+    // --- 7.6 LE DROIT INTERNATIONAL PRIVÉ (Dès page 78 du cours) ---
+    droit_inter_prive: {
+        title: "Le droit international privé (aperçu)",
+        info: "Le droit international privé (DIP) entre en jeu lorsqu'une relation de droit privé comporte un <strong>élément d'extranéité</strong> (c'est-à-dire un lien avec l'étranger, comme des parties de nationalités différentes ou domiciliées dans des pays distincts). En Suisse, ces règles se trouvent dans la <span class='highlight'>Loi fédérale sur le droit international privé (LDIP)</span>.",
+        children: ["dip_trois_questions"],
+        parent: "droit_prive_pt7"
+    },
+
+    dip_trois_questions: {
+        title: "Les trois questions fondamentales",
+        info: "Lorsqu'un litige présente un caractère international, le juge doit obligatoirement se poser trois questions dans un ordre très précis :<br><br><ol><li><strong>La compétence (Conflit de juridictions) :</strong> Les tribunaux suisses sont-ils compétents pour juger l'affaire ? Si oui, dans quel canton ?</li><li><strong>Le droit applicable (Conflit de lois) :</strong> Quel droit national le juge doit-il appliquer pour trancher le litige sur le fond ? Le juge suisse peut tout à fait être amené à <span class='success'>appliquer un droit étranger</span> (par exemple le droit japonais ou français) si les règles de rattachement l'exigent.</li><li><strong>La reconnaissance et l'exécution :</strong> Un jugement rendu à l'étranger peut-il être reconnu et exécuté de force en Suisse ?</li></ol>",
+        children: [], 
+        parent: "droit_inter_prive"
+    },
+
+    // --- 7.7 L'ARBITRAGE (Dès page 79 du cours) ---
+    arbitrage: {
+        title: "L'arbitrage (aperçu)",
+        info: "L'arbitrage est un mode de résolution des litiges <strong>privé et extrajudiciaire</strong>. Au lieu de s'adresser aux tribunaux de l'État, les parties confient le soin de trancher leur différend à un ou plusieurs particuliers que l'on appelle des <span class='highlight'>arbitres</span>.",
+        children: ["arbitrage_convention", "arbitrage_sentence", "arbitrage_caracteristiques"],
+        parent: "droit_prive_pt7"
+    },
+
+    arbitrage_convention: {
+        title: "La convention d'arbitrage",
+        info: "Pour qu'un litige soit soumis à l'arbitrage au lieu de la justice ordinaire, il faut obligatoirement le <strong>consentement des deux parties</strong>. <br><br>Cela se fait généralement par une <span class='highlight'>clause compromissoire</span> insérée directement dans le contrat principal (bien avant qu'un litige n'éclate). S'il y a une telle clause valide, les tribunaux étatiques doivent se déclarer incompétents.",
+        children: [], 
+        parent: "arbitrage"
+    },
+
+    arbitrage_sentence: {
+        title: "La sentence arbitrale",
+        info: "La décision finale rendue par le tribunal arbitral s'appelle une <strong>sentence arbitrale</strong>. <br><br>Elle est <strong>définitive et contraignante</strong> pour les parties, au même titre qu'un jugement étatique officiel. Fait essentiel : grâce aux traités internationaux (comme la Convention de New York), une sentence arbitrale est souvent <span class='success'>plus facilement reconnue et exécutable à l'étranger</span> qu'un jugement d'un tribunal national.",
+        children: [], 
+        parent: "arbitrage"
+    },
+
+    arbitrage_caracteristiques: {
+        title: "Les caractéristiques (Avantages / Inconvénients)",
+        info: "L'arbitrage est le mode de résolution favori dans le commerce international pour plusieurs raisons majeures :<br><br><ul><li><strong>Confidentialité :</strong> Contrairement aux tribunaux de l'État où les audiences sont publiques, l'arbitrage se déroule à huis clos. Les secrets d'affaires sont protégés.</li><li><strong>Expertise :</strong> Les parties peuvent choisir des arbitres hyper-spécialisés dans le domaine technique de leur litige (ingénierie, finance, etc.).</li><li><strong>Flexibilité :</strong> Le choix de la langue, du lieu et des règles de procédure est libre.</li><li><strong>Le coût (Inconvénient) :</strong> L'arbitrage est généralement <strong>très onéreux</strong>, car les parties doivent payer elles-mêmes les honoraires souvent très élevés des arbitres (contrairement aux juges étatiques qui sont payés par nos impôts).</li></ul>",
+        children: [], 
+        parent: "arbitrage"
     },
 
 const mainContent = document.getElementById('main-content');
