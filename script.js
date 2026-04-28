@@ -211,30 +211,34 @@ const courseData = {
     sources: {
         title: "4. Les sources du droit",
         info: "Les sources du droit sont les formes sous lesquelles les règles apparaissent et deviennent obligatoires. On distingue les sources formelles (obligatoires) des sources matérielles (interprétatives).",
-        children: ["sources_formelles", "sources_materielles"],
+        children: ["coutume", "loi_large", "jurisprudence", "doctrine", "usages_commerciaux"],
         parent: "root"
     },
 
-    // --- 4.1 SOURCES FORMELLES ---
-    sources_formelles: {
-        title: "4.1 Sources formelles",
-        info: "Ce sont les sources directes et impératives du droit positif.",
-        children: ["traites_internationaux", "loi_large", "coutume", "usages_commerciaux"],
-        parent: "sources"
+    // --- ZOOM : COUTUME ET USAGES ---
+    coutume: {
+        title: "La Coutume",
+        info: "Usage constant et conviction juridique (p. 26). <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
+        children: [], parent: "sources_formelles"
     },
-
+    usages_commerciaux: {
+        title: "Usages et Autoréglementation",
+        info: "Règles spécifiques au commerce (Incoterms, déontologie). <br>Elles permettent au droit de s'adapter vite aux besoins des entreprises sans passer par le Parlement.",
+        children: [], parent: "sources"
+    },
+    
     traites_internationaux: {
         title: "Traités internationaux",
         info: "Accords conclus entre États ou avec des organisations internationales. <br><br><strong>Détails du cours (p. 20) :</strong> <br><ul><li><strong>Primauté :</strong> Ils l'emportent en principe sur le droit national.</li><li><strong>Domaines :</strong> Droits de l'homme (CEDH), économie, environnement, etc.</li><li><strong>Exemple majeur :</strong> La Convention européenne des droits de l'homme (CEDH) garantit des libertés fondamentales que la Suisse doit respecter.</li></ul>",
         children: [],
-        parent: "sources_formelles"
+        parent: "loi_large"
     },
 
     loi_large: {
         title: "La Loi (au sens large)",
         info: "La source écrite principale, structurée en pyramide.",
         children: ["constitution", "loi_etroit", "ordonnance"],
-        parent: "sources_formelles"
+        parent: "sources"
     },
 
     // --- ZOOM : CONSTITUTION FÉDÉRALE (Arbre détaillé) ---
@@ -272,7 +276,7 @@ const courseData = {
 
     // --- ZOOM : LOIS ET ORDONNANCES ---
     loi_etroit: {
-        title: "Lois (au sens étroit)",
+        title: "Lois fédérale",
         info: "Édictées par le Parlement (p. 24). <br><ul><li><strong>Exemples :</strong> Code Civil, Code des Obligations.</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote populaire.</li></ul>",
         children: [], parent: "loi_large"
     },
@@ -282,34 +286,15 @@ const courseData = {
         children: [], parent: "loi_large"
     },
 
-    // --- ZOOM : COUTUME ET USAGES ---
-    coutume: {
-        title: "La Coutume",
-        info: "Usage constant et conviction juridique (p. 26). <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
-        children: [], parent: "sources_formelles"
-    },
-    usages_commerciaux: {
-        title: "Usages et Autoréglementation",
-        info: "Règles spécifiques au commerce (Incoterms, déontologie). <br>Elles permettent au droit de s'adapter vite aux besoins des entreprises sans passer par le Parlement.",
-        children: [], parent: "sources_formelles"
-    },
-
-    // --- 4.2 SOURCES MATÉRIELLES ---
-    sources_materielles: {
-        title: "4.2 Sources matérielles",
-        info: "Aident à comprendre et combler les 'trous' de la loi.",
-        children: ["jurisprudence", "doctrine"],
-        parent: "sources"
-    },
     jurisprudence: {
         title: "La Jurisprudence",
         info: "Ensemble des décisions des tribunaux (p. 27). <br><strong>Rôle crucial (Art. 1 al. 2 CC) :</strong> Si la loi est muette, le juge doit agir comme un législateur. <br><strong>Le Tribunal Fédéral (TF)</strong> assure l'unité de l'application du droit en Suisse.",
-        children: [], parent: "sources_materielles"
+        children: [], parent: "sources"
     },
     doctrine: {
         title: "La Doctrine",
         info: "Opinions des savants (p. 27). <br>Indispensable pour éclairer le juge sur des cas complexes, bien qu'elle n'ait pas de force obligatoire.",
-        children: [], parent: "sources_materielles"
+        children: [], parent: "sources"
     },
 
     // --- 5. DIVISIONS DU DROIT ---
