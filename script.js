@@ -341,22 +341,64 @@ const courseData = {
         children: [], parent: "jurisprudence"
     },
     
-    // --- 5. DIVISIONS DU DROIT ---
+    // --- 5. LES GRANDES DIVISIONS DU DROIT (Dès page 30) ---
     divisions: {
         title: "5. Les grandes divisions du droit",
-        info: "Séparation selon les acteurs.",
-        children: ["droit_public", "droit_prive"],
+        info: "Le droit n'est pas un bloc monolithique ; il est divisé en grandes catégories pour mieux organiser les rapports sociaux.",
+        children: ["div_general", "div_public_prive", "div_materiel_formel"],
         parent: "root"
     },
-    droit_public: {
-        title: "Le Droit Public",
-        info: "Rapports État-citoyen avec lien de subordination.",
-        children: [], parent: "divisions"
+
+    // --- BRANCHE : EN GÉNÉRAL ---
+    div_general: {
+        title: "En général",
+        info: "L'ordre juridique est la somme des règles de droit. Pour s'y retrouver, la doctrine a établi des classifications fondées sur l'objet de la règle ou les personnes qu'elle régit. <br><br><strong>Points clés :</strong> <br><ul><li>La division la plus ancienne et la plus importante est celle qui oppose le <strong>droit public</strong> au <strong>droit privé</strong>.</li><li>Une règle de droit peut appartenir à plusieurs catégories, mais sa nature (impérative ou dispositive) dépendra souvent de sa branche d'origine.</li></ul>",
+        children: [],
+        parent: "divisions"
     },
-    droit_prive: {
+
+    // --- BRANCHE : DROIT PUBLIC ET DROIT PRIVÉ ---
+    div_public_prive: {
+        title: "Le droit public et le droit privé",
+        info: "C'est la <em>'Summa Divisio'</em> (la division suprême). Elle repose sur trois critères principaux soulignés dans le cours.",
+        children: ["detail_droit_public", "detail_droit_prive"],
+        parent: "divisions"
+    },
+
+    detail_droit_public: {
+        title: "Le Droit Public",
+        info: "Le droit public régit l'organisation de l'État et les rapports entre l'État (agissant comme puissance publique) et les particuliers. <br><br><strong>Critères soulignés (p. 31) :</strong> <br><ul><li><span class='highlight'>Lien de subordination</span> : L'État impose sa volonté au particulier par des décisions unilatérales.</li><li><span class='highlight'>Intérêt général</span> : Le but est la satisfaction des besoins de la collectivité.</li><li><span class='highlight'>Caractère impératif</span> : Les règles de droit public sont presque toujours impératives (on ne peut pas y déroger).</li></ul><br><strong>Comprend :</strong> Droit constitutionnel, administratif, pénal et fiscal.",
+        children: [],
+        parent: "div_public_prive"
+    },
+
+    detail_droit_prive: {
         title: "Le Droit Privé",
-        info: "Rapports entre particuliers sur un pied d'égalité.",
-        children: [], parent: "divisions"
+        info: "Le droit privé régit les rapports entre les particuliers (personnes physiques ou morales) ou entre l'État et les particuliers quand l'État n'agit pas en puissance publique. <br><br><strong>Critères soulignés (p. 32) :</strong> <br><ul><li><span class='success'>Rapport d'égalité</span> : Les parties traitent d'égal à égal.</li><li><span class='success'>Intérêt particulier</span> : Vise la satisfaction des besoins individuels.</li><li><span class='success'>Autonomie de la volonté</span> : Les règles sont souvent <strong>dispositives</strong> (on peut les modifier par contrat).</li></ul><br><strong>Comprend :</strong> Droit civil (CC) et Droit des obligations (CO).",
+        children: [],
+        parent: "div_public_prive"
+    },
+
+    // --- BRANCHE : DROIT MATÉRIEL ET DROIT FORMEL ---
+    div_materiel_formel: {
+        title: "Le droit matériel et le droit formel",
+        info: "Cette distinction concerne l'objet même de la règle : le fond contre la forme.",
+        children: ["detail_droit_materiel", "detail_droit_formel"],
+        parent: "divisions"
+    },
+
+    detail_droit_materiel: {
+        title: "Le Droit Matériel (Droit de fond)",
+        info: "Le droit matériel comprend les règles de conduite qui définissent les <strong>droits et les obligations</strong> des personnes. <br><br><strong>Exemple :</strong> L'article 41 CO (celui qui cause un dommage doit le réparer) est une règle de fond car elle définit une obligation.",
+        children: [],
+        parent: "div_materiel_formel"
+    },
+
+    detail_droit_formel: {
+        title: "Le Droit Formel (Droit de procédure)",
+        info: "Le droit formel (ou procédural) comprend les règles qui fixent la <strong>marche à suivre</strong> pour faire valoir ses droits de fond ou pour les faire appliquer par les autorités. <br><br><strong>Rôles soulignés :</strong> <br><ul><li>Organisation des autorités et des tribunaux.</li><li>Déroulement du procès (délais, preuves).</li><li>Voies de recours.</li></ul><br><strong>Exemples :</strong> Code de procédure civile (CPC), Code de procédure pénale (CPP).",
+        children: [],
+        parent: "div_materiel_formel"
     },
 
     // --- 6. DROIT DE L'ENTREPRISE ---
