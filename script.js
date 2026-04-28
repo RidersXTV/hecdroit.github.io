@@ -406,7 +406,7 @@ const courseData = {
         title: "Le droit constitutionnel",
         info: "Cette branche examine l'impact de la Constitution fédérale sur l'activité économique et les droits des entreprises.",
         children: ["portee_cst", "libertes_fondamentales"],
-        parent: "entreprise"
+        parent: "root"
     },
 
     // SOUS-BRANCHE : PORTÉE
