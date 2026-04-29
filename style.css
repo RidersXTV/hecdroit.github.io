@@ -210,3 +210,51 @@ header p { margin: 0; color: #bee3f8; font-size: 0.9em; }
     .navigation-buttons { flex-direction: column; }
     .nav-btn { align-items: center !important; text-align: center !important; }
 }
+/* --- STYLES POUR LES CAS PRATIQUES --- */
+.cas-pratique {
+    background-color: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.cas-pratique h4 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.cas-pratique-question {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-top: 15px;
+}
+
+.toggle-answer-btn {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.2s;
+    font-size: 0.9em;
+}
+
+.toggle-answer-btn:hover {
+    background-color: var(--primary);
+}
+
+.answer-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-left: 4px solid var(--success);
+    background-color: var(--bg-card);
+    border-radius: 0 5px 5px 0;
+    box-shadow: var(--shadow);
+}
