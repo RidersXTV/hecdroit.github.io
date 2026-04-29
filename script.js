@@ -7,6 +7,7 @@ const courseData = {
         children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11", "rc_contractuelle_titre12", "enrichissement_illegitime_titre13", "modalites_obligations_titre14", "transmission_obligations_titre15", "exec_obligations_titre16", "extinction_obligations_titre17"]
     },
 
+    // --- NOUVELLE ENTRÉE POUR LA BIBLIOGRAPHIE (Footer) ---
     bibliographie: {
         title: "Définitions juridiques et bibliographie",
         info: "Ce cours se base sur les livres suivants :<br><br><ul><li>C. BOVET / A. CARVALHO, Glossaire juridique, Collection Quid iuris ?, Genève / Zurich 2017.</li><li>B. CARRON / P. WESSNER, Le droit des obligations: Partie générale - Vol. I et Vol. II, Berne 2022 et 2024.</li><li>F. CHAUDET / J. C. LANDROVE / V. JUNOD / A. MACALUSO / F. CHAUDET, Droit suisse des affaires, 4ème éd., Bâle 2023.</li><li>P. TERCIER / P. PICHONNAZ, Le droit des obligations, 7ème éd., Zürich / Genève 2024.</li><li>F. WERRO, La responsabilité civile, 4ème éd., Berne 2025.</li></ul><br><em>Les définitions qui se trouvent sur des sites Internet et les réponses proposées par des outils d'intelligence artificielle ne concernent pas forcément le droit suisse. (Extrait de la page 2 du polycopié)</em>",
@@ -21,47 +22,69 @@ const courseData = {
         children: ["fondements_droit", "sens_droit"],
         parent: "root"
     },
+
+    // --- BRANCHE PRINCIPALE 1.1 : LES FONDEMENTS DU DROIT ---
     fondements_droit: {
         title: "Les fondements du droit",
         info: "Pour pouvoir exercer ses fonctions, à savoir assurer un équilibre entre des intérêts opposés et organiser la vie en communauté, le droit doit remplir trois sortes de conditions : il doit être sûr, émaner d'un pouvoir social et correspondre à une idée de justice.",
         children: ["def_fonctions", "securite_droit", "pouvoir_social", "idee_justice"],
         parent: "notion"
     },
+
+    // SOUS-BRANCHE 1.1.1
     def_fonctions: {
         title: "Définition et fonctions",
         info: "Le droit est le système normatif englobant toutes les règles de droit obligatoires, soit l'ensemble des règles de conduite imposées aux personnes physiques et morales par un pouvoir que personnifie l'État. <br><br>Le droit a deux fonctions principales :<br><ul><li><strong>Une fonction pacificatrice :</strong> freiner les appétits égoïstes et assurer la coexistence pacifique entre les individus.</li><li><strong>Une fonction organisatrice :</strong> établir un ordre social fondé sur l'équilibre des divers intérêts.</li></ul>",
-        children: [], parent: "fondements_droit"
+        children: [],
+        parent: "fondements_droit"
     },
+
+    // SOUS-BRANCHE 1.1.2
     securite_droit: {
         title: "La sécurité du droit",
         info: "Les personnes soumises au droit doivent toujours avoir la possibilité de le connaître pour pouvoir se conformer à ses normes ; il s'agit de la sécurité du droit. En règle générale, le droit écrit correspond le mieux à cette idée de clarté et de prévisibilité.<br><br>La sécurité du droit implique plusieurs exigences :<br><ul><li>Le principe de la <strong>non-rétroactivité des lois</strong> et l'existence de règles transitoires.</li><li>L'institution de la <strong>prescription</strong>, c'est-à-dire l'extinction d'un droit, d'une obligation ou d'une action par l'effet de l'écoulement du temps.</li></ul><br>Ces éléments garantissent l'équilibre entre les intérêts opposés (c'est l'effet préventif).",
-        children: [], parent: "fondements_droit"
+        children: [],
+        parent: "fondements_droit"
     },
+
+    // SOUS-BRANCHE 1.1.3
     pouvoir_social: {
         title: "L'émanation d'un pouvoir social",
         info: "Le droit doit émaner d'un pouvoir social. L'ordre social suppose l'existence d'une autorité habilitée et apte à imposer les normes établies, à les faire exécuter et à infliger des sanctions. <br><br>Dans une société correspondant à un État de droit, c'est l'État qui, à lui seul, assure le fonctionnement de la justice.",
-        children: [], parent: "fondements_droit"
+        children: [],
+        parent: "fondements_droit"
     },
+
+    // SOUS-BRANCHE 1.1.4
     idee_justice: {
         title: "La conformité à l'idée de justice",
         info: "Le droit doit correspondre à une idée de justice. On distingue deux approches :<br><ul><li><strong>La justice commutative :</strong> se rapporte aux droits fondamentaux qui appartiennent à chaque être humain de façon égale sans que l'on tienne compte de l'origine, de la race ou de la religion (ex: liberté de conscience).</li><li><strong>La justice distributive :</strong> implique que l'on tienne compte de certaines différences qui existent entre les individus dans leur rapport avec la société (ex: impôts proportionnels aux revenus).</li></ul><br>Il est à noter que l'ordre juridique est le fruit de la pensée humaine et qu'il ne doit pas être immuable, mais doit s'adapter continuellement aux conditions changeantes de la vie.",
-        children: [], parent: "fondements_droit"
+        children: [],
+        parent: "fondements_droit"
     },
+
+    // --- BRANCHE PRINCIPALE 1.2 : LES DIFFÉRENTS SENS DU MOT DROIT ---
     sens_droit: {
         title: "Les différents sens du mot droit",
         info: "Le terme de « droit » recouvre deux notions fondamentales : le droit au sens objectif et le droit au sens subjectif.",
         children: ["droit_objectif", "droit_subjectif"],
         parent: "notion"
     },
+
+    // SOUS-BRANCHE 1.2.1
     droit_objectif: {
         title: "Le droit au sens objectif",
         info: "Le droit au sens objectif est un ensemble de règles obligatoires (ou de normes), générales et abstraites, indiquant ce qui doit être fait dans un cas donné, édictées ou reconnues par un organe officiel, régissant l'organisation et le déroulement des relations sociales et dont le respect est assuré par des moyens de contrainte organisés par l'État.<br><br>Dans ce cadre, on distingue :<br><ul><li>Le <strong>droit naturel</strong> : règles universelles et immuables conformes à la nature humaine.</li><li>Le <strong>droit positif</strong> : règles en vigueur dans un État, à un moment donné.</li></ul>",
-        children: [], parent: "sens_droit"
+        children: [],
+        parent: "sens_droit"
     },
+
+    // SOUS-BRANCHE 1.2.2
     droit_subjectif: {
         title: "Le droit au sens subjectif",
         info: "Le droit au sens subjectif est une faculté, une prérogative attachée à une certaine personne et protégée par l'ordre juridique existant. C'est la faculté appartenant à un sujet de droit de faire ou d'exiger quelque chose (sujet actif) ou d'être obligée à quelque chose (sujet passif).<br><br>On distingue deux catégories :<br><ul><li><strong>Les droits réels ou absolus :</strong> droits qui peuvent être exercés à l'égard de toute tierce personne (ex: le droit de propriété).</li><li><strong>Les droits relatifs ou personnels :</strong> droits qui ne peuvent être exercés qu'à l'encontre de certaines personnes bien déterminées (ex: l'obligation ou droit de créance découlant d'un contrat).</li></ul><br>Un droit subjectif ne peut exister que dans la mesure où le droit objectif le consacre et permet d'en obtenir le respect.",
-        children: [], parent: "sens_droit"
+        children: [],
+        parent: "sens_droit"
     },
 
     // --- 2. LES SUJETS DE DROIT ---
@@ -71,20 +94,29 @@ const courseData = {
         children: ["definition_sujets", "jouissance_exercice_droits", "personne_morale_entreprise"],
         parent: "root"
     },
+
+    // --- BRANCHE PRINCIPALE 2.1 ---
     definition_sujets: {
         title: "Définition et notion",
         info: "Un sujet de droit est soit le titulaire de droits subjectifs qui peut faire valoir les prérogatives qui en découlent (le créancier), soit la personne qui est obligée du fait de ces droits subjectifs (le débiteur). <br><br>Il est important de noter que les choses ne peuvent être en soi que l'objet d'un droit subjectif, elles sont un moyen et non un but en soi.",
-        children: [], parent: "sujets"
+        children: [],
+        parent: "sujets"
     },
+
+    // --- BRANCHE PRINCIPALE 2.2 ---
     jouissance_exercice_droits: {
         title: "La jouissance et l'exercice des droits civils",
         info: "Il est fondamental de distinguer la jouissance de l'exercice des droits civils :<br><br><ul><li><strong>La jouissance des droits civils (capacité juridique) :</strong> C'est la capacité d'être sujet de droit. Toute personne a une aptitude égale à devenir sujet de droits et d'obligations. Cette faculté, indépendante de l'âge ou des facultés mentales, commence à la naissance et finit par la mort.</li><li><strong>L'exercice des droits civils :</strong> C'est la capacité de s'engager juridiquement, d'acquérir des droits et pouvoir s'obliger par ses propres actes. Ne possède l'exercice des droits civils que la personne majeure et capable de discernement.</li></ul><br>Le <strong>discernement</strong> se définit comme étant la capacité intellectuelle présumée chez toute personne physique qui n'est pas atteinte de déficience mentale, de troubles psychiques, d'ivresse ou d'autres causes semblables, temporaires ou définitives, l'empêchant d'agir raisonnablement.",
-        children: ["cp_frere_jean"], parent: "sujets"
+        children: ["cp_frere_jean"],
+        parent: "sujets"
     },
+
+    // --- BRANCHE PRINCIPALE 2.3 ---
     personne_morale_entreprise: {
         title: "La personne morale et l'entreprise",
         info: "L'être humain cherche souvent à atteindre des buts qui dépassent les forces d'une personne individuelle, formant ainsi des groupements.<br><br><ul><li><strong>La personne morale (ou juridique) :</strong> Ce sont des entités, comme des groupements de personnes (ex: association, société de capitaux) ou des masses de biens (ex: fondation), qui peuvent devenir, à certaines conditions, sujets de droits et d'obligations.</li><li><strong>L'entreprise :</strong> La notion de personne morale doit être distinguée de celle d'entreprise. L'entreprise peut être définie comme étant une activité économique indépendante exercée en vue d'un revenu régulier.</li></ul><br>En pratique, la notion d'entreprise peut désigner l'activité commerciale exploitée par une personne morale (ex: société anonyme) ou par une ou plusieurs personnes physiques (ex: entreprise individuelle, société en nom collectif).",
-        children: ["cp_perroquet"], parent: "sujets"
+        children: ["cp_perroquet"],
+        parent: "sujets"
     },
 
     // --- CAS PRATIQUES (Sujets de droit) ---
@@ -127,43 +159,58 @@ const courseData = {
         children: ["caracteristiques_regle", "nature_regles"],
         parent: "root"
     },
+
+    // --- 1ÈRE BRANCHE PRINCIPALE : LES CARACTÉRISTIQUES ---
     caracteristiques_regle: {
         title: "Définition et caractéristiques",
         info: "Les caractéristiques de la règle de droit sont au nombre de trois. Elles permettent de structurer et d'imposer la règle au sein de la société.",
         children: ["caractere_general_abstrait", "structure_double", "caractere_obligatoire"],
         parent: "regle"
     },
+
+    // SOUS-BRANCHE 1.1
     caractere_general_abstrait: {
         title: "Le caractère général et abstrait",
         info: "Par essence, la règle de droit est générale et abstraite. <br><br><ul><li>Elle est <strong>générale</strong>, en ce sens qu'elle vise un nombre indéterminé de personnes.</li><li>Elle est <strong>abstraite</strong> dans la mesure où elle s'applique à un nombre indéterminé de situations.</li></ul><br>La règle de droit doit donc être formulée de telle manière qu'elle puisse viser le plus de situations possibles, sans pour autant être trop générale et, par conséquent, trop vague, ce qui nuirait à la sécurité du droit.",
-        children: [], parent: "caracteristiques_regle"
+        children: [],
+        parent: "caracteristiques_regle"
     },
+
+    // SOUS-BRANCHE 1.2
     structure_double: {
         title: "La structure double",
         info: "Sur le plan de sa structure, la règle de droit comprend deux éléments, elle est bipartite :<br><br><ol><li>D'une part, elle comprend un <strong>point de départ</strong>. Ce sont les conditions, l'hypothèse, les faits ou les éléments dont la réalisation entraîne l'application de la règle.</li><li>D'autre part, elle emporte un <strong>effet juridique</strong>, soit la conséquence que la règle de droit attache à la réalisation des faits ou conditions d'application.</li></ol><br>Cette double structure se rencontre non seulement dans la règle abstraite, mais aussi dans l'application au cas concret (il y a une partie « fait » et une partie « droit » dans tout jugement).",
-        children: [], parent: "caracteristiques_regle"
+        children: [],
+        parent: "caracteristiques_regle"
     },
+
+    // SOUS-BRANCHE 1.3
     caractere_obligatoire: {
         title: "Le caractère obligatoire",
         info: "La troisième caractéristique, qui est de loin la plus importante, est le caractère obligatoire de la règle de droit, accompagné de la menace de sanction ou de la sanction elle-même. <br><br>La sanction, qui est la conséquence attachée par le droit à la violation d'une règle juridique, poursuit deux buts essentiels :<br><ul><li>Un but de <strong>prévention et de punition</strong> : inciter les justiciables à suivre les règles de droit.</li><li>Un but de <strong>réparation</strong> : réparer les effets d'une conduite contraire au droit.</li></ul>",
-        children: [], parent: "caracteristiques_regle"
+        children: [],
+        parent: "caracteristiques_regle"
     },
+
+    // --- 2ÈME BRANCHE PRINCIPALE : NATURE ET EXEMPLES ---
     nature_regles: {
         title: "Nature des règles et exemples",
         info: "Les règles de droit ne sont pas toutes de même nature. <br><br><ul><li><strong>Règles impératives :</strong> Règles auxquelles il n'est pas permis de déroger, même par convention, ou qu'il n'est pas licite d'éluder. Elles doivent être respectées par tous.</li><li><strong>Règles dispositives :</strong> Elles sont édictées dans les mêmes conditions mais ne s'appliquent que si les particuliers n'en ont pas décidé autrement. Elles peuvent suppléer à la volonté des parties.</li><li><strong>Règles semi-impératives :</strong> Règles auxquelles on ne peut déroger qu'en faveur de l'une des parties, généralement la plus faible (ex: droit du travail).</li></ul>",
-        children: [], parent: "regle"
+        children: [],
+        parent: "regle"
     },
-
-    // --- 4. LES SOURCES DU DROIT ---
+    // --- 4. LES SOURCES DU DROIT (Structure en Arbre Exhaustive) ---
     sources: {
         title: "4. Les sources du droit",
         info: "Les sources du droit sont les formes sous lesquelles les règles apparaissent et deviennent obligatoires. On distingue les sources formelles (obligatoires) des sources matérielles (interprétatives).",
         children: ["coutume", "loi_large", "jurisprudence", "doctrine", "usages_commerciaux"],
         parent: "root"
     },
+
+    // --- ZOOM : COUTUME ET USAGES ---
     coutume: {
         title: "La Coutume",
-        info: "Usage constant et conviction juridique. <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
+        info: "Usage constant et conviction juridique (p. 26). <br><strong>Conditions cumulatives :</strong> <br>1. <strong>Usage constant :</strong> Pratique répétée sur une longue durée. <br>2. <strong>Opinio iuris :</strong> Conviction des individus d'obéir à une règle de droit.",
         children: [], parent: "sources"
     },
     usages_commerciaux: {
@@ -188,26 +235,30 @@ const courseData = {
         children: [], parent: "usages_commerciaux"
     },
 
+    traites_internationaux: {
+        title: "Traités internationaux",
+        info: "Accords conclus entre États ou avec des organisations internationales. <br><br><strong>Détails du cours (p. 20) :</strong> <br><ul><li><strong>Primauté :</strong> Ils l'emportent en principe sur le droit national.</li><li><strong>Domaines :</strong> Droits de l'homme (CEDH), économie, environnement, etc.</li><li><strong>Exemple majeur :</strong> La Convention européenne des droits de l'homme (CEDH) garantit des libertés fondamentales que la Suisse doit respecter.</li></ul>",
+        children: [],
+        parent: "loi_large"
+    },
+
     loi_large: {
         title: "La Loi (au sens large)",
         info: "La source écrite principale, structurée en pyramide.",
         children: ["traites_internationaux", "constitution", "loi_etroit", "ordonnance", "application_loi"],
         parent: "sources"
     },
-    traites_internationaux: {
-        title: "Traités internationaux",
-        info: "Accords conclus entre États ou avec des organisations internationales. <br><br><strong>Détails du cours :</strong> <br><ul><li><strong>Primauté :</strong> Ils l'emportent en principe sur le droit national.</li><li><strong>Domaines :</strong> Droits de l'homme (CEDH), économie, environnement, etc.</li><li><strong>Exemple majeur :</strong> La Convention européenne des droits de l'homme (CEDH) garantit des libertés fondamentales que la Suisse doit respecter.</li></ul>",
-        children: [], parent: "loi_large"
-    },
+
+    // --- ZOOM : CONSTITUTION FÉDÉRALE (Arbre détaillé) ---
     constitution: {
         title: "La Constitution fédérale (Cst)",
-        info: "Loi fondamentale au sommet de la hiérarchie.",
+        info: "Loi fondamentale au sommet de la hiérarchie (p. 22).",
         children: ["cst_adoption", "cst_droits", "cst_organisation", "cst_separation", "cst_primante"],
         parent: "loi_large"
     },
     cst_adoption: {
         title: "Adoption et Révision",
-        info: "<strong>Révision totale ou partielle :</strong> Elle nécessite la <span class='highlight'>double majorité du Peuple et des Cantons</span>. <br><ul><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent demander une modification.</li><li><strong>Référendum obligatoire :</strong> Toute révision décidée par le Parlement est soumise au vote.</li></ul>",
+        info: "<strong>Révision totale ou partielle :</strong> Elle nécessite la <span class='highlight'>double majorité du Peuple et des Cantons</span>. <br><ul><li><strong>Initiative populaire :</strong> 100'000 citoyens peuvent demander une modification (p. 23).</li><li><strong>Référendum obligatoire :</strong> Toute révision décidée par le Parlement est soumise au vote.</li></ul>",
         children: [], parent: "constitution"
     },
     cst_droits: {
@@ -230,16 +281,26 @@ const courseData = {
         info: "Le droit fédéral l'emporte sur le droit cantonal qui lui est contraire. 'La force dérogatoire du droit fédéral'.",
         children: [], parent: "constitution"
     },
+
+    // --- ZOOM : LOIS ET ORDONNANCES ---
     loi_etroit: {
         title: "La loi fédérale",
-        info: "Édictées par le Parlement. <br><ul><li><strong>Exemples :</strong> Code Civil, Code des Obligations.</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote populaire.</li></ul>",
+        info: "Édictées par le Parlement (p. 24). <br><ul><li><strong>Exemples :</strong> Code Civil, Code des Obligations.</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote populaire.</li></ul>",
         children: [], parent: "loi_large"
     },
     ordonnance: {
         title: "Ordonnances",
-        info: "Édictées par le Conseil fédéral pour appliquer les lois. <br><ul><li><strong>Nature :</strong> Rang inférieur à la loi.</li><li><strong>Sanction :</strong> Jamais de référendum possible contre une ordonnance.</li></ul>",
+        info: "Édictées par le Conseil fédéral pour appliquer les lois (p. 25). <br><ul><li><strong>Nature :</strong> Rang inférieur à la loi.</li><li><strong>Sanction :</strong> Jamais de référendum possible contre une ordonnance.</li></ul>",
         children: [], parent: "loi_large"
     },
+
+    doctrine: {
+        title: "La Doctrine",
+        info: "Opinions des savants (p. 27). <br>Indispensable pour éclairer le juge sur des cas complexes, bien qu'elle n'ait pas de force obligatoire.",
+        children: [], parent: "sources"
+    },
+
+    // --- NOUVELLE BRANCHE : L'APPLICATION DE LA LOI (Dès page 26) ---
     application_loi: {
         title: "L'application de la loi",
         info: "L'application de la loi consiste à passer de la règle générale et abstraite au cas concret. Ce processus suit des règles strictes de temps, d'espace et d'interprétation.",
@@ -262,27 +323,32 @@ const courseData = {
         children: [], parent: "application_loi"
     },
 
+    // --- DÉVELOPPEMENT DE LA JURISPRUDENCE (Dès page 28) ---
     jurisprudence: {
         title: "La Jurisprudence",
         info: "Ensemble des décisions rendues par les tribunaux. Elle est une source matérielle de première importance.",
         children: ["juris_role", "juris_effets", "juris_revirement", "cp_qcm_jurisprudence"],
         parent: "sources"
     },
+
     juris_role: {
         title: "Rôle de la jurisprudence",
         info: "Le juge ne peut pas refuser de juger sous prétexte que la loi est obscure ou incomplète (déni de justice). <br><br><strong>Ses missions :</strong> <br><ul><li><strong>Appliquer la loi :</strong> Adapter la règle abstraite au cas particulier.</li><li><strong>Préciser la loi :</strong> Définir les notions imprécises ou 'clauses générales' (ex: 'justes motifs', 'bonne foi').</li><li><strong>Combler les lacunes :</strong> Selon l'<strong>Art. 1 al. 2 CC</strong>, si la loi est muette, le juge doit créer la règle qu'il établirait s'il était législateur.</li></ul>",
         children: [], parent: "jurisprudence"
     },
+
     juris_effets: {
         title: "Effets de la jurisprudence",
         info: "Contrairement à la loi, la jurisprudence n'a pas une portée générale immédiate, mais son influence est réelle. <br><br><ul><li><strong>Autorité relative :</strong> La décision ne lie formellement que les parties au procès (autorité de la chose jugée).</li><li><strong>Unification :</strong> Les décisions du <strong>Tribunal fédéral (TF)</strong> créent des précédents. Les tribunaux inférieurs s'y conforment pour éviter que leurs jugements ne soient annulés en appel.</li><li><strong>Sécurité juridique :</strong> Elle permet une application prévisible et uniforme du droit sur tout le territoire.</li></ul>",
         children: [], parent: "jurisprudence"
     },
+
     juris_revirement: {
         title: "Le Revirement de jurisprudence",
         info: "Le Tribunal fédéral peut changer d'avis et modifier sa manière d'interpréter une règle. C'est ce qu'on appelle un revirement. <br><br><strong>Conditions et caractéristiques :</strong> <br><ul><li><strong>Raisons :</strong> Changement des mœurs, évolution technique ou prise de conscience d'une erreur passée.</li><li><strong>Stabilité vs Évolution :</strong> Le juge doit trouver un équilibre entre le besoin de stabilité (ne pas changer d'avis sans cesse) et la nécessité d'adapter le droit à la réalité.</li><li><strong>Conséquence :</strong> La nouvelle interprétation s'appliquera désormais à tous les cas futurs similaires.</li></ul>",
         children: [], parent: "jurisprudence"
     },
+    
     cp_qcm_jurisprudence: {
         title: "Cas pratique : Exemple de question d'examen",
         info: `<div class="cas-pratique">
@@ -307,41 +373,45 @@ const courseData = {
         </div>`,
         children: [], parent: "jurisprudence"
     },
-
-    doctrine: {
-        title: "La Doctrine",
-        info: "Opinions des savants. <br>Indispensable pour éclairer le juge sur des cas complexes, bien qu'elle n'ait pas de force obligatoire.",
-        children: [], parent: "sources"
-    },
     
-    // --- 5. LES GRANDES DIVISIONS DU DROIT ---
+    // --- 5. LES GRANDES DIVISIONS DU DROIT (Dès page 30) ---
     divisions: {
         title: "5. Les grandes divisions du droit",
         info: "Le droit n'est pas un bloc monolithique ; il est divisé en grandes catégories pour mieux organiser les rapports sociaux.",
         children: ["div_general", "div_public_prive", "div_materiel_formel"],
         parent: "root"
     },
+
+    // --- BRANCHE : EN GÉNÉRAL ---
     div_general: {
         title: "En général",
         info: "L'ordre juridique est la somme des règles de droit. Pour s'y retrouver, la doctrine a établi des classifications fondées sur l'objet de la règle ou les personnes qu'elle régit. <br><br><strong>Points clés :</strong> <br><ul><li>La division la plus ancienne et la plus importante est celle qui oppose le <strong>droit public</strong> au <strong>droit privé</strong>.</li><li>Une règle de droit peut appartenir à plusieurs catégories, mais sa nature (impérative ou dispositive) dépendra souvent de sa branche d'origine.</li></ul>",
-        children: [], parent: "divisions"
+        children: [],
+        parent: "divisions"
     },
+
+    // --- BRANCHE : DROIT PUBLIC ET DROIT PRIVÉ ---
     div_public_prive: {
         title: "Le droit public et le droit privé",
         info: "C'est la <em>'Summa Divisio'</em> (la division suprême). Elle repose sur trois critères principaux soulignés dans le cours.",
         children: ["detail_droit_public", "detail_droit_prive", "cp_public_prive"],
         parent: "divisions"
     },
+
     detail_droit_public: {
         title: "Le Droit Public",
         info: "Le droit public régit l'organisation de l'État et les rapports entre l'État (agissant comme puissance publique) et les particuliers. <br><br><ul><li><span class='highlight'>Lien de subordination</span> : L'État impose sa volonté au particulier par des décisions unilatérales.</li><li><span class='highlight'>Intérêt général</span> : Le but est la satisfaction des besoins de la collectivité.</li><li><span class='highlight'>Caractère impératif</span> : Les règles de droit public sont presque toujours impératives (on ne peut pas y déroger).</li></ul><br><strong>Comprend :</strong> Droit constitutionnel, administratif, pénal et fiscal.",
-        children: [], parent: "div_public_prive"
+        children: [],
+        parent: "div_public_prive"
     },
+
     detail_droit_prive: {
         title: "Le Droit Privé",
         info: "Le droit privé régit les rapports entre les particuliers (personnes physiques ou morales) ou entre l'État et les particuliers quand l'État n'agit pas en puissance publique. <br><br><ul><li><span class='success'>Rapport d'égalité</span> : Les parties traitent d'égal à égal.</li><li><span class='success'>Intérêt particulier</span> : Vise la satisfaction des besoins individuels.</li><li><span class='success'>Autonomie de la volonté</span> : Les règles sont souvent <strong>dispositives</strong> (on peut les modifier par contrat).</li></ul><br><strong>Comprend :</strong> Droit civil (CC) et Droit des obligations (CO).",
-        children: [], parent: "div_public_prive"
+        children: [],
+        parent: "div_public_prive"
     },
+    
     cp_public_prive: {
         title: "Cas pratique : Charlie et la commune",
         info: `<div class="cas-pratique">
@@ -361,22 +431,29 @@ const courseData = {
         </div>`,
         children: [], parent: "div_public_prive"
     },
+
+    // --- BRANCHE : DROIT MATÉRIEL ET DROIT FORMEL ---
     div_materiel_formel: {
         title: "Le droit matériel et le droit formel",
         info: "Cette distinction concerne l'objet même de la règle : le fond contre la forme.",
         children: ["detail_droit_materiel", "detail_droit_formel", "cp_materiel_formel"],
         parent: "divisions"
     },
+
     detail_droit_materiel: {
         title: "Le Droit Matériel (Droit de fond)",
         info: "Le droit matériel comprend les règles de conduite qui définissent les <strong>droits et les obligations</strong> des personnes. <br><br><strong>Exemple :</strong> L'article 41 CO (celui qui cause un dommage doit le réparer) est une règle de fond car elle définit une obligation.",
-        children: [], parent: "div_materiel_formel"
+        children: [],
+        parent: "div_materiel_formel"
     },
+
     detail_droit_formel: {
         title: "Le Droit Formel (Droit de procédure)",
         info: "Le droit formel (ou procédural) comprend les règles qui fixent la <strong>marche à suivre</strong> pour faire valoir ses droits de fond ou pour les faire appliquer par les autorités. <br><br><strong>Rôles soulignés :</strong> <br><ul><li>Organisation des autorités et des tribunaux.</li><li>Déroulement du procès (délais, preuves).</li><li>Voies de recours.</li></ul><br><strong>Exemples :</strong> Code de procédure civile (CPC), Code de procédure pénale (CPP).",
-        children: [], parent: "div_materiel_formel"
+        children: [],
+        parent: "div_materiel_formel"
     },
+    
     cp_materiel_formel: {
         title: "Cas pratique : Le vélo de Charlie",
         info: `<div class="cas-pratique">
@@ -400,62 +477,82 @@ const courseData = {
         parent: "root"
     },
     
-    // --- 6.1 LE DROIT CONSTITUTIONNEL ---
+    // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
     droit_constitutionnel: {
         title: "Le droit constitutionnel",
         info: "Cette branche examine l'impact de la Constitution fédérale sur l'activité économique et les droits des entreprises.",
         children: ["portee_cst", "libertes_fondamentales"],
         parent: "public"
     },
+
+    // SOUS-BRANCHE : PORTÉE
     portee_cst: {
         title: "La portée du droit constitutionnel",
         info: "Le droit constitutionnel définit le cadre dans lequel l'entreprise peut agir. <br><br><ul><li>Il garantit la <span class='highlight'>liberté d'action</span> des acteurs économiques face à l'État.</li><li>Il fixe les limites de l'intervention étatique pour protéger l'initiative privée.</li><li>Il assure l'unité de l'espace économique suisse.</li></ul>",
-        children: [], parent: "droit_constitutionnel"
+        children: [],
+        parent: "droit_constitutionnel"
     },
+
+    // SOUS-BRANCHE : LIBERTÉS FONDAMENTALES
     libertes_fondamentales: {
         title: "Les libertés fondamentales et leur restriction",
         info: "Les libertés ne sont pas absolues ; l'État peut les limiter à des conditions très strictes fixées par la Constitution elle-même.",
         children: ["principes_generaux_lib", "restriction_lib", "liberte_economique", "liberte_association"],
         parent: "droit_constitutionnel"
     },
+
     principes_generaux_lib: {
         title: "Les principes généraux",
         info: "Les droits fondamentaux s'appliquent à toute personne physique ou morale (entreprise) se trouvant en Suisse. <br><br><ul><li>L'État a l'obligation de respecter, protéger et réaliser les droits fondamentaux.</li><li>Les particuliers doivent également respecter les droits fondamentaux d'autrui dans leurs relations privées (effet horizontal).</li></ul>",
-        children: [], parent: "libertes_fondamentales"
+        children: [],
+        parent: "libertes_fondamentales"
     },
+
     restriction_lib: {
         title: "La restriction des libertés fondamentales",
         info: "Selon l'<strong>Article 36 Cst</strong>, toute restriction d'un droit fondamental doit remplir <span class='highlight'>quatre conditions cumulatives</span> soulignées dans le cours : <br><br><ol><li><strong>Base légale :</strong> La restriction doit être prévue par une loi.</li><li><strong>Intérêt public :</strong> Elle doit être justifiée par un intérêt public prépondérant ou par la protection des droits d'autrui.</li><li><strong>Proportionnalité :</strong> La mesure doit être apte, nécessaire et raisonnable pour atteindre le but visé.</li><li><strong>Essence du droit :</strong> L'essence du droit fondamental est inviolable.</li></ol>",
-        children: [], parent: "libertes_fondamentales"
+        children: [],
+        parent: "libertes_fondamentales"
     },
+
     liberte_economique: {
         title: "La liberté économique (Art. 27 Cst)",
         info: "C'est la liberté fondamentale pivot pour le droit de l'entreprise. <br><br><ul><li>Elle comprend notamment le <span class='success'>libre choix de la profession</span> ainsi que le <span class='success'>libre accès à une activité économique lucrative privée</span> et son libre exercice.</li><li>Elle protège toute activité économique privée exercée en vue de l'obtention d'un gain.</li></ul><br><strong>Distinction importante :</strong> L'État ne peut prendre des mesures qui dérogent au principe de la liberté économique que si elles sont prévues par la Constitution ou fondées sur des prérogatives cantonales régulières.",
-        children: [], parent: "libertes_fondamentales"
+        children: [],
+        parent: "libertes_fondamentales"
     },
+
     liberte_association: {
         title: "Liberté d'association et syndicale",
         info: "Ces libertés garantissent le droit de se regrouper pour défendre des intérêts communs. <br><br><ul><li><strong>Liberté d'association (Art. 23 Cst) :</strong> Toute personne a le droit de former des associations, d'y adhérer ou de ne pas y adhérer.</li><li><strong>Liberté syndicale (Art. 28 Cst) :</strong> Les travailleurs et les employeurs ont le droit de s'unir pour la défense de leurs intérêts, de former des associations professionnelles et d'y adhérer.</li></ul>",
-        children: [], parent: "libertes_fondamentales"
+        children: [],
+        parent: "libertes_fondamentales"
     },
 
-    // --- 6.2 LE DROIT ADMINISTRATIF ---
+    // --- 6.2 LE DROIT ADMINISTRATIF (Dès page 35 du cours) ---
     droit_administratif: {
         title: "Le droit administratif",
         info: "Ensemble des règles de droit public qui régissent l'organisation et l'activité de l'administration, ainsi que les rapports entre l'administration et les administrés.",
         children: ["admin_definition", "admin_organisation", "admin_activite", "admin_procedure"],
         parent: "public"
     },
+
+    // SOUS-BRANCHE : DÉFINITION
     admin_definition: {
         title: "Définition et notion",
         info: "Le droit administratif est le <strong>droit de l'action publique</strong>. <br><br><ul><li>Il s'agit d'un <span class='highlight'>droit interne</span> (propre à chaque État ou canton).</li><li>Il appartient au <span class='highlight'>droit public</span>, impliquant un rapport de subordination (l'intérêt général prime sur l'intérêt particulier).</li><li>Il règle les tâches concrètes de l'État (police, santé, éducation, infrastructures).</li></ul>",
-        children: [], parent: "droit_administratif"
+        children: [],
+        parent: "droit_administratif"
     },
+
+    // SOUS-BRANCHE : ORGANISATION
     admin_organisation: {
         title: "L'organisation de l'administration",
         info: "L'administration est structurée pour remplir les tâches de l'État à différents échelons. <br><br><strong>Notions clés :</strong> <br><ul><li><strong>Administration centralisée :</strong> Directement rattachée au pouvoir politique (Départements, Offices).</li><li><strong>Administration décentralisée :</strong> Entités autonomes chargées de tâches spécifiques (ex: CFF, La Poste, universités).</li><li><strong>Collectivités publiques :</strong> En Suisse, l'administration est répartie entre la Confédération, les Cantons et les Communes.</li></ul>",
-        children: ["cp_garage_1"], parent: "droit_administratif"
+        children: ["cp_garage_1"],
+        parent: "droit_administratif"
     },
+    
     cp_garage_1: {
         title: "Cas pratique : Charlie et son garage (Organisation)",
         info: `<div class="cas-pratique">
@@ -477,47 +574,64 @@ const courseData = {
         </div>`,
         children: [], parent: "admin_organisation"
     },
+
+    // SOUS-BRANCHE : ACTIVITÉ (BRANCHE DÉTAILLÉE)
     admin_activite: {
         title: "L'activité de l'administration",
         info: "L'administration agit par des actes juridiques pour accomplir ses tâches.",
         children: ["decision_vs_contrat", "principe_legalite", "principe_interet_public", "principe_proportionnalite", "principe_bonne_foi", "principe_non_retroactivite", "modalites_decision", "cp_garage_2"],
         parent: "droit_administratif"
     },
+
     decision_vs_contrat: {
         title: "Décision vs Contrat administratif",
         info: "<strong>1. La Décision administrative (Moyen principal) :</strong> Acte <span class='highlight'>unilatéral</span> et individuel par lequel une autorité règle un cas d'espèce de façon obligatoire et contraignante. <br><br><strong>2. Le Contrat de droit administratif :</strong> Accord entre l'administration et un particulier pour accomplir une tâche d'intérêt public. Il est plus rare car il suppose un pied d'égalité partiel.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     principe_legalite: {
         title: "Principe de la légalité",
         info: "<strong>'Le droit est la base et la limite de l'activité de l'État.'</strong> (Art. 5 al. 1 Cst.) <br><br>L'administration ne peut agir que si une loi l'y autorise expressément. Elle doit respecter la hiérarchie des normes.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     principe_interet_public: {
         title: "Intérêt public",
         info: "Toute activité de l'État doit répondre à un <span class='highlight'>intérêt public</span> (Art. 5 al. 2 Cst.). L'administration ne peut pas agir pour satisfaire des intérêts privés ou purement politiques.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     principe_proportionnalite: {
         title: "Proportionnalité",
         info: "La mesure prise par l'État doit être <span class='highlight'>proportionnée au but visé</span> (Art. 5 al. 2 Cst.). <br><br><strong>Les 3 conditions :</strong> <ol><li><strong>Aptitude :</strong> La mesure doit permettre d'atteindre le but.</li><li><strong>Nécessité :</strong> On doit choisir la mesure la moins incisive possible.</li><li><strong>Proportionnalité au sens étroit :</strong> Équilibre raisonnable entre le but et la restriction imposée.</li></ol>",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     principe_bonne_foi: {
         title: "Bonne foi",
         info: "L'État et les particuliers doivent agir de manière <strong>loyale</strong> (Art. 5 al. 3 Cst.). Cela implique la protection de la confiance du citoyen envers les promesses de l'administration.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     principe_non_retroactivite: {
         title: "Principe de non-rétroactivité",
         info: "Une règle nouvelle ne s'applique pas à des faits passés. Cela garantit la <span class='highlight'>sécurité juridique</span>.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+
     modalites_decision: {
         title: "Modalités de la décision",
         info: "Une décision administrative doit être <strong>notifiée</strong> (communiquée par écrit), <strong>motivée</strong>, et mentionner les <strong>voies de recours</strong>.",
-        children: [], parent: "admin_activite"
+        children: [],
+        parent: "admin_activite"
     },
+    
     cp_garage_2: {
         title: "Cas pratique : Charlie et son garage (Activité)",
         info: `<div class="cas-pratique">
@@ -538,11 +652,15 @@ const courseData = {
         </div>`,
         children: [], parent: "admin_activite"
     },
+
+    // SOUS-BRANCHE : PROCÉDURE ET RECOURS
     admin_procedure: {
         title: "La procédure et les recours",
         info: "Le citoyen n'est pas sans défense face à l'administration. <br><br><ul><li><strong>Droit d'être entendu :</strong> Avant toute décision, l'administré a le droit de s'exprimer.</li><li><strong>Le Recours :</strong> Moyen de contester une décision devant une autorité supérieure ou un tribunal (ex: TAF).</li></ul>",
-        children: ["cp_garage_3", "cp_restaurant"], parent: "droit_administratif"
+        children: ["cp_garage_3", "cp_restaurant"],
+        parent: "droit_administratif"
     },
+    
     cp_garage_3: {
         title: "Cas pratique : Charlie et son garage (Procédure)",
         info: `<div class="cas-pratique">
@@ -574,23 +692,28 @@ const courseData = {
         children: [], parent: "admin_procedure"
     },
 
-    // --- 6.3 LE DROIT PÉNAL ---
+    // --- 6.3 LE DROIT PÉNAL (Dès page 39 du cours) ---
     droit_penal: {
         title: "Le droit pénal",
         info: "Branche du droit public qui définit les comportements constitutifs d'infractions et les sanctions qui leur sont applicables.",
         children: ["penal_definition", "penal_comportement", "penal_illiceite", "penal_culpabilite", "penal_responsabilite", "penal_sanction", "penal_infractions", "penal_procedure"],
         parent: "public"
     },
+
     penal_definition: {
         title: "Définition et notion",
         info: "Le droit pénal intervient en <strong>ultime recours</strong> (<em>ultima ratio</em>). Il est régi par le <strong>Code pénal suisse (CP)</strong>.",
-        children: [], parent: "droit_penal"
+        children: [],
+        parent: "droit_penal"
     },
+
     penal_comportement: {
         title: "Le comportement humain",
         info: "Pour qu'il y ait infraction, il faut un comportement humain volontaire. <br><ul><li><strong>L'action (commission) :</strong> Faire ce que la loi interdit.</li><li><strong>L'omission :</strong> Ne pas faire ce que la loi commande, alors que l'auteur avait une <span class='highlight'>position de garant</span>.</li></ul>",
-        children: ["cp_stage"], parent: "droit_penal"
+        children: ["cp_stage"],
+        parent: "droit_penal"
     },
+    
     cp_stage: {
         title: "Cas pratique : Charlie et son stage",
         info: `<div class="cas-pratique">
@@ -608,11 +731,14 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_comportement"
     },
+
     penal_illiceite: {
         title: "L'illicéité",
         info: "Le comportement doit être contraire au droit. Un acte n'est pas illicite s'il existe un fait justificatif (Légitime défense, état de nécessité, consentement de la victime).",
-        children: ["cp_randonnee"], parent: "droit_penal"
+        children: ["cp_randonnee"],
+        parent: "droit_penal"
     },
+    
     cp_randonnee: {
         title: "Cas pratique : Charlie et la randonnée",
         info: `<div class="cas-pratique">
@@ -628,11 +754,14 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_illiceite"
     },
+
     penal_culpabilite: {
         title: "La culpabilité",
         info: "C'est le reproche personnel à l'auteur (pas de peine sans culpabilité). Se manifeste sous deux formes : l'intention (inclut le dol éventuel) et la négligence.",
-        children: ["cp_basejump", "cp_bonnepom"], parent: "droit_penal"
+        children: ["cp_basejump", "cp_bonnepom"],
+        parent: "droit_penal"
     },
+    
     cp_basejump: {
         title: "Cas pratique : Charlie et le Base jump",
         info: `<div class="cas-pratique">
@@ -649,6 +778,7 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_culpabilite"
     },
+    
     cp_bonnepom: {
         title: "Cas pratique : Gilles et l’entreprise BonnePom’ SA",
         info: `<div class="cas-pratique">
@@ -670,11 +800,14 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_culpabilite"
     },
+
     penal_responsabilite: {
         title: "La responsabilité pénale",
         info: "Capacité d'apprécier le caractère illicite. Comprend l'irresponsabilité (trouble mental) et la responsabilité de l'entreprise (art. 102 CP).",
-        children: ["cp_demence", "cp_bonus_roland"], parent: "droit_penal"
+        children: ["cp_demence", "cp_bonus_roland"],
+        parent: "droit_penal"
     },
+    
     cp_demence: {
         title: "Cas pratique : Charlie et la démence",
         info: `<div class="cas-pratique">
@@ -690,6 +823,7 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_responsabilite"
     },
+    
     cp_bonus_roland: {
         title: "Cas pratique : Le bonus de Roland",
         info: `<div class="cas-pratique">
@@ -705,32 +839,42 @@ const courseData = {
         </div>`,
         children: [], parent: "penal_responsabilite"
     },
+
     penal_sanction: {
         title: "La sanction",
         info: "La conséquence juridique d'une infraction. Elle se divise en peines (pécuniaire, TIG, prison) et en mesures (thérapeutiques, internement).",
-        children: [], parent: "droit_penal"
+        children: [],
+        parent: "droit_penal"
     },
+
     penal_infractions: {
         title: "Les infractions",
         info: "Le Code pénal classe les infractions en trois catégories selon leur gravité : Crime (> 3 ans), Délit (max 3 ans), Contravention (amende).",
-        children: [], parent: "droit_penal"
+        children: [],
+        parent: "droit_penal"
     },
+
     penal_procedure: {
         title: "La procédure pénale",
         info: "L'ensemble des règles fixant le déroulement de la poursuite et du jugement des auteurs d'infractions.",
         children: ["procedure_notions", "procedure_deroulement", "cp_patron_soupe"],
         parent: "droit_penal"
     },
+
     procedure_notions: {
         title: "Les notions générales",
         info: "Principes directeurs de la procédure : poursuite d'office vs sur plainte, présomption d'innocence, In dubio pro reo.",
-        children: [], parent: "penal_procedure"
+        children: [],
+        parent: "penal_procedure"
     },
+
     procedure_deroulement: {
         title: "Le déroulement de la procédure",
         info: "Procédure préliminaire (Ministère public), procédure de première instance (Tribunal), voies de recours, exécution.",
-        children: [], parent: "penal_procedure"
+        children: [],
+        parent: "penal_procedure"
     },
+    
     cp_patron_soupe: {
         title: "Cas pratique : Le patron soupe-au-lait de Charlie",
         info: `<div class="cas-pratique">
@@ -746,52 +890,63 @@ const courseData = {
         children: [], parent: "penal_procedure"
     },
 
-    // --- 6.4 LE DROIT INTERNATIONAL PUBLIC ---
+    // --- 6.4 LE DROIT INTERNATIONAL PUBLIC (Dès page 46 du cours) ---
     droit_inter_public: {
         title: "Le droit international public",
         info: "Branche du droit qui régit les relations entre les différents acteurs de la communauté internationale.",
         children: ["inter_definition", "inter_conventions", "inter_relation"],
         parent: "public"
     },
+
     inter_definition: {
         title: "Définition et notion",
         info: "Le droit international public régit les relations entre les <strong>sujets de droit international</strong> (États et organisations internationales).",
-        children: [], parent: "droit_inter_public"
+        children: [],
+        parent: "droit_inter_public"
     },
+
     inter_conventions: {
         title: "Les conventions internationales",
         info: "Aussi appelées <strong>traités</strong> (Pacta sunt servanda, Bilatéral/Multilatéral, Ratification).",
-        children: [], parent: "droit_inter_public"
+        children: [],
+        parent: "droit_inter_public"
     },
+
     inter_relation: {
         title: "Relation avec le droit interne",
         info: "Système moniste, primauté du droit international (Art. 5 Cst), Jus Cogens (normes impératives internationales).",
-        children: [], parent: "droit_inter_public"
+        children: [],
+        parent: "droit_inter_public"
     },
-
-    // --- 7. LE DROIT PRIVÉ ---
+    
+    // --- 7. LE DROIT PRIVÉ (Dès page 48 du cours) ---
     droit_prive_pt7: {
         title: "7. Le droit privé",
         info: "Cette section aborde les fondements des relations juridiques entre particuliers.",
         children: ["autonomie_volonte", "droit_personnes", "droit_successions", "droits_reels", "procedure_civile", "droit_inter_prive", "arbitrage"],
         parent: "root" 
     },
+
     autonomie_volonte: {
         title: "L'autonomie de la volonté",
         info: "C'est le principe fondamental et le moteur du droit privé. Liberté contractuelle, ses limites (nullité absolue), protection de la partie faible.",
-        children: [], parent: "droit_prive_pt7"
+        children: [],
+        parent: "droit_prive_pt7"
     },
+
     droit_personnes: {
         title: "Le droit des personnes",
         info: "Détermine qui peut être sujet de droits et d'obligations.",
         children: ["debut_fin_pers", "jouissance_exercice", "domicile", "protection_pers", "personnes_morales_structures"],
         parent: "droit_prive_pt7"
     },
+
     debut_fin_pers: {
         title: "Le début et la fin de la personnalité",
         info: "Début = naissance accomplie de l'enfant vivant. Fin = mort.",
         children: ["cp_testament_reymond"], parent: "droit_personnes"
     },
+    
     cp_testament_reymond: {
         title: "Cas pratique : Le testament de Reymond",
         info: `<div class="cas-pratique">
@@ -806,21 +961,25 @@ const courseData = {
         </div>`,
         children: [], parent: "debut_fin_pers"
     },
+
     jouissance_exercice: {
         title: "La jouissance et l'exercice des droits civils",
         info: "Jouissance = aptitude à avoir des droits. Exercice = aptitude à agir par soi-même (majeur + discernement).",
-        children: ["cp_frere_jean"], parent: "droit_personnes" /* Link already created above in Sujets de Droit, keeping structure logical */
+        children: ["cp_frere_jean"], parent: "droit_personnes"
     },
+
     domicile: {
         title: "Le domicile",
         info: "Le lieu où l'on réside avec l'intention de s'y établir.",
         children: [], parent: "droit_personnes"
     },
+
     protection_pers: {
         title: "La protection de la personnalité",
         info: "Protection contre soi-même (engagements excessifs) et contre les tiers (atteintes illicites).",
         children: ["prot_soimeme", "prot_tiers", "cp_presse"], parent: "droit_personnes"
     },
+    
     prot_soimeme: {
         title: "Protection contre soi-même",
         info: "Nul ne peut aliéner sa liberté.",
@@ -831,6 +990,7 @@ const courseData = {
         info: "Action contre les atteintes illicites.",
         children: [], parent: "protection_pers"
     },
+    
     cp_presse: {
         title: "Cas pratique : Charlie et la presse",
         info: `<div class="cas-pratique">
@@ -845,11 +1005,13 @@ const courseData = {
         </div>`,
         children: [], parent: "protection_pers"
     },
+
     personnes_morales_structures: {
         title: "Personnes morales et structures d'entreprises",
         info: "Association, Fondation, Entreprise individuelle, Sociétés de personnes (SS, SNC, SCom, SCoop), Sociétés de capitaux (SA, Sàrl).",
         children: ["cp_amis_recolte", "cp_entrepreneuriat", "cp_manon"], parent: "droit_personnes"
     },
+    
     cp_amis_recolte: {
         title: "Cas pratique : Charlie et ses amis (Asso / Fond)",
         info: `<div class="cas-pratique">
@@ -865,6 +1027,7 @@ const courseData = {
         </div>`,
         children: [], parent: "personnes_morales_structures"
     },
+    
     cp_entrepreneuriat: {
         title: "Cas pratique : Charlie et l'entrepreneuriat",
         info: `<div class="cas-pratique">
@@ -880,6 +1043,7 @@ const courseData = {
         </div>`,
         children: [], parent: "personnes_morales_structures"
     },
+    
     cp_manon: {
         title: "Cas pratique : Charlie et Manon",
         info: `<div class="cas-pratique">
@@ -905,11 +1069,13 @@ const courseData = {
         children: ["succ_legale", "succ_volontaire", "succ_devolution"],
         parent: "droit_prive_pt7" 
     },
+    
     succ_legale: {
         title: "La succession légale",
         info: "Par défaut, s'il n'y a pas de testament. Système des parentèles.",
         children: ["cp_succ_lucienne"], parent: "droit_successions"
     },
+    
     cp_succ_lucienne: {
         title: "Cas pratique : La succession de Lucienne",
         info: `<div class="cas-pratique">
@@ -925,11 +1091,13 @@ const courseData = {
         </div>`,
         children: [], parent: "succ_legale"
     },
+    
     succ_volontaire: {
         title: "La succession volontaire",
         info: "Formes (testament, pacte) et limites (la réserve).",
         children: ["cp_succ_rey", "cp_succ_maxime"], parent: "droit_successions"
     },
+    
     cp_succ_rey: {
         title: "Cas pratique : La succession de M. Rey",
         info: `<div class="cas-pratique">
@@ -951,6 +1119,7 @@ const courseData = {
         </div>`,
         children: [], parent: "succ_volontaire"
     },
+    
     cp_succ_maxime: {
         title: "Cas pratique : La succession de Maxime",
         info: `<div class="cas-pratique">
@@ -965,6 +1134,7 @@ const courseData = {
         </div>`,
         children: [], parent: "succ_volontaire"
     },
+    
     succ_devolution: {
         title: "La dévolution",
         info: "L'ouverture, l'acquisition de plein droit, et la répudiation.",
@@ -977,11 +1147,13 @@ const courseData = {
         children: ["propriete_commune", "reels_restreints", "reels_acquisition_perte"],
         parent: "droit_prive_pt7" 
     },
+    
     propriete_commune: {
         title: "Propriété en commun",
         info: "Copropriété et propriété commune.",
         children: ["cp_voiture_vacances"], parent: "droits_reels"
     },
+    
     cp_voiture_vacances: {
         title: "Cas pratique : Charlie et la voiture de vacances",
         info: `<div class="cas-pratique">
@@ -996,11 +1168,13 @@ const courseData = {
         </div>`,
         children: [], parent: "propriete_commune"
     },
+    
     reels_restreints: {
         title: "Les droits réels restreints",
         info: "Servitudes, charges foncières, droit de gage.",
         children: ["cp_bois_sarl"], parent: "droits_reels"
     },
+    
     cp_bois_sarl: {
         title: "Cas pratique : Charlie et Bois Sàrl",
         info: `<div class="cas-pratique">
@@ -1015,11 +1189,13 @@ const courseData = {
         </div>`,
         children: [], parent: "reels_restreints"
     },
+    
     reels_acquisition_perte: {
         title: "Acquisition et Perte de la propriété",
         info: "Moyens originaires et dérivés pour acquérir (Tradition, RF, etc.).",
         children: ["cp_acquisition_prop"], parent: "droits_reels"
     },
+    
     cp_acquisition_prop: {
         title: "Cas pratique : Charlie et l'acquisition de la propriété",
         info: `<div class="cas-pratique">
@@ -1046,21 +1222,25 @@ const courseData = {
         children: ["proc_civ_competence", "proc_civ_deroulement", "proc_civ_execution", "cp_scooter_global"],
         parent: "droit_prive_pt7" 
     },
+    
     proc_civ_competence: {
         title: "La compétence du tribunal",
         info: "Territoriale (Le For) et Matérielle (Valeur litigieuse).",
         children: [], parent: "procedure_civile"
     },
+    
     proc_civ_deroulement: {
         title: "Le déroulement de la procédure",
         info: "Conciliation, première instance, recours.",
         children: [], parent: "procedure_civile"
     },
+    
     proc_civ_execution: {
         title: "Le régime de l'exécution forcée",
         info: "Mise en œuvre du jugement (LP pour l'argent).",
         children: [], parent: "procedure_civile"
     },
+    
     cp_scooter_global: {
         title: "Cas pratique : Charlie et le scooter (Global)",
         info: `<div class="cas-pratique">
@@ -1083,11 +1263,13 @@ const courseData = {
         children: ["dip_trois_questions", "cp_achats_internet"],
         parent: "droit_prive_pt7"
     },
+    
     dip_trois_questions: {
         title: "Les 3 questions (Compétence, Droit, Exécution)",
         info: "Les 3 étapes d'analyse d'un litige international.",
         children: [], parent: "droit_inter_prive"
     },
+    
     cp_achats_internet: {
         title: "Cas pratique : Charlie et les achats sur Internet",
         info: `<div class="cas-pratique">
@@ -1109,11 +1291,13 @@ const courseData = {
         children: ["arbitrage_convention", "cp_pacha"],
         parent: "droit_prive_pt7"
     },
+    
     arbitrage_convention: {
         title: "Clause compromissoire et caractéristiques",
         info: "Consentement mutuel, huis clos, expertise, coût.",
         children: [], parent: "arbitrage"
     },
+    
     cp_pacha: {
         title: "Cas pratique : L'arbitrage de Pacha SA",
         info: `<div class="cas-pratique">
@@ -1137,16 +1321,19 @@ const courseData = {
         children: ["ob_definition", "ob_prestation", "ob_sources"],
         parent: "root"
     },
+    
     ob_definition: {
         title: "Définition et notion d'obligation",
         info: "Lien juridique entre un créancier (exige) et un débiteur (exécute).",
         children: [], parent: "droit_obligations"
     },
+    
     ob_prestation: {
         title: "La prestation",
         info: "Objet de l'obligation : Prestation positive (donner, faire) ou négative (ne pas faire, tolérer).",
         children: [], parent: "droit_obligations"
     },
+    
     ob_sources: {
         title: "Les sources des obligations",
         info: "Contrat, Acte illicite, Enrichissement illégitime.",
@@ -1160,16 +1347,19 @@ const courseData = {
         children: ["so_notion", "so_volontaires", "so_legales"],
         parent: "root"
     },
+    
     so_notion: {
         title: "Notion",
         info: "Sources volontaires vs légales.",
         children: [], parent: "sources_obligations_titre9"
     },
+    
     so_volontaires: {
         title: "Les sources volontaires d'obligation",
         info: "Le contrat, l'acte unilatéral, les quasi-contrats.",
         children: [], parent: "sources_obligations_titre9"
     },
+    
     so_legales: {
         title: "Les sources légales",
         info: "La loi impose des obligations. Acte illicite, enrichissement illégitime.",
@@ -1187,56 +1377,67 @@ const courseData = {
         ],
         parent: "root"
     },
+    
     oc_definition_classification: {
         title: "Définition et classification",
         info: "Le contrat se définit comme l'échange de deux ou plusieurs manifestations de volonté concordantes.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_autonomie: {
         title: "L'autonomie de la volonté",
         info: "Cinq droits essentiels (contracter, partenaire, forme, annuler, contenu).",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_conclusion: {
         title: "La conclusion du contrat",
         info: "Offre (irrévocable) + Acceptation (silence != acceptation). Contrats d'adhésion soumis au contrôle.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_icc: {
         title: "Interprétation, complètement et correction",
         info: "Principe de la confiance. Théorie de l'imprévision.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_forme: {
         title: "La forme du contrat",
         info: "Principe du consensualisme. Sanction = Nullité absolue.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_objet: {
         title: "L'objet du contrat",
         info: "Limites: Impossible, illicite, immoral. Sanction: Nullité absolue (parfois partielle).",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_vices: {
         title: "Les vices du contrat",
         info: "Erreur essentielle, Dol, Crainte fondée. + La lésion (exploitation d'une faiblesse). Contrat annulable (délai 1 an).",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_representation: {
         title: "La représentation",
         info: "Agir au nom d'un autre. Sans pouvoirs = pseudocontractant non lié sauf ratification.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_stipulation: {
         title: "La stipulation pour autrui",
         info: "Imparfaite ou Parfaite.",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_suretes: {
         title: "Les sûretés personnelles",
         info: "Cautionnement (strictement accessoire) vs Porte-fort (indépendant).",
         children: [], parent: "obligations_contractuelles_titre10"
     },
+    
     oc_subrogation: {
         title: "La subrogation",
         info: "Le transfert légal de la créance.",
@@ -1253,46 +1454,55 @@ const courseData = {
         ],
         parent: "root"
     },
+    
     rc_notion: {
         title: "Notion",
         info: "3 conditions générales : préjudice, causalité, illicéité + titre (faute ou loi).",
         children: [], parent: "rc_titre11"
     },
+    
     rc_prejudice: {
         title: "Le préjudice",
         info: "Dommage (perte effective / gain manqué) et Tort moral.",
         children: [], parent: "rc_titre11"
     },
+    
     rc_causalite: {
         title: "Le rapport de causalité",
         info: "Naturelle et adéquate. Interruption possible.",
         children: [], parent: "rc_titre11"
     },
+    
     rc_illiceite: {
         title: "L'illicéité",
         info: "Par résultat (droit absolu) ou comportement (norme protectrice). Faits justificatifs.",
         children: [], parent: "rc_titre11"
     },
+    
     rc_faute: {
         title: "La faute, condition de la responsabilité subjective",
         info: "Manquement de la volonté. Intention ou négligence.",
         children: [], parent: "rc_titre11"
     },
+    
     rc_objective: {
         title: "La responsabilité objective",
         info: "Indépendante de la faute. Employeur (preuves libératoires), Ouvrage, Produits (LRFP).",
         children: [], parent: "rc_titre11"
     },
+    
     rc_reparation: {
         title: "La réparation du préjudice",
         info: "Réduction possible selon la gravité. Cas de lésions ou décès.",
         children: [], parent: "rc_titre11"
     },
+    
     rc_pluralite: {
         title: "La pluralité de responsables",
         info: "Solidarité parfaite (faute commune) ou imparfaite (titres différents).",
         children: [], parent: "rc_titre11"
     },
+    
     rc_prescription: {
         title: "La prescription (RC)",
         info: "Relatif 3 ans. Absolu 10 ans (20 ans si mort/lésion).",
@@ -1306,16 +1516,19 @@ const courseData = {
         children: ["rcc_notion", "rcc_conditions", "rcc_prescription"],
         parent: "root"
     },
+    
     rcc_notion: {
         title: "Notion",
         info: "Les parties sont liées par une relation juridique préalable.",
         children: [], parent: "rc_contractuelle_titre12"
     },
+    
     rcc_conditions: {
         title: "Les conditions",
         info: "Quatre conditions cumulatives. <strong>La faute est présumée.</strong>",
         children: [], parent: "rc_contractuelle_titre12"
     },
+    
     rcc_prescription: {
         title: "La prescription",
         info: "Délai ordinaire de 10 ans. 5 ans pour loyers/artisans/médecins.",
@@ -1329,21 +1542,25 @@ const courseData = {
         children: ["ei_notion", "ei_conditions", "ei_restitution", "ei_prescription"],
         parent: "root"
     },
+    
     ei_notion: {
         title: "Notion",
         info: "Règles subsidiaires.",
         children: [], parent: "enrichissement_illegitime_titre13"
     },
+    
     ei_conditions: {
         title: "Les conditions",
         info: "Enrichissement, appauvrissement, connexité, absence de cause valable.",
         children: [], parent: "enrichissement_illegitime_titre13"
     },
+    
     ei_restitution: {
         title: "La restitution",
         info: "Remboursement des impenses (nécessaires, utiles).",
         children: [], parent: "enrichissement_illegitime_titre13"
     },
+    
     ei_prescription: {
         title: "La prescription (EI)",
         info: "Relatif 3 ans, Absolu 10 ans.",
@@ -1359,21 +1576,25 @@ const courseData = {
         ],
         parent: "root"
     },
+    
     mo_pluralite_debiteurs: {
         title: "La pluralité de débiteurs",
         info: "Solidarité passive (ne se présume pas).",
         children: [], parent: "modalites_obligations_titre14"
     },
+    
     mo_pluralite_creanciers: {
         title: "La pluralité de créanciers",
         info: "Solidarité active.",
         children: [], parent: "modalites_obligations_titre14"
     },
+    
     mo_obligations_conditionnelles: {
         title: "Les obligations conditionnelles",
         info: "Événement incertain. Suspensive ou Résolutoire.",
         children: [], parent: "modalites_obligations_titre14"
     },
+    
     mo_clause_arrhes_dedit: {
         title: "La clause pénale, les arrhes et le dédit",
         info: "Clause pénale: Juge doit réduire si excessif. Dédit réel (restitué au double).",
@@ -1387,11 +1608,13 @@ const courseData = {
         children: ["to_cession_creance", "to_reprise_dette"],
         parent: "root"
     },
+    
     to_cession_creance: {
         title: "La cession de créance",
         info: "Ne nécessite aucune intervention du débiteur. Forme écrite obligatoire.",
         children: [], parent: "transmission_obligations_titre15"
     },
+    
     to_reprise_dette: {
         title: "La reprise de dette",
         info: "Reprise interne vs externe. Reprise cumulative (adjonction d'un débiteur).",
@@ -1405,16 +1628,19 @@ const courseData = {
         children: ["eo_lieu_moment", "eo_demeure_creancier", "eo_demeure_debiteur"],
         parent: "root"
     },
+    
     eo_lieu_moment: {
         title: "Lieu et Moment",
         info: "Dettes portables vs quérables. Exécution immédiate = principe. Contrats bilatéraux (exception d'inexécution).",
         children: [], parent: "exec_obligations_titre16"
     },
+    
     eo_demeure_creancier: {
         title: "La demeure du créancier",
         info: "Le créancier refuse de recevoir. Assumation des risques de la chose.",
         children: [], parent: "exec_obligations_titre16"
     },
+    
     eo_demeure_debiteur: {
         title: "La demeure du débiteur",
         info: "Retard. Demeure simple vs Demeure qualifiée (délai de grâce nécessaire, résolution possible).",
@@ -1430,6 +1656,7 @@ const courseData = {
         ],
         parent: "root"
     },
+    
     eo_ext_causes: {
         title: "Les différentes causes",
         info: "Remise de dette (contrat). Novation (présomption contre). Confusion (réunion des qualités). Impossibilité subséquente. Compensation. Prescription.",
