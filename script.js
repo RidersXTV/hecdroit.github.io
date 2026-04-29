@@ -1,9 +1,18 @@
 // BASE DE DONNÉES COMPLÈTE DU COURS
 const courseData = {
+    
     root: {
-        title: "Sommaire Général",
-        info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
+        title: "Droit de l'Entreprise",
+        info: "Bienvenue sur cette plateforme de révision interactive.<br><br>Ce site est basé sur le polycopié du cours de <strong>Droit de l'entreprise</strong> donné lors du semestre de printemps 2026 aux étudiants de première année de Bachelor en HEC Lausanne par le <strong>Prof. Pascal Favrod-Coune</strong>.<br><br>Sélectionnez une des grandes branches ci-dessous ou utilisez le menu latéral pour commencer vos révisions.",
         children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11", "rc_contractuelle_titre12", "enrichissement_illegitime_titre13", "modalites_obligations_titre14", "transmission_obligations_titre15", "exec_obligations_titre16", "extinction_obligations_titre17"]
+    },
+
+    // --- NOUVELLE ENTRÉE POUR LA BIBLIOGRAPHIE (Footer) ---
+    bibliographie: {
+        title: "Définitions juridiques et bibliographie",
+        info: "Ce cours se base sur les livres suivants :<br><br><ul><li>C. BOVET / A. CARVALHO, Glossaire juridique, Collection Quid iuris ?, Genève / Zurich 2017.</li><li>B. CARRON / P. WESSNER, Le droit des obligations: Partie générale - Vol. I et Vol. II, Berne 2022 et 2024.</li><li>F. CHAUDET / J. C. LANDROVE / V. JUNOD / A. MACALUSO / F. CHAUDET, Droit suisse des affaires, 4ème éd., Bâle 2023.</li><li>P. TERCIER / P. PICHONNAZ, Le droit des obligations, 7ème éd., Zürich / Genève 2024.</li><li>F. WERRO, La responsabilité civile, 4ème éd., Berne 2025.</li></ul><br><em>Les définitions qui se trouvent sur des sites Internet et les réponses proposées par des outils d'intelligence artificielle ne concernent pas forcément le droit suisse. (Extrait de la page 2 du polycopié)</em>",
+        children: [],
+        parent: "root"
     },
     
     // --- 1. NOTION ET FONCTIONS DU DROIT ---
