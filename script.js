@@ -3102,7 +3102,7 @@ function renderTopic(id, pushHistory = true) {
                 if (prevId && prevId !== 'root') {
                     html += `
                         <div class="nav-btn nav-btn-prev" onclick="renderTopic('${prevId}')">
-                            <span>▲ Précédent</span>
+                            <span>◀︎ Précédent</span>
                             ${courseData[prevId].title}
                         </div>`;
                 } else {
@@ -3112,7 +3112,7 @@ function renderTopic(id, pushHistory = true) {
                 if (nextId) {
                     html += `
                         <div class="nav-btn nav-btn-next" onclick="renderTopic('${nextId}')">
-                            <span>Suivant ▼</span>
+                            <span>Suivant ▶︎</span>
                             ${courseData[nextId].title}
                         </div>`;
                 } else {
