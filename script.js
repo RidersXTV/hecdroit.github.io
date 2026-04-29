@@ -3051,15 +3051,9 @@ function renderTopic(id, pushHistory = true) {
 
     breadcrumb.innerHTML = bcHtml;
 
-    // 3. Génération du HTML principal (Titre et Info)
-    let html = `
-        <div class="info-box">
-            <h2>${topic.title}</h2>
-            <p>${topic.info}</p>
-        </div>
-    `;
+    let html = ``; // Start empty
 
-    // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT (Désormais EN HAUT) ---
+    // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT (TOUT EN HAUT) ---
     if (id !== 'root' && id !== 'bibliographie') {
         const parentId = topic.parent;
         const parentTopic = courseData[parentId];
@@ -3108,8 +3102,7 @@ function renderTopic(id, pushHistory = true) {
 
             // Génération du HTML pour les boutons
             if (prevId || nextId) {
-                // Ajout d'une marge en bas pour séparer de la section "Explorer"
-                html += `<div class="navigation-buttons" style="margin-top: 0; margin-bottom: 30px; border-top: none; border-bottom: 2px solid var(--border); padding-bottom: 20px;">`;
+                html += `<div class="navigation-buttons" style="margin-top: 0; margin-bottom: 20px; padding-top: 0; border-top: none; border-bottom: 2px solid var(--border); padding-bottom: 20px;">`;
                 
                 if (prevId && prevId !== 'root') {
                     html += `
@@ -3136,7 +3129,15 @@ function renderTopic(id, pushHistory = true) {
         }
     }
 
-    // --- SOUS-BRANCHES ("Explorer :") (Désormais EN BAS) ---
+    // --- 3. Génération du HTML principal (Titre et Info) ---
+    html += `
+        <div class="info-box" style="border-top: none;">
+            <h2>${topic.title}</h2>
+            <p>${topic.info}</p>
+        </div>
+    `;
+
+    // --- SOUS-BRANCHES ("Explorer :") (EN BAS) ---
     if (topic.children && topic.children.length > 0) {
         html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
         topic.children.forEach(childId => {
@@ -3208,4 +3209,4 @@ const initialTopic = urlParams.get('topic') || 'root';
 
 // Remplace l'état initial pour que le tout premier bouton retour fonctionne bien
 history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
-renderTopic(initialTopic, false);
+renderTopic(initialTopic, false)
