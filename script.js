@@ -6,126 +6,108 @@ const courseData = {
         children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations"]
     },
     
-    // --- 1. NOTION ET FONCTION DU DROIT ---
+    // --- 1. NOTION ET FONCTIONS DU DROIT ---
     notion: {
-        title: "1. Notion et fonction du droit",
-        info: "Cette section définit le cadre fondamental du droit et son rôle essentiel au sein de la collectivité humaine.",
-        children: ["definition", "fonctions_droit", "sanctions"],
+        title: "1. Notion et fonctions du droit",
+        info: "Cette section définit le cadre fondamental du droit, ses fonctions essentielles au sein de la société et les différents sens que peut prendre ce terme.",
+        children: ["fondements_droit", "sens_droit"],
         parent: "root"
     },
 
-    // SOUS-BRANCHE : DÉFINITION
-    definition: {
-        title: "Définition du droit",
-        info: "Le droit est défini comme l’ensemble des règles de conduite, socialement édictées et sanctionnées, qui s'imposent aux membres de la société. <br><br> L'adage latin <strong>'Ubi societas, ibi ius'</strong> signifie que là où il y a une société, il y a forcément du droit.",
+    // --- BRANCHE PRINCIPALE 1.1 : LES FONDEMENTS DU DROIT ---
+    fondements_droit: {
+        title: "Section 1 : Les fondements du droit",
+        info: "Pour pouvoir exercer ses fonctions, à savoir assurer un équilibre entre des intérêts opposés et organiser la vie en communauté, le droit doit remplir trois sortes de conditions : il doit être sûr, émaner d'un pouvoir social et correspondre à une idée de justice.",
+        children: ["def_fonctions", "securite_droit", "pouvoir_social", "idee_justice"],
+        parent: "notion"
+    },
+
+    // SOUS-BRANCHE 1.1.1
+    def_fonctions: {
+        title: "Chapitre 1 : Définition et fonctions",
+        info: "Le droit est le système normatif englobant toutes les règles de droit obligatoires, soit l'ensemble des règles de conduite imposées aux personnes physiques et morales par un pouvoir que personnifie l'État. <br><br>Le droit a deux fonctions principales :<br><ul><li><strong>Une fonction pacificatrice :</strong> freiner les appétits égoïstes et assurer la coexistence pacifique entre les individus.</li><li><strong>Une fonction organisatrice :</strong> établir un ordre social fondé sur l'équilibre des divers intérêts.</li></ul>",
+        children: [],
+        parent: "fondements_droit"
+    },
+
+    // SOUS-BRANCHE 1.1.2
+    securite_droit: {
+        title: "Chapitre 2 : La sécurité du droit",
+        info: "Les personnes soumises au droit doivent toujours avoir la possibilité de le connaître pour pouvoir se conformer à ses normes ; il s'agit de la sécurité du droit. En règle générale, le droit écrit correspond le mieux à cette idée de clarté et de prévisibilité.<br><br>La sécurité du droit implique plusieurs exigences :<br><ul><li>Le principe de la <strong>non-rétroactivité des lois</strong> et l'existence de règles transitoires.</li><li>L'institution de la <strong>prescription</strong>, c'est-à-dire l'extinction d'un droit, d'une obligation ou d'une action par l'effet de l'écoulement du temps.</li></ul><br>Ces éléments garantissent l'équilibre entre les intérêts opposés (c'est l'effet préventif).",
+        children: [],
+        parent: "fondements_droit"
+    },
+
+    // SOUS-BRANCHE 1.1.3
+    pouvoir_social: {
+        title: "Chapitre 3 : L'émanation d'un pouvoir social",
+        info: "Le droit doit émaner d'un pouvoir social. L'ordre social suppose l'existence d'une autorité habilitée et apte à imposer les normes établies, à les faire exécuter et à infliger des sanctions. <br><br>Dans une société correspondant à un État de droit, c'est l'État qui, à lui seul, assure le fonctionnement de la justice.",
+        children: [],
+        parent: "fondements_droit"
+    },
+
+    // SOUS-BRANCHE 1.1.4
+    idee_justice: {
+        title: "Chapitre 4 : La conformité à l'idée de justice",
+        info: "Le droit doit correspondre à une idée de justice. On distingue deux approches :<br><ul><li><strong>La justice commutative :</strong> se rapporte aux droits fondamentaux qui appartiennent à chaque être humain de façon égale sans que l'on tienne compte de l'origine, de la race ou de la religion (ex: liberté de conscience).</li><li><strong>La justice distributive :</strong> implique que l'on tienne compte de certaines différences qui existent entre les individus dans leur rapport avec la société (ex: impôts proportionnels aux revenus).</li></ul><br>Il est à noter que l'ordre juridique est le fruit de la pensée humaine et qu'il ne doit pas être immuable, mais doit s'adapter continuellement aux conditions changeantes de la vie.",
+        children: [],
+        parent: "fondements_droit"
+    },
+
+    // --- BRANCHE PRINCIPALE 1.2 : LES DIFFÉRENTS SENS DU MOT DROIT ---
+    sens_droit: {
+        title: "Section 2 : Les différents sens du mot droit",
+        info: "Le terme de « droit » recouvre deux notions fondamentales : le droit au sens objectif et le droit au sens subjectif.",
         children: ["droit_objectif", "droit_subjectif"],
         parent: "notion"
     },
+
+    // SOUS-BRANCHE 1.2.1
     droit_objectif: {
-        title: "Droit Objectif",
-        info: "Désigné par 'le Droit', il s'agit de l'ensemble des règles de conduite, générales et abstraites, qui régissent les rapports des hommes entre eux et dont le respect est assuré, au besoin, par l’autorité publique.",
+        title: "Chapitre 1 : Le droit au sens objectif",
+        info: "Le droit au sens objectif est un ensemble de règles obligatoires (ou de normes), générales et abstraites, indiquant ce qui doit être fait dans un cas donné, édictées ou reconnues par un organe officiel, régissant l'organisation et le déroulement des relations sociales et dont le respect est assuré par des moyens de contrainte organisés par l'État.<br><br>Dans ce cadre, on distingue :<br><ul><li>Le <strong>droit naturel</strong> : règles universelles et immuables conformes à la nature humaine.</li><li>Le <strong>droit positif</strong> : règles en vigueur dans un État, à un moment donné.</li></ul>",
         children: [],
-        parent: "definition"
+        parent: "sens_droit"
     },
+
+    // SOUS-BRANCHE 1.2.2
     droit_subjectif: {
-        title: "Droit Subjectif",
-        info: "Désigné par 'les droits', il s'agit de la prérogative qu’une personne détient sur une chose (droit réel) ou contre une autre personne (droit de créance) et qui est reconnue et protégée par le droit objectif.",
+        title: "Chapitre 2 : Le droit au sens subjectif",
+        info: "Le droit au sens subjectif est une faculté, une prérogative attachée à une certaine personne et protégée par l'ordre juridique existant. C'est la faculté appartenant à un sujet de droit de faire ou d'exiger quelque chose (sujet actif) ou d'être obligée à quelque chose (sujet passif).<br><br>On distingue deux catégories :<br><ul><li><strong>Les droits réels ou absolus :</strong> droits qui peuvent être exercés à l'égard de toute tierce personne (ex: le droit de propriété).</li><li><strong>Les droits relatifs ou personnels :</strong> droits qui ne peuvent être exercés qu'à l'encontre de certaines personnes bien déterminées (ex: l'obligation ou droit de créance découlant d'un contrat).</li></ul><br>Un droit subjectif ne peut exister que dans la mesure où le droit objectif le consacre et permet d'en obtenir le respect.",
         children: [],
-        parent: "definition"
-    },
-
-    // SOUS-BRANCHE : FONCTIONS DU DROIT
-    fonctions_droit: {
-        title: "Fonctions du droit",
-        info: "Le droit remplit plusieurs missions vitales pour la collectivité.",
-        children: ["pacifier", "organiser"],
-        parent: "notion"
-    },
-    pacifier: {
-        title: "Pacifier la société",
-        info: "Le droit vise à instaurer la paix sociale (l'ordre) en remplaçant la force par la règle. Il garantit la <strong>sécurité juridique</strong> en permettant aux individus de prévoir les conséquences de leurs actes.",
-        children: [],
-        parent: "fonctions_droit"
-    },
-    organiser: {
-        title: "Organiser la vie en commun",
-        info: "Le droit définit les cadres dans lesquels s'exerce l'activité humaine. Il organise également le fonctionnement de l'État et de ses institutions.",
-        children: [],
-        parent: "fonctions_droit"
-    },
-
-    // SOUS-BRANCHE : SANCTIONS
-    sanctions: {
-        title: "Sanctions",
-        info: "La règle de droit est coercitive ; sa violation entraîne une sanction de la part de l'État.",
-        children: ["sanction_penale", "sanction_civile", "sanction_administrative"],
-        parent: "notion"
-    },
-    sanction_penale: {
-        title: "Sanction pénale",
-        info: "Elle punit l'auteur d'une infraction à l'ordre public. Les infractions sont classées selon leur gravité : <br><ul><li><strong>Crimes :</strong> Infractions passibles d'une peine privative de liberté de plus de 3 ans.</li><li><strong>Délits :</strong> Infractions passibles d'une peine privative de liberté n'excédant pas 3 ans ou d'une peine pécuniaire.</li><li><strong>Contraventions :</strong> Infractions passibles de l'amende.</li></ul>",
-        children: [],
-        parent: "sanctions"
-    },
-    sanction_civile: {
-        title: "Sanction civile",
-        info: "Elle vise à rétablir l'équilibre rompu entre particuliers ou à réparer un dommage. <br> Exemples : <br><ul><li><strong>Nullité :</strong> L'acte est considéré comme n'ayant jamais existé.</li><li><strong>Dommages-intérêts :</strong> Somme d'argent pour réparer un préjudice.</li><li><strong>Exécution forcée :</strong> Obligation physique ou financière de remplir son engagement.</li></ul>",
-        children: [],
-        parent: "sanctions"
-    },
-    sanction_administrative: {
-        title: "Sanction administrative",
-        info: "Mesure prise par une autorité administrative suite à la violation d'une règle de droit public. <br> Exemples : retrait du permis de conduire, retrait d'une licence, ou amendes administratives.",
-        children: [],
-        parent: "sanctions"
+        parent: "sens_droit"
     },
 
     // --- 2. LES SUJETS DE DROIT ---
     sujets: {
         title: "2. Les sujets de droit",
-        info: "Un sujet de droit est un être ou une entité apte à être titulaire de droits et d'obligations. Le droit reconnaît deux catégories de sujets.",
-        children: ["pers_physique", "pers_morale"],
+        info: "L'ordre juridique détermine qui peut être sujet de droit, c'est-à-dire avoir des droits et assumer des obligations.",
+        children: ["definition_sujets", "jouissance_exercice_droits", "personne_morale_entreprise"],
         parent: "root"
     },
 
-    // SOUS-BRANCHE : PERSONNE PHYSIQUE
-    pers_physique: {
-        title: "La Personne physique",
-        info: "Concerne tous les êtres humains. La personnalité juridique commence par la naissance (si l'enfant naît vivant) et finit par la mort.",
-        children: ["phys_jouissance", "phys_exercice"],
+    // --- BRANCHE PRINCIPALE 2.1 ---
+    definition_sujets: {
+        title: "1. Définition et notion",
+        info: "Un sujet de droit est soit le titulaire de droits subjectifs qui peut faire valoir les prérogatives qui en découlent (le créancier), soit la personne qui est obligée du fait de ces droits subjectifs (le débiteur). <br><br>Il est important de noter que les choses ne peuvent être en soi que l'objet d'un droit subjectif, elles sont un moyen et non un but en soi.",
+        children: [],
         parent: "sujets"
-    },
-    phys_jouissance: {
-        title: "Jouissance des droits civils (PP)",
-        info: "Tout être humain a la jouissance des droits civils. C'est l'aptitude d'une personne à devenir titulaire de droits et d'obligations (capacité passive). Elle est totale pour tous les êtres humains quel que soit leur âge ou leur santé d'esprit.",
-        children: [],
-        parent: "pers_physique"
-    },
-    phys_exercice: {
-        title: "Exercice des droits civils (PP)",
-        info: "C'est la capacité de produire des effets juridiques par ses propres actes (capacité active). <br><br><strong>Deux conditions cumulatives sont requises :</strong> <br><ul><li><strong>La Majorité :</strong> Avoir 18 ans révolus.</li><li><strong>La Capacité de discernement :</strong> Toute personne qui n'est pas dépourvue de la faculté d'agir raisonnablement (n'étant pas affectée par le bas âge, une déficience mentale, un trouble psychique, l'ivresse ou d'autres causes semblables).</li></ul>",
-        children: [],
-        parent: "pers_physique"
     },
 
-    // SOUS-BRANCHE : PERSONNE MORALE
-    pers_morale: {
-        title: "La Personne morale",
-        info: "Ce sont des groupements de personnes (ex: SA, association) ou des masses de biens (ex: fondation) auxquels le droit accorde la personnalité juridique. Elles acquièrent la personnalité par l'inscription au registre du commerce (sauf exceptions).",
-        children: ["morale_jouissance", "morale_exercice"],
+    // --- BRANCHE PRINCIPALE 2.2 ---
+    jouissance_exercice_droits: {
+        title: "2. La jouissance et l'exercice des droits civils",
+        info: "Il est fondamental de distinguer la jouissance de l'exercice des droits civils :<br><br><ul><li><strong>La jouissance des droits civils (capacité juridique) :</strong> C'est la capacité d'être sujet de droit. Toute personne a une aptitude égale à devenir sujet de droits et d'obligations. Cette faculté, indépendante de l'âge ou des facultés mentales, commence à la naissance et finit par la mort.</li><li><strong>L'exercice des droits civils :</strong> C'est la capacité de s'engager juridiquement, d'acquérir des droits et pouvoir s'obliger par ses propres actes. Ne possède l'exercice des droits civils que la personne majeure et capable de discernement.</li></ul><br>Le <strong>discernement</strong> se définit comme étant la capacité intellectuelle présumée chez toute personne physique qui n'est pas atteinte de déficience mentale, de troubles psychiques, d'ivresse ou d'autres causes semblables, temporaires ou définitives, l'empêchant d'agir raisonnablement.",
+        children: [],
         parent: "sujets"
     },
-    morale_jouissance: {
-        title: "Jouissance des droits civils (PM)",
-        info: "La personne morale jouit de tous les droits qui ne sont pas inséparables de la nature humaine (elle ne peut pas se marier ou tester, par exemple). Elle a son propre nom, son siège et son patrimoine distinct de celui des membres qui la composent.",
+
+    // --- BRANCHE PRINCIPALE 2.3 ---
+    personne_morale_entreprise: {
+        title: "3. La personne morale et l'entreprise",
+        info: "L'être humain cherche souvent à atteindre des buts qui dépassent les forces d'une personne individuelle, formant ainsi des groupements.<br><br><ul><li><strong>La personne morale (ou juridique) :</strong> Ce sont des entités, comme des groupements de personnes (ex: association, société de capitaux) ou des masses de biens (ex: fondation), qui peuvent devenir, à certaines conditions, sujets de droits et d'obligations.</li><li><strong>L'entreprise :</strong> La notion de personne morale doit être distinguée de celle d'entreprise. L'entreprise peut être définie comme étant une activité économique indépendante exercée en vue d'un revenu régulier.</li></ul><br>En pratique, la notion d'entreprise peut désigner l'activité commerciale exploitée par une personne morale (ex: société anonyme) ou par une ou plusieurs personnes physiques (ex: entreprise individuelle, société en nom collectif).",
         children: [],
-        parent: "pers_morale"
-    },
-    morale_exercice: {
-        title: "Exercice des droits civils (PM)",
-        info: "La personne morale exerce ses droits par l'intermédiaire de ses <strong>organes</strong> (Conseil d'administration, direction, etc.). Elle possède l'exercice des droits civils dès qu'elle a nommé les organes prescrits par la loi et les statuts.",
-        children: [],
-        parent: "pers_morale"
+        parent: "sujets"
     },
 
     // --- 3. LA RÈGLE DE DROIT ---
