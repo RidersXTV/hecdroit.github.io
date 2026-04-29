@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9"]
     },
     
     // --- 1. NOTION ET FONCTIONS DU DROIT ---
@@ -1078,6 +1078,176 @@ const courseData = {
         info: "C'est également une <strong>source non volontaire</strong>. L'obligation naît lorsqu'une personne <strong>s'enrichit aux dépens d'autrui sans cause légitime</strong>. <br><br>Celui qui s'est enrichi injustement (le débiteur) a l'obligation de <span class='highlight'>restituer cet enrichissement</span>. <br><em>Exemple typique : Vous payez par erreur une facture deux fois. L'entreprise qui a reçu le double paiement a l'obligation de vous rembourser le trop-perçu.</em>",
         children: [],
         parent: "ob_sources"
+    },
+    
+    // --- 9. LES SOURCES DES OBLIGATIONS ---
+    sources_obligations_titre9: {
+        title: "9. Les sources des obligations",
+        info: "Ce chapitre traite des différentes causes juridiques qui donnent naissance à une obligation entre deux ou plusieurs personnes[cite: 5].",
+        children: ["so_notion", "so_volontaires", "so_legales"],
+        parent: "root"
+    },
+
+    // --- SECTION 1 : NOTION ---
+    so_notion: {
+        title: "Section 1 : Notion",
+        info: "La source d'une obligation est la <strong>cause juridique de cette dernière</strong>, c'est-à-dire le fait que le droit objectif attache directement ou indirectement à la naissance d'une obligation[cite: 5]. Chaque obligation repose donc sur une source[cite: 5].<br><br>Parmi ces dernières, on distingue deux grandes catégories[cite: 5] :<br><ul><li>Les sources <strong>volontaires</strong>[cite: 5].</li><li>Les sources <strong>légales</strong> (en particulier les actes illicites et l'enrichissement illégitime)[cite: 5].</li></ul>",
+        children: [],
+        parent: "sources_obligations_titre9"
+    },
+
+    // --- SECTION 2 : LES SOURCES VOLONTAIRES D'OBLIGATION ---
+    so_volontaires: {
+        title: "Section 2 : Les sources volontaires d'obligation",
+        info: "Les sources volontaires d'obligation sont constituées par la ou les <strong>volontés d'une ou plusieurs parties de s'engager</strong>[cite: 5]. De cette volonté découlent des obligations qui lient la ou les parties (art. 1 CO)[cite: 5].",
+        children: ["so_contrat", "so_acte_unilateral", "so_quasi_contrats"],
+        parent: "sources_obligations_titre9"
+    },
+
+    // SOUS-BRANCHES SECTION 2
+    so_contrat: {
+        title: "Chapitre 1 : Le contrat ou les obligations contractuelles",
+        info: "Le contrat constitue la source d'obligations volontaires la plus importante. Il se définit comme <strong>l'échange de plusieurs manifestations de volonté réciproques et concordantes</strong>[cite: 5].<br><br>Les obligations ayant leur source dans le contrat sont au nombre de trois[cite: 5] :<br><ol><li>Les obligations découlant du <strong>contenu même du contrat</strong>[cite: 5].</li><li>Les obligations prévues par le <strong>droit supplétif</strong> : un droit qui ne s'applique que lorsque les parties n'ont pas réglé le point dans le contrat. Il complète alors le contrat[cite: 5].</li><li>Les obligations prévues par le <strong>droit impératif</strong> : celui qui s'applique de manière obligatoire et incontournable dès que certaines conditions sont remplies[cite: 5].</li></ol>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    so_acte_unilateral: {
+        title: "Chapitre 2 : L'acte juridique unilatéral",
+        info: "L'acte juridique unilatéral est <strong>l'acte par lequel une personne s'engage seule</strong>[cite: 5]. <br><br><strong>Exemples :</strong> <br><ul><li>La promesse publique faite à un nombre déterminé de personnes de récompenser celle qui réalisera une prestation déterminée (art. 8 CO)[cite: 5].</li><li>Le testament (art. 498 CC)[cite: 5].</li></ul>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    so_quasi_contrats: {
+        title: "Chapitre 3 : Les quasi-contrats",
+        info: "Les quasi-contrats correspondent à des <strong>situations pour lesquelles les conditions d'un acte juridique font défaut</strong> (par exemple, la volonté de l'une des parties au moins) mais que la loi et la jurisprudence <strong>assimilent à des actes volontaires</strong>[cite: 5].<br><br><strong>Exemples de quasi-contrats :</strong><br><ul><li>La gestion d'affaires sans mandat (art. 419 à 424 CO)[cite: 5].</li><li>L'acte de complaisance[cite: 5].</li><li>La relation contractuelle de fait[cite: 5].</li></ul>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    // --- SECTION 3 : LES SOURCES LÉGALES ---
+    so_legales: {
+        title: "Section 3 : Les sources légales",
+        info: "La source d'obligation est ici <strong>la loi elle-même, indifféremment de la volonté du débiteur ou même de son comportement</strong>[cite: 5]. La loi impose des obligations lorsque certaines conditions définies par elle sont remplies, en raison de situations juridiques durables le plus souvent[cite: 5].",
+        children: ["so_acte_illicite", "so_enrichissement"],
+        parent: "sources_obligations_titre9"
+    },
+
+    // SOUS-BRANCHES SECTION 3
+    so_acte_illicite: {
+        title: "Chapitre 1 : L'acte illicite ou la responsabilité civile",
+        info: "La loi impose <strong>l'obligation à l'auteur d'un préjudice de réparer le dommage causé aux tiers</strong>[cite: 5]. <br><br>Le fondement de cette obligation réside dans le fait qui a généré le dommage, donnant lieu à deux types de responsabilités[cite: 5] :<br><ul><li>La <strong>responsabilité subjective</strong> : fondée sur la faute de l'auteur (art. 41 CO)[cite: 5].</li><li>La <strong>responsabilité objective</strong> : fondée sur le risque créé[cite: 5].</li></ul><br>Des lois spéciales prévoient également une telle responsabilité (ex: la LCR qui impose l'obligation de réparer le dommage à la charge du détenteur d'un véhicule à moteur)[cite: 5].",
+        children: [],
+        parent: "so_legales"
+    },
+
+    so_enrichissement: {
+        title: "Chapitre 2 : L'enrichissement illégitime",
+        info: "La personne qui <strong>bénéficie aux dépens d'autrui d'un enrichissement sans cause valable a l'obligation de par la loi de restituer cet enrichissement</strong> (art. 62 à 67 CO)[cite: 5]. <br><br>Il est très important de noter que les règles sur l'enrichissement illégitime sont <strong>subsidiaires</strong> : elles ne s'appliquent que lorsqu'aucune règle de fond relative aux obligations contractuelles ou à la responsabilité civile ne trouve application[cite: 5].",
+        children: [],
+        parent: "so_legales"
+    },
+
+    // --- 10. LES OBLIGATIONS CONTRACTUELLES ---
+    obligations_contractuelles_titre10: {
+        title: "10. Les obligations contractuelles",
+        info: "Cette branche traite de la source volontaire d'obligations la plus importante : le contrat. Elle régit sa formation, son objet, ses vices et ses modalités juridiques[cite: 5].",
+        children: [
+            "oc_sec1_definition", "oc_sec2_autonomie", "oc_sec3_conclusion", 
+            "oc_sec4_interpretation", "oc_sec5_forme", "oc_sec6_objet", 
+            "oc_sec7_vices", "oc_sec8_representation", "oc_sec9_stipulation", 
+            "oc_sec10_suretes", "oc_sec11_subrogation"
+        ],
+        parent: "root"
+    },
+
+    // --- SECTION 1 ---
+    oc_sec1_definition: {
+        title: "Section 1 : Définition et classification",
+        info: "<strong>L'acte juridique</strong> se définit comme une manifestation de volonté destinée et apte à produire un effet juridique[cite: 5]. Il peut être unilatéral ou bi/multilatéral.<br><br><strong>Le contrat</strong> se définit comme <strong>l'échange de deux ou plusieurs manifestations de volonté concordantes</strong> destiné à produire un effet juridique conforme aux volontés exprimées de manière concordante (art. 1 al. 1 CO)[cite: 5].<br><br>Classification des contrats[cite: 5] :<br><ul><li><strong>Selon les effets :</strong> unilatéral (ex: donation) ou bilatéral (parfait/synallagmatique où les prestations sont dans un rapport d'échange, ou imparfait)[cite: 5].</li><li><strong>Selon la durée :</strong> contrats simples (instantanés) ou contrats de durée[cite: 5].</li><li><strong>Selon la loi :</strong> contrats nommés (réglés par la loi) ou innommés (mixtes ou sui generis)[cite: 5].</li></ul>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 2 ---
+    oc_sec2_autonomie: {
+        title: "Section 2 : L'autonomie de la volonté",
+        info: "En tant que branche du droit privé, le droit des obligations est soumis au principe de l'autonomie de la volonté[cite: 5].<br><br>Elle comprend <strong>cinq droits essentiels</strong>[cite: 5] :<br><ol><li>La liberté de contracter.</li><li>La liberté de choisir son ou ses partenaires contractuels.</li><li>La liberté de choisir la forme du contrat.</li><li>La liberté d'annuler ou de modifier le contrat par volonté commune.</li><li>La liberté de déterminer le contenu du contrat.</li></ol><br>Cette liberté connaît des <strong>limites de fait</strong> (poids respectif des parties) et des <strong>limites de droit</strong> (forme ou objet)[cite: 5].",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 3 ---
+    oc_sec3_conclusion: {
+        title: "Section 3 : La conclusion du contrat",
+        info: "La conclusion passe par plusieurs étapes[cite: 5] :<br><br><ul><li><strong>La négociation :</strong> Les parties ont des devoirs précontractuels (se comporter loyalement, s'informer). La violation de ces devoirs engage la responsabilité précontractuelle (<strong>culpa in contrahendo</strong>)[cite: 5].</li><li><strong>L'offre :</strong> Proposition ferme de conclure un contrat. C'est un acte <strong>soumis à réception</strong> qui est en principe <strong>irrévocable</strong> (sauf exceptions art. 9 CO)[cite: 5].</li><li><strong>L'acceptation :</strong> Manifestation de volonté définitive de conclure. Le <strong>silence ne vaut en principe pas acceptation</strong> (art. 6 CO)[cite: 5].</li><li><strong>La concordance :</strong> Il doit y avoir un accord sur les <strong>points objectivement et subjectivement essentiels</strong>[cite: 5]. Si les volontés réelles divergent, le juge applique le <strong>principe de la confiance</strong> (consentement juridique ou normatif)[cite: 5].</li><li><strong>Conditions générales (CG) :</strong> Sont limitées par la règle de l'insolite et l'interdiction des clauses abusives (art. 8 LCD)[cite: 5].</li></ul>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 4 ---
+    oc_sec4_interpretation: {
+        title: "Section 4 : Interprétation, complètement, correction",
+        info: "Lorsque les parties sont en désaccord sur un contrat conclu[cite: 5] :<br><br><ol><li><strong>L'interprétation :</strong> Le juge recherche d'abord la <strong>volonté réelle</strong> des parties (interprétation subjective). En cas d'échec, il détermine la <strong>volonté supposée</strong> selon le principe de la confiance (interprétation objective)[cite: 5].</li><li><strong>Le complètement :</strong> En cas de lacune, le juge applique une <strong>règle légale supplétive</strong> ou, à défaut, recherche la volonté hypothétique des parties[cite: 5].</li><li><strong>La correction :</strong> Si l'exécution devient excessivement dure, le juge peut intervenir via la théorie de l'erreur sur les faits futurs ou la <strong>théorie de l'imprévision (clausula rebus sic stantibus)</strong>[cite: 5].</li></ol>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 5 ---
+    oc_sec5_forme: {
+        title: "Section 5 : La forme du contrat",
+        info: "Le principe est le <strong>consensualisme (libre choix de la forme, art. 11 CO)</strong>[cite: 5].<br><br>Lorsque la loi exige une forme (pour protéger les parties ou assurer la sécurité des transactions), elle peut imposer[cite: 5] :<br><ul><li><strong>La forme écrite :</strong> Acte rédigé matériellement et <strong>signé par toutes les personnes qui s'obligent</strong>[cite: 5].</li><li><strong>La légalisation :</strong> Attestation officielle d'une signature[cite: 5].</li><li><strong>La forme authentique :</strong> Nécessite la collaboration d'un officier public (notaire)[cite: 5].</li></ul><br><strong>Sanction :</strong> Le non-respect d'une forme imposée entraîne de plein droit la <strong>nullité absolue</strong> du contrat (nullité originaire ou <em>ex tunc</em>)[cite: 5].",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 6 ---
+    oc_sec6_objet: {
+        title: "Section 6 : L'objet du contrat",
+        info: "L'objet du contrat peut être librement déterminé dans les limites de la loi (art. 19 al. 1 CO)[cite: 5].<br><br><strong>Les exceptions (Art. 19 et 20 CO)</strong> qui limitent cette liberté sont[cite: 5] :<br><ul><li><strong>L'impossibilité :</strong> Elle doit être <strong>initiale (originaire) et objective</strong> (impossible pour tout le monde)[cite: 5].</li><li><strong>L'illicéité :</strong> Violation d'une interdiction absolue du droit suisse (y compris la fraude à la loi)[cite: 5].</li><li><strong>L'immoralité :</strong> Contrat heurtant la morale sociale[cite: 5].</li><li><strong>Atteinte aux droits de la personnalité (art. 27 CC) :</strong> Engagement excessif[cite: 5].</li></ul><br><strong>Sanction :</strong> Le contrat est frappé de <strong>nullité absolue</strong>. Des exceptions existent comme la <strong>nullité partielle</strong> (seules les clauses viciées tombent) ou la <strong>nullité relative</strong> (seule la partie protégée peut l'invoquer)[cite: 5].",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 7 ---
+    oc_sec7_vices: {
+        title: "Section 7 : Les vices du contrat",
+        info: "Le contrat est <strong>annulable</strong> si la volonté a été faussée. La déclaration d'annulation a un effet rétroactif (<strong>ex tunc</strong>)[cite: 5].<br><br><strong>Les vices de la volonté (Art. 23-30 CO) :</strong><br><ul><li><strong>L'erreur essentielle :</strong> Fausse représentation de la réalité. Elle peut être une <strong>erreur de déclaration</strong> (volonté mal exprimée) ou une <strong>erreur sur les motifs/erreur de base</strong> (la volonté est bien exprimée mais repose sur un fait objectivement et subjectivement essentiel qui est faux)[cite: 5].</li><li><strong>Le dol :</strong> Induire <strong>intentionnellement</strong> une personne en erreur (tromperie) pour l'amener à conclure[cite: 5].</li><li><strong>La crainte fondée :</strong> Menace <strong>illicite et intentionnelle</strong> inspirant la peur pour forcer la conclusion (ex: chantage)[cite: 5].</li></ul><br><strong>La lésion (Art. 21 CO) :</strong><br>Disproportion évidente entre les prestations, causée par l'<strong>exploitation consciente de la gêne, de la légèreté ou de l'inexpérience</strong> de la victime[cite: 5].",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 8 ---
+    oc_sec8_representation: {
+        title: "Section 8 : La représentation",
+        info: "Rapport juridique en vertu duquel un acte accompli par le <strong>représentant</strong> produit des effets directement pour le <strong>représenté</strong> envers le <strong>cocontractant</strong>[cite: 5].<br><br><ul><li><strong>Représentation avec pouvoirs :</strong> Le représentant doit agir <strong>au nom du représenté</strong> (déclaration expresse ou implicite) et disposer du <strong>pouvoir de représentation</strong>[cite: 5].</li><li><strong>Représentation sans pouvoirs :</strong> Le pseudo-représenté n'est pas lié, SAUF s'il y a <strong>ratification du contrat</strong> ou s'il a créé une <strong>apparence efficace</strong> envers le tiers de bonne foi[cite: 5].</li><li><strong>Contrat avec soi-même et double représentation :</strong> Interdits en principe (danger de conflit d'intérêts) et frappés de nullité, sauf si la nature de l'affaire exclut tout préjudice ou s'il y a eu autorisation/ratification[cite: 5].</li></ul>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 9 ---
+    oc_sec9_stipulation: {
+        title: "Section 9 : La stipulation pour autrui",
+        info: "Convention par laquelle le <strong>promettant</strong> promet au <strong>stipulant</strong> de faire sa prestation à une troisième personne, le <strong>bénéficiaire</strong> (art. 112 CO)[cite: 5].<br><br><ul><li><strong>Stipulation imparfaite :</strong> Seul le stipulant est créancier. Le bénéficiaire reçoit valablement mais ne peut pas exiger l'exécution en justice[cite: 5].</li><li><strong>Stipulation parfaite :</strong> Le bénéficiaire acquiert un <strong>droit de créance propre et indépendant</strong> contre le promettant. Il se substitue au stipulant dès qu'il déclare vouloir faire usage de son droit[cite: 5].</li></ul>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 10 ---
+    oc_sec10_suretes: {
+        title: "Section 10 : Les sûretés personnelles",
+        info: "Garanties fournies par une personne pour protéger le créancier contre l'inexécution d'une dette[cite: 5].<br><br><ul><li><strong>Le cautionnement (art. 492 ss CO) :</strong> Engagement de la caution à répondre de la dette d'un débiteur principal. Il a un caractère <strong>strictement accessoire</strong> : sa validité dépend de la dette principale. La caution qui a payé est <strong>subrogée</strong> aux droits du créancier[cite: 5].</li><li><strong>Le contrat de porte-fort (art. 111 CO) :</strong> Engagement <strong>indépendant</strong> par lequel le promettant garantit au bénéficiaire le fait d'un tiers (verser des dommages-intérêts si le tiers ne s'exécute pas). N'est soumis à <strong>aucune règle de forme</strong>[cite: 5].</li></ul>",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- SECTION 11 ---
+    oc_sec11_subrogation: {
+        title: "Section 11 : La subrogation",
+        info: "La subrogation est le <strong>transfert légal de la créance</strong> (art. 110 CO)[cite: 5].<br><br>Le paiement effectué par un tiers au créancier n'éteint pas la créance, mais la <strong>transfère du créancier au tiers payant</strong>, qui acquiert ainsi les droits liés à cette créance contre le débiteur initial (ex: la caution qui paie le créancier prend la place de ce dernier pour se retourner contre le débiteur)[cite: 5].",
+        children: [],
+        parent: "obligations_contractuelles_titre10"
     }
 };
 // [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
