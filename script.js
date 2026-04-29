@@ -4299,7 +4299,7 @@ const initialTopic = urlParams.get('topic') || 'root';
 history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
 renderTopic(initialTopic, false)
 
-const ACADEMIC_PASSWORD = "HEC_DROIT_2026"; // Changez ceci par le mot de passe de votre choix
+const ACADEMIC_PASSWORD = "HEC_DROIT_2026"; // Votre mot de passe
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
@@ -4311,12 +4311,21 @@ function checkPassword() {
         sessionStorage.setItem('isAuth', 'true');
     } else {
         errorMsg.style.display = 'block';
+        // Petit effet visuel en cas d'erreur
+        document.getElementById('password-input').style.borderColor = 'var(--accent)';
     }
 }
 
-// Vérification au chargement de la page
-window.onload = function() {
+// Permet de valider avec la touche Entrée
+document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter' && document.getElementById('auth-overlay').style.display !== 'none') {
+        checkPassword();
+    }
+});
+
+// Vérification automatique au chargement
+window.addEventListener('DOMContentLoaded', (event) => {
     if (sessionStorage.getItem('isAuth') === 'true') {
         document.getElementById('auth-overlay').style.display = 'none';
     }
-};
+});
