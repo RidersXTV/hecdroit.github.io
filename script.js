@@ -1201,20 +1201,33 @@ function renderTopic(id, pushHistory = true) {
         history.pushState({ topicId: id }, topic.title, "?topic=" + id);
     }
 
-    // 2. Mise à jour du fil d'Ariane
+    // 2. Mise à jour du fil d'Ariane interactive
     let path = [];
     let currentId = id;
+
+// On remonte la généalogie des parents pour construire le chemin
     while (currentId && currentId !== 'root') {
-        path.unshift({id: currentId, title: courseData[currentId].title});
+        path.unshift({ id: currentId, title: courseData[currentId].title });
         currentId = courseData[currentId].parent;
     }
-    
-    let bcHtml = `<span onclick="renderTopic('root')">🏠 Accueil</span>`;
-    path.forEach(p => {
-        bcHtml += ` / <span onclick="renderTopic('${p.id}')">${p.title}</span>`;
-    });
-    breadcrumb.innerHTML = bcHtml;
 
+// On commence toujours par le bouton Accueil
+    let bcHtml = `<span class="breadcrumb-link" onclick="renderTopic('root')">🏠 Accueil</span>`;
+
+// On ajoute chaque branche du chemin comme un lien cliquable
+    path.forEach((p, index) => {
+    // On ajoute un séparateur
+        bcHtml += ` <span class="breadcrumb-separator">/</span> `;
+    
+    // Si c'est le dernier élément (la page actuelle), on peut le styliser différemment
+        if (index === path.length - 1) {
+            bcHtml += `<span class="breadcrumb-current">${p.title}</span>`;
+        } else {
+            bcHtml += `<span class="breadcrumb-link" onclick="renderTopic('${p.id}')">${p.title}</span>`;
+        }
+    });
+
+    breadcrumb.innerHTML = bcHtml;
     // 3. Génération du HTML principal
     let html = `
         <div class="info-box">
