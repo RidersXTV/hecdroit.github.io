@@ -1090,7 +1090,7 @@ const courseData = {
 
     // --- SECTION 1 : NOTION ---
     so_notion: {
-        title: "Section 1 : Notion",
+        title: "Notion",
         info: "La source d'une obligation est la <strong>cause juridique de cette dernière</strong>, c'est-à-dire le fait que le droit objectif attache directement ou indirectement à la naissance d'une obligation. Chaque obligation repose donc sur une source.<br><br>Parmi ces dernières, on distingue deux grandes catégories :<br><ul><li>Les sources <strong>volontaires</strong>.</li><li>Les sources <strong>légales</strong> (en particulier les actes illicites et l'enrichissement illégitime).</li></ul>",
         children: [],
         parent: "sources_obligations_titre9"
@@ -1098,7 +1098,7 @@ const courseData = {
 
     // --- SECTION 2 : LES SOURCES VOLONTAIRES D'OBLIGATION ---
     so_volontaires: {
-        title: "Section 2 : Les sources volontaires d'obligation",
+        title: "Les sources volontaires d'obligation",
         info: "Les sources volontaires d'obligation sont constituées par la ou les <strong>volontés d'une ou plusieurs parties de s'engager</strong>. De cette volonté découlent des obligations qui lient la ou les parties (art. 1 CO).",
         children: ["so_contrat", "so_acte_unilateral", "so_quasi_contrats"],
         parent: "sources_obligations_titre9"
@@ -1106,21 +1106,21 @@ const courseData = {
 
     // SOUS-BRANCHES SECTION 2
     so_contrat: {
-        title: "Chapitre 1 : Le contrat ou les obligations contractuelles",
+        title: "Le contrat ou les obligations contractuelles",
         info: "Le contrat constitue la source d'obligations volontaires la plus importante. Il se définit comme <strong>l'échange de plusieurs manifestations de volonté réciproques et concordantes</strong>.<br><br>Les obligations ayant leur source dans le contrat sont au nombre de trois :<br><ol><li>Les obligations découlant du <strong>contenu même du contrat</strong>.</li><li>Les obligations prévues par le <strong>droit supplétif</strong> : un droit qui ne s'applique que lorsque les parties n'ont pas réglé le point dans le contrat. Il complète alors le contrat.</li><li>Les obligations prévues par le <strong>droit impératif</strong> : celui qui s'applique de manière obligatoire et incontournable dès que certaines conditions sont remplies.</li></ol>",
         children: [],
         parent: "so_volontaires"
     },
 
     so_acte_unilateral: {
-        title: "Chapitre 2 : L'acte juridique unilatéral",
+        title: "L'acte juridique unilatéral",
         info: "L'acte juridique unilatéral est <strong>l'acte par lequel une personne s'engage seule</strong>. <br><br><strong>Exemples :</strong> <br><ul><li>La promesse publique faite à un nombre déterminé de personnes de récompenser celle qui réalisera une prestation déterminée (art. 8 CO).</li><li>Le testament (art. 498 CC).</li></ul>",
         children: [],
         parent: "so_volontaires"
     },
 
     so_quasi_contrats: {
-        title: "Chapitre 3 : Les quasi-contrats",
+        title: "Les quasi-contrats",
         info: "Les quasi-contrats correspondent à des <strong>situations pour lesquelles les conditions d'un acte juridique font défaut</strong> (par exemple, la volonté de l'une des parties au moins) mais que la loi et la jurisprudence <strong>assimilent à des actes volontaires</strong>.<br><br><strong>Exemples de quasi-contrats :</strong><br><ul><li>La gestion d'affaires sans mandat (art. 419 à 424 CO).</li><li>L'acte de complaisance.</li><li>La relation contractuelle de fait.</li></ul>",
         children: [],
         parent: "so_volontaires"
@@ -1128,7 +1128,7 @@ const courseData = {
 
     // --- SECTION 3 : LES SOURCES LÉGALES ---
     so_legales: {
-        title: "Section 3 : Les sources légales",
+        title: "Les sources légales",
         info: "La source d'obligation est ici <strong>la loi elle-même, indifféremment de la volonté du débiteur ou même de son comportement</strong>. La loi impose des obligations lorsque certaines conditions définies par elle sont remplies, en raison de situations juridiques durables le plus souvent.",
         children: ["so_acte_illicite", "so_enrichissement"],
         parent: "sources_obligations_titre9"
@@ -1136,14 +1136,14 @@ const courseData = {
 
     // SOUS-BRANCHES SECTION 3
     so_acte_illicite: {
-        title: "Chapitre 1 : L'acte illicite ou la responsabilité civile",
+        title: "L'acte illicite ou la responsabilité civile",
         info: "La loi impose <strong>l'obligation à l'auteur d'un préjudice de réparer le dommage causé aux tiers</strong>. <br><br>Le fondement de cette obligation réside dans le fait qui a généré le dommage, donnant lieu à deux types de responsabilités :<br><ul><li>La <strong>responsabilité subjective</strong> : fondée sur la faute de l'auteur (art. 41 CO).</li><li>La <strong>responsabilité objective</strong> : fondée sur le risque créé.</li></ul><br>Des lois spéciales prévoient également une telle responsabilité (ex: la LCR qui impose l'obligation de réparer le dommage à la charge du détenteur d'un véhicule à moteur).",
         children: [],
         parent: "so_legales"
     },
 
     so_enrichissement: {
-        title: "Chapitre 2 : L'enrichissement illégitime",
+        title: "L'enrichissement illégitime",
         info: "La personne qui <strong>bénéficie aux dépens d'autrui d'un enrichissement sans cause valable a l'obligation de par la loi de restituer cet enrichissement</strong> (art. 62 à 67 CO). <br><br>Il est très important de noter que les règles sur l'enrichissement illégitime sont <strong>subsidiaires</strong> : elles ne s'appliquent que lorsqu'aucune règle de fond relative aux obligations contractuelles ou à la responsabilité civile ne trouve application.",
         children: [],
         parent: "so_legales"
@@ -1151,101 +1151,605 @@ const courseData = {
 
     // --- 10. LES OBLIGATIONS CONTRACTUELLES ---
     obligations_contractuelles_titre10: {
-        title: "10. Les obligations contractuelles",
-        info: "Cette branche traite de la source volontaire d'obligations la plus importante : le contrat. Elle régit sa formation, son objet, ses vices et ses modalités juridiques.",
+        title: "Les obligations contractuelles",
+        info: "Cette grande thématique aborde la vie du contrat : sa formation, sa validité, son interprétation, ses vices et ses sûretés[cite: 5].",
         children: [
-            "oc_sec1_definition", "oc_sec2_autonomie", "oc_sec3_conclusion", 
-            "oc_sec4_interpretation", "oc_sec5_forme", "oc_sec6_objet", 
-            "oc_sec7_vices", "oc_sec8_representation", "oc_sec9_stipulation", 
-            "oc_sec10_suretes", "oc_sec11_subrogation"
+            "oc_definition_classification", "oc_autonomie", "oc_conclusion", 
+            "oc_icc", "oc_forme", "oc_objet", "oc_vices", 
+            "oc_representation", "oc_stipulation", "oc_suretes", "oc_subrogation"
         ],
         parent: "root"
     },
 
-    // --- SECTION 1 ---
-    oc_sec1_definition: {
-        title: "Section 1 : Définition et classification",
-        info: "<strong>L'acte juridique</strong> se définit comme une manifestation de volonté destinée et apte à produire un effet juridique. Il peut être unilatéral ou bi/multilatéral.<br><br><strong>Le contrat</strong> se définit comme <strong>l'échange de deux ou plusieurs manifestations de volonté concordantes</strong> destiné à produire un effet juridique conforme aux volontés exprimées de manière concordante (art. 1 al. 1 CO).<br><br>Classification des contrats :<br><ul><li><strong>Selon les effets :</strong> unilatéral (ex: donation) ou bilatéral (parfait/synallagmatique où les prestations sont dans un rapport d'échange, ou imparfait).</li><li><strong>Selon la durée :</strong> contrats simples (instantanés) ou contrats de durée.</li><li><strong>Selon la loi :</strong> contrats nommés (réglés par la loi) ou innommés (mixtes ou sui generis).</li></ul>",
-        children: [],
+    // ==========================================
+    // DÉFINITION ET CLASSIFICATION
+    // ==========================================
+    oc_definition_classification: {
+        title: "Définition et classification",
+        info: "Bases de la notion de contrat et de sa typologie[cite: 5].",
+        children: ["oc_dc_definition", "oc_dc_classification"],
         parent: "obligations_contractuelles_titre10"
     },
-
-    // --- SECTION 2 ---
-    oc_sec2_autonomie: {
-        title: "Section 2 : L'autonomie de la volonté",
-        info: "En tant que branche du droit privé, le droit des obligations est soumis au principe de l'autonomie de la volonté.<br><br>Elle comprend <strong>cinq droits essentiels</strong> :<br><ol><li>La liberté de contracter.</li><li>La liberté de choisir son ou ses partenaires contractuels.</li><li>La liberté de choisir la forme du contrat.</li><li>La liberté d'annuler ou de modifier le contrat par volonté commune.</li><li>La liberté de déterminer le contenu du contrat.</li></ol><br>Cette liberté connaît des <strong>limites de fait</strong> (poids respectif des parties) et des <strong>limites de droit</strong> (forme ou objet).",
+    oc_dc_definition: {
+        title: "Définition",
+        info: "L'acte juridique est une manifestation de volonté destinée et apte à produire un effet juridique (création, modification, suppression ou transfert d'un droit). Il peut être unilatéral ou bi/multilatéral[cite: 5].<br><br>Le contrat se définit comme <strong>l'échange de deux ou plusieurs manifestations de volonté concordantes</strong> destiné à produire un effet juridique conforme aux volontés exprimées de manière concordante[cite: 5].",
         children: [],
-        parent: "obligations_contractuelles_titre10"
+        parent: "oc_definition_classification"
+    },
+    oc_dc_classification: {
+        title: "Classification",
+        info: "Les différents contrats peuvent être classés selon divers critères[cite: 5].",
+        children: ["oc_dc_class_effets", "oc_dc_class_duree", "oc_dc_class_loi", "oc_dc_class_autres"],
+        parent: "oc_definition_classification"
+    },
+    oc_dc_class_effets: {
+        title: "Selon les effets",
+        info: "<ul><li><strong>Contrat unilatéral :</strong> une seule des parties assume des obligations (ex: donation)[cite: 5].</li><li><strong>Contrat bilatéral :</strong> obligations réciproques. S'il est <strong>parfait (ou synallagmatique)</strong>, les prestations sont dans un rapport d'échange. S'il est imparfait, une seule partie a une obligation principale[cite: 5].</li><li><strong>Contrats multilatéraux :</strong> les prestations sont réunies en vue d'un but commun[cite: 5].</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_duree: {
+        title: "Selon la durée",
+        info: "<ul><li><strong>Contrats simples (ou instantanés) :</strong> le débiteur doit faire une prestation isolée dans le temps[cite: 5].</li><li><strong>Contrats de durée :</strong> le débiteur doit une prestation qui se prolonge dans le temps[cite: 5].</li><li><strong>Contrats analogues aux contrats de durée :</strong> exécution qui nécessite un certain temps[cite: 5].</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_loi: {
+        title: "Selon la relation avec la loi",
+        info: "<ul><li><strong>Contrats nommés :</strong> réglementés par le CO ou une autre loi (ex: vente)[cite: 5].</li><li><strong>Contrats innommés :</strong> non réglés par la loi. Peuvent être des <strong>contrats mixtes</strong> (combinaison d'éléments réglementés) ou <strong>sui generis</strong> (contenu entièrement original, ex: franchise)[cite: 5].</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_autres: {
+        title: "Autres distinctions",
+        info: "Le contrat peut être principal ou accessoire (existe seulement en fonction d'un autre contrat). Il peut aussi être gratuit ou onéreux (recevoir un avantage en fournissant ou non un équivalent)[cite: 5].",
+        children: [],
+        parent: "oc_dc_classification"
     },
 
-    // --- SECTION 3 ---
-    oc_sec3_conclusion: {
-        title: "Section 3 : La conclusion du contrat",
-        info: "La conclusion passe par plusieurs étapes :<br><br><ul><li><strong>La négociation :</strong> Les parties ont des devoirs précontractuels (se comporter loyalement, s'informer). La violation de ces devoirs engage la responsabilité précontractuelle (<strong>culpa in contrahendo</strong>).</li><li><strong>L'offre :</strong> Proposition ferme de conclure un contrat. C'est un acte <strong>soumis à réception</strong> qui est en principe <strong>irrévocable</strong> (sauf exceptions art. 9 CO).</li><li><strong>L'acceptation :</strong> Manifestation de volonté définitive de conclure. Le <strong>silence ne vaut en principe pas acceptation</strong> (art. 6 CO).</li><li><strong>La concordance :</strong> Il doit y avoir un accord sur les <strong>points objectivement et subjectivement essentiels</strong>. Si les volontés réelles divergent, le juge applique le <strong>principe de la confiance</strong> (consentement juridique ou normatif).</li><li><strong>Conditions générales (CG) :</strong> Sont limitées par la règle de l'insolite et l'interdiction des clauses abusives (art. 8 LCD).</li></ul>",
-        children: [],
+    // ==========================================
+    // L'AUTONOMIE DE LA VOLONTÉ
+    // ==========================================
+    oc_autonomie: {
+        title: "L'autonomie de la volonté",
+        info: "Le droit des obligations est soumis au principe fondamental de l'autonomie de la volonté des parties[cite: 5].",
+        children: ["oc_auto_notion", "oc_auto_limites", "oc_auto_liberte"],
         parent: "obligations_contractuelles_titre10"
     },
-
-    // --- SECTION 4 ---
-    oc_sec4_interpretation: {
-        title: "Section 4 : Interprétation, complètement, correction",
-        info: "Lorsque les parties sont en désaccord sur un contrat conclu :<br><br><ol><li><strong>L'interprétation :</strong> Le juge recherche d'abord la <strong>volonté réelle</strong> des parties (interprétation subjective). En cas d'échec, il détermine la <strong>volonté supposée</strong> selon le principe de la confiance (interprétation objective).</li><li><strong>Le complètement :</strong> En cas de lacune, le juge applique une <strong>règle légale supplétive</strong> ou, à défaut, recherche la volonté hypothétique des parties.</li><li><strong>La correction :</strong> Si l'exécution devient excessivement dure, le juge peut intervenir via la théorie de l'erreur sur les faits futurs ou la <strong>théorie de l'imprévision (clausula rebus sic stantibus)</strong>.</li></ol>",
+    oc_auto_notion: {
+        title: "Notion",
+        info: "L'autonomie de la volonté comprend cinq droits essentiels[cite: 5] :<br><ol><li>La liberté de contracter.</li><li>La liberté de choisir son ou ses partenaires contractuels.</li><li>La liberté de choisir la forme du contrat.</li><li>La liberté d'annuler le contrat, d'y mettre fin ou de le ratifier.</li><li>La liberté de déterminer le contenu du contrat.</li></ol>",
         children: [],
-        parent: "obligations_contractuelles_titre10"
+        parent: "oc_autonomie"
+    },
+    oc_auto_limites: {
+        title: "Les limites",
+        info: "Le principe de l'autonomie de la volonté se heurte à deux types de limites : les limites de fait (poids respectif des parties) et les limites de droit (forme ou objet)[cite: 5].",
+        children: [],
+        parent: "oc_autonomie"
+    },
+    oc_auto_liberte: {
+        title: "La liberté de contracter",
+        info: "Nul ne peut être contraint de contracter contre sa volonté[cite: 5]. Cette liberté est cependant limitée par des dispositions de droit public et de droit privé créant, dans certaines circonstances, une obligation de contracter[cite: 5].",
+        children: [],
+        parent: "oc_autonomie"
     },
 
-    // --- SECTION 5 ---
-    oc_sec5_forme: {
-        title: "Section 5 : La forme du contrat",
-        info: "Le principe est le <strong>consensualisme (libre choix de la forme, art. 11 CO)</strong>.<br><br>Lorsque la loi exige une forme (pour protéger les parties ou assurer la sécurité des transactions), elle peut imposer :<br><ul><li><strong>La forme écrite :</strong> Acte rédigé matériellement et <strong>signé par toutes les personnes qui s'obligent</strong>.</li><li><strong>La légalisation :</strong> Attestation officielle d'une signature.</li><li><strong>La forme authentique :</strong> Nécessite la collaboration d'un officier public (notaire).</li></ul><br><strong>Sanction :</strong> Le non-respect d'une forme imposée entraîne de plein droit la <strong>nullité absolue</strong> du contrat (nullité originaire ou <em>ex tunc</em>).",
-        children: [],
+    // ==========================================
+    // LA CONCLUSION DU CONTRAT
+    // ==========================================
+    oc_conclusion: {
+        title: "La conclusion du contrat",
+        info: "Étapes et règles régissant la formation de l'accord entre les parties[cite: 5].",
+        children: [
+            "oc_concl_negociation", "oc_concl_offre", "oc_concl_acceptation", 
+            "oc_concl_lettre", "oc_concl_concordance", "oc_concl_moment", "oc_concl_cas"
+        ],
         parent: "obligations_contractuelles_titre10"
     },
-
-    // --- SECTION 6 ---
-    oc_sec6_objet: {
-        title: "Section 6 : L'objet du contrat",
-        info: "L'objet du contrat peut être librement déterminé dans les limites de la loi (art. 19 al. 1 CO).<br><br><strong>Les exceptions (Art. 19 et 20 CO)</strong> qui limitent cette liberté sont :<br><ul><li><strong>L'impossibilité :</strong> Elle doit être <strong>initiale (originaire) et objective</strong> (impossible pour tout le monde).</li><li><strong>L'illicéité :</strong> Violation d'une interdiction absolue du droit suisse (y compris la fraude à la loi).</li><li><strong>L'immoralité :</strong> Contrat heurtant la morale sociale.</li><li><strong>Atteinte aux droits de la personnalité (art. 27 CC) :</strong> Engagement excessif.</li></ul><br><strong>Sanction :</strong> Le contrat est frappé de <strong>nullité absolue</strong>. Des exceptions existent comme la <strong>nullité partielle</strong> (seules les clauses viciées tombent) ou la <strong>nullité relative</strong> (seule la partie protégée peut l'invoquer).",
+    oc_concl_negociation: {
+        title: "La négociation",
+        info: "Durant la phase de pourparlers, les parties ne sont pas encore liées. Néanmoins, elles ont certains devoirs précontractuels : négocier sérieusement, s'informer soi-même, renseigner l'autre partie et se comporter loyalement[cite: 5].<br><br>Si une partie cause un dommage à l'autre en violant un de ces devoirs, elle encourt une responsabilité précontractuelle appelée <strong>culpa in contrahendo</strong>[cite: 5].",
         children: [],
-        parent: "obligations_contractuelles_titre10"
+        parent: "oc_conclusion"
+    },
+    oc_concl_offre: {
+        title: "L'offre",
+        info: "La première étape formelle de la conclusion[cite: 5].",
+        children: ["oc_offre_notion", "oc_offre_contenu", "oc_offre_effets", "oc_offre_duree"],
+        parent: "oc_conclusion"
+    },
+    oc_offre_notion: {
+        title: "Notion",
+        info: "L'offre est une proposition ferme de conclure un contrat, adressée à l'autre partie[cite: 5]. Il s'agit d'un acte juridique <strong>soumis à réception</strong> ; l'offre déploie ses effets dès que le destinataire l'a reçue, même s'il n'en a pas pris connaissance[cite: 5].",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_contenu: {
+        title: "Contenu et forme",
+        info: "L'offre doit contenir <strong>tous les éléments essentiels du contrat</strong> ainsi que <strong>l'expression d'une volonté de se lier</strong>[cite: 5]. Conformément au principe de liberté, elle est en principe informelle[cite: 5].",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_effets: {
+        title: "Effets",
+        info: "L'offre lie son auteur et confère un <strong>droit formateur</strong> au destinataire (qui peut provoquer unilatéralement la conclusion)[cite: 5]. <br><br>Elle est <strong>irrévocable</strong> sauf dans deux cas (art. 9 CO)[cite: 5] :<br>1. Retrait parvenu au destinataire avant ou en même temps que l'offre.<br>2. Retrait communiqué avant que le destinataire ait pris connaissance de l'offre.",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_duree: {
+        title: "Durée de validité",
+        info: "L'offrant peut fixer un délai. À défaut, la loi impose[cite: 5] :<br><ul><li><strong>Entre présents :</strong> l'offrant est délié à défaut d'acceptation immédiate.</li><li><strong>Entre absents :</strong> l'offrant est lié jusqu'au moment où il peut s'attendre à l'arrivée d'une réponse expédiée à temps et régulièrement.</li></ul>",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_concl_acceptation: {
+        title: "L'acceptation",
+        info: "La réponse positive à l'offre[cite: 5].",
+        children: ["oc_acc_notion", "oc_acc_contenu"],
+        parent: "oc_conclusion"
+    },
+    oc_acc_notion: {
+        title: "Notion",
+        info: "Manifestation de volonté par laquelle l'acceptant exprime sa <strong>volonté définitive de conclure</strong>[cite: 5]. C'est un acte soumis à réception, qui constitue l'exercice du droit formateur[cite: 5]. Elle peut être retirée aux mêmes conditions restrictives que l'offre[cite: 5].",
+        children: [],
+        parent: "oc_concl_acceptation"
+    },
+    oc_acc_contenu: {
+        title: "Contenu et forme",
+        info: "L'acceptation doit être conforme à l'offre. Elle peut être tacite ou résulter d'actes concluants[cite: 5]. <br><br>Cependant, <strong>le silence ne vaut pas acceptation</strong>, à moins que le contraire ne résulte de la nature de l'affaire (art. 6 CO)[cite: 5].",
+        children: [],
+        parent: "oc_concl_acceptation"
+    },
+    oc_concl_lettre: {
+        title: "La lettre de confirmation",
+        info: "Pratique commerciale où une partie résume le contenu d'un accord préalable. Elle a un <strong>effet probatoire</strong> et confirme l'accord[cite: 5]. Elle peut avoir un <strong>effet constitutif</strong> si l'on doit s'attendre à ce que le destinataire conteste son contenu inexact[cite: 5].",
+        children: [],
+        parent: "oc_conclusion"
+    },
+    oc_concl_concordance: {
+        title: "La concordance des manifestations de volonté",
+        info: "L'harmonie nécessaire entre l'offre et l'acceptation[cite: 5].",
+        children: ["oc_conc_notion", "oc_conc_objet", "oc_conc_regles"],
+        parent: "oc_conclusion"
+    },
+    oc_conc_notion: {
+        title: "Notion",
+        info: "Le contrat consiste dans un accord de manifestations de volonté. L'acceptation doit correspondre à l'offre[cite: 5].",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_conc_objet: {
+        title: "L'objet de l'accord",
+        info: "L'accord doit se faire sur les <strong>points essentiels</strong> du contrat. On distingue[cite: 5] :<br><ul><li>Les points <strong>objectivement essentiels</strong> : le noyau indispensable du contrat.</li><li>Les points <strong>subjectivement essentiels</strong> : éléments sans lesquels une partie ne contracterait pas.</li></ul>Les autres points sont secondaires[cite: 5].",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_conc_regles: {
+        title: "Les règles régissant l'accord",
+        info: "S'il y a <strong>accord réel ou naturel</strong>, les volontés effectives sont concordantes (le sens voulu, déclaré et compris sont identiques)[cite: 5]. <br><br>S'il n'y a pas d'accord réel, l'ordre juridique applique le <strong>principe de la confiance</strong> : les déclarations doivent être comprises dans le sens que leur destinataire pouvait et devait leur donner de bonne foi. On parle alors de <strong>consentement juridique ou normatif</strong>[cite: 5].",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_concl_moment: {
+        title: "Le moment de la conclusion du contrat",
+        info: "Le contrat est formellement conclu à la réception de l'acceptation[cite: 5]. <br><br>Toutefois, les effets des contrats <strong>rétroagissent au moment de l'expédition de l'acceptation</strong> ou, en cas d'acceptation tacite, au moment de la réception de l'offre[cite: 5].",
+        children: [],
+        parent: "oc_conclusion"
+    },
+    oc_concl_cas: {
+        title: "Cas particuliers de conclusion",
+        info: "Situations spécifiques prévues par la loi[cite: 5].",
+        children: ["oc_cas_appel", "oc_cas_promesse", "oc_cas_precontrat", "oc_cas_adhesion"],
+        parent: "oc_conclusion"
+    },
+    oc_cas_appel: {
+        title: "L'appel d'offres",
+        info: "Déclaration par laquelle l'appelant demande, <strong>sans engagement</strong>, que des offres lui soient faites (art. 7 CO)[cite: 5].",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_promesse: {
+        title: "La promesse publique",
+        info: "Promesse faite à un nombre indéterminé de personnes de récompenser celle qui réalisera une prestation. Étant publique, elle <strong>lie son auteur</strong> qui doit payer la récompense (art. 8 CO)[cite: 5].",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_precontrat: {
+        title: "La promesse de contracter",
+        info: "Aussi appelée <strong>précontrat</strong>, c'est l'engagement souscrit par une ou deux parties de conclure ultérieurement un contrat principal (art. 22 CO)[cite: 5].",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_adhesion: {
+        title: "Contrat d'adhésion et CG",
+        info: "<strong>Le contrat d'adhésion</strong> ne peut en pratique être discuté par l'adhérent. <strong>Les conditions générales (CG)</strong> sont des clauses standardisées[cite: 5].<br><br>Le juge effectue deux contrôles[cite: 5] :<br><ul><li><strong>L'incorporation :</strong> Elles n'ont d'effet que si incorporées dans l'accord.</li><li><strong>Le contenu :</strong> La jurisprudence applique la <strong>règle de l'insolite</strong> (les clauses insolites, c.-à-d. excessivement onéreuses ou s'écartant du contenu attendu, ne lient pas)[cite: 5].</li></ul><br>L'art. 8 LCD protège également le consommateur si la clause provoque une <strong>disproportion notable et injustifiée</strong> contraire aux règles de la bonne foi (entraîne la nullité de la clause)[cite: 5].",
+        children: [],
+        parent: "oc_concl_cas"
     },
 
-    // --- SECTION 7 ---
-    oc_sec7_vices: {
-        title: "Section 7 : Les vices du contrat",
-        info: "Le contrat est <strong>annulable</strong> si la volonté a été faussée. La déclaration d'annulation a un effet rétroactif (<strong>ex tunc</strong>).<br><br><strong>Les vices de la volonté (Art. 23-30 CO) :</strong><br><ul><li><strong>L'erreur essentielle :</strong> Fausse représentation de la réalité. Elle peut être une <strong>erreur de déclaration</strong> (volonté mal exprimée) ou une <strong>erreur sur les motifs/erreur de base</strong> (la volonté est bien exprimée mais repose sur un fait objectivement et subjectivement essentiel qui est faux).</li><li><strong>Le dol :</strong> Induire <strong>intentionnellement</strong> une personne en erreur (tromperie) pour l'amener à conclure.</li><li><strong>La crainte fondée :</strong> Menace <strong>illicite et intentionnelle</strong> inspirant la peur pour forcer la conclusion (ex: chantage).</li></ul><br><strong>La lésion (Art. 21 CO) :</strong><br>Disproportion évidente entre les prestations, causée par l'<strong>exploitation consciente de la gêne, de la légèreté ou de l'inexpérience</strong> de la victime.",
-        children: [],
+    // ==========================================
+    // INTERPRÉTATION, COMPLÈTEMENT, CORRECTION
+    // ==========================================
+    oc_icc: {
+        title: "Interprétation, complètement et correction",
+        info: "Processus applicables lorsqu'un contrat est conclu mais génère des conflits sur son sens ou son exécution[cite: 5].",
+        children: ["oc_icc_interpretation", "oc_icc_completement", "oc_icc_correction"],
         parent: "obligations_contractuelles_titre10"
     },
-
-    // --- SECTION 8 ---
-    oc_sec8_representation: {
-        title: "Section 8 : La représentation",
-        info: "Rapport juridique en vertu duquel un acte accompli par le <strong>représentant</strong> produit des effets directement pour le <strong>représenté</strong> envers le <strong>cocontractant</strong>.<br><br><ul><li><strong>Représentation avec pouvoirs :</strong> Le représentant doit agir <strong>au nom du représenté</strong> (déclaration expresse ou implicite) et disposer du <strong>pouvoir de représentation</strong>.</li><li><strong>Représentation sans pouvoirs :</strong> Le pseudo-représenté n'est pas lié, SAUF s'il y a <strong>ratification du contrat</strong> ou s'il a créé une <strong>apparence efficace</strong> envers le tiers de bonne foi.</li><li><strong>Contrat avec soi-même et double représentation :</strong> Interdits en principe (danger de conflit d'intérêts) et frappés de nullité, sauf si la nature de l'affaire exclut tout préjudice ou s'il y a eu autorisation/ratification.</li></ul>",
+    oc_icc_interpretation: {
+        title: "L'interprétation du contrat",
+        info: "Le juge procède en deux étapes[cite: 5] :<br><ol><li>La <strong>recherche de la volonté réelle</strong> (interprétation subjective) : établir ce que les parties ont effectivement voulu.</li><li>La <strong>détermination de la volonté supposée</strong> (interprétation objective) : s'il y a divergence, le juge applique le <strong>principe de la confiance</strong> pour retenir l'interprétation d'une personne raisonnable et honnête placée dans les mêmes circonstances.</li></ol>",
         children: [],
-        parent: "obligations_contractuelles_titre10"
+        parent: "oc_icc"
+    },
+    oc_icc_completement: {
+        title: "Le complètement du contrat",
+        info: "Utilisé pour combler une lacune du contrat[cite: 5] :<br><ul><li>Application d'une <strong>règle légale supplétive</strong> (prévue par le CO ou loi spéciale).</li><li>À défaut, le juge devra imaginer la <strong>volonté hypothétique des parties</strong> à partir des règles de la bonne foi.</li></ul>",
+        children: [],
+        parent: "oc_icc"
+    },
+    oc_icc_correction: {
+        title: "La correction du contrat",
+        info: "Si le contrat devient excessivement dur en raison de changements, et en l'absence de clause spécifique, le juge peut intervenir via[cite: 5] :<br><ul><li><strong>L'erreur sur les faits futurs :</strong> si les faits étaient prévisibles.</li><li><strong>La théorie de l'imprévision (clausula rebus sic stantibus) :</strong> permet exceptionnellement de refuser l'exécution stricte quand les circonstances ont fondamentalement changé.</li></ul>",
+        children: [],
+        parent: "oc_icc"
     },
 
-    // --- SECTION 9 ---
-    oc_sec9_stipulation: {
-        title: "Section 9 : La stipulation pour autrui",
-        info: "Convention par laquelle le <strong>promettant</strong> promet au <strong>stipulant</strong> de faire sa prestation à une troisième personne, le <strong>bénéficiaire</strong> (art. 112 CO).<br><br><ul><li><strong>Stipulation imparfaite :</strong> Seul le stipulant est créancier. Le bénéficiaire reçoit valablement mais ne peut pas exiger l'exécution en justice.</li><li><strong>Stipulation parfaite :</strong> Le bénéficiaire acquiert un <strong>droit de créance propre et indépendant</strong> contre le promettant. Il se substitue au stipulant dès qu'il déclare vouloir faire usage de son droit.</li></ul>",
-        children: [],
+    // ==========================================
+    // LA FORME DU CONTRAT
+    // ==========================================
+    oc_forme: {
+        title: "La forme du contrat",
+        info: "Règles relatives aux exigences formelles pour la validité d'un contrat[cite: 5].",
+        children: ["oc_forme_principe", "oc_forme_exceptions", "oc_forme_sanctions", "oc_forme_conv"],
         parent: "obligations_contractuelles_titre10"
     },
-
-    // --- SECTION 10 ---
-    oc_sec10_suretes: {
-        title: "Section 10 : Les sûretés personnelles",
-        info: "Garanties fournies par une personne pour protéger le créancier contre l'inexécution d'une dette.<br><br><ul><li><strong>Le cautionnement (art. 492 ss CO) :</strong> Engagement de la caution à répondre de la dette d'un débiteur principal. Il a un caractère <strong>strictement accessoire</strong> : sa validité dépend de la dette principale. La caution qui a payé est <strong>subrogée</strong> aux droits du créancier.</li><li><strong>Le contrat de porte-fort (art. 111 CO) :</strong> Engagement <strong>indépendant</strong> par lequel le promettant garantit au bénéficiaire le fait d'un tiers (verser des dommages-intérêts si le tiers ne s'exécute pas). N'est soumis à <strong>aucune règle de forme</strong>.</li></ul>",
+    oc_forme_principe: {
+        title: "Le principe du libre choix de la forme",
+        info: "Le droit des obligations consacre le principe du <strong>consensualisme</strong> : le libre choix de la forme, sauf exceptions prévues par la loi (art. 11 CO)[cite: 5].",
         children: [],
-        parent: "obligations_contractuelles_titre10"
+        parent: "oc_forme"
+    },
+    oc_forme_exceptions: {
+        title: "Les exceptions",
+        info: "La loi peut imposer une forme pour protéger les parties ou assurer la sécurité des transactions[cite: 5].",
+        children: ["oc_fexc_ecrite", "oc_fexc_leg", "oc_fexc_auth", "oc_fexc_reg"],
+        parent: "oc_forme"
+    },
+    oc_fexc_ecrite: {
+        title: "La forme écrite",
+        info: "Suppose que le contenu soit rédigé sur un support matériel. Le contrat doit être <strong>signé par toutes les personnes qui s'obligent</strong>[cite: 5]. Une forme écrite qualifiée peut exiger des indications obligatoires manuscrites (ex: montant du cautionnement)[cite: 5].",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_leg: {
+        title: "Légalisation",
+        info: "Attestation officielle de l'authenticité d'une signature, réglée par le droit cantonal[cite: 5].",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_auth: {
+        title: "La forme authentique",
+        info: "Nécessite la collaboration d'un fonctionnaire ou d'un officier public, généralement un <strong>notaire</strong>[cite: 5].",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_reg: {
+        title: "L'inscription dans un registre public",
+        info: "Certains actes doivent être inscrits (Registre foncier, Registre du commerce, etc.)[cite: 5].",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_forme_sanctions: {
+        title: "Sanctions en cas d'inobservation",
+        info: "Lorsque la loi impose une forme, elle est solennelle. Le non-respect entraîne la <strong>nullité absolue du contrat</strong> (art. 11 al. 2 CO)[cite: 5]. Cette nullité est <strong>originaire (ex tunc)</strong> et invocable en tout temps (limitée par l'interdiction de l'abus de droit)[cite: 5].",
+        children: [],
+        parent: "oc_forme"
+    },
+    oc_forme_conv: {
+        title: "La forme conventionnelle",
+        info: "Même si la loi ne l'exige pas, les parties sont libres de subordonner la conclusion à une forme qu'elles ont choisie. Cette forme est présumée être une condition de validité du contrat[cite: 5].",
+        children: [],
+        parent: "oc_forme"
     },
 
-    // --- SECTION 11 ---
-    oc_sec11_subrogation: {
-        title: "Section 11 : La subrogation",
-        info: "La subrogation est le <strong>transfert légal de la créance</strong> (art. 110 CO).<br><br>Le paiement effectué par un tiers au créancier n'éteint pas la créance, mais la <strong>transfère du créancier au tiers payant</strong>, qui acquiert ainsi les droits liés à cette créance contre le débiteur initial (ex: la caution qui paie le créancier prend la place de ce dernier pour se retourner contre le débiteur).",
+    // ==========================================
+    // L'OBJET DU CONTRAT
+    // ==========================================
+    oc_objet: {
+        title: "L'objet du contrat",
+        info: "Il désigne les obligations découlant du contrat et les prestations convenues[cite: 5].",
+        children: ["oc_obj_principe", "oc_obj_exceptions", "oc_obj_sanctions"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    oc_obj_principe: {
+        title: "Le principe du libre choix",
+        info: "L'objet du contrat peut être librement déterminé dans les limites de la loi (art. 19 al. 1 CO). Les parties peuvent même créer de nouveaux contrats (contrats innommés)[cite: 5].",
+        children: [],
+        parent: "oc_objet"
+    },
+    oc_obj_exceptions: {
+        title: "Les exceptions",
+        info: "Limites matérielles à la liberté contractuelle (art. 19 et 20 CO)[cite: 5].",
+        children: ["oc_oexc_imp", "oc_oexc_ill", "oc_oexc_fraude", "oc_oexc_imm", "oc_oexc_att"],
+        parent: "oc_objet"
+    },
+    oc_oexc_imp: {
+        title: "L'impossibilité",
+        info: "L'impossibilité de la prestation doit présenter deux caractéristiques : elle doit être <strong>initiale (ou originaire)</strong> et <strong>objective</strong> (irréalisable pour tout le monde). Elle peut être matérielle ou juridique[cite: 5].",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_ill: {
+        title: "L'illicéité",
+        info: "Le contrat est illicite si son objet se heurte à une <strong>interdiction absolue</strong> du droit suisse (violation de dispositions impératives de droit privé ou public)[cite: 5].",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_fraude: {
+        title: "La fraude à la loi",
+        info: "Consiste à recourir à un moyen apparemment légitime pour atteindre un résultat qui est prohibé (éviter une norme). Sanctionnée par l'interdiction de l'abus de droit[cite: 5].",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_imm: {
+        title: "L'immoralité",
+        info: "Sanctionne des comportements qui, sans être expressément interdits, <strong>heurtent la morale sociale</strong>[cite: 5].",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_att: {
+        title: "L'atteinte aux droits de la personnalité",
+        info: "Sanctionne un contrat dont l'objet porte sur une sphère inadmissible ou qui constitue un <strong>engagement excessif</strong> (art. 27 CC)[cite: 5].",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_obj_sanctions: {
+        title: "Sanctions pour objet illicite",
+        info: "Conséquences si l'objet viole les exceptions[cite: 5].",
+        children: ["oc_osan_principe", "oc_osan_exceptions"],
+        parent: "oc_objet"
+    },
+    oc_osan_principe: {
+        title: "Le principe de nullité absolue",
+        info: "La sanction normale du contrat impossible, illicite, contraire aux mœurs ou aux droits de la personnalité est la <strong>nullité absolue</strong>. Le contrat est radicalement nul même si le vice ne touche qu'une seule clause[cite: 5].",
+        children: [],
+        parent: "oc_obj_sanctions"
+    },
+    oc_osan_exceptions: {
+        title: "Les exceptions",
+        info: "<ul><li><strong>La nullité partielle :</strong> Seules les clauses viciées sont nulles, à moins que le contrat n'eût pas été conclu sans elles (art. 20 al. 2 CO)[cite: 5].</li><li><strong>La nullité relative :</strong> Lorsque la norme violée a pour seul but de protéger la partie faible, seule cette partie protégée peut invoquer le vice[cite: 5].</li></ul>",
+        children: [],
+        parent: "oc_obj_sanctions"
+    },
+
+    // ==========================================
+    // LES VICES DU CONTRAT
+    // ==========================================
+    oc_vices: {
+        title: "Les vices du contrat",
+        info: "Défauts mettant en péril l'existence du contrat en raison d'une volonté faussée ou d'une lésion[cite: 5].",
+        children: ["oc_vices_volonte", "oc_vices_lesion"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    oc_vices_volonte: {
+        title: "Les vices de la volonté",
+        info: "La partie dont la volonté a été faussée par une cause interne (erreur) ou externe (dol, crainte) peut annuler le contrat[cite: 5].",
+        children: ["oc_vvol_erreur", "oc_vvol_dol", "oc_vvol_crainte"],
+        parent: "oc_vices"
+    },
+    oc_vvol_erreur: {
+        title: "L'erreur essentielle",
+        info: "L'erreur est une fausse représentation de la réalité. Pour être essentielle, elle doit être justifiable objectivement et causale subjectivement. L'annulation a un effet <strong>ex tunc</strong> (rétroactif). Guérison possible par ratification (délai péremptoire d'un an)[cite: 5].<br><br>Deux types[cite: 5] :<br><ul><li><strong>L'erreur de déclaration :</strong> La volonté exprimée ne correspond pas à la volonté réelle (sur la nature, l'identité de la chose/personne, quantité).</li><li><strong>L'erreur sur les motifs (erreur de base) :</strong> La déclaration est conforme à la volonté, mais repose sur une idée fausse. Doit être qualifiée : fait déterminé, <strong>subjectivement essentiel</strong> et <strong>objectivement essentiel</strong>.</li></ul>",
+        children: [],
+        parent: "oc_vices_volonte"
+    },
+    oc_vvol_dol: {
+        title: "Le dol",
+        info: "Consiste à <strong>induire intentionnellement une personne en erreur</strong> pour l'amener à conclure (art. 28 CO). Assimilé à l'escroquerie pénale[cite: 5].<br><br>Suppose deux conditions : <strong>une erreur et une tromperie</strong> (intentionnelle et qui a effectivement induit l'autre en erreur). Entraîne l'annulabilité et droit aux dommages-intérêts[cite: 5].",
+        children: [],
+        parent: "oc_vices_volonte"
+    },
+    oc_vvol_crainte: {
+        title: "La crainte fondée",
+        info: "Crainte inspirée <strong>intentionnellement et de manière illicite</strong> pour forcer à conclure (extorsion/chantage, art. 29 CO)[cite: 5].<br><br>Quatre conditions : menace illicite, crainte fondée, menace intentionnelle et menace causale[cite: 5]. La victime peut annuler le contrat et demander des dommages-intérêts, même si l'auteur est un tiers et le cocontractant de bonne foi[cite: 5].",
+        children: [],
+        parent: "oc_vices_volonte"
+    },
+    oc_vices_lesion: {
+        title: "La lésion",
+        info: "Préjudice économique issu d'un résultat inéquitable[cite: 5].",
+        children: ["oc_vles_notion", "oc_vles_conditions", "oc_vles_effets"],
+        parent: "oc_vices"
+    },
+    oc_vles_notion: {
+        title: "Notion",
+        info: "C'est le préjudice économique éprouvé à raison de la <strong>disproportion évidente des prestations</strong>, causé par l'exploitation de la gêne, de la légèreté ou de l'inexpérience (art. 21 CO)[cite: 5]. Contrairement aux vices de la volonté, la lésion s'attache au résultat obtenu[cite: 5].",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+    oc_vles_conditions: {
+        title: "Conditions",
+        info: "Trois conditions[cite: 5] :<br>1. Disproportion évidente entre les prestations.<br>2. La gêne, la légèreté ou l'inexpérience de la victime.<br>3. <strong>L'exploitation consciente</strong> de la situation d'infériorité.",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+    oc_vles_effets: {
+        title: "Les effets de la lésion",
+        info: "Entraîne l'annulabilité du contrat. Le <strong>délai péremptoire d'un an court dès la conclusion du contrat</strong> (et non de la découverte du vice). Droit de réclamer des dommages-intérêts[cite: 5].",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+
+    // ==========================================
+    // LA REPRÉSENTATION
+    // ==========================================
+    oc_representation: {
+        title: "La représentation",
+        info: "Rapport en vertu duquel un acte accompli par un <strong>représentant</strong> produit des effets pour le <strong>représenté</strong> (art. 32 à 40 CO)[cite: 5].",
+        children: ["oc_rep_notion", "oc_rep_types", "oc_rep_conditions", "oc_rep_sp", "oc_rep_double"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    oc_rep_notion: {
+        title: "Notion",
+        info: "Trois personnes sont impliquées : le représenté, le représentant (qui agit au nom et pour le compte), et le cocontractant[cite: 5]. <br><br>Se distingue de la <strong>représentation indirecte</strong> (représentant agit en son propre nom), des <strong>organes d'une personne morale</strong> (qui forment directement la volonté) et du <strong>messager</strong> (qui n'exprime aucune volonté propre)[cite: 5].",
+        children: [],
+        parent: "oc_representation"
+    },
+    oc_rep_types: {
+        title: "Les types de représentation",
+        info: "Quatre distinctions[cite: 5] :<br>1. Légale / Volontaire.<br>2. Avec pouvoirs / Sans pouvoirs.<br>3. Civile / Commerciale.<br>4. Active (émettre déclarations) / Passive (recevoir déclarations).",
+        children: [],
+        parent: "oc_representation"
+    },
+    oc_rep_conditions: {
+        title: "Les conditions",
+        info: "Deux conditions d'efficacité[cite: 5].",
+        children: ["oc_rcond_nom", "oc_rcond_pouvoir"],
+        parent: "oc_representation"
+    },
+    oc_rcond_nom: {
+        title: "L'action au nom du représenté",
+        info: "Le représentant doit avoir la volonté d'agir au nom du représenté et la <strong>manifester expressément</strong> au cocontractant. Exceptions (art. 32 al. 2) : rapport implicite ou indifférence du cocontractant[cite: 5].",
+        children: [],
+        parent: "oc_rep_conditions"
+    },
+    oc_rcond_pouvoir: {
+        title: "Le pouvoir de représentation",
+        info: "Peut avoir trois sources : la loi, décision d'autorité, acte juridique unilatéral[cite: 5]. À la fin, le représentant doit restituer le titre de procuration[cite: 5].",
+        children: [],
+        parent: "oc_rep_conditions"
+    },
+    oc_rep_sp: {
+        title: "La représentation sans pouvoirs",
+        info: "Agir au nom d'un autre sans avoir les pouvoirs nécessaires[cite: 5].",
+        children: ["oc_rsp_notion", "oc_rsp_pseudocont", "oc_rsp_repcont", "oc_rsp_pseudo_pseudo"],
+        parent: "oc_representation"
+    },
+    oc_rsp_notion: {
+        title: "Notion",
+        info: "Survient quand les pouvoirs n'ont jamais été octroyés, ont été excédés, ou se sont éteints[cite: 5].",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_pseudocont: {
+        title: "Rapports pseudo-représenté / contractant",
+        info: "Le pseudo-représenté <strong>n'est pas lié</strong>. Il le devient seulement si[cite: 5] :<br><ul><li><strong>Ratification du contrat :</strong> Acte unilatéral avec effet rétroactif (ex tunc). Le tiers peut fixer un délai.</li><li><strong>Apparence efficace :</strong> Le pseudo-représenté a lui-même créé l'apparence des pouvoirs, le tiers de bonne foi est protégé.</li></ul>",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_repcont: {
+        title: "Rapports pseudo-représentant / cocontractant",
+        info: "Le pseudo-représentant n'est pas obligé par le contrat. S'il n'y a pas ratification, il <strong>doit des dommages-intérêts</strong> au cocontractant, sauf si ce dernier connaissait l'absence de pouvoirs[cite: 5].",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_pseudo_pseudo: {
+        title: "Rapports pseudo-représenté / pseudo-représentant",
+        info: "Le comportement peut causer un préjudice au représenté, réparable via le contrat de base (mandat), responsabilité délictuelle, ou gestion d'affaires[cite: 5].",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rep_double: {
+        title: "Contrat avec soi-même et double représentation",
+        info: "Une personne agit seule comme représentant et en son propre nom (avec soi-même) ou comme représentant des deux parties (double)[cite: 5]. <br><br>Il y a un <strong>danger évident de conflit d'intérêts</strong>. La jurisprudence pose le <strong>principe de la nullité du contrat</strong>, à moins que la nature de l'affaire exclue tout préjudice ou que le représenté ait autorisé/ratifié l'acte[cite: 5].",
+        children: [],
+        parent: "oc_representation"
+    },
+
+    // ==========================================
+    // LA STIPULATION POUR AUTRUI
+    // ==========================================
+    oc_stipulation: {
+        title: "La stipulation pour autrui",
+        info: "Convention où le <strong>promettant</strong> promet au <strong>stipulant</strong> de faire sa prestation à un tiers, le <strong>bénéficiaire</strong> (art. 112 CO)[cite: 5].",
+        children: ["oc_stip_notion", "oc_stip_effets"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    oc_stip_notion: {
+        title: "Notion",
+        info: "<ul><li><strong>Imparfaite :</strong> Seul le stipulant est créancier. Le bénéficiaire reçoit valablement mais ne peut exiger l'exécution.</li><li><strong>Parfaite :</strong> Le bénéficiaire acquiert un droit de créance. Le promettant a deux créanciers. Le bénéficiaire <strong>se substitue entièrement</strong> au stipulant s'il déclare vouloir utiliser son droit.</li></ul>[cite: 5]",
+        children: [],
+        parent: "oc_stipulation"
+    },
+    oc_stip_effets: {
+        title: "Les effets",
+        info: "Les trois relations qui en découlent[cite: 5].",
+        children: ["oc_seff_couv", "oc_seff_prest", "oc_seff_val"],
+        parent: "oc_stipulation"
+    },
+    oc_seff_couv: {
+        title: "Rapport de couverture ou de provision",
+        info: "Entre le promettant et le stipulant. Le stipulant est créancier du promettant (seul dans l'imparfaite, solidaire dans la parfaite)[cite: 5].",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+    oc_seff_prest: {
+        title: "Rapport de prestation",
+        info: "Entre le promettant et le bénéficiaire. Le bénéficiaire acquiert une créance propre uniquement dans la stipulation parfaite[cite: 5].",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+    oc_seff_val: {
+        title: "Rapport de valeur",
+        info: "Entre le stipulant et le bénéficiaire. Justifie l'enrichissement du bénéficiaire[cite: 5].",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+
+    // ==========================================
+    // LES SÛRETÉS PERSONNELLES
+    // ==========================================
+    oc_suretes: {
+        title: "Les sûretés personnelles",
+        info: "Contrats garantissant l'exécution d'une obligation[cite: 5].",
+        children: ["oc_sur_cautionnement", "oc_sur_portefort"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    oc_sur_cautionnement: {
+        title: "Le cautionnement",
+        info: "Garantie de la dette d'autrui (art. 492 CO)[cite: 5].",
+        children: ["oc_caut_notion", "oc_caut_effets"],
+        parent: "oc_suretes"
+    },
+    oc_caut_notion: {
+        title: "Notion",
+        info: "La caution s'engage envers le créancier à répondre accessoirement de la dette. <br><br><strong>Spécificité : son caractère accessoire.</strong> Il dépend de l'existence de la dette principale. La nullité de l'engagement principal entraîne la nullité du cautionnement[cite: 5].",
+        children: [],
+        parent: "oc_sur_cautionnement"
+    },
+    oc_caut_effets: {
+        title: "Les effets",
+        info: "La caution donne une garantie de solvabilité[cite: 5].<br><br><strong>Subrogation :</strong> La caution qui a désintéressé le créancier est <strong>subrogée aux droits de celui-ci</strong> (le paiement transfère la créance à la caution), lui offrant un droit de recours contre le débiteur[cite: 5].",
+        children: [],
+        parent: "oc_sur_cautionnement"
+    },
+    oc_sur_portefort: {
+        title: "Le contrat de porte-fort",
+        info: "Garantie indépendante (art. 111 CO)[cite: 5].",
+        children: ["oc_pf_notion", "oc_pf_effets"],
+        parent: "oc_suretes"
+    },
+    oc_pf_notion: {
+        title: "Notion",
+        info: "Engagement <strong>indépendant</strong> par lequel on promet de réparer le dommage si un débiteur/tiers ne s'exécute pas. Implique la garantie du fait d'autrui[cite: 5]. <br><br>Contrairement au cautionnement, il n'est <strong>soumis à aucune règle de forme</strong>. En cas de doute d'interprétation, le juge penchera pour le cautionnement (plus protecteur)[cite: 5].",
+        children: [],
+        parent: "oc_sur_portefort"
+    },
+    oc_pf_effets: {
+        title: "Les effets",
+        info: "N'a aucun effet pour le tiers. Oblige le promettant (le porte-fort) à verser des dommages-intérêts à son cocontractant si le tiers ne s'exécute pas[cite: 5].",
+        children: [],
+        parent: "oc_sur_portefort"
+    },
+
+    // ==========================================
+    // LA SUBROGATION
+    // ==========================================
+    oc_subrogation: {
+        title: "La subrogation",
+        info: "La subrogation est le <strong>transfert légal de la créance</strong> (art. 110 CO). Le paiement n'éteint pas la créance, mais la transfère du créancier à un tiers. Exemples : la caution qui paie, ou le tiers qui paie le créancier pour libérer un gage[cite: 5].",
         children: [],
         parent: "obligations_contractuelles_titre10"
     }
