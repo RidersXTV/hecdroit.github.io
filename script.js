@@ -4299,7 +4299,7 @@ const initialTopic = urlParams.get('topic') || 'root';
 history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
 renderTopic(initialTopic, false)
 
-const ACADEMIC_PASSWORD = "HEC_DROIT_2026"; // Votre mot de passe
+const ACADEMIC_PASSWORD = "mm droit mm droite"; // Mot de passe
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
