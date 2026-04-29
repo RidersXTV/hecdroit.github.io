@@ -3014,14 +3014,11 @@ function toggleMobileSidebar() {
 }
 
 // --- FONCTION POUR AFFICHER LE CONTENU CENTRAL ---
-// L'argument 'pushHistory' permet de savoir si on doit ajouter la page à l'historique ou non
 function renderTopic(id, pushHistory = true) {
     const topic = courseData[id];
     if (!topic) return;
 
-    // 1. Ajouter à l'historique du navigateur (pour le bouton retour)
     if (pushHistory) {
-        // Enregistre l'état actuel dans le navigateur
         history.pushState({ topicId: id }, topic.title, "?topic=" + id);
     }
 
@@ -3029,21 +3026,15 @@ function renderTopic(id, pushHistory = true) {
     let path = [];
     let currentId = id;
 
-// On remonte la généalogie des parents pour construire le chemin
     while (currentId && currentId !== 'root') {
         path.unshift({ id: currentId, title: courseData[currentId].title });
         currentId = courseData[currentId].parent;
     }
 
-// On commence toujours par le bouton Accueil
     let bcHtml = `<span class="breadcrumb-link" onclick="renderTopic('root')">🏠 Accueil</span>`;
 
-// On ajoute chaque branche du chemin comme un lien cliquable
     path.forEach((p, index) => {
-    // On ajoute un séparateur
         bcHtml += ` <span class="breadcrumb-separator">/</span> `;
-    
-    // Si c'est le dernier élément (la page actuelle), on peut le styliser différemment
         if (index === path.length - 1) {
             bcHtml += `<span class="breadcrumb-current">${p.title}</span>`;
         } else {
@@ -3052,6 +3043,7 @@ function renderTopic(id, pushHistory = true) {
     });
 
     breadcrumb.innerHTML = bcHtml;
+
     // 3. Génération du HTML principal
     let html = `
         <div class="info-box">
@@ -3060,7 +3052,7 @@ function renderTopic(id, pushHistory = true) {
         </div>
     `;
 
-    if (topic.children.length > 0) {
+    if (topic.children && topic.children.length > 0) {
         html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
         topic.children.forEach(childId => {
             const child = courseData[childId];
@@ -3075,7 +3067,72 @@ function renderTopic(id, pushHistory = true) {
         html += `</div>`;
     }
 
+    // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT ---
+    if (id !== 'root' && id !== 'bibliographie') {
+        const parentId = topic.parent;
+        const parentTopic = courseData[parentId];
+        
+        if (parentTopic && parentTopic.children) {
+            const currentIndex = parentTopic.children.indexOf(id);
+            let prevId = null;
+            let nextId = null;
+
+            // Déterminer le Sujet Précédent
+            if (currentIndex > 0) {
+                // S'il y a un frère avant
+                prevId = parentTopic.children[currentIndex - 1];
+            } else {
+                // Sinon on remonte au parent
+                prevId = parentId;
+            }
+
+            // Déterminer le Sujet Suivant
+            if (topic.children && topic.children.length > 0) {
+                // S'il a des enfants, on descend dans le premier enfant
+                nextId = topic.children[0];
+            } else if (currentIndex < parentTopic.children.length - 1) {
+                // S'il n'a pas d'enfant mais un frère après
+                nextId = parentTopic.children[currentIndex + 1];
+            }
+
+            // Génération du HTML pour les boutons
+            if (prevId || nextId) {
+                html += `<div class="navigation-buttons">`;
+                
+                if (prevId && prevId !== 'root') {
+                    html += `
+                        <div class="nav-btn nav-btn-prev" onclick="renderTopic('${prevId}')">
+                            <span>▲ Remonter / Précédent</span>
+                            ${courseData[prevId].title}
+                        </div>`;
+                } else {
+                    html += `<div></div>`; // Espace vide pour flexbox
+                }
+
+                if (nextId) {
+                    html += `
+                        <div class="nav-btn nav-btn-next" onclick="renderTopic('${nextId}')">
+                            <span>Descendre / Suivant ▼</span>
+                            ${courseData[nextId].title}
+                        </div>`;
+                } else {
+                     html += `<div></div>`;
+                }
+                
+                html += `</div>`;
+            }
+        }
+    }
+
     mainContent.innerHTML = html;
+    
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.classList.contains('active')) {
+        toggleMobileSidebar();
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     
     // 4. Sur mobile, fermer le menu automatiquement après un clic
     const sidebar = document.getElementById('sidebar');
