@@ -1151,7 +1151,7 @@ const courseData = {
 
     // --- 10. LES OBLIGATIONS CONTRACTUELLES ---
     obligations_contractuelles_titre10: {
-        title: "Les obligations contractuelles",
+        title: "10. Les obligations contractuelles",
         info: "Cette grande thématique aborde la vie du contrat : sa formation, sa validité, son interprétation, ses vices et ses sûretés[cite: 5].",
         children: [
             "oc_definition_classification", "oc_autonomie", "oc_conclusion", 
