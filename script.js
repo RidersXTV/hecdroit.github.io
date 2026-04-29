@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11"]
     },
     
     // --- 1. NOTION ET FONCTIONS DU DROIT ---
@@ -1752,6 +1752,251 @@ const courseData = {
         info: "La subrogation est le <strong>transfert légal de la créance</strong> (art. 110 CO). Le paiement n'éteint pas la créance, mais la transfère du créancier à un tiers. Exemples : la caution qui paie, ou le tiers qui paie le créancier pour libérer un gage.",
         children: [],
         parent: "obligations_contractuelles_titre10"
+    },
+
+    // --- 11. LA RESPONSABILITÉ CIVILE ---
+    rc_titre11: {
+        title: "11. La responsabilité civile",
+        info: "Ce domaine traite de l'obligation de réparer un préjudice causé à autrui. Il régit les relations entre sujets de droit privé.",
+        children: [
+            "rc_notion", "rc_prejudice", "rc_causalite", "rc_illiceite", 
+            "rc_faute", "rc_objective", "rc_reparation", "rc_pluralite", "rc_prescription"
+        ],
+        parent: "root"
+    },
+
+    // ==========================================
+    // NOTION
+    // ==========================================
+    rc_notion: {
+        title: "Notion",
+        info: "La responsabilité désigne l'obligation faite à un sujet de droit de réparer le préjudice causé à autrui. <br><br>Au sens étroit, elle désigne l'obligation de réparer un dommage résultant d'un acte illicite. Elle a alors pour synonyme les expressions de <strong>responsabilité délictuelle</strong> et de <strong>responsabilité extracontractuelle</strong>.<br><br>Toute responsabilité civile suppose <strong>trois conditions générales</strong> (préjudice, rapport de causalité, illicéité) ainsi qu'un titre de responsabilité (la faute ou la loi).",
+        children: [],
+        parent: "rc_titre11"
+    },
+
+    // ==========================================
+    // LE PRÉJUDICE
+    // ==========================================
+    rc_prejudice: {
+        title: "Le préjudice",
+        info: "Toute prétention délictuelle suppose une <strong>péjoration de la situation de la victime</strong>. Le préjudice est une catégorie générique regroupant le dommage et le tort moral.",
+        children: ["rc_prej_dommage", "rc_prej_tortmoral"],
+        parent: "rc_titre11"
+    },
+    rc_prej_dommage: {
+        title: "Le dommage",
+        info: "C'est la diminution de valeur du patrimoine d'une personne qui se produit sans la volonté de celle-ci.",
+        children: ["rc_dom_notion", "rc_dom_types"],
+        parent: "rc_prejudice"
+    },
+    rc_dom_notion: {
+        title: "Notion",
+        info: "Le dommage se calcule en faisant la différence entre l'état actuel du patrimoine et son état hypothétique sans l'acte dommageable. C'est la <strong>théorie de la différence</strong>.<br><br>Le dommage est une <strong>notion exclusivement patrimoniale</strong> (la valeur affective n'entre pas en considération).",
+        children: [],
+        parent: "rc_prej_dommage"
+    },
+    rc_dom_types: {
+        title: "Les types de dommage",
+        info: "Distinctions des différentes formes que peut prendre le dommage patrimonial.",
+        children: ["rc_typ_pertegain", "rc_typ_corpmat"],
+        parent: "rc_prej_dommage"
+    },
+    rc_typ_pertegain: {
+        title: "La perte effective et le gain manqué",
+        info: "<ul><li><strong>La perte effective :</strong> diminution effective de la fortune nette (l'actif diminue ou le passif augmente).</li><li><strong>Le gain manqué :</strong> perte d'un gain futur que la victime aurait réalisé sans l'acte dommageable.</li></ul>",
+        children: [],
+        parent: "rc_dom_types"
+    },
+    rc_typ_corpmat: {
+        title: "Le dommage corporel, matériel et les autres dommages",
+        info: "<ul><li><strong>Dommage corporel :</strong> résulte d'une atteinte à l'intégrité physique de la victime (ex: frais médicaux).</li><li><strong>Dommage matériel :</strong> découle d'une atteinte à un objet. Il y a dommage matériel lorsqu'une personne subit la destruction d'une chose <strong>dont elle est propriétaire</strong>.</li><li><strong>Autres dommages (purement patrimonial ou économique) :</strong> tous les dommages qui ne sont ni corporels ni matériels (ex: perte d'exploitation).</li></ul>",
+        children: [],
+        parent: "rc_dom_types"
+    },
+    rc_prej_tortmoral: {
+        title: "Le tort moral",
+        info: "Le tort moral désigne les <strong>souffrances physiques ou psychiques</strong> que ressent la victime à la suite d'une atteinte à sa personnalité (ex: chagrin consécutif au décès d'un proche, douleur d'une blessure).",
+        children: [],
+        parent: "rc_prejudice"
+    },
+
+    // ==========================================
+    // LE RAPPORT DE CAUSALITÉ
+    // ==========================================
+    rc_causalite: {
+        title: "Le rapport de causalité",
+        info: "L'exigence d'un lien de cause à effet entre le comportement de l'auteur et le préjudice.",
+        children: ["rc_caus_nat", "rc_caus_adeq", "rc_caus_int"],
+        parent: "rc_titre11"
+    },
+    rc_caus_nat: {
+        title: "La causalité naturelle",
+        info: "D'un point de vue logique, constitue la cause d'un événement <strong>tout fait sans lequel l'événement ne se serait pas produit</strong>.",
+        children: [],
+        parent: "rc_causalite"
+    },
+    rc_caus_adeq: {
+        title: "La causalité adéquate",
+        info: "Pour limiter l'extension illimitée de la responsabilité, la jurisprudence utilise la causalité adéquate. Un fait est une cause adéquate si, <strong>d'après le cours ordinaire des choses et l'expérience de la vie</strong>, ce fait était propre à entraîner un résultat du genre de celui qui s'est produit.",
+        children: [],
+        parent: "rc_causalite"
+    },
+    rc_caus_int: {
+        title: "L'interruption du lien de causalité",
+        info: "Une cause adéquate cesse de l'être lorsqu'une autre cause apparaît à tel point prépondérante qu'elle rejette la première à l'arrière-plan. On distingue trois faits interruptifs :<br><ul><li><strong>La force majeure.</strong></li><li><strong>La faute grave de la victime.</strong></li><li><strong>La faute grave d'un tiers.</strong></li></ul>",
+        children: [],
+        parent: "rc_causalite"
+    },
+
+    // ==========================================
+    // L'ILLICÉITÉ
+    // ==========================================
+    rc_illiceite: {
+        title: "L'illicéité",
+        info: "La transgression d'une norme protégeant autrui.",
+        children: ["rc_ill_notion", "rc_ill_res", "rc_ill_comp", "rc_ill_faits"],
+        parent: "rc_titre11"
+    },
+    rc_ill_notion: {
+        title: "Notion",
+        info: "L'illicéité consiste en la transgression d'une norme de comportement appliquant défense de nuire à autrui. Elle prend deux formes : par le résultat ou par le comportement.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_res: {
+        title: "L'illicéité par le résultat",
+        info: "Lorsque le préjudice résulte de l'atteinte à un <strong>droit subjectif absolu</strong> (intégrité corporelle, propriété, droits réels), il est <strong>d'emblée illicite</strong> sans qu'il soit nécessaire d'examiner le comportement de l'auteur.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_comp: {
+        title: "L'illicéité par le comportement",
+        info: "Lorsque le dommage est purement patrimonial (pas d'atteinte à un droit absolu), l'illicéité n'est donnée que si l'auteur a transgressé une <strong>norme protectrice</strong> dont la finalité est de protéger la victime contre ce genre de préjudice.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_faits: {
+        title: "Les faits justificatifs",
+        info: "Un comportement a priori illicite peut devenir licite grâce à cinq faits justificatifs :<br><ul><li><strong>Le consentement de la victime.</strong></li><li><strong>La légitime défense.</strong></li><li><strong>L'état de nécessité.</strong></li><li><strong>La défense personnelle.</strong></li><li><strong>Le devoir de fonction</strong> (exercice autorisé de la puissance publique).</li></ul>",
+        children: [],
+        parent: "rc_illiceite"
+    },
+
+    // ==========================================
+    // LA FAUTE (SUBJECTIVE)
+    // ==========================================
+    rc_faute: {
+        title: "La faute, condition de la responsabilité subjective",
+        info: "Élément central de la responsabilité basée sur le comportement (Art. 41 CO).",
+        children: ["rc_fau_notion", "rc_fau_gravite"],
+        parent: "rc_titre11"
+    },
+    rc_fau_notion: {
+        title: "Notion",
+        info: "La faute se définit comme un <strong>manquement de la volonté aux devoirs imposés par l'ordre juridique</strong>.<br><br>Elle comprend :<br><ul><li>Un <strong>élément objectif</strong> : déviation du comportement exigé par rapport à une personne consciencieuse et raisonnable.</li><li>Un <strong>élément subjectif</strong> : intention ou négligence.</li></ul><br>En pratique, la jurisprudence recourt à une <strong>notion objectivée de la faute</strong> et écarte les motifs d'excuses purement personnels (ex: stress, fatigue).",
+        children: [],
+        parent: "rc_faute"
+    },
+    rc_fau_gravite: {
+        title: "Gravité",
+        info: "On distingue trois degrés : <strong>faute grave (ou lourde), faute légère, et faute moyenne</strong>. Une faute légère peut entraîner une réduction de la réparation, tandis qu'une faute grave de la victime/tiers peut interrompre le lien de causalité.",
+        children: [],
+        parent: "rc_faute"
+    },
+
+    // ==========================================
+    // LA RESPONSABILITÉ OBJECTIVE
+    // ==========================================
+    rc_objective: {
+        title: "La responsabilité objective",
+        info: "Responsabilités indépendantes de toute faute personnelle de l'auteur.",
+        children: ["rc_obj_notion", "rc_obj_employeur", "rc_obj_ouvrage", "rc_obj_produits"],
+        parent: "rc_titre11"
+    },
+    rc_obj_notion: {
+        title: "Notion",
+        info: "Certaines dispositions instituent des responsabilités sans faute. On distingue :<br><ul><li><strong>Les responsabilités objectives simples :</strong> reposent sur la violation présumée d'un <strong>devoir de diligence</strong> (ex: l'employeur).</li><li><strong>Les responsabilités objectives aggravées :</strong> reposent sur le <strong>risque inhérent</strong> à certaines activités (ne supposent même pas la violation d'un devoir de diligence).</li></ul>",
+        children: [],
+        parent: "rc_objective"
+    },
+    rc_obj_employeur: {
+        title: "La responsabilité de l'employeur",
+        info: "L'employeur répond du fait de ses auxiliaires (dès qu'il y a <strong>lien de subordination</strong>) s'ils commettent un acte illicite dans l'exercice de leur travail (art. 55 CO).<br><br>Il dispose de <strong>deux preuves libératoires</strong> :<br><ul><li>Faire la triple preuve de la diligence dans le choix, l'instruction et la surveillance de l'auxiliaire.</li><li>Établir l'absence de lien de causalité.</li></ul>",
+        children: [],
+        parent: "rc_objective"
+    },
+    rc_obj_ouvrage: {
+        title: "La responsabilité du propriétaire d'ouvrage",
+        info: "Le propriétaire d'un ouvrage (objet créé/disposé par la main de l'homme et rattaché au sol) est responsable si le préjudice est la conséquence d'un <strong>défaut de l'ouvrage</strong> (art. 58 CO).",
+        children: [],
+        parent: "rc_objective"
+    },
+    rc_obj_produits: {
+        title: "La responsabilité du fait des produits",
+        info: "Le producteur répond, indépendamment de toute faute, des dommages corporels causés par un <strong>produit défectueux</strong> (qui n'offre pas la sécurité à laquelle on est en droit de s'attendre). Régi par la LRFP.<br><br>Pour les dommages matériels, la victime doit supporter une <strong>franchise de 900 CHF</strong> pour éviter la multiplication des petits litiges.",
+        children: [],
+        parent: "rc_objective"
+    },
+
+    // ==========================================
+    // LA RÉPARATION DU PRÉJUDICE
+    // ==========================================
+    rc_reparation: {
+        title: "La réparation du préjudice",
+        info: "Manières dont le dommage est compensé en justice.",
+        children: ["rc_rep_modes", "rc_rep_etendue", "rc_rep_cas"],
+        parent: "rc_titre11"
+    },
+    rc_rep_modes: {
+        title: "Les modes de réparation",
+        info: "Le juge a le choix entre la <strong>réparation en nature</strong> ou la <strong>réparation en argent</strong>. En pratique, les tribunaux optent dans la grande majorité des cas pour la réparation en argent.",
+        children: [],
+        parent: "rc_reparation"
+    },
+    rc_rep_etendue: {
+        title: "L'étendue de la réparation",
+        info: "En principe, l'auteur doit réparer l'intégralité du préjudice. Toutefois, le juge peut réduire l'indemnité selon certains <strong>facteurs de réduction</strong> :<br><ul><li>La légèreté de la faute de l'auteur.</li><li>La faute concomitante de la victime.</li><li>Le consentement de la victime.</li><li>La gêne du responsable.</li></ul>",
+        children: [],
+        parent: "rc_reparation"
+    },
+    rc_rep_cas: {
+        title: "Cas particuliers de réparation",
+        info: "La loi encadre spécifiquement les indemnités en cas d'atteinte aux personnes.",
+        children: ["rc_cas_lesions", "rc_cas_deces"],
+        parent: "rc_reparation"
+    },
+    rc_cas_lesions: {
+        title: "L'indemnité en cas de lésions corporelles",
+        info: "Comprend quatre postes : le remboursement des frais de traitement, l'indemnité pour incapacité de travail, l'indemnité pour atteinte à l'avenir économique, et l'indemnité pour tort moral (art. 46 et 47 CO).",
+        children: [],
+        parent: "rc_rep_cas"
+    },
+    rc_cas_deces: {
+        title: "L'indemnité en cas de décès de la victime",
+        info: "Accorde à de tierces personnes le droit de réclamer la réparation du préjudice qu'elles subissent par ricochet. Comprend : dommage antérieur au décès, frais d'inhumation, <strong>perte de soutien</strong>, et tort moral (art. 45 et 47 CO).",
+        children: [],
+        parent: "rc_rep_cas"
+    },
+
+    // ==========================================
+    // LA PLURALITÉ DE RESPONSABLES
+    // ==========================================
+    rc_pluralite: {
+        title: "La pluralité de responsables",
+        info: "Lorsque plusieurs personnes sont tenues de réparer un même préjudice, la loi prévoit deux cas de figure (art. 50 et 51 CO) :<br><ul><li><strong>La solidarité parfaite :</strong> Les auteurs ont causé le préjudice par une faute commune (activité/entreprise commune).</li><li><strong>La solidarité imparfaite :</strong> Les auteurs répondent du préjudice à des titres différents (ex: un contractuel, un délictuel).</li></ul><br>Dans les deux cas, la victime peut agir <strong>pour le tout contre chacun</strong>. En interne, l'ordre de recours est : d'abord le responsable délictuel, puis le contractuel, enfin l'objectif.",
+        children: [],
+        parent: "rc_titre11"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
+    rc_prescription: {
+        title: "La prescription",
+        info: "L'action délictuelle (art. 60 CO) est soumise à des délais spécifiques :<br><ul><li>Un <strong>délai relatif de trois ans</strong> (dès la connaissance du préjudice et de l'auteur).</li><li>Un <strong>délai absolu de dix ans</strong> (dès la survenance du fait dommageable).</li><li>Un <strong>délai absolu de vingt ans en cas de mort d'homme ou de lésions corporelles</strong>.</li></ul>",
+        children: [],
+        parent: "rc_titre11"
     }
 };
 // [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
