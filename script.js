@@ -276,7 +276,7 @@ const courseData = {
 
     // --- ZOOM : LOIS ET ORDONNANCES ---
     loi_etroit: {
-        title: "Lois fédérale",
+        title: "La loi fédérale",
         info: "Édictées par le Parlement (p. 24). <br><ul><li><strong>Exemples :</strong> Code Civil, Code des Obligations.</li><li><strong>Référendum facultatif :</strong> 50'000 citoyens ou 8 cantons peuvent demander un vote populaire.</li></ul>",
         children: [], parent: "loi_large"
     },
