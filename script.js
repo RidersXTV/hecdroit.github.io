@@ -3,7 +3,7 @@ const courseData = {
     
     root: {
         title: "Droit de l'Entreprise",
-        info: "Bienvenue sur cette plateforme de révision interactive.<br><br>Ce site est basé sur le polycopié du cours de <strong>Droit de l'entreprise</strong> donné lors du semestre de printemps 2026 aux étudiants de première année de Bachelor en HEC Lausanne par le <strong>Prof. Pascal Favrod-Coune</strong>.<img src='Capture d'écran 2026-04-29 110409.png' alt='illustration' style='width:100%; max-width: 600px; display: block; margin: 20px auto;'><br><br>Sélectionnez une des grandes branches ci-dessous ou utilisez le menu latéral pour commencer vos révisions.",
+        info: "Bienvenue sur cette plateforme de révision interactive.<br><br>Ce site est basé sur le polycopié du cours de <strong>Droit de l'entreprise</strong> donné lors du semestre de printemps 2026 aux étudiants de première année de Bachelor en HEC Lausanne par le <strong>Prof. Pascal Favrod-Coune</strong>.<br><br>Sélectionnez une des grandes branches ci-dessous ou utilisez le menu latéral pour commencer vos révisions.",
         children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11", "rc_contractuelle_titre12", "enrichissement_illegitime_titre13", "modalites_obligations_titre14", "transmission_obligations_titre15", "exec_obligations_titre16", "extinction_obligations_titre17"]
     },
 
@@ -119,7 +119,7 @@ const courseData = {
         parent: "sujets"
     },
 
-    // --- CAS PRATIQUES (Sujets de droit) ---
+     // --- CAS PRATIQUES (Sujets de droit) ---
     cp_frere_jean: {
         title: "Cas pratique : Charlie et son frère Jean",
         info: `<div class="cas-pratique">
@@ -373,7 +373,7 @@ const courseData = {
         </div>`,
         children: [], parent: "jurisprudence"
     },
-    
+
     // --- 5. LES GRANDES DIVISIONS DU DROIT (Dès page 30) ---
     divisions: {
         title: "5. Les grandes divisions du droit",
@@ -411,7 +411,7 @@ const courseData = {
         children: [],
         parent: "div_public_prive"
     },
-    
+
     cp_public_prive: {
         title: "Cas pratique : Charlie et la commune",
         info: `<div class="cas-pratique">
@@ -453,7 +453,7 @@ const courseData = {
         children: [],
         parent: "div_materiel_formel"
     },
-    
+
     cp_materiel_formel: {
         title: "Cas pratique : Le vélo de Charlie",
         info: `<div class="cas-pratique">
@@ -469,6 +469,7 @@ const courseData = {
         children: [], parent: "div_materiel_formel"
     },
 
+
     // --- 6. DROIT PUBLIC ---
     public: {
         title: "6. Droit public",
@@ -476,7 +477,6 @@ const courseData = {
         children: ["droit_constitutionnel", "droit_administratif", "droit_penal", "droit_inter_public"],
         parent: "root"
     },
-    
     // --- 6.1 LE DROIT CONSTITUTIONNEL (Dès page 33 du cours) ---
     droit_constitutionnel: {
         title: "Le droit constitutionnel",
@@ -549,10 +549,10 @@ const courseData = {
     admin_organisation: {
         title: "L'organisation de l'administration",
         info: "L'administration est structurée pour remplir les tâches de l'État à différents échelons. <br><br><strong>Notions clés :</strong> <br><ul><li><strong>Administration centralisée :</strong> Directement rattachée au pouvoir politique (Départements, Offices).</li><li><strong>Administration décentralisée :</strong> Entités autonomes chargées de tâches spécifiques (ex: CFF, La Poste, universités).</li><li><strong>Collectivités publiques :</strong> En Suisse, l'administration est répartie entre la Confédération, les Cantons et les Communes.</li></ul>",
-        children: ["cp_garage_1"],
-        parent: "droit_administratif"
+        children: [],
+        parent: "droit_administratif, cp_garage_1"
     },
-    
+
     cp_garage_1: {
         title: "Cas pratique : Charlie et son garage (Organisation)",
         info: `<div class="cas-pratique">
@@ -591,47 +591,47 @@ const courseData = {
     },
 
     principe_legalite: {
-        title: "Principe de la légalité",
-        info: "<strong>'Le droit est la base et la limite de l'activité de l'État.'</strong> (Art. 5 al. 1 Cst.) <br><br>L'administration ne peut agir que si une loi l'y autorise expressément. Elle doit respecter la hiérarchie des normes.",
+        title: "Principe de la légalité (Art. 5 al. 1 Cst.)",
+        info: "<strong>'Le droit est la base et la limite de l'activité de l'État.'</strong> <br><br><ul><li>L'administration ne peut agir que si une loi l'y autorise expressément.</li><li>Elle doit respecter la hiérarchie des normes et ne peut pas agir arbitrairement.</li></ul>",
         children: [],
         parent: "admin_activite"
     },
 
     principe_interet_public: {
-        title: "Intérêt public",
-        info: "Toute activité de l'État doit répondre à un <span class='highlight'>intérêt public</span> (Art. 5 al. 2 Cst.). L'administration ne peut pas agir pour satisfaire des intérêts privés ou purement politiques.",
+        title: "Intérêt public (Art. 5 al. 2 Cst.)",
+        info: "Toute activité de l'État doit répondre à un <span class='highlight'>intérêt public</span>. <br><br>L'administration ne peut pas agir pour satisfaire des intérêts privés ou purement politiques ; elle doit viser le bien de la collectivité (sécurité, santé publique, ordre public).",
         children: [],
         parent: "admin_activite"
     },
 
     principe_proportionnalite: {
-        title: "Proportionnalité",
-        info: "La mesure prise par l'État doit être <span class='highlight'>proportionnée au but visé</span> (Art. 5 al. 2 Cst.). <br><br><strong>Les 3 conditions :</strong> <ol><li><strong>Aptitude :</strong> La mesure doit permettre d'atteindre le but.</li><li><strong>Nécessité :</strong> On doit choisir la mesure la moins incisive possible.</li><li><strong>Proportionnalité au sens étroit :</strong> Équilibre raisonnable entre le but et la restriction imposée.</li></ol>",
+        title: "Proportionnalité (Art. 5 al. 2 Cst.)",
+        info: "La mesure prise par l'État doit être <span class='highlight'>proportionnée au but visé</span>. <br><br><strong>Les 3 conditions :</strong> <br><ol><li><strong>Aptitude :</strong> La mesure doit permettre d'atteindre le but.</li><li><strong>Nécessité :</strong> On doit choisir la mesure la moins incisive possible.</li><li><strong>Proportionnalité au sens étroit :</strong> Il doit y avoir un équilibre raisonnable entre le but visé et la restriction imposée.</li></ol>",
         children: [],
         parent: "admin_activite"
     },
 
     principe_bonne_foi: {
-        title: "Bonne foi",
-        info: "L'État et les particuliers doivent agir de manière <strong>loyale</strong> (Art. 5 al. 3 Cst.). Cela implique la protection de la confiance du citoyen envers les promesses de l'administration.",
+        title: "Bonne foi (Art. 5 al. 3 Cst.)",
+        info: "L'État et les particuliers doivent agir de manière <strong>loyale</strong>. <br><br><strong>Conséquence majeure :</strong> <br><ul><li><strong>Protection de la confiance :</strong> Le citoyen doit pouvoir compter sur les informations ou promesses données par l'administration (si elles sont précises et que le citoyen a pris des dispositions sur cette base).</li><li>Interdiction du comportement contradictoire.</li></ul>",
         children: [],
         parent: "admin_activite"
     },
 
     principe_non_retroactivite: {
         title: "Principe de non-rétroactivité",
-        info: "Une règle nouvelle ne s'applique pas à des faits passés. Cela garantit la <span class='highlight'>sécurité juridique</span>.",
+        info: "En principe, une règle nouvelle ne s'applique pas à des faits qui se sont entièrement passés sous l'empire de l'ancienne loi. <br><br>Cela garantit la <span class='highlight'>sécurité juridique</span> : les entreprises doivent savoir à quelle sauce elles seront mangées au moment où elles agissent.",
         children: [],
         parent: "admin_activite"
     },
 
     modalites_decision: {
         title: "Modalités de la décision",
-        info: "Une décision administrative doit être <strong>notifiée</strong> (communiquée par écrit), <strong>motivée</strong>, et mentionner les <strong>voies de recours</strong>.",
+        info: "Une décision administrative doit respecter certaines formes : <br><ul><li>Elle doit être <strong>notifiée</strong> (communiquée) par écrit.</li><li>Elle doit être <strong>motivée</strong> (expliquer pourquoi elle est prise).</li><li>Elle doit mentionner les <strong>voies de recours</strong> (délai et autorité auprès de laquelle on peut contester).</li></ul>",
         children: [],
         parent: "admin_activite"
     },
-    
+
     cp_garage_2: {
         title: "Cas pratique : Charlie et son garage (Activité)",
         info: `<div class="cas-pratique">
@@ -656,11 +656,11 @@ const courseData = {
     // SOUS-BRANCHE : PROCÉDURE ET RECOURS
     admin_procedure: {
         title: "La procédure et les recours",
-        info: "Le citoyen n'est pas sans défense face à l'administration. <br><br><ul><li><strong>Droit d'être entendu :</strong> Avant toute décision, l'administré a le droit de s'exprimer.</li><li><strong>Le Recours :</strong> Moyen de contester une décision devant une autorité supérieure ou un tribunal (ex: TAF).</li></ul>",
+        info: "Le citoyen n'est pas sans défense face à l'administration. <br><br><ul><li><strong>Droit d'être entendu :</strong> Avant toute décision, l'administré a le droit de s'exprimer et de consulter le dossier.</li><li><strong>Le Recours :</strong> Moyen de contester une décision devant une autorité supérieure ou un tribunal.</li><li><strong>Tribunaux administratifs :</strong> En Suisse, il existe le Tribunal administratif fédéral (TAF) et des tribunaux cantonaux spécialisés.</li></ul>",
         children: ["cp_garage_3", "cp_restaurant"],
         parent: "droit_administratif"
     },
-    
+
     cp_garage_3: {
         title: "Cas pratique : Charlie et son garage (Procédure)",
         info: `<div class="cas-pratique">
@@ -695,25 +695,25 @@ const courseData = {
     // --- 6.3 LE DROIT PÉNAL (Dès page 39 du cours) ---
     droit_penal: {
         title: "Le droit pénal",
-        info: "Branche du droit public qui définit les comportements constitutifs d'infractions et les sanctions qui leur sont applicables.",
+        info: "Branche du droit public qui définit les comportements constitutifs d'infractions et les sanctions qui leur sont applicables. Il a pour but de protéger les biens juridiques essentiels de la société.",
         children: ["penal_definition", "penal_comportement", "penal_illiceite", "penal_culpabilite", "penal_responsabilite", "penal_sanction", "penal_infractions", "penal_procedure"],
         parent: "public"
     },
 
     penal_definition: {
         title: "Définition et notion",
-        info: "Le droit pénal intervient en <strong>ultime recours</strong> (<em>ultima ratio</em>). Il est régi par le <strong>Code pénal suisse (CP)</strong>.",
+        info: "Le droit pénal détermine quels actes sont punissables et quelles peines ou mesures doivent être prononcées. <br><br><ul><li>Il intervient en <strong>ultime recours</strong> (<em>ultima ratio</em>) lorsque les autres branches du droit sont insuffisantes.</li><li>Il est régi par le <strong>Code pénal suisse (CP)</strong>.</li></ul>",
         children: [],
         parent: "droit_penal"
     },
 
     penal_comportement: {
         title: "Le comportement humain",
-        info: "Pour qu'il y ait infraction, il faut un comportement humain volontaire. <br><ul><li><strong>L'action (commission) :</strong> Faire ce que la loi interdit.</li><li><strong>L'omission :</strong> Ne pas faire ce que la loi commande, alors que l'auteur avait une <span class='highlight'>position de garant</span>.</li></ul>",
+        info: "Pour qu'il y ait infraction, il faut d'abord un comportement humain volontaire. <br><br>Ce comportement peut prendre deux formes :<br><ul><li><strong>L'action (commission) :</strong> Faire ce que la loi interdit (ex: frapper quelqu'un).</li><li><strong>L'omission :</strong> Ne pas faire ce que la loi commande, alors que l'auteur avait une <span class='highlight'>position de garant</span> (obligation juridique d'agir, ex: un médecin qui n'assiste pas son patient).</li></ul>",
         children: ["cp_stage"],
         parent: "droit_penal"
     },
-    
+
     cp_stage: {
         title: "Cas pratique : Charlie et son stage",
         info: `<div class="cas-pratique">
@@ -734,11 +734,11 @@ const courseData = {
 
     penal_illiceite: {
         title: "L'illicéité",
-        info: "Le comportement doit être contraire au droit. Un acte n'est pas illicite s'il existe un fait justificatif (Légitime défense, état de nécessité, consentement de la victime).",
+        info: "Le comportement doit être contraire au droit. <br><br>Un acte n'est <strong>pas</strong> illicite s'il existe un <span class='success'>fait justificatif</span>. Les principaux faits justificatifs sont :<br><ul><li><strong>La légitime défense :</strong> Repousser une attaque actuelle ou imminente de manière proportionnée.</li><li><strong>L'état de nécessité :</strong> Commettre une infraction pour préserver un bien juridique plus important d'un danger imminent.</li><li><strong>Le consentement de la victime :</strong> Valable uniquement pour les biens dont on peut disposer librement.</li></ul>",
         children: ["cp_randonnee"],
         parent: "droit_penal"
     },
-    
+
     cp_randonnee: {
         title: "Cas pratique : Charlie et la randonnée",
         info: `<div class="cas-pratique">
@@ -757,11 +757,11 @@ const courseData = {
 
     penal_culpabilite: {
         title: "La culpabilité",
-        info: "C'est le reproche personnel à l'auteur (pas de peine sans culpabilité). Se manifeste sous deux formes : l'intention (inclut le dol éventuel) et la négligence.",
+        info: "C'est le reproche personnel que l'on peut faire à l'auteur de l'infraction. Il n'y a <strong>pas de peine sans culpabilité</strong>. <br><br>La culpabilité se manifeste sous deux formes :<br><ul><li><strong>L'intention :</strong> L'auteur agit avec conscience et volonté. Cela inclut le <span class='highlight'>dol éventuel</span> (l'auteur s'accommode du résultat même s'il ne le recherche pas directement).</li><li><strong>La négligence :</strong> L'auteur agit par imprudence ou imprévoyance coupable (il ne se rend pas compte des conséquences de son acte, ou pense à tort pouvoir les éviter).</li></ul>",
         children: ["cp_basejump", "cp_bonnepom"],
         parent: "droit_penal"
     },
-    
+
     cp_basejump: {
         title: "Cas pratique : Charlie et le Base jump",
         info: `<div class="cas-pratique">
@@ -803,11 +803,11 @@ const courseData = {
 
     penal_responsabilite: {
         title: "La responsabilité pénale",
-        info: "Capacité d'apprécier le caractère illicite. Comprend l'irresponsabilité (trouble mental) et la responsabilité de l'entreprise (art. 102 CP).",
+        info: "C'est la capacité de l'auteur d'apprécier le caractère illicite de son acte et de se déterminer d'après cette appréciation. <br><br><ul><li><strong>Irresponsabilité :</strong> Si l'auteur souffre d'un grave trouble mental au moment des faits, il n'est pas punissable (mais des mesures peuvent être ordonnées).</li><li><strong>Responsabilité de l'entreprise (Art. 102 CP) :</strong> Exceptionnellement, une entreprise peut être punie pénalement si une infraction a été commise en son sein et qu'elle n'a pas pris toutes les <strong>mesures d'organisation raisonnables et nécessaires</strong> pour l'empêcher.</li></ul>",
         children: ["cp_demence", "cp_bonus_roland"],
         parent: "droit_penal"
     },
-    
+
     cp_demence: {
         title: "Cas pratique : Charlie et la démence",
         info: `<div class="cas-pratique">
@@ -840,41 +840,65 @@ const courseData = {
         children: [], parent: "penal_responsabilite"
     },
 
+    // --- SOUS-BRANCHES SANCTIONS ---
     penal_sanction: {
         title: "La sanction",
-        info: "La conséquence juridique d'une infraction. Elle se divise en peines (pécuniaire, TIG, prison) et en mesures (thérapeutiques, internement).",
-        children: [],
+        info: "La conséquence juridique d'une infraction. Elle se divise en peines et en mesures.",
+        children: ["sanction_principes", "sanction_peines", "sanction_mesures"],
         parent: "droit_penal"
     },
 
+    sanction_principes: {
+        title: "Les principes généraux",
+        info: "Le prononcé d'une sanction obéit à des principes stricts :<br><ul><li><strong>Principe de la légalité :</strong> <em>Nullum crimen, nulla poena sine lege</em> (Pas d'infraction, pas de peine sans loi). L'acte doit être prévu par la loi avant sa commission.</li><li><strong>Proportionnalité :</strong> La sanction doit être adaptée à la faute de l'auteur et à ses antécédents.</li></ul>",
+        children: [],
+        parent: "penal_sanction"
+    },
+
+    sanction_peines: {
+        title: "Les peines",
+        info: "La peine a une fonction de punition et de prévention. Les principales peines sont :<br><ul><li><strong>La peine pécuniaire :</strong> Calculée en <span class='highlight'>jours-amende</span>. Le nombre de jours dépend de la faute, et le montant du jour dépend de la situation financière de l'auteur.</li><li><strong>Le travail d'intérêt général (TIG) :</strong> Fourniture d'un travail non rémunéré au profit de la collectivité.</li><li><strong>La peine privative de liberté :</strong> Incarcération (prison).</li><li><strong>L'amende :</strong> Somme d'argent forfaitaire, applicable principalement aux contraventions.</li></ul>",
+        children: [],
+        parent: "penal_sanction"
+    },
+
+    sanction_mesures: {
+        title: "Les mesures",
+        info: "Contrairement aux peines, les mesures ne visent pas à punir mais à <strong>protéger la société</strong> et à <strong>soigner l'auteur</strong>.<br><ul><li><strong>Mesures thérapeutiques :</strong> Traitement des troubles mentaux ou des addictions.</li><li><strong>Internement :</strong> Mesure de sécurité pour les délinquants très dangereux.</li><li><strong>Autres mesures :</strong> Interdiction d'exercer une profession, expulsion du territoire, confiscation d'objets dangereux.</li></ul>",
+        children: [],
+        parent: "penal_sanction"
+    },
+
+    // --- INFRACTIONS ---
     penal_infractions: {
         title: "Les infractions",
-        info: "Le Code pénal classe les infractions en trois catégories selon leur gravité : Crime (> 3 ans), Délit (max 3 ans), Contravention (amende).",
+        info: "Le Code pénal classe les infractions en trois catégories selon leur gravité (peine maximale prévue) :<br><ol><li><strong>Le Crime :</strong> Infraction passible d'une peine privative de liberté de <span class='highlight'>plus de 3 ans</span>.</li><li><strong>Le Délit :</strong> Infraction passible d'une peine privative de liberté de <span class='highlight'>3 ans au plus</span> ou d'une peine pécuniaire.</li><li><strong>La Contravention :</strong> Infraction passible d'une <span class='highlight'>amende</span>.</li></ol>",
         children: [],
         parent: "droit_penal"
     },
 
+    // --- SOUS-BRANCHES PROCÉDURE ---
     penal_procedure: {
         title: "La procédure pénale",
-        info: "L'ensemble des règles fixant le déroulement de la poursuite et du jugement des auteurs d'infractions.",
+        info: "L'ensemble des règles fixant le déroulement de la poursuite et du jugement des auteurs d'infractions (Code de procédure pénale - CPP).",
         children: ["procedure_notions", "procedure_deroulement", "cp_patron_soupe"],
         parent: "droit_penal"
     },
 
     procedure_notions: {
         title: "Les notions générales",
-        info: "Principes directeurs de la procédure : poursuite d'office vs sur plainte, présomption d'innocence, In dubio pro reo.",
+        info: "Principes directeurs de la procédure :<br><ul><li><strong>Poursuite d'office vs sur plainte :</strong> La plupart des infractions sont poursuivies d'office par l'État. Certaines (plus légères) nécessitent le dépôt d'une plainte par la victime (délai de 3 mois).</li><li><strong>Présomption d'innocence :</strong> Toute personne est présumée innocente tant que sa culpabilité n'est pas légalement établie.</li><li><strong>In dubio pro reo :</strong> Le doute profite à l'accusé.</li></ul>",
         children: [],
         parent: "penal_procedure"
     },
 
     procedure_deroulement: {
         title: "Le déroulement de la procédure",
-        info: "Procédure préliminaire (Ministère public), procédure de première instance (Tribunal), voies de recours, exécution.",
+        info: "Le processus pénal se divise en plusieurs phases successives :<br><ol><li><strong>La procédure préliminaire :</strong> Investigations de la police et instruction par le <span class='highlight'>Ministère public (Procureur)</span>. Le Procureur décide s'il classe l'affaire ou s'il dresse un acte d'accusation.</li><li><strong>La procédure de première instance :</strong> Le jugement devant le Tribunal compétent. Débats oraux et publics.</li><li><strong>Les voies de recours :</strong> Appel ou recours devant une juridiction supérieure (jusqu'au Tribunal fédéral).</li><li><strong>L'exécution :</strong> Mise en œuvre de la peine ou de la mesure prononcée.</li></ol>",
         children: [],
         parent: "penal_procedure"
     },
-    
+
     cp_patron_soupe: {
         title: "Cas pratique : Le patron soupe-au-lait de Charlie",
         info: `<div class="cas-pratique">
@@ -893,28 +917,28 @@ const courseData = {
     // --- 6.4 LE DROIT INTERNATIONAL PUBLIC (Dès page 46 du cours) ---
     droit_inter_public: {
         title: "Le droit international public",
-        info: "Branche du droit qui régit les relations entre les différents acteurs de la communauté internationale.",
+        info: "Branche du droit qui régit les relations entre les différents acteurs de la communauté internationale. Contrairement au droit interne, il n'y a pas de 'gouvernement mondial' ou de législateur suprême pour imposer ces règles de manière centralisée.",
         children: ["inter_definition", "inter_conventions", "inter_relation"],
         parent: "public"
     },
 
     inter_definition: {
         title: "Définition et notion",
-        info: "Le droit international public régit les relations entre les <strong>sujets de droit international</strong> (États et organisations internationales).",
+        info: "Le droit international public régit les relations entre les <strong>sujets de droit international</strong>. <br><br><strong>Acteurs principaux :</strong><br><ul><li><strong>Les États :</strong> Sujets originaires et principaux. Ils bénéficient du principe de l'<span class='highlight'>égalité souveraine</span> (aucun État n'est supérieur à un autre).</li><li><strong>Les organisations internationales :</strong> (ex: ONU, OMC). Elles ont des compétences d'attribution limitées aux buts pour lesquels elles ont été créées.</li></ul>",
         children: [],
         parent: "droit_inter_public"
     },
 
     inter_conventions: {
         title: "Les conventions internationales",
-        info: "Aussi appelées <strong>traités</strong> (Pacta sunt servanda, Bilatéral/Multilatéral, Ratification).",
+        info: "Aussi appelées <strong>traités</strong>, accords ou pactes, ce sont la source principale du droit international. <br><br><strong>Notions clés :</strong><br><ul><li><strong>Pacta sunt servanda :</strong> Principe fondamental selon lequel <span class='highlight'>les engagements doivent être respectés</span>. Tout traité en vigueur lie les parties et doit être exécuté de bonne foi.</li><li><strong>Bilatéral vs Multilatéral :</strong> Un traité peut lier deux États (bilatéral) ou plusieurs États (multilatéral, comme la CEDH).</li><li><strong>La Ratification :</strong> Étape cruciale. C'est l'acte formel par lequel un État <span class='success'>s'engage définitivement</span> au niveau international à respecter le traité (après l'avoir signé).</li></ul>",
         children: [],
         parent: "droit_inter_public"
     },
 
     inter_relation: {
         title: "Relation avec le droit interne",
-        info: "Système moniste, primauté du droit international (Art. 5 Cst), Jus Cogens (normes impératives internationales).",
+        info: "Comment le droit international s'applique-t-il à l'intérieur de la Suisse ? Le cours met en avant des principes stricts : <br><br><ul><li><strong>Le système moniste :</strong> La Suisse applique ce système. Dès qu'un traité est ratifié, il s'intègre <span class='highlight'>automatiquement</span> à l'ordre juridique suisse. Il n'y a pas besoin de voter une loi nationale supplémentaire pour le rendre applicable.</li><li><strong>La primauté du droit international (Art. 5 al. 4 Cst.) :</strong> En cas de conflit entre une règle de droit suisse et une règle de droit international, <strong>le droit international l'emporte</strong> en principe sur le droit interne.</li><li><strong>Le Jus Cogens :</strong> Ce sont les normes impératives du droit international général (ex: interdiction de la torture, de l'esclavage, du génocide). <strong>Aucune dérogation</strong> n'est permise, et aucun traité ni aucune loi nationale ne peut aller à l'encontre du <em>jus cogens</em>.</li></ul>",
         children: [],
         parent: "droit_inter_public"
     },
@@ -922,31 +946,55 @@ const courseData = {
     // --- 7. LE DROIT PRIVÉ (Dès page 48 du cours) ---
     droit_prive_pt7: {
         title: "7. Le droit privé",
-        info: "Cette section aborde les fondements des relations juridiques entre particuliers.",
+        info: "Cette section aborde les fondements des relations juridiques entre particuliers (ou entreprises) sur un pied d'égalité, principalement régies par le Code civil (CC) et le Code des obligations (CO).",
         children: ["autonomie_volonte", "droit_personnes", "droit_successions", "droits_reels", "procedure_civile", "droit_inter_prive", "arbitrage"],
         parent: "root" 
     },
 
+    // --- BRANCHE : L'AUTONOMIE DE LA VOLONTÉ ---
     autonomie_volonte: {
         title: "L'autonomie de la volonté",
-        info: "C'est le principe fondamental et le moteur du droit privé. Liberté contractuelle, ses limites (nullité absolue), protection de la partie faible.",
-        children: [],
+        info: "C'est le principe fondamental et le moteur du droit privé. Il garantit aux individus la <strong>liberté d'aménager leurs relations juridiques</strong> comme ils l'entendent, par leur propre volonté.",
+        children: ["liberte_contractuelle", "limites_autonomie", "protection_faible"],
         parent: "droit_prive_pt7"
     },
 
+    liberte_contractuelle: {
+        title: "La liberté contractuelle",
+        info: "C'est la traduction concrète de l'autonomie de la volonté dans le domaine des contrats. Elle se décline en plusieurs libertés fondamentales : <br><br><ul><li><strong>Liberté de conclure :</strong> Chacun est libre de conclure ou de ne pas conclure un contrat.</li><li><strong>Liberté de choisir son partenaire :</strong> Chacun décide avec qui il veut s'engager.</li><li><strong>Liberté de la forme (Art. 11 CO) :</strong> En principe, les contrats ne sont soumis à <span class='success'>aucune exigence de forme</span> (un accord oral ou même tacite est parfaitement valable). L'exigence d'une forme écrite ou d'un acte authentique n'est qu'une exception prévue par la loi.</li><li><strong>Liberté de l'objet (Art. 19 CO) :</strong> Les parties peuvent en principe fixer le contenu du contrat <span class='highlight'>librement</span>. Elles peuvent même créer des contrats qui ne sont pas prévus par la loi (les contrats innommés, comme le leasing).</li><li><strong>Liberté de modifier ou d'annuler :</strong> Les parties peuvent toujours modifier ou mettre fin à un contrat par un accord mutuel.</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
+    },
+
+    limites_autonomie: {
+        title: "Les limites : La nullité absolue (Art. 20 CO)",
+        info: "La liberté contractuelle n'est pas absolue. Pour protéger l'intérêt public, la loi pose des barrières infranchissables. <br><br>Un contrat est frappé de <span class='highlight'>nullité absolue</span> (il est considéré comme n'ayant jamais existé) si son objet remplit l'une de ces trois conditions :<br><ul><li><strong>Il est impossible :</strong> L'exécution du contrat est objectivement irréalisable pour tout le monde (ex: vendre un terrain sur Jupiter).</li><li><strong>Il est illicite :</strong> L'accord viole une règle de droit impérative (ex: contrat pour un assassinat, trafic de stupéfiants).</li><li><strong>Il est contraire aux mœurs :</strong> L'accord heurte les principes moraux fondamentaux de la société (ex: s'engager à ne jamais se marier, vendre son vote).</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
+    },
+
+    protection_faible: {
+        title: "La protection de la partie faible",
+        info: "L'autonomie de la volonté part du principe que les parties sont égales. Dans la réalité, ce n'est pas toujours le cas (ex: un employé face à une multinationale). <br><br>Le législateur intervient donc avec des <strong>règles impératives</strong> pour rééquilibrer la relation et <span class='highlight'>protéger la partie présumée la plus faible</span> :<br><ul><li><strong>Le droit du travail :</strong> Règles strictes sur les vacances, les licenciements, la santé.</li><li><strong>Le droit du bail :</strong> Protection du locataire contre les congés abusifs ou les loyers excessifs.</li><li><strong>Le droit de la consommation :</strong> Protection de l'acheteur privé face aux professionnels.</li></ul>",
+        children: [],
+        parent: "autonomie_volonte"
+    },
+
+    // --- 7.2 LE DROIT DES PERSONNES ET DES SOCIÉTÉS (Dès page 48 du cours) ---
     droit_personnes: {
         title: "Le droit des personnes",
-        info: "Détermine qui peut être sujet de droits et d'obligations.",
+        info: "Cette branche du Code civil (CC) détermine qui peut être sujet de droits et d'obligations, et comment ces sujets s'organisent juridiquement.",
         children: ["debut_fin_pers", "jouissance_exercice", "domicile", "protection_pers", "personnes_morales_structures"],
-        parent: "droit_prive_pt7"
+        parent: "droit_prive_pt7" // À adapter selon ton point d'ancrage principal
     },
 
+    // --- PERSONNES PHYSIQUES ---
     debut_fin_pers: {
         title: "Le début et la fin de la personnalité",
-        info: "Début = naissance accomplie de l'enfant vivant. Fin = mort.",
+        info: "<ul><li><strong>Le début :</strong> La personnalité commence avec la <span class='highlight'>naissance accomplie de l'enfant vivant</span>. L'enfant conçu jouit des droits civils à condition qu'il naisse vivant.</li><li><strong>La fin :</strong> La personnalité se termine par la <strong>mort</strong> (ou la déclaration d'absence).</li></ul>",
         children: ["cp_testament_reymond"], parent: "droit_personnes"
     },
-    
+
     cp_testament_reymond: {
         title: "Cas pratique : Le testament de Reymond",
         info: `<div class="cas-pratique">
@@ -964,33 +1012,32 @@ const courseData = {
 
     jouissance_exercice: {
         title: "La jouissance et l'exercice des droits civils",
-        info: "Jouissance = aptitude à avoir des droits. Exercice = aptitude à agir par soi-même (majeur + discernement).",
-        children: ["cp_frere_jean"], parent: "droit_personnes"
+        info: "C'est une distinction fondamentale en droit civil suisse :<br><br><ul><li><strong>La jouissance des droits civils (capacité passive) :</strong> C'est l'aptitude à <em>avoir</em> des droits et des obligations. <strong>Tout être humain</strong> en bénéficie dès sa naissance, sans aucune condition d'âge ou de santé.</li><li><strong>L'exercice des droits civils (capacité active) :</strong> C'est l'aptitude à créer des droits et des obligations par ses <em>propres actes</em> (ex: signer un contrat). Pour l'avoir, il faut réunir deux conditions cumulatives : <strong>être majeur</strong> (18 ans révolus) ET <strong>avoir la capacité de discernement</strong> (faculté d'agir raisonnablement).</li></ul>",
+        children: [], parent: "droit_personnes"
     },
 
     domicile: {
         title: "Le domicile",
-        info: "Le lieu où l'on réside avec l'intention de s'y établir.",
+        info: "Le domicile de toute personne est le lieu où elle réside avec <strong>l'intention de s'y établir</strong> (Art. 23 CC). Toute personne ne peut avoir qu'un seul domicile civil à la fois. C'est essentiel pour déterminer quel tribunal est compétent ou où payer ses impôts.",
         children: [], parent: "droit_personnes"
     },
 
     protection_pers: {
         title: "La protection de la personnalité",
-        info: "Protection contre soi-même (engagements excessifs) et contre les tiers (atteintes illicites).",
+        info: "Le Code civil protège l'individu dans ses droits les plus intimes.",
         children: ["prot_soimeme", "prot_tiers", "cp_presse"], parent: "droit_personnes"
     },
-    
     prot_soimeme: {
-        title: "Protection contre soi-même",
-        info: "Nul ne peut aliéner sa liberté.",
+        title: "La protection contre elle-même",
+        info: "Nul ne peut aliéner sa liberté ni s'en interdire l'usage dans une mesure contraire aux lois ou aux mœurs (Art. 27 CC). <br><br><strong>Exemple :</strong> On ne peut pas signer un contrat pour devenir esclave ou s'engager à ne jamais changer d'emploi.",
         children: [], parent: "protection_pers"
     },
     prot_tiers: {
-        title: "Protection contre les tiers",
-        info: "Action contre les atteintes illicites.",
+        title: "La protection contre les tiers",
+        info: "Celui qui subit une <strong>atteinte illicite</strong> à sa personnalité peut agir en justice (Art. 28 CC). <br><br>Cela protège notamment la sphère privée, l'honneur, le nom et le droit à l'image. Le juge peut interdire l'atteinte, la faire cesser ou constater son caractère illicite.",
         children: [], parent: "protection_pers"
     },
-    
+
     cp_presse: {
         title: "Cas pratique : Charlie et la presse",
         info: `<div class="cas-pratique">
@@ -1006,12 +1053,14 @@ const courseData = {
         children: [], parent: "protection_pers"
     },
 
+    // --- PERSONNES MORALES ET ENTREPRISES ---
     personnes_morales_structures: {
-        title: "Personnes morales et structures d'entreprises",
-        info: "Association, Fondation, Entreprise individuelle, Sociétés de personnes (SS, SNC, SCom, SCoop), Sociétés de capitaux (SA, Sàrl).",
-        children: ["cp_amis_recolte", "cp_entrepreneuriat", "cp_manon"], parent: "droit_personnes"
+        title: "Les personnes morales et formes d'entreprises",
+        info: "Le droit permet à des entités abstraites d'agir sur la scène juridique comme des personnes physiques.",
+        children: ["notion_pm", "statut_pm", "formes_juridiques_pm", "association", "fondation", "entreprise_individuelle", "societes_personnes", "societes_capitaux", "cp_amis_recolte", "cp_entrepreneuriat", "cp_manon"],
+        parent: "droit_personnes"
     },
-    
+
     cp_amis_recolte: {
         title: "Cas pratique : Charlie et ses amis (Asso / Fond)",
         info: `<div class="cas-pratique">
@@ -1063,19 +1112,117 @@ const courseData = {
         children: [], parent: "personnes_morales_structures"
     },
 
+    notion_pm: {
+        title: "La notion de personne morale",
+        info: "Les personnes morales sont des <strong>fictions juridiques</strong>. Ce sont des groupements de personnes (ex: SA) ou des masses de biens (ex: fondation) auxquels la loi accorde la personnalité juridique de manière indépendante des individus qui la composent.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    statut_pm: {
+        title: "Le statut des personnes morales",
+        info: "<ul><li><strong>Naissance :</strong> Elles acquièrent généralement la personnalité juridique par leur <strong>inscription au Registre du commerce (RC)</strong> (exception faite des associations à but non lucratif).</li><li><strong>Fonctionnement :</strong> Elles agissent par l'intermédiaire de leurs <strong>organes</strong> (Conseil d'administration, direction, assemblée générale). La volonté de l'organe engage la personne morale.</li></ul>",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    formes_juridiques_pm: {
+        title: "Les différentes formes juridiques",
+        info: "Le droit suisse est régi par le principe du <em>Numerus clausus</em> : on ne peut choisir qu'une des formes d'entreprises <strong>strictement prévues par la loi</strong>. On ne peut pas en inventer de nouvelles.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    association: {
+        title: "L'association (CC)",
+        info: "Groupement de personnes dédié à un <strong>but idéal</strong> (politique, religieux, scientifique, artistique, caritatif). Elle acquiert la personnalité juridique dès que ses statuts sont rédigés, sans obligation de s'inscrire au RC (sauf si elle exploite une industrie en la forme commerciale).",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    fondation: {
+        title: "La fondation (CC)",
+        info: "Ce n'est pas un groupement de personnes, mais une <strong>masse de biens affectée à un but spécial</strong> (souvent d'utilité publique). Elle doit obligatoirement être inscrite au Registre du commerce.",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    entreprise_individuelle: {
+        title: "L’entreprise individuelle",
+        info: "Bien qu'étudiée ici, c'est juridiquement une <strong>personne physique</strong> qui exerce une activité économique indépendante. <br><br><ul><li><strong>Création :</strong> Très simple et sans capital minimum exigé.</li><li><strong>Responsabilité :</strong> L'entrepreneur répond des dettes de l'entreprise <strong>sur sa fortune privée, de manière illimitée</strong>. C'est le risque principal de cette forme.</li></ul>",
+        children: [], parent: "personnes_morales_structures"
+    },
+
+    // --- SOCIÉTÉS DE PERSONNES ---
+    societes_personnes: {
+        title: "Les sociétés de personnes",
+        info: "Dans ces sociétés, c'repose sur la confiance mutuelle (<em>intuitu personae</em>) et la personnalité des associés joue un rôle central.",
+        children: ["societe_simple", "snc", "soc_commandite", "soc_cooperative"],
+        parent: "personnes_morales_structures"
+    },
+    societe_simple: {
+        title: "La société simple",
+        info: "Contrat par lequel deux ou plusieurs personnes conviennent d'unir leurs efforts ou leurs ressources en vue d'atteindre un <strong>but commun</strong> (Art. 530 CO). <br>C'est la forme de base par défaut. Elle n'a <strong>pas de personnalité juridique propre</strong> et ne s'inscrit pas au RC. Les associés sont solidairement responsables.",
+        children: [], parent: "societes_personnes"
+    },
+    snc: {
+        title: "La société en nom collectif (SNC)",
+        info: "Constituée uniquement par des <strong>personnes physiques</strong> pour exploiter une entreprise commerciale. <br><br><strong>Caractéristique phare :</strong> Les associés contractent une responsabilité <strong>subsidiaire, illimitée et solidaire</strong>. Si la société fait faillite, les créanciers peuvent se retourner contre n'importe quel associé sur sa fortune privée.",
+        children: [], parent: "societes_personnes"
+    },
+    soc_commandite: {
+        title: "La société en commandite",
+        info: "Société composée de deux types d'associés :<br><ul><li><strong>Le(s) commandité(s) :</strong> Toujours une personne physique. Responsabilité <strong>illimitée</strong> et solidaire.</li><li><strong>Le(s) commanditaire(s) :</strong> Le 'bailleur de fonds'. Sa responsabilité est <strong>limitée</strong> à l'apport convenu (la commandite).</li></ul>",
+        children: [], parent: "societes_personnes"
+    },
+    soc_cooperative: {
+        title: "La société coopérative",
+        info: "Corporation formée d'un nombre variable de personnes ou sociétés, visant principalement à favoriser les <strong>intérêts économiques spécifiques de ses membres</strong> par une action d'entraide commune (ex: Migros, Coop, coopératives agricoles). Elle n'a pas de capital social fixe.",
+        children: [], parent: "societes_personnes"
+    },
+
+    // --- SOCIÉTÉS DE CAPITAUX ---
+    societes_capitaux: {
+        title: "Les sociétés de capitaux",
+        info: "Dans ces sociétés, l'apport financier (le capital) est plus important que la personne de l'associé. Elles sont des personnes morales à part entière.",
+        children: ["sa", "sarl", "sca"],
+        parent: "personnes_morales_structures"
+    },
+    sa: {
+        title: "La société anonyme (SA)",
+        info: "La forme juridique par excellence pour les grandes entreprises, mais aussi prisée par les PME.<br><br><ul><li><strong>Capital :</strong> Capital-actions minimum de <span class='highlight'>100'000 CHF</span> (dont au moins 20% ou 50'000 CHF libérés).</li><li><strong>Responsabilité :</strong> Exclusivement limitée au capital social. L'actionnaire ne risque pas sa fortune privée.</li><li><strong>Anonymat :</strong> Les actionnaires peuvent rester anonymes vis-à-vis du public (actions au porteur).</li></ul>",
+        children: [], parent: "societes_capitaux"
+    },
+    sarl: {
+        title: "La société à responsabilité limitée (Sàrl)",
+        info: "Forme mixte combinant des éléments de la SA et de la SNC, idéale pour les PME et les entreprises familiales.<br><br><ul><li><strong>Capital :</strong> Capital social minimum de <span class='highlight'>20'000 CHF</span> (entièrement libéré).</li><li><strong>Responsabilité :</strong> Limitée au capital social.</li><li><strong>Transparence :</strong> Pas d'anonymat. Les associés et le nombre de leurs parts sociales sont <strong>obligatoirement inscrits au Registre du commerce</strong> (public).</li></ul>",
+        children: [], parent: "societes_capitaux"
+    },
+    sca: {
+        title: "La société en commandite par actions",
+        info: "Société dont le capital est divisé en actions (comme la SA) mais dans laquelle un ou plusieurs associés répondent solidairement et indéfiniment des dettes sociales (comme les commandités). Très rare en pratique en Suisse.",
+        children: [], parent: "societes_capitaux"
+    },
+
+    // --- 7.3 LE DROIT DES SUCCESSIONS (Dès page 63 du cours) ---
     droit_successions: {
         title: "Le droit des successions",
-        info: "Règle le sort du patrimoine après le décès.",
-        children: ["succ_legale", "succ_volontaire", "succ_devolution"],
+        info: "Cette branche du Code civil (CC) règle le sort des biens, des créances et des dettes d'une personne après son décès.",
+        children: ["succ_definition", "succ_legale", "succ_volontaire", "succ_devolution"],
         parent: "droit_prive_pt7" 
     },
-    
+
+    // --- CHAPITRE 1 : DÉFINITION ---
+    succ_definition: {
+        title: "Définition",
+        info: "Le droit des successions détermine qui hérite du patrimoine du défunt (appelé le <span class='highlight'>de cujus</span>). <br><br><strong>Principe fondamental :</strong> Il s'agit d'une <strong>succession universelle</strong>. Les héritiers reprennent l'ensemble du patrimoine du défunt, c'est-à-dire <span class='highlight'>aussi bien les actifs (biens, argent) que les passifs (dettes)</span>.",
+        children: [], 
+        parent: "droit_successions"
+    },
+
+    // --- CHAPITRE 2 : LA SUCCESSION LÉGALE ---
     succ_legale: {
         title: "La succession légale",
-        info: "Par défaut, s'il n'y a pas de testament. Système des parentèles.",
-        children: ["cp_succ_lucienne"], parent: "droit_successions"
+        info: "C'est le régime qui s'applique par défaut <strong>lorsque le défunt n'a rien prévu</strong> (pas de testament, pas de pacte successoral). Le droit suisse utilise le <strong>système des parentèles</strong> pour déterminer l'ordre des héritiers :<br><br><ul><li><strong>1ère parentèle :</strong> Les descendants (enfants, petits-enfants). Ils excluent toutes les autres parentèles.</li><li><strong>2ème parentèle :</strong> S'il n'y a pas de descendants, on remonte aux père et mère et à leurs descendants (les frères et sœurs du défunt).</li><li><strong>3ème parentèle :</strong> S'il n'y a personne dans la 2ème, on remonte aux grands-parents et à leurs descendants (oncles, tantes, cousins).</li><li><strong>Le conjoint survivant (ou partenaire enregistré) :</strong> Il n'appartient à aucune parentèle mais <strong>partage l'héritage</strong> avec la parentèle qui vient à la succession (ex: il reçoit la moitié s'il partage avec les enfants).</li><li><strong>L'État :</strong> S'il n'y a aucun héritier légal, la succession revient au canton ou à la commune.</li></ul>",
+        children: ["cp_succ_lucienne"], 
+        parent: "droit_successions"
     },
-    
+
     cp_succ_lucienne: {
         title: "Cas pratique : La succession de Lucienne",
         info: `<div class="cas-pratique">
@@ -1091,12 +1238,14 @@ const courseData = {
         </div>`,
         children: [], parent: "succ_legale"
     },
-    
+
+    // --- CHAPITRE 3 : LA SUCCESSION VOLONTAIRE ---
     succ_volontaire: {
         title: "La succession volontaire",
-        info: "Formes (testament, pacte) et limites (la réserve).",
-        children: ["cp_succ_rey", "cp_succ_maxime"], parent: "droit_successions"
-    },
+        info: "Le défunt a la liberté d'organiser sa succession autrement que ce que prévoit la loi par défaut, en respectant certaines formes et certaines limites.",
+        children: ["succ_formes", "succ_reserve", "cp_succ_rey", "cp_succ_maxime"], 
+        parent: "droit_successions"
+    }, 
     
     cp_succ_rey: {
         title: "Cas pratique : La succession de M. Rey",
@@ -1134,26 +1283,89 @@ const courseData = {
         </div>`,
         children: [], parent: "succ_volontaire"
     },
-    
-    succ_devolution: {
-        title: "La dévolution",
-        info: "L'ouverture, l'acquisition de plein droit, et la répudiation.",
-        children: [], parent: "droit_successions"
+
+    succ_formes: {
+        title: "La forme des dispositions pour cause de mort",
+        info: "Le défunt peut exprimer ses dernières volontés de deux manières principales :<br><br><strong>1. Le testament :</strong> Acte <strong>unilatéral</strong> et révocable en tout temps. Il existe sous plusieurs formes :<br><ul><li><em>Le testament olographe :</em> Doit être écrit en entier, daté et signé <span class='success'>de la main du testateur</span>.</li><li><em>Le testament public :</em> Rédigé par un notaire en présence de deux témoins.</li><li><em>Le testament oral :</em> Exceptionnel, uniquement en cas de danger de mort imminent.</li></ul><br><strong>2. Le pacte successoral :</strong> C'est un <strong>contrat</strong> passé entre le testateur et ses héritiers (ex: pour qu'un héritier renonce à sa part). Il nécessite la forme authentique (devant notaire) et ne peut être modifié qu'avec l'accord de toutes les parties.",
+        children: [], 
+        parent: "succ_volontaire"
     },
 
+    succ_reserve: {
+        title: "La réserve (Les héritiers réservataires)",
+        info: "La liberté de tester n'est pas totale. La loi protège les héritiers les plus proches en leur garantissant une part minimale de l'héritage, appelée la <span class='highlight'>réserve héréditaire</span>.<br><br><ul><li><strong>Les héritiers réservataires :</strong> Ce sont les <strong>descendants</strong> (enfants) et le <strong>conjoint survivant</strong> (ou partenaire enregistré).</li><li><strong>Conséquence :</strong> Le testateur ne peut absolument pas les priver de cette part (sauf cas rarissimes d'exhérédation, ex: crime grave contre le défunt).</li><li><strong>La quotité disponible :</strong> C'est la partie du patrimoine qui reste <em>une fois les réserves déduites</em>. Le testateur peut la distribuer <strong>librement</strong> à qui il veut (amis, associations, etc.).</li></ul>",
+        children: [], 
+        parent: "succ_volontaire"
+    },
+
+    // --- CHAPITRE 4 : LA DÉVOLUTION ---
+    succ_devolution: {
+        title: "La dévolution",
+        info: "C'est le processus par lequel la succession passe concrètement du défunt aux héritiers.<br><br><strong>Étapes et principes clés :</strong><br><ul><li><strong>L'ouverture :</strong> La succession s'ouvre au moment exact du décès, au dernier domicile du défunt.</li><li><strong>L'acquisition de plein droit :</strong> Les héritiers deviennent <strong>immédiatement et solidairement</strong> propriétaires des biens et débiteurs des dettes, sans avoir besoin d'une décision du juge.</li><li><strong>La répudiation :</strong> Si la succession est déficitaire (plus de dettes que d'actifs), les héritiers ont le droit de <span class='highlight'>répudier la succession</span>. Ils ont généralement un délai de <strong>3 mois</strong> pour le faire. S'ils ne font rien, la succession est réputée acceptée (y compris les dettes).</li></ul>",
+        children: [], 
+        parent: "droit_successions"
+    },
+
+    // --- 7.4 LES DROITS RÉELS (Dès page 68 du cours) ---
     droits_reels: {
         title: "Les droits réels",
-        info: "Maîtrise juridique sur les choses. Propriété, droits réels restreints, possession.",
-        children: ["propriete_commune", "reels_restreints", "reels_acquisition_perte"],
+        info: "Cette branche du droit privé régit la maîtrise juridique et matérielle qu'une personne exerce sur les choses (les biens).",
+        children: ["reels_definition", "reels_meubles_immeubles", "reels_propriete", "reels_restreints", "reels_possession", "reels_acquisition_perte"],
         parent: "droit_prive_pt7" 
     },
-    
-    propriete_commune: {
-        title: "Propriété en commun",
-        info: "Copropriété et propriété commune.",
-        children: ["cp_voiture_vacances"], parent: "droits_reels"
+
+    // --- CHAPITRE 1 : DÉFINITION ---
+    reels_definition: {
+        title: "Définition",
+        info: "Un droit réel est un droit qui confère à son titulaire une <span class='highlight'>maîtrise directe et absolue sur une chose</span>. <br><br><strong>Caractère absolu :</strong> Contrairement à un droit de créance (qui ne lie que deux personnes), le droit réel est <strong>opposable à tous</strong> (<em>erga omnes</em>). Quiconque doit respecter ce droit.",
+        children: [], 
+        parent: "droits_reels"
     },
-    
+
+    // --- CHAPITRE 2 : LES MEUBLES ET LES IMMEUBLES ---
+    reels_meubles_immeubles: {
+        title: "Les meubles et les immeubles",
+        info: "La loi divise les choses en deux grandes catégories, soumises à des règles différentes :<br><br><ul><li><strong>Les meubles :</strong> Ce sont les choses corporelles qui <span class='success'>peuvent être transportées</span> d'un lieu à un autre sans être altérées (ex: une voiture, un livre, l'argent). Les forces naturelles (ex: électricité) sont aussi des meubles.</li><li><strong>Les immeubles :</strong> Ce sont les choses qui <strong>ne peuvent pas être déplacées</strong>. Le Code civil en distingue plusieurs sortes : les biens-fonds (terrains), les droits distincts et permanents immatriculés au registre foncier (ex: droit de superficie), les mines, et les parts de copropriété d'un immeuble (ex: appartement en PPE).</li></ul>",
+        children: [], 
+        parent: "droits_reels"
+    },
+
+    // --- CHAPITRE 3 : LA PROPRIÉTÉ ---
+    reels_propriete: {
+        title: "La propriété",
+        info: "C'est le droit réel le plus complet qu'une personne puisse avoir sur une chose.",
+        children: ["propriete_definition", "propriete_restrictions", "propriete_copropriete", "propriete_commune"], 
+        parent: "droits_reels"
+    },
+
+    propriete_definition: {
+        title: "Définition (Art. 641 CC)",
+        info: "Le propriétaire d'une chose a le droit d'en <span class='highlight'>disposer librement</span>, dans les limites de la loi. <br><br>Il possède deux prérogatives fondamentales :<br><ul><li>Le droit de l'utiliser, d'en percevoir les fruits et même de la détruire.</li><li>Le droit de <strong>revendiquer la chose</strong> contre quiconque la détient sans droit et de repousser toute usurpation.</li></ul>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_restrictions: {
+        title: "Les restrictions du droit de propriété",
+        info: "La propriété n'est pas un droit sans limites. Elle est restreinte par la loi pour protéger les autres.<br><br><ul><li><strong>Le droit de voisinage :</strong> Le propriétaire doit s'abstenir de tout excès au détriment de ses voisins (interdiction des <span class='highlight'>immissions excessives</span> comme le bruit, la fumée, les mauvaises odeurs).</li><li><strong>L'expropriation :</strong> L'État peut forcer un propriétaire à céder son bien pour cause d'<strong>utilité publique</strong> (ex: construire une route), moyennant une juste et entière indemnité.</li></ul>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_copropriete: {
+        title: "La copropriété",
+        info: "Plusieurs personnes sont propriétaires en commun de la même chose. <br><br><strong>Particularité :</strong> Chacun possède une <strong>quote-part idéale</strong> (une fraction mathématique, ex: 1/2 ou 1/4) dont il peut <span class='success'>disposer librement</span> (la vendre, la mettre en gage) sans l'accord des autres. <br><em>Exemple typique : La Propriété Par Étages (PPE).</em>",
+        children: [], 
+        parent: "reels_propriete"
+    },
+
+    propriete_commune: {
+        title: "La propriété commune",
+        info: "Plusieurs personnes forment une communauté préalable (ex: une communauté d'héritiers ou une société simple) et sont propriétaires d'un bien.<br><br><strong>Particularité :</strong> Il n'y a <strong>pas de quote-part indépendante</strong>. Aucun des propriétaires ne peut vendre sa part seul ; toutes les décisions doivent être prises à l'<span class='highlight'>unanimité</span>.",
+        children: ["cp_voiture_vacances"], 
+        parent: "reels_propriete"
+    },
+
     cp_voiture_vacances: {
         title: "Cas pratique : Charlie et la voiture de vacances",
         info: `<div class="cas-pratique">
@@ -1168,13 +1380,15 @@ const courseData = {
         </div>`,
         children: [], parent: "propriete_commune"
     },
-    
+
+    // --- CHAPITRE 4 : LES DROITS RÉELS RESTREINTS ---
     reels_restreints: {
         title: "Les droits réels restreints",
-        info: "Servitudes, charges foncières, droit de gage.",
-        children: ["cp_bois_sarl"], parent: "droits_reels"
+        info: "Contrairement à la propriété, ils ne confèrent qu'une maîtrise <strong>partielle</strong> sur une chose qui appartient à quelqu'un d'autre.<br><br>On en distingue trois types :<br><ul><li><strong>Les servitudes :</strong> Obligent le propriétaire à <em>tolérer</em> un usage ou à <em>s'abstenir</em> d'exercer un droit (ex: droit de passage, usufruit).</li><li><strong>Les charges foncières :</strong> Obligent le propriétaire d'un immeuble à faire certaines prestations (ex: livrer du bois).</li><li><strong>Les droits de gage :</strong> Permettent au créancier de faire réaliser (vendre) la chose pour se payer sur le produit si le débiteur ne rembourse pas sa dette (ex: <span class='highlight'>hypothèque</span> pour un immeuble, droit de rétention pour un meuble).</li></ul>",
+        children: ["cp_bois_sarl"], 
+        parent: "droits_reels"
     },
-    
+
     cp_bois_sarl: {
         title: "Cas pratique : Charlie et Bois Sàrl",
         info: `<div class="cas-pratique">
@@ -1189,13 +1403,23 @@ const courseData = {
         </div>`,
         children: [], parent: "reels_restreints"
     },
-    
-    reels_acquisition_perte: {
-        title: "Acquisition et Perte de la propriété",
-        info: "Moyens originaires et dérivés pour acquérir (Tradition, RF, etc.).",
-        children: ["cp_acquisition_prop"], parent: "droits_reels"
+
+    // --- CHAPITRE 5 : LA POSSESSION ---
+    reels_possession: {
+        title: "La possession",
+        info: "<strong>Attention à la nuance :</strong> La possession n'est pas un droit, c'est une <strong>situation de fait</strong>. <br><br>Le possesseur est celui qui a la <span class='highlight'>maîtrise effective et corporelle</span> de la chose (Art. 919 CC). <br><em>Exemple : Le locataire d'une voiture est le possesseur (il a les clés et conduit), mais l'entreprise de leasing en reste la propriétaire.</em>",
+        children: [], 
+        parent: "droits_reels"
     },
-    
+
+    // --- CHAPITRE 6 : L'ACQUISITION ET LA PERTE ---
+    reels_acquisition_perte: {
+        title: "L'acquisition et la perte de la propriété",
+        info: "Les règles de transfert diffèrent fondamentalement selon la nature du bien :<br><br><strong>Pour les meubles :</strong><br><ul><li><em>Acquisition :</em> Se fait par le <strong>transfert de la possession</strong> (la tradition), c'est-à-dire la remise matérielle de l'objet.</li><li><em>Perte :</em> Par l'abandon volontaire (déréliction), le transfert à un tiers, ou la destruction de la chose.</li></ul><br><strong>Pour les immeubles :</strong><br><ul><li><em>Acquisition :</em> Ne devient effective que par l'<strong>inscription au Registre Foncier (RF)</strong>. Un contrat de vente immobilier (qui doit revêtir la forme authentique) ne suffit pas à lui seul pour transférer la propriété.</li><li><em>Perte :</em> Par la radiation au Registre Foncier.</li></ul>",
+        children: ["cp_acquisition_prop"], 
+        parent: "droits_reels"
+    },
+
     cp_acquisition_prop: {
         title: "Cas pratique : Charlie et l'acquisition de la propriété",
         info: `<div class="cas-pratique">
@@ -1216,31 +1440,46 @@ const courseData = {
         children: [], parent: "reels_acquisition_perte"
     },
 
+    // --- 7.5 LA PROCÉDURE CIVILE (Dès page 72 du cours) ---
     procedure_civile: {
         title: "La procédure civile",
-        info: "Déroulement des procès de droit privé.",
-        children: ["proc_civ_competence", "proc_civ_deroulement", "proc_civ_execution", "cp_scooter_global"],
-        parent: "droit_prive_pt7" 
+        info: "Cette branche détermine les règles à suivre lorsqu'un litige de droit privé (entre particuliers ou entreprises) doit être tranché par un juge civil. Elle est régie au niveau national par le Code de procédure civile (CPC).",
+        children: ["proc_civ_definition", "proc_civ_competence", "proc_civ_deroulement", "proc_civ_execution", "cp_scooter_global"],
+        parent: "droit_prive_pt7" // À ajuster selon ton ancrage principal
     },
-    
+
+    // --- CHAPITRE 1 : DÉFINITION ET NOTIONS ---
+    proc_civ_definition: {
+        title: "Définition et notions générales",
+        info: "La procédure civile sert à faire reconnaître et exécuter des droits subjectifs privés. Contrairement à la procédure pénale où l'État poursuit d'office, le procès civil est <span class='highlight'>l'affaire des parties</span>.<br><br><strong>Principes fondamentaux :</strong><br><ul><li><strong>La maxime de disposition :</strong> Le juge ne s'occupe que de ce que les parties lui demandent. Il ne peut pas accorder plus, ni autre chose, que ce qui est réclamé.</li><li><strong>La maxime des débats :</strong> C'est aux parties de <span class='success'>présenter les faits et d'apporter les preuves</span>. Le juge civil ne mène pas d'enquête lui-même (contrairement au juge pénal).</li><li><strong>Le fardeau de la preuve (Art. 8 CC) :</strong> Quiconque allègue un fait pour en déduire un droit doit le prouver. Si on n'a pas de preuve, on perd le procès.</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
+    },
+
+    // --- CHAPITRE 2 : LA COMPÉTENCE DU TRIBUNAL ---
     proc_civ_competence: {
         title: "La compétence du tribunal",
-        info: "Territoriale (Le For) et Matérielle (Valeur litigieuse).",
-        children: [], parent: "procedure_civile"
+        info: "Avant d'entrer en matière, il faut déterminer quel tribunal a le droit de juger l'affaire (la juridiction compétente).<br><br><ul><li><strong>La compétence à raison de la matière :</strong> Dépend de l'objet du litige ou de la somme en jeu (ex: Tribunal des prud'hommes pour le droit du travail, Tribunal des baux pour les loyers, Tribunal d'arrondissement).</li><li><strong>La compétence territoriale (Le For) :</strong> Détermine le lieu géographique du tribunal. <strong>Principe de base :</strong> Le for ordinaire est au <span class='highlight'>domicile du défendeur</span> (la personne qui est attaquée en justice). Des exceptions existent (ex: for du lieu de situation de l'immeuble pour les droits réels).</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
     },
-    
+
+    // --- CHAPITRE 3 : LE DÉROULEMENT DE LA PROCÉDURE ---
     proc_civ_deroulement: {
         title: "Le déroulement de la procédure",
-        info: "Conciliation, première instance, recours.",
-        children: [], parent: "procedure_civile"
+        info: "Le procès civil obéit à un processus chronologique strict pour garantir un procès équitable.<br><br><strong>Les étapes clés :</strong><br><ol><li><strong>La tentative de conciliation :</strong> Dans la grande majorité des cas, il est <span class='highlight'>obligatoire de passer d'abord par une autorité de conciliation</span>. Le but est de trouver un accord à l'amiable et d'éviter d'engorger les tribunaux.</li><li><strong>La procédure de première instance :</strong> Si la conciliation échoue, le plaignant reçoit une autorisation de procéder. S'ensuivent l'échange des écritures (demande et réponse), les débats oraux, l'administration des preuves (audition de témoins, expertises) et enfin, le jugement.</li><li><strong>Les voies de recours :</strong> La partie perdante peut contester le jugement devant une instance supérieure (Appel ou recours au Tribunal cantonal), puis éventuellement au Tribunal fédéral en dernière instance.</li></ol>",
+        children: [], 
+        parent: "procedure_civile"
     },
-    
+
+    // --- CHAPITRE 4 : LE RÉGIME DE L'EXÉCUTION FORCÉE ---
     proc_civ_execution: {
         title: "Le régime de l'exécution forcée",
-        info: "Mise en œuvre du jugement (LP pour l'argent).",
-        children: [], parent: "procedure_civile"
+        info: "Si la partie perdante refuse d'exécuter volontairement le jugement, le gagnant peut recourir à la force de l'État.<br><br>Il faut distinguer deux systèmes distincts :<br><ul><li><strong>Si la condamnation porte sur une somme d'argent :</strong> L'exécution est régie exclusivement par la <span class='highlight'>Loi fédérale sur la poursuite pour dettes et la faillite (LP)</span>. On s'adresse à l'Office des poursuites (saisie de salaire, faillite).</li><li><strong>Si la condamnation porte sur autre chose (faire, donner, tolérer, s'abstenir) :</strong> L'exécution est régie par le Code de procédure civile (CPC). Le juge de l'exécution peut prononcer des <span class='success'>amendes disciplinaires</span>, une menace de peine pénale (Art. 292 CP), ou ordonner l'intervention de la police (ex: pour une expulsion de locataire).</li></ul>",
+        children: [], 
+        parent: "procedure_civile"
     },
-    
+
     cp_scooter_global: {
         title: "Cas pratique : Charlie et le scooter (Global)",
         info: `<div class="cas-pratique">
@@ -1257,19 +1496,21 @@ const courseData = {
         children: [], parent: "procedure_civile"
     },
 
+    // --- 7.6 LE DROIT INTERNATIONAL PRIVÉ (Dès page 78 du cours) ---
     droit_inter_prive: {
-        title: "Le droit international privé",
-        info: "Conflits de lois et juridictions (LDIP).",
+        title: "Le droit international privé (aperçu)",
+        info: "Le droit international privé (DIP) entre en jeu lorsqu'une relation de droit privé comporte un <strong>élément d'extranéité</strong> (c'est-à-dire un lien avec l'étranger, comme des parties de nationalités différentes ou domiciliées dans des pays distincts). En Suisse, ces règles se trouvent dans la <span class='highlight'>Loi fédérale sur le droit international privé (LDIP)</span>.",
         children: ["dip_trois_questions", "cp_achats_internet"],
         parent: "droit_prive_pt7"
     },
-    
+
     dip_trois_questions: {
-        title: "Les 3 questions (Compétence, Droit, Exécution)",
-        info: "Les 3 étapes d'analyse d'un litige international.",
-        children: [], parent: "droit_inter_prive"
+        title: "Les trois questions fondamentales",
+        info: "Lorsqu'un litige présente un caractère international, le juge doit obligatoirement se poser trois questions dans un ordre très précis :<br><br><ol><li><strong>La compétence (Conflit de juridictions) :</strong> Les tribunaux suisses sont-ils compétents pour juger l'affaire ? Si oui, dans quel canton ?</li><li><strong>Le droit applicable (Conflit de lois) :</strong> Quel droit national le juge doit-il appliquer pour trancher le litige sur le fond ? Le juge suisse peut tout à fait être amené à <span class='success'>appliquer un droit étranger</span> (par exemple le droit japonais ou français) si les règles de rattachement l'exigent.</li><li><strong>La reconnaissance et l'exécution :</strong> Un jugement rendu à l'étranger peut-il être reconnu et exécuté de force en Suisse ?</li></ol>",
+        children: [], 
+        parent: "droit_inter_prive"
     },
-    
+
     cp_achats_internet: {
         title: "Cas pratique : Charlie et les achats sur Internet",
         info: `<div class="cas-pratique">
@@ -1285,19 +1526,21 @@ const courseData = {
         children: [], parent: "droit_inter_prive"
     },
 
+    // --- 7.7 L'ARBITRAGE (Dès page 79 du cours) ---
     arbitrage: {
-        title: "L'arbitrage",
-        info: "Résolution extrajudiciaire.",
-        children: ["arbitrage_convention", "cp_pacha"],
+        title: "L'arbitrage (aperçu)",
+        info: "L'arbitrage est un mode de résolution des litiges <strong>privé et extrajudiciaire</strong>. Au lieu de s'adresser aux tribunaux de l'État, les parties confient le soin de trancher leur différend à un ou plusieurs particuliers que l'on appelle des <span class='highlight'>arbitres</span>.",
+        children: ["arbitrage_convention", "arbitrage_sentence", "arbitrage_caracteristiques", "cp_pacha"],
         parent: "droit_prive_pt7"
     },
-    
+
     arbitrage_convention: {
-        title: "Clause compromissoire et caractéristiques",
-        info: "Consentement mutuel, huis clos, expertise, coût.",
-        children: [], parent: "arbitrage"
+        title: "La convention d'arbitrage",
+        info: "Pour qu'un litige soit soumis à l'arbitrage au lieu de la justice ordinaire, il faut obligatoirement le <strong>consentement des deux parties</strong>. <br><br>Cela se fait généralement par une <span class='highlight'>clause compromissoire</span> insérée directement dans le contrat principal (bien avant qu'un litige n'éclate). S'il y a une telle clause valide, les tribunaux étatiques doivent se déclarer incompétents.",
+        children: [], 
+        parent: "arbitrage"
     },
-    
+
     cp_pacha: {
         title: "Cas pratique : L'arbitrage de Pacha SA",
         info: `<div class="cas-pratique">
@@ -1314,30 +1557,104 @@ const courseData = {
         children: [], parent: "arbitrage"
     },
 
-    // --- 8. LE DROIT DES OBLIGATIONS ---
+    arbitrage_sentence: {
+        title: "La sentence arbitrale",
+        info: "La décision finale rendue par le tribunal arbitral s'appelle une <strong>sentence arbitrale</strong>. <br><br>Elle est <strong>définitive et contraignante</strong> pour les parties, au même titre qu'un jugement étatique officiel. Fait essentiel : grâce aux traités internationaux (comme la Convention de New York), une sentence arbitrale est souvent <span class='success'>plus facilement reconnue et exécutable à l'étranger</span> qu'un jugement d'un tribunal national.",
+        children: [], 
+        parent: "arbitrage"
+    },
+
+    arbitrage_caracteristiques: {
+        title: "Les caractéristiques (Avantages / Inconvénients)",
+        info: "L'arbitrage est le mode de résolution favori dans le commerce international pour plusieurs raisons majeures :<br><br><ul><li><strong>Confidentialité :</strong> Contrairement aux tribunaux de l'État où les audiences sont publiques, l'arbitrage se déroule à huis clos. Les secrets d'affaires sont protégés.</li><li><strong>Expertise :</strong> Les parties peuvent choisir des arbitres hyper-spécialisés dans le domaine technique de leur litige (ingénierie, finance, etc.).</li><li><strong>Flexibilité :</strong> Le choix de la langue, du lieu et des règles de procédure est libre.</li><li><strong>Le coût (Inconvénient) :</strong> L'arbitrage est généralement <strong>très onéreux</strong>, car les parties doivent payer elles-mêmes les honoraires souvent très élevés des arbitres (contrairement aux juges étatiques qui sont payés par nos impôts).</li></ul>",
+        children: [], 
+        parent: "arbitrage"
+    },
+
+    // --- 8. LE DROIT DES OBLIGATIONS (Dès page 80 du cours) ---
     droit_obligations: {
         title: "8. Le droit des obligations",
         info: "Cette branche fondamentale du droit privé régit les relations juridiques entre créanciers et débiteurs. Elle est principalement codifiée dans le Code des obligations (CO).",
-        children: ["ob_definition", "ob_prestation", "ob_sources"],
+        children: ["ob_definition", "ob_prestation", "ob_sources", "cp_paris"],
         parent: "root"
     },
-    
+
+    cp_paris: {
+        title: "Cas pratique : Charlie & les paris",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie a parié CHF 1000.- avec Grégoire que son équipe favorite va passer le 1er tour de la Ligue des champions. Charlie remporte le pari mais Grégoire refuse de lui verser la somme.</p>
+            <p class="cas-pratique-question">Charlie peut-il forcer Grégoire à payer ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Selon l'art. 513 al. 1 CO, « le jeu et le pari ne donnent aucun droit de créance ». Il s'agit d'une obligation naturelle qui est donc dépourvue d'action en exécution.</p>
+                <p><strong>Conclusion :</strong> Charlie ne peut pas exiger l'exécution de sa créance en justice.</p>
+            </div>
+        </div>`,
+        children: [], parent: "ob_definition"
+    },
+
+    // --- CHAPITRE 1 : DÉFINITION ET NOTION ---
     ob_definition: {
         title: "Définition et notion d'obligation",
-        info: "Lien juridique entre un créancier (exige) et un débiteur (exécute).",
-        children: [], parent: "droit_obligations"
+        info: "Au sens juridique, une obligation est un <span class='highlight'>lien juridique</span> entre deux personnes au moins.<br><br>Dans cette relation bilatérale, on distingue :<br><ul><li><strong>Le créancier :</strong> C'est la partie active. Il est celui qui a le <strong>droit d'exiger</strong> l'exécution de la prestation (il détient une <em>créance</em>).</li><li><strong>Le débiteur :</strong> C'est la partie passive. Il est celui qui a le <strong>devoir d'exécuter</strong> la prestation (il a une <em>dette</em> envers le créancier).</li></ul>",
+        children: [],
+        parent: "droit_obligations"
     },
-    
+
+    // --- CHAPITRE 2 : LA PRESTATION ---
     ob_prestation: {
         title: "La prestation",
-        info: "Objet de l'obligation : Prestation positive (donner, faire) ou négative (ne pas faire, tolérer).",
-        children: [], parent: "droit_obligations"
+        info: "C'est l'objet même de l'obligation, c'est-à-dire le comportement précis que le créancier peut exiger du débiteur.<br><br>La prestation peut prendre deux formes principales :<br><ul><li><strong>Prestation positive :</strong> Elle consiste à <span class='success'>donner</span> (ex: livrer une marchandise, transférer la propriété, payer une somme d'argent) ou à <span class='success'>faire</span> (ex: construire un mur, fournir un service, travailler).</li><li><strong>Prestation négative :</strong> Elle consiste à <span class='success'>ne pas faire</span> (une abstention, ex: respecter une clause de non-concurrence) ou à <span class='success'>tolérer</span> (ex: laisser un voisin passer sur son terrain).</li></ul>",
+        children: [],
+        parent: "droit_obligations"
     },
-    
+
+    // --- CHAPITRE 3 : LES SOURCES DES OBLIGATIONS ---
     ob_sources: {
         title: "Les sources des obligations",
-        info: "Contrat, Acte illicite, Enrichissement illégitime.",
-        children: [], parent: "droit_obligations"
+        info: "Comment naît une obligation ? Le droit suisse reconnaît <span class='highlight'>trois sources légales principales</span> qui créent ce lien juridique entre deux individus :",
+        children: ["ob_source_contrat", "ob_source_rc", "ob_source_enrichissement", "cp_jean_accident"],
+        parent: "droit_obligations"
+    },
+
+    cp_jean_accident: {
+        title: "Cas pratique : Charlie & Jean (Sources multiples)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie emboutit la voiture de Jean. Charlie verse l'argent pour les réparations à un homonyme de Jean qui refuse de rendre l'argent. Charlie engage un avocat pour récupérer la somme.</p>
+            <p class="cas-pratique-question">Quelles sont les sources des obligations en l'espèce ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <ul>
+                    <li><strong>Charlie et Jean :</strong> Obligation résultant d'un acte illicite (Responsabilité civile, art. 41 CO).</li>
+                    <li><strong>Charlie et l'homonyme :</strong> L'homonyme s'est enrichi sans cause valable (Enrichissement illégitime, art. 62 CO).</li>
+                    <li><strong>Charlie et son avocat :</strong> L'obligation de payer la provision relève d'un contrat de mandat (Obligations contractuelles).</li>
+                </ul>
+            </div>
+        </div>`,
+        children: [], parent: "ob_sources"
+    },
+
+    ob_source_contrat: {
+        title: "1. Le contrat (Art. 1 ss CO)",
+        info: "C'est la <strong>source volontaire</strong> la plus courante. L'obligation naît de la <span class='highlight'>manifestation de volonté concordante</span> de deux ou plusieurs parties qui se mettent d'accord pour créer, modifier ou annuler un lien juridique (ex: contrat de vente, de bail, de travail). Les deux parties ont voulu s'engager.",
+        children: [],
+        parent: "ob_sources"
+    },
+
+    ob_source_rc: {
+        title: "2. La responsabilité civile / Acte illicite (Art. 41 ss CO)",
+        info: "C'est une <strong>source légale non volontaire</strong>. L'obligation naît du fait qu'une personne a <strong>causé sans droit un dommage à autrui</strong> (soit de manière intentionnelle, soit par négligence). <br><br>L'auteur du dommage devient immédiatement le débiteur : il a l'obligation légale de <span class='highlight'>réparer le préjudice</span> (souvent par le versement de dommages-intérêts). La victime devient le créancier.",
+        children: [],
+        parent: "ob_sources"
+    },
+
+    ob_source_enrichissement: {
+        title: "3. L'enrichissement illégitime (Art. 62 ss CO)",
+        info: "C'est également une <strong>source non volontaire</strong>. L'obligation naît lorsqu'une personne <strong>s'enrichit aux dépens d'autrui sans cause légitime</strong>. <br><br>Celui qui s'est enrichi injustement (le débiteur) a l'obligation de <span class='highlight'>restituer cet enrichissement</span>. <br><em>Exemple typique : Vous payez par erreur une facture deux fois. L'entreprise qui a reçu le double paiement a l'obligation de vous rembourser le trop-perçu.</em>",
+        children: [],
+        parent: "ob_sources"
     },
     
     // --- 9. LES SOURCES DES OBLIGATIONS ---
@@ -1347,23 +1664,66 @@ const courseData = {
         children: ["so_notion", "so_volontaires", "so_legales"],
         parent: "root"
     },
-    
+
+    // --- SECTION 1 : NOTION ---
     so_notion: {
         title: "Notion",
-        info: "Sources volontaires vs légales.",
-        children: [], parent: "sources_obligations_titre9"
+        info: "La source d'une obligation est la <strong>cause juridique de cette dernière</strong>, c'est-à-dire le fait que le droit objectif attache directement ou indirectement à la naissance d'une obligation. Chaque obligation repose donc sur une source.<br><br>Parmi ces dernières, on distingue deux grandes catégories :<br><ul><li>Les sources <strong>volontaires</strong>.</li><li>Les sources <strong>légales</strong> (en particulier les actes illicites et l'enrichissement illégitime).</li></ul>",
+        children: [],
+        parent: "sources_obligations_titre9"
     },
-    
+
+    // --- SECTION 2 : LES SOURCES VOLONTAIRES D'OBLIGATION ---
     so_volontaires: {
         title: "Les sources volontaires d'obligation",
-        info: "Le contrat, l'acte unilatéral, les quasi-contrats.",
-        children: [], parent: "sources_obligations_titre9"
+        info: "Les sources volontaires d'obligation sont constituées par la ou les <strong>volontés d'une ou plusieurs parties de s'engager</strong>. De cette volonté découlent des obligations qui lient la ou les parties (art. 1 CO).",
+        children: ["so_contrat", "so_acte_unilateral", "so_quasi_contrats"],
+        parent: "sources_obligations_titre9"
     },
-    
+
+    // SOUS-BRANCHES SECTION 2
+    so_contrat: {
+        title: "Le contrat ou les obligations contractuelles",
+        info: "Le contrat constitue la source d'obligations volontaires la plus importante. Il se définit comme <strong>l'échange de plusieurs manifestations de volonté réciproques et concordantes</strong>.<br><br>Les obligations ayant leur source dans le contrat sont au nombre de trois :<br><ol><li>Les obligations découlant du <strong>contenu même du contrat</strong>.</li><li>Les obligations prévues par le <strong>droit supplétif</strong> : un droit qui ne s'applique que lorsque les parties n'ont pas réglé le point dans le contrat. Il complète alors le contrat.</li><li>Les obligations prévues par le <strong>droit impératif</strong> : celui qui s'applique de manière obligatoire et incontournable dès que certaines conditions sont remplies.</li></ol>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    so_acte_unilateral: {
+        title: "L'acte juridique unilatéral",
+        info: "L'acte juridique unilatéral est <strong>l'acte par lequel une personne s'engage seule</strong>. <br><br><strong>Exemples :</strong> <br><ul><li>La promesse publique faite à un nombre déterminé de personnes de récompenser celle qui réalisera une prestation déterminée (art. 8 CO).</li><li>Le testament (art. 498 CC).</li></ul>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    so_quasi_contrats: {
+        title: "Les quasi-contrats",
+        info: "Les quasi-contrats correspondent à des <strong>situations pour lesquelles les conditions d'un acte juridique font défaut</strong> (par exemple, la volonté de l'une des parties au moins) mais que la loi et la jurisprudence <strong>assimilent à des actes volontaires</strong>.<br><br><strong>Exemples de quasi-contrats :</strong><br><ul><li>La gestion d'affaires sans mandat (art. 419 à 424 CO).</li><li>L'acte de complaisance.</li><li>La relation contractuelle de fait.</li></ul>",
+        children: [],
+        parent: "so_volontaires"
+    },
+
+    // --- SECTION 3 : LES SOURCES LÉGALES ---
     so_legales: {
         title: "Les sources légales",
-        info: "La loi impose des obligations. Acte illicite, enrichissement illégitime.",
-        children: [], parent: "sources_obligations_titre9"
+        info: "La source d'obligation est ici <strong>la loi elle-même, indifféremment de la volonté du débiteur ou même de son comportement</strong>. La loi impose des obligations lorsque certaines conditions définies par elle sont remplies, en raison de situations juridiques durables le plus souvent.",
+        children: ["so_acte_illicite", "so_enrichissement"],
+        parent: "sources_obligations_titre9"
+    },
+
+    // SOUS-BRANCHES SECTION 3
+    so_acte_illicite: {
+        title: "L'acte illicite ou la responsabilité civile",
+        info: "La loi impose <strong>l'obligation à l'auteur d'un préjudice de réparer le dommage causé aux tiers</strong>. <br><br>Le fondement de cette obligation réside dans le fait qui a généré le dommage, donnant lieu à deux types de responsabilités :<br><ul><li>La <strong>responsabilité subjective</strong> : fondée sur la faute de l'auteur (art. 41 CO).</li><li>La <strong>responsabilité objective</strong> : fondée sur le risque créé.</li></ul><br>Des lois spéciales prévoient également une telle responsabilité (ex: la LCR qui impose l'obligation de réparer le dommage à la charge du détenteur d'un véhicule à moteur).",
+        children: [],
+        parent: "so_legales"
+    },
+
+    so_enrichissement: {
+        title: "L'enrichissement illégitime",
+        info: "La personne qui <strong>bénéficie aux dépens d'autrui d'un enrichissement sans cause valable a l'obligation de par la loi de restituer cet enrichissement</strong> (art. 62 à 67 CO). <br><br>Il est très important de noter que les règles sur l'enrichissement illégitime sont <strong>subsidiaires</strong> : elles ne s'appliquent que lorsqu'aucune règle de fond relative aux obligations contractuelles ou à la responsabilité civile ne trouve application.",
+        children: [],
+        parent: "so_legales"
     },
 
     // --- 10. LES OBLIGATIONS CONTRACTUELLES ---
@@ -1377,71 +1737,788 @@ const courseData = {
         ],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // DÉFINITION ET CLASSIFICATION
+    // ==========================================
     oc_definition_classification: {
         title: "Définition et classification",
-        info: "Le contrat se définit comme l'échange de deux ou plusieurs manifestations de volonté concordantes.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Bases de la notion de contrat et de sa typologie.",
+        children: ["oc_dc_definition", "oc_dc_classification"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_dc_definition: {
+        title: "Définition",
+        info: "L'acte juridique est une manifestation de volonté destinée et apte à produire un effet juridique (création, modification, suppression ou transfert d'un droit). Il peut être unilatéral ou bi/multilatéral.<br><br>Le contrat se définit comme <strong>l'échange de deux ou plusieurs manifestations de volonté concordantes</strong> destiné à produire un effet juridique conforme aux volontés exprimées de manière concordante.",
+        children: [],
+        parent: "oc_definition_classification"
+    },
+    oc_dc_classification: {
+        title: "Classification",
+        info: "Les différents contrats peuvent être classés selon divers critères.",
+        children: ["oc_dc_class_effets", "oc_dc_class_duree", "oc_dc_class_loi", "oc_dc_class_autres"],
+        parent: "oc_definition_classification"
+    },
+    oc_dc_class_effets: {
+        title: "Selon les effets",
+        info: "<ul><li><strong>Contrat unilatéral :</strong> une seule des parties assume des obligations (ex: donation).</li><li><strong>Contrat bilatéral :</strong> obligations réciproques. S'il est <strong>parfait (ou synallagmatique)</strong>, les prestations sont dans un rapport d'échange. S'il est imparfait, une seule partie a une obligation principale.</li><li><strong>Contrats multilatéraux :</strong> les prestations sont réunies en vue d'un but commun.</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_duree: {
+        title: "Selon la durée",
+        info: "<ul><li><strong>Contrats simples (ou instantanés) :</strong> le débiteur doit faire une prestation isolée dans le temps.</li><li><strong>Contrats de durée :</strong> le débiteur doit une prestation qui se prolonge dans le temps.</li><li><strong>Contrats analogues aux contrats de durée :</strong> exécution qui nécessite un certain temps.</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_loi: {
+        title: "Selon la relation avec la loi",
+        info: "<ul><li><strong>Contrats nommés :</strong> réglementés par le CO ou une autre loi (ex: vente).</li><li><strong>Contrats innommés :</strong> non réglés par la loi. Peuvent être des <strong>contrats mixtes</strong> (combinaison d'éléments réglementés) ou <strong>sui generis</strong> (contenu entièrement original, ex: franchise).</li></ul>",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+    oc_dc_class_autres: {
+        title: "Autres distinctions",
+        info: "Le contrat peut être principal ou accessoire (existe seulement en fonction d'un autre contrat). Il peut aussi être gratuit ou onéreux (recevoir un avantage en fournissant ou non un équivalent).",
+        children: [],
+        parent: "oc_dc_classification"
+    },
+
+    // ==========================================
+    // L'AUTONOMIE DE LA VOLONTÉ
+    // ==========================================
     oc_autonomie: {
         title: "L'autonomie de la volonté",
-        info: "Cinq droits essentiels (contracter, partenaire, forme, annuler, contenu).",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Le droit des obligations est soumis au principe fondamental de l'autonomie de la volonté des parties.",
+        children: ["oc_auto_notion", "oc_auto_limites", "oc_auto_liberte"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_auto_notion: {
+        title: "Notion",
+        info: "L'autonomie de la volonté comprend cinq droits essentiels :<br><ol><li>La liberté de contracter.</li><li>La liberté de choisir son ou ses partenaires contractuels.</li><li>La liberté de choisir la forme du contrat.</li><li>La liberté d'annuler le contrat, d'y mettre fin ou de le ratifier.</li><li>La liberté de déterminer le contenu du contrat.</li></ol>",
+        children: [],
+        parent: "oc_autonomie"
+    },
+    oc_auto_limites: {
+        title: "Les limites",
+        info: "Le principe de l'autonomie de la volonté se heurte à deux types de limites : les limites de fait (poids respectif des parties) et les limites de droit (forme ou objet).",
+        children: [],
+        parent: "oc_autonomie"
+    },
+    oc_auto_liberte: {
+        title: "La liberté de contracter",
+        info: "Nul ne peut être contraint de contracter contre sa volonté. Cette liberté est cependant limitée par des dispositions de droit public et de droit privé créant, dans certaines circonstances, une obligation de contracter.",
+        children: [],
+        parent: "oc_autonomie"
+    },
+
+    // ==========================================
+    // LA CONCLUSION DU CONTRAT
+    // ==========================================
     oc_conclusion: {
         title: "La conclusion du contrat",
-        info: "Offre (irrévocable) + Acceptation (silence != acceptation). Contrats d'adhésion soumis au contrôle.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Étapes et règles régissant la formation de l'accord entre les parties.",
+        children: [
+            "oc_concl_negociation", "oc_concl_offre", "oc_concl_acceptation", 
+            "oc_concl_lettre", "oc_concl_concordance", "oc_concl_moment", "oc_concl_cas"
+        ],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_concl_negociation: {
+        title: "La négociation",
+        info: "Durant la phase de pourparlers, les parties ne sont pas encore liées. Néanmoins, elles ont certains devoirs précontractuels : négocier sérieusement, s'informer soi-même, renseigner l'autre partie et se comporter loyalement.<br><br>Si une partie cause un dommage à l'autre en violant un de ces devoirs, elle encourt une responsabilité précontractuelle appelée <strong>culpa in contrahendo</strong>.",
+        children: [],
+        parent: "oc_conclusion"
+    },
+    oc_concl_offre: {
+        title: "L'offre",
+        info: "La première étape formelle de la conclusion.",
+        children: ["oc_offre_notion", "oc_offre_contenu", "oc_offre_effets", "oc_offre_duree"],
+        parent: "oc_conclusion"
+    },
+    oc_offre_notion: {
+        title: "Notion",
+        info: "L'offre est une proposition ferme de conclure un contrat, adressée à l'autre partie. Il s'agit d'un acte juridique <strong>soumis à réception</strong> ; l'offre déploie ses effets dès que le destinataire l'a reçue, même s'il n'en a pas pris connaissance.",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_contenu: {
+        title: "Contenu et forme",
+        info: "L'offre doit contenir <strong>tous les éléments essentiels du contrat</strong> ainsi que <strong>l'expression d'une volonté de se lier</strong>. Conformément au principe de liberté, elle est en principe informelle.",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_effets: {
+        title: "Effets",
+        info: "L'offre lie son auteur et confère un <strong>droit formateur</strong> au destinataire (qui peut provoquer unilatéralement la conclusion). <br><br>Elle est <strong>irrévocable</strong> sauf dans deux cas (art. 9 CO) :<br>1. Retrait parvenu au destinataire avant ou en même temps que l'offre.<br>2. Retrait communiqué avant que le destinataire ait pris connaissance de l'offre.",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_offre_duree: {
+        title: "Durée de validité",
+        info: "L'offrant peut fixer un délai. À défaut, la loi impose :<br><ul><li><strong>Entre présents :</strong> l'offrant est délié à défaut d'acceptation immédiate.</li><li><strong>Entre absents :</strong> l'offrant est lié jusqu'au moment où il peut s'attendre à l'arrivée d'une réponse expédiée à temps et régulièrement.</li></ul>",
+        children: [],
+        parent: "oc_concl_offre"
+    },
+    oc_concl_acceptation: {
+        title: "L'acceptation",
+        info: "La réponse positive à l'offre.",
+        children: ["oc_acc_notion", "oc_acc_contenu"],
+        parent: "oc_conclusion"
+    },
+    oc_acc_notion: {
+        title: "Notion",
+        info: "Manifestation de volonté par laquelle l'acceptant exprime sa <strong>volonté définitive de conclure</strong>. C'est un acte soumis à réception, qui constitue l'exercice du droit formateur. Elle peut être retirée aux mêmes conditions restrictives que l'offre.",
+        children: [],
+        parent: "oc_concl_acceptation"
+    },
+    oc_acc_contenu: {
+        title: "Contenu et forme",
+        info: "L'acceptation doit être conforme à l'offre. Elle peut être tacite ou résulter d'actes concluants. <br><br>Cependant, <strong>le silence ne vaut pas acceptation</strong>, à moins que le contraire ne résulte de la nature de l'affaire (art. 6 CO).",
+        children: [],
+        parent: "oc_concl_acceptation"
+    },
+    oc_concl_lettre: {
+        title: "La lettre de confirmation",
+        info: "Pratique commerciale où une partie résume le contenu d'un accord préalable. Elle a un <strong>effet probatoire</strong> et confirme l'accord. Elle peut avoir un <strong>effet constitutif</strong> si l'on doit s'attendre à ce que le destinataire conteste son contenu inexact.",
+        children: [],
+        parent: "oc_conclusion"
+    },
+    oc_concl_concordance: {
+        title: "La concordance des manifestations de volonté",
+        info: "L'harmonie nécessaire entre l'offre et l'acceptation.",
+        children: ["oc_conc_notion", "oc_conc_objet", "oc_conc_regles", "cp_voitures_sarl_1"],
+        parent: "oc_conclusion"
+    },
+
+    cp_voitures_sarl_1: {
+        title: "Cas pratique : Charlie & Voitures Sàrl (L'offre)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie publie une annonce sur Internet : « Voiture à vendre. 5'000 km. Très bon état. Prix à discuter ». Antoine lui propose CHF 3'000.-. Charlie accepte en précisant que « la voiture n'est pas livrée ».</p>
+            <p class="cas-pratique-question">Le contrat est-il conclu ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>L'annonce de Charlie n'est pas une offre (pas de prix = manque un point essentiel). C'est Antoine qui formule l'offre d'achat. Charlie accepte en modifiant une condition (livraison).</p>
+                <p><strong>Conclusion :</strong> Si la livraison est un point secondaire, le juge le réglera (art. 2 CO). Si c'est subjectivement essentiel pour Antoine, l'acceptation de Charlie est en fait une contre-offre qu'Antoine doit accepter pour que le contrat soit conclu.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_concl_concordance"
+    },
+
+    oc_conc_notion: {
+        title: "Notion",
+        info: "Le contrat consiste dans un accord de manifestations de volonté. L'acceptation doit correspondre à l'offre.",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_conc_objet: {
+        title: "L'objet de l'accord",
+        info: "L'accord doit se faire sur les <strong>points essentiels</strong> du contrat. On distingue :<br><ul><li>Les points <strong>objectivement essentiels</strong> : le noyau indispensable du contrat.</li><li>Les points <strong>subjectivement essentiels</strong> : éléments sans lesquels une partie ne contracterait pas.</li></ul>Les autres points sont secondaires.",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_conc_regles: {
+        title: "Les règles régissant l'accord",
+        info: "S'il y a <strong>accord réel ou naturel</strong>, les volontés effectives sont concordantes (le sens voulu, déclaré et compris sont identiques). <br><br>S'il n'y a pas d'accord réel, l'ordre juridique applique le <strong>principe de la confiance</strong> : les déclarations doivent être comprises dans le sens que leur destinataire pouvait et devait leur donner de bonne foi. On parle alors de <strong>consentement juridique ou normatif</strong>.",
+        children: [],
+        parent: "oc_concl_concordance"
+    },
+    oc_concl_moment: {
+        title: "Le moment de la conclusion du contrat",
+        info: "Le contrat est formellement conclu à la réception de l'acceptation. <br><br>Toutefois, les effets des contrats <strong>rétroagissent au moment de l'expédition de l'acceptation</strong> ou, en cas d'acceptation tacite, au moment de la réception de l'offre.",
+        children: ["cp_voitures_sarl_2"],
+        parent: "oc_conclusion"
+    },
+    cp_voitures_sarl_2: {
+        title: "Cas pratique : Charlie & Voitures Sàrl (Le retrait)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie envoie par courrier une offre de vente d'une voiture à CHF 50'000.- à un ami. Quelques heures plus tard, quelqu'un lui propose 200'000.-. Charlie appelle immédiatement son ami pour retirer son offre envoyée par courrier.</p>
+            <p class="cas-pratique-question">L'offre est-elle valablement retirée ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Selon l'art. 9 CO, le retrait est valable s'il parvient avant l'offre ou en même temps. L'appel de Charlie arrive avant la réception de la lettre postale.</p>
+                <p><strong>Conclusion :</strong> Oui, l'offre a été valablement retirée.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_concl_moment"
+    },
+    oc_concl_cas: {
+        title: "Cas particuliers de conclusion",
+        info: "Situations spécifiques prévues par la loi.",
+        children: ["oc_cas_appel", "oc_cas_promesse", "oc_cas_precontrat", "oc_cas_adhesion"],
+        parent: "oc_conclusion"
+    },
+    oc_cas_appel: {
+        title: "L'appel d'offres",
+        info: "Déclaration par laquelle l'appelant demande, <strong>sans engagement</strong>, que des offres lui soient faites (art. 7 CO).",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_promesse: {
+        title: "La promesse publique",
+        info: "Promesse faite à un nombre indéterminé de personnes de récompenser celle qui réalisera une prestation. Étant publique, elle <strong>lie son auteur</strong> qui doit payer la récompense (art. 8 CO).",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_precontrat: {
+        title: "La promesse de contracter",
+        info: "Aussi appelée <strong>précontrat</strong>, c'est l'engagement souscrit par une ou deux parties de conclure ultérieurement un contrat principal (art. 22 CO).",
+        children: [],
+        parent: "oc_concl_cas"
+    },
+    oc_cas_adhesion: {
+        title: "Contrat d'adhésion et CG",
+        info: "<strong>Le contrat d'adhésion</strong> ne peut en pratique être discuté par l'adhérent. <strong>Les conditions générales (CG)</strong> sont des clauses standardisées.<br><br>Le juge effectue deux contrôles :<br><ul><li><strong>L'incorporation :</strong> Elles n'ont d'effet que si incorporées dans l'accord.</li><li><strong>Le contenu :</strong> La jurisprudence applique la <strong>règle de l'insolite</strong> (les clauses insolites, c.-à-d. excessivement onéreuses ou s'écartant du contenu attendu, ne lient pas).</li></ul><br>L'art. 8 LCD protège également le consommateur si la clause provoque une <strong>disproportion notable et injustifiée</strong> contraire aux règles de la bonne foi (entraîne la nullité de la clause).",
+        children: ["cp_voitures_sarl_3"],
+        parent: "oc_concl_cas"
+    },
+
+    cp_voitures_sarl_3: {
+        title: "Cas pratique : Charlie et les Conditions Générales",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie conclut une assurance sur Internet. Le contrat renvoie aux CG sur le site web. Dans un document annexe de 13 pages en petits caractères, il est stipulé un délai de résiliation de 3 ans.</p>
+            <p class="cas-pratique-question">Ces clauses sont-elles valables ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p><strong>Incorporation :</strong> Si le renvoi est clair et les CG accessibles, l'incorporation globale est valable.</p>
+                <p><strong>Contenu :</strong> Le délai de 3 ans déroge aux usages habituels, c'est une clause insolite. Elle ne sera pas valable à moins que l'assurance n'ait attiré expressément l'attention de Charlie sur ce point.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_cas_adhesion"
+    },
+
+    // ==========================================
+    // INTERPRÉTATION, COMPLÈTEMENT, CORRECTION
+    // ==========================================
     oc_icc: {
         title: "Interprétation, complètement et correction",
-        info: "Principe de la confiance. Théorie de l'imprévision.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Processus applicables lorsqu'un contrat est conclu mais génère des conflits sur son sens ou son exécution.",
+        children: ["oc_icc_interpretation", "oc_icc_completement", "oc_icc_correction"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_icc_interpretation: {
+        title: "L'interprétation du contrat",
+        info: "Le juge procède en deux étapes :<br><ol><li>La <strong>recherche de la volonté réelle</strong> (interprétation subjective) : établir ce que les parties ont effectivement voulu.</li><li>La <strong>détermination de la volonté supposée</strong> (interprétation objective) : s'il y a divergence, le juge applique le <strong>principe de la confiance</strong> pour retenir l'interprétation d'une personne raisonnable et honnête placée dans les mêmes circonstances.</li></ol>",
+        children: [],
+        parent: "oc_icc"
+    },
+    oc_icc_completement: {
+        title: "Le complètement du contrat",
+        info: "Utilisé pour combler une lacune du contrat :<br><ul><li>Application d'une <strong>règle légale supplétive</strong> (prévue par le CO ou loi spéciale).</li><li>À défaut, le juge devra imaginer la <strong>volonté hypothétique des parties</strong> à partir des règles de la bonne foi.</li></ul>",
+        children: ["cp_completement_transport"],
+        parent: "oc_icc"
+    },
+    cp_completement_transport: {
+        title: "Cas pratique : Charlie et le complètement du contrat",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie achète un tableau à Pierre pour CHF 10'000.-. Le contrat écrit ne mentionne pas les frais de port de Zurich à Moudon. Pierre facture CHF 200.- supplémentaires pour l'envoi. Charlie refuse de payer ce supplément.</p>
+            <p class="cas-pratique-question">Comment le juge va-t-il combler cette lacune ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Le contrat (vente) est muet sur un point secondaire (les frais de port). Le juge utilise les règles supplétives du CO.</p>
+                <p>Selon l'art. 189 al. 1 CO, les frais de transport sont à la charge de l'acheteur dans la vente à distance (sauf convention contraire). Charlie doit donc payer les CHF 200.-.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_icc_completement"
+    },
+    oc_icc_correction: {
+        title: "La correction du contrat",
+        info: "Si le contrat devient excessivement dur en raison de changements, et en l'absence de clause spécifique, le juge peut intervenir via :<br><ul><li><strong>L'erreur sur les faits futurs :</strong> si les faits étaient prévisibles.</li><li><strong>La théorie de l'imprévision (clausula rebus sic stantibus) :</strong> permet exceptionnellement de refuser l'exécution stricte quand les circonstances ont fondamentalement changé.</li></ul>",
+        children: [],
+        parent: "oc_icc"
+    },
+
+    // ==========================================
+    // LA FORME DU CONTRAT
+    // ==========================================
     oc_forme: {
         title: "La forme du contrat",
-        info: "Principe du consensualisme. Sanction = Nullité absolue.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Règles relatives aux exigences formelles pour la validité d'un contrat.",
+        children: ["oc_forme_principe", "oc_forme_exceptions", "oc_forme_sanctions", "oc_forme_conv", "cp_vente_ppe"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    cp_vente_ppe: {
+        title: "Cas pratique : Charlie & la vente d'une PPE",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie vend une part de Propriété Par Étages (PPE) à son cousin. Ils rédigent et signent ensemble un contrat complet de plusieurs pages.</p>
+            <p class="cas-pratique-question">Leur contrat est-il valable en la forme ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Une part de PPE est un immeuble (art. 665 CC). Selon l'art. 216 al. 1 CO, les ventes d'immeubles ne sont valables que par <strong>acte authentique</strong> (passé devant notaire).</p>
+                <p><strong>Conclusion :</strong> Le contrat sous seing privé est frappé de nullité absolue.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_forme"
+    },
+    oc_forme_principe: {
+        title: "Le principe du libre choix de la forme",
+        info: "Le droit des obligations consacre le principe du <strong>consensualisme</strong> : le libre choix de la forme, sauf exceptions prévues par la loi (art. 11 CO).",
+        children: [],
+        parent: "oc_forme"
+    },
+    oc_forme_exceptions: {
+        title: "Les exceptions",
+        info: "La loi peut imposer une forme pour protéger les parties ou assurer la sécurité des transactions.",
+        children: ["oc_fexc_ecrite", "oc_fexc_leg", "oc_fexc_auth", "oc_fexc_reg"],
+        parent: "oc_forme"
+    },
+    oc_fexc_ecrite: {
+        title: "La forme écrite",
+        info: "Suppose que le contenu soit rédigé sur un support matériel. Le contrat doit être <strong>signé par toutes les personnes qui s'obligent</strong>. Une forme écrite qualifiée peut exiger des indications obligatoires manuscrites (ex: montant du cautionnement).",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_leg: {
+        title: "Légalisation",
+        info: "Attestation officielle de l'authenticité d'une signature, réglée par le droit cantonal.",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_auth: {
+        title: "La forme authentique",
+        info: "Nécessite la collaboration d'un fonctionnaire ou d'un officier public, généralement un <strong>notaire</strong>.",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_fexc_reg: {
+        title: "L'inscription dans un registre public",
+        info: "Certains actes doivent être inscrits (Registre foncier, Registre du commerce, etc.).",
+        children: [],
+        parent: "oc_forme_exceptions"
+    },
+    oc_forme_sanctions: {
+        title: "Sanctions en cas d'inobservation",
+        info: "Lorsque la loi impose une forme, elle est solennelle. Le non-respect entraîne la <strong>nullité absolue du contrat</strong> (art. 11 al. 2 CO). Cette nullité est <strong>originaire (ex tunc)</strong> et invocable en tout temps (limitée par l'interdiction de l'abus de droit).",
+        children: [],
+        parent: "oc_forme"
+    },
+    oc_forme_conv: {
+        title: "La forme conventionnelle",
+        info: "Même si la loi ne l'exige pas, les parties sont libres de subordonner la conclusion à une forme qu'elles ont choisie. Cette forme est présumée être une condition de validité du contrat.",
+        children: [],
+        parent: "oc_forme"
+    },
+
+    // ==========================================
+    // L'OBJET DU CONTRAT
+    // ==========================================
     oc_objet: {
         title: "L'objet du contrat",
-        info: "Limites: Impossible, illicite, immoral. Sanction: Nullité absolue (parfois partielle).",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Il désigne les obligations découlant du contrat et les prestations convenues.",
+        children: ["oc_obj_principe", "oc_obj_exceptions", "oc_obj_sanctions"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_obj_principe: {
+        title: "Le principe du libre choix",
+        info: "L'objet du contrat peut être librement déterminé dans les limites de la loi (art. 19 al. 1 CO). Les parties peuvent même créer de nouveaux contrats (contrats innommés).",
+        children: [],
+        parent: "oc_objet"
+    },
+    oc_obj_exceptions: {
+        title: "Les exceptions",
+        info: "Limites matérielles à la liberté contractuelle (art. 19 et 20 CO).",
+        children: ["oc_oexc_imp", "oc_oexc_ill", "oc_oexc_fraude", "oc_oexc_imm", "oc_oexc_att"],
+        parent: "oc_objet"
+    },
+    oc_oexc_imp: {
+        title: "L'impossibilité",
+        info: "L'impossibilité de la prestation doit présenter deux caractéristiques : elle doit être <strong>initiale (ou originaire)</strong> et <strong>objective</strong> (irréalisable pour tout le monde). Elle peut être matérielle ou juridique.",
+        children: ["cp_sculpture_detruite"],
+        parent: "oc_obj_exceptions"
+    },
+    cp_sculpture_detruite: {
+        title: "Cas pratique : Charlie & la sculpture",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie achète par téléphone une statue unique à un ami et verse l'argent. Or, la statue a été détruite la nuit précédant la conclusion du contrat (à l'insu de Charlie).</p>
+            <p class="cas-pratique-question">Que peut faire Charlie ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il y a une <strong>impossibilité initiale et objective</strong> (la chose n'existait plus au moment de l'accord).</p>
+                <p>La sanction (art. 20 CO) est la nullité absolue. Charlie disposera de l'action en enrichissement illégitime (art. 62 CO) pour récupérer son argent.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_oexc_imp"
+    },
+    oc_oexc_ill: {
+        title: "L'illicéité",
+        info: "Le contrat est illicite si son objet se heurte à une <strong>interdiction absolue</strong> du droit suisse (violation de dispositions impératives de droit privé ou public).",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_fraude: {
+        title: "La fraude à la loi",
+        info: "Consiste à recourir à un moyen apparemment légitime pour atteindre un résultat qui est prohibé (éviter une norme). Sanctionnée par l'interdiction de l'abus de droit.",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_imm: {
+        title: "L'immoralité",
+        info: "Sanctionne des comportements qui, sans être expressément interdits, <strong>heurtent la morale sociale</strong>.",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_oexc_att: {
+        title: "L'atteinte aux droits de la personnalité",
+        info: "Sanctionne un contrat dont l'objet porte sur une sphère inadmissible ou qui constitue un <strong>engagement excessif</strong> (art. 27 CC).",
+        children: [],
+        parent: "oc_obj_exceptions"
+    },
+    oc_obj_sanctions: {
+        title: "Sanctions pour objet illicite",
+        info: "Conséquences si l'objet viole les exceptions.",
+        children: ["oc_osan_principe", "oc_osan_exceptions"],
+        parent: "oc_objet"
+    },
+    oc_osan_principe: {
+        title: "Le principe de nullité absolue",
+        info: "La sanction normale du contrat impossible, illicite, contraire aux mœurs ou aux droits de la personnalité est la <strong>nullité absolue</strong>. Le contrat est radicalement nul même si le vice ne touche qu'une seule clause.",
+        children: [],
+        parent: "oc_obj_sanctions"
+    },
+    oc_osan_exceptions: {
+        title: "Les exceptions",
+        info: "<ul><li><strong>La nullité partielle :</strong> Seules les clauses viciées sont nulles, à moins que le contrat n'eût pas été conclu sans elles (art. 20 al. 2 CO).</li><li><strong>La nullité relative :</strong> Lorsque la norme violée a pour seul but de protéger la partie faible, seule cette partie protégée peut invoquer le vice.</li></ul>",
+        children: [],
+        parent: "oc_obj_sanctions"
+    },
+
+    // ==========================================
+    // LES VICES DU CONTRAT
+    // ==========================================
     oc_vices: {
         title: "Les vices du contrat",
-        info: "Erreur essentielle, Dol, Crainte fondée. + La lésion (exploitation d'une faiblesse). Contrat annulable (délai 1 an).",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Défauts mettant en péril l'existence du contrat en raison d'une volonté faussée ou d'une lésion.",
+        children: ["oc_vices_volonte", "oc_vices_lesion"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_vices_volonte: {
+        title: "Les vices de la volonté",
+        info: "La partie dont la volonté a été faussée par une cause interne (erreur) ou externe (dol, crainte) peut annuler le contrat.",
+        children: ["oc_vvol_erreur", "oc_vvol_dol", "oc_vvol_crainte"],
+        parent: "oc_vices"
+    },
+    oc_vvol_erreur: {
+        title: "L'erreur essentielle",
+        info: "L'erreur est une fausse représentation de la réalité. Pour être essentielle, elle doit être justifiable objectivement et causale subjectivement. L'annulation a un effet <strong>ex tunc</strong> (rétroactif). Guérison possible par ratification (délai péremptoire d'un an).<br><br>Deux types :<br><ul><li><strong>L'erreur de déclaration :</strong> La volonté exprimée ne correspond pas à la volonté réelle (sur la nature, l'identité de la chose/personne, quantité).</li><li><strong>L'erreur sur les motifs (erreur de base) :</strong> La déclaration est conforme à la volonté, mais repose sur une idée fausse. Doit être qualifiée : fait déterminé, <strong>subjectivement essentiel</strong> et <strong>objectivement essentiel</strong>.</li></ul>",
+        children: ["cp_tableau_faux"],
+        parent: "oc_vices_volonte"
+    },
+    cp_tableau_faux: {
+        title: "Cas pratique : Charlie & le tableau",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie achète de bonne foi à un ami une toile qu'ils pensent tous les deux être un original de Félix Vallotton. Plus tard, Charlie s'aperçoit que c'est un faux.</p>
+            <p class="cas-pratique-question">Peut-il annuler la vente ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une <strong>erreur essentielle sur les motifs (erreur de base, art. 24 al. 1 ch. 4 CO)</strong>. La jurisprudence fédérale (arrêt Picasso) admet que l'authenticité d'une œuvre est un fait que la loyauté commerciale permet de considérer comme une condition nécessaire au contrat.</p>
+                <p>Charlie pourra annuler le contrat de vente.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_vvol_erreur"
+    },
+    oc_vvol_dol: {
+        title: "Le dol",
+        info: "Consiste à <strong>induire intentionnellement une personne en erreur</strong> pour l'amener à conclure (art. 28 CO). Assimilé à l'escroquerie pénale.<br><br>Suppose deux conditions : <strong>une erreur et une tromperie</strong> (intentionnelle et qui a effectivement induit l'autre en erreur). Entraîne l'annulabilité et droit aux dommages-intérêts.",
+        children: [],
+        parent: "oc_vices_volonte"
+    },
+    oc_vvol_crainte: {
+        title: "La crainte fondée",
+        info: "Crainte inspirée <strong>intentionnellement et de manière illicite</strong> pour forcer à conclure (extorsion/chantage, art. 29 CO).<br><br>Quatre conditions : menace illicite, crainte fondée, menace intentionnelle et menace causale. La victime peut annuler le contrat et demander des dommages-intérêts, même si l'auteur est un tiers et le cocontractant de bonne foi.",
+        children: [],
+        parent: "oc_vices_volonte"
+    },
+    oc_vices_lesion: {
+        title: "La lésion",
+        info: "Préjudice économique issu d'un résultat inéquitable.",
+        children: ["oc_vles_notion", "oc_vles_conditions", "oc_vles_effets"],
+        parent: "oc_vices"
+    },
+    oc_vles_notion: {
+        title: "Notion",
+        info: "C'est le préjudice économique éprouvé à raison de la <strong>disproportion évidente des prestations</strong>, causé par l'exploitation de la gêne, de la légèreté ou de l'inexpérience (art. 21 CO). Contrairement aux vices de la volonté, la lésion s'attache au résultat obtenu.",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+    oc_vles_conditions: {
+        title: "Conditions",
+        info: "Trois conditions :<br>1. Disproportion évidente entre les prestations.<br>2. La gêne, la légèreté ou l'inexpérience de la victime.<br>3. <strong>L'exploitation consciente</strong> de la situation d'infériorité.",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+    oc_vles_effets: {
+        title: "Les effets de la lésion",
+        info: "Entraîne l'annulabilité du contrat. Le <strong>délai péremptoire d'un an court dès la conclusion du contrat</strong> (et non de la découverte du vice). Droit de réclamer des dommages-intérêts.",
+        children: [],
+        parent: "oc_vices_lesion"
+    },
+
+    // ==========================================
+    // LA REPRÉSENTATION
+    // ==========================================
     oc_representation: {
         title: "La représentation",
-        info: "Agir au nom d'un autre. Sans pouvoirs = pseudocontractant non lié sauf ratification.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Rapport en vertu duquel un acte accompli par un <strong>représentant</strong> produit des effets pour le <strong>représenté</strong> (art. 32 à 40 CO).",
+        children: ["oc_rep_notion", "oc_rep_types", "oc_rep_conditions", "oc_rep_sp", "oc_rep_double"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_rep_notion: {
+        title: "Notion",
+        info: "Trois personnes sont impliquées : le représenté, le représentant (qui agit au nom et pour le compte), et le cocontractant. <br><br>Se distingue de la <strong>représentation indirecte</strong> (représentant agit en son propre nom), des <strong>organes d'une personne morale</strong> (qui forment directement la volonté) et du <strong>messager</strong> (qui n'exprime aucune volonté propre).",
+        children: [],
+        parent: "oc_representation"
+    },
+    oc_rep_types: {
+        title: "Les types de représentation",
+        info: "Quatre distinctions :<br>1. Légale / Volontaire.<br>2. Avec pouvoirs / Sans pouvoirs.<br>3. Civile / Commerciale.<br>4. Active (émettre déclarations) / Passive (recevoir déclarations).",
+        children: [],
+        parent: "oc_representation"
+    },
+    oc_rep_conditions: {
+        title: "Les conditions",
+        info: "Deux conditions d'efficacité.",
+        children: ["oc_rcond_nom", "oc_rcond_pouvoir"],
+        parent: "oc_representation"
+    },
+    oc_rcond_nom: {
+        title: "L'action au nom du représenté",
+        info: "Le représentant doit avoir la volonté d'agir au nom du représenté et la <strong>manifester expressément</strong> au cocontractant. Exceptions (art. 32 al. 2) : rapport implicite ou indifférence du cocontractant.",
+        children: [],
+        parent: "oc_rep_conditions"
+    },
+    oc_rcond_pouvoir: {
+        title: "Le pouvoir de représentation",
+        info: "Peut avoir trois sources : la loi, décision d'autorité, acte juridique unilatéral. À la fin, le représentant doit restituer le titre de procuration.",
+        children: [],
+        parent: "oc_rep_conditions"
+    },
+    oc_rep_sp: {
+        title: "La représentation sans pouvoirs",
+        info: "Agir au nom d'un autre sans avoir les pouvoirs nécessaires.",
+        children: ["oc_rsp_notion", "oc_rsp_pseudocont", "oc_rsp_repcont", "oc_rsp_pseudo_pseudo", "cp_catherine_1"],
+        parent: "oc_representation"
+    },
+    cp_catherine_1: {
+        title: "Cas pratique : Charlie et la procuration trop large",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie, cloué au lit, donne une procuration très générale à son mécanicien pour aller acheter des pièces détachées. Le mécanicien en profite pour mandater, au nom de Charlie, un architecte afin de rénover le magasin.</p>
+            <p class="cas-pratique-question">Quels sont les rapports juridiques entre Charlie, le mécanicien et l'architecte ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une représentation sans pouvoir (le mécanicien n'avait pas l'autorité pour la rénovation).</p>
+                <p>Toutefois, la procuration écrite très générale créée par Charlie constitue une <strong>apparence efficace</strong>. Si l'architecte est de bonne foi, Charlie est lié par le contrat.</p>
+                <p>Charlie pourra ensuite réclamer des dommages-intérêts à son mécanicien (le pseudo-représentant).</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_rep_sp"
+    },
+    oc_rsp_notion: {
+        title: "Notion",
+        info: "Survient quand les pouvoirs n'ont jamais été octroyés, ont été excédés, ou se sont éteints.",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_pseudocont: {
+        title: "Rapports pseudo-représenté / contractant",
+        info: "Le pseudo-représenté <strong>n'est pas lié</strong>. Il le devient seulement si :<br><ul><li><strong>Ratification du contrat :</strong> Acte unilatéral avec effet rétroactif (ex tunc). Le tiers peut fixer un délai.</li><li><strong>Apparence efficace :</strong> Le pseudo-représenté a lui-même créé l'apparence des pouvoirs, le tiers de bonne foi est protégé.</li></ul>",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_repcont: {
+        title: "Rapports pseudo-représentant / cocontractant",
+        info: "Le pseudo-représentant n'est pas obligé par le contrat. S'il n'y a pas ratification, il <strong>doit des dommages-intérêts</strong> au cocontractant, sauf si ce dernier connaissait l'absence de pouvoirs.",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rsp_pseudo_pseudo: {
+        title: "Rapports pseudo-représenté / pseudo-représentant",
+        info: "Le comportement peut causer un préjudice au représenté, réparable via le contrat de base (mandat), responsabilité délictuelle, ou gestion d'affaires.",
+        children: [],
+        parent: "oc_rep_sp"
+    },
+    oc_rep_double: {
+        title: "Contrat avec soi-même et double représentation",
+        info: "Une personne agit seule comme représentant et en son propre nom (avec soi-même) ou comme représentant des deux parties (double). <br><br>Il y a un <strong>danger évident de conflit d'intérêts</strong>. La jurisprudence pose le <strong>principe de la nullité du contrat</strong>, à moins que la nature de l'affaire exclue tout préjudice ou que le représenté ait autorisé/ratifié l'acte.",
+        children: ["cp_catherine_2"],
+        parent: "oc_representation"
+    },
+    cp_catherine_2: {
+        title: "Cas pratique : Catherine, l'avocate-administratrice",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Catherine est avocate et administratrice unique d'une start-up. Face à un litige, la société décide de mandater Catherine comme avocate.</p>
+            <p class="cas-pratique-question">Est-ce valable ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'un <strong>contrat avec soi-même</strong> (Catherine agit pour la société et pour elle-même). Il y a un fort risque de conflit d'intérêts qui peut entraîner la nullité.</p>
+                <p>De plus, l'art. 718b CO exige impérativement que ce contrat revête la <strong>forme écrite</strong> s'il dépasse CHF 1'000.-.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_rep_double"
+    },
+
+    // ==========================================
+    // LA STIPULATION POUR AUTRUI
+    // ==========================================
     oc_stipulation: {
         title: "La stipulation pour autrui",
-        info: "Imparfaite ou Parfaite.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Convention où le <strong>promettant</strong> promet au <strong>stipulant</strong> de faire sa prestation à un tiers, le <strong>bénéficiaire</strong> (art. 112 CO).",
+        children: ["oc_stip_notion", "oc_stip_effets", "cp_stipulation_tv"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    cp_stipulation_tv: {
+        title: "Cas pratique I : Charlie et la télévision",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie achète une télévision dans un magasin et demande au vendeur de la livrer directement chez ses parents en cadeau.</p>
+            <p class="cas-pratique-question">Comment qualifier juridiquement cet acte ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une <strong>stipulation pour autrui imparfaite</strong>.</p>
+                <ul>
+                    <li>Le promettant (débiteur de la livraison) = Le magasin.</li>
+                    <li>Le stipulant (créancier qui peut exiger l'exécution) = Charlie.</li>
+                    <li>Les bénéficiaires (ceux qui reçoivent) = Les parents. Les parents ne peuvent pas forcer le magasin en justice à livrer (imparfaite).</li>
+                </ul>
+            </div>
+        </div>`,
+        children: [], parent: "oc_stipulation"
+    },
+    oc_stip_notion: {
+        title: "Notion",
+        info: "<ul><li><strong>Imparfaite :</strong> Seul le stipulant est créancier. Le bénéficiaire reçoit valablement mais ne peut exiger l'exécution.</li><li><strong>Parfaite :</strong> Le bénéficiaire acquiert un droit de créance. Le promettant a deux créanciers. Le bénéficiaire <strong>se substitue entièrement</strong> au stipulant s'il déclare vouloir utiliser son droit.</li></ul>",
+        children: [],
+        parent: "oc_stipulation"
+    },
+    oc_stip_effets: {
+        title: "Les effets",
+        info: "Les trois relations qui en découlent.",
+        children: ["oc_seff_couv", "oc_seff_prest", "oc_seff_val"],
+        parent: "oc_stipulation"
+    },
+    oc_seff_couv: {
+        title: "Rapport de couverture ou de provision",
+        info: "Entre le promettant et le stipulant. Le stipulant est créancier du promettant (seul dans l'imparfaite, solidaire dans la parfaite).",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+    oc_seff_prest: {
+        title: "Rapport de prestation",
+        info: "Entre le promettant et le bénéficiaire. Le bénéficiaire acquiert une créance propre uniquement dans la stipulation parfaite.",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+    oc_seff_val: {
+        title: "Rapport de valeur",
+        info: "Entre le stipulant et le bénéficiaire. Justifie l'enrichissement du bénéficiaire.",
+        children: [],
+        parent: "oc_stip_effets"
+    },
+
+    // ==========================================
+    // LES SÛRETÉS PERSONNELLES
+    // ==========================================
     oc_suretes: {
         title: "Les sûretés personnelles",
-        info: "Cautionnement (strictement accessoire) vs Porte-fort (indépendant).",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "Contrats garantissant l'exécution d'une obligation.",
+        children: ["oc_sur_cautionnement", "oc_sur_portefort"],
+        parent: "obligations_contractuelles_titre10"
     },
-    
+    oc_sur_cautionnement: {
+        title: "Le cautionnement",
+        info: "Garantie de la dette d'autrui (art. 492 CO).",
+        children: ["oc_caut_notion", "oc_caut_effets", "cp_caution_manon"],
+        parent: "oc_suretes"
+    },
+    cp_caution_manon: {
+        title: "Cas pratique II : Charlie et Manon (La caution)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie contracte un prêt de CHF 30'000.- auprès d'une banque pour ouvrir son magasin. La banque exige une caution. Manon, célibataire, accepte.</p>
+            <p class="cas-pratique-question">Quelles sont les conditions et les risques pour Manon ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p><strong>Conditions :</strong> La dette principale existe (30'000.-). La loi exige la <strong>forme authentique</strong> car le montant dépasse CHF 2'000.- (art. 493 CO). La signature de Manon chez un notaire est requise (seule, puisqu'elle n'est pas mariée).</p>
+                <p><strong>Risques :</strong> Si Charlie ne paie pas, Manon devra payer CHF 30'000.- (+ intérêts/frais) à la banque. Elle obtiendra ensuite, par subrogation légale, un droit de recours contre Charlie.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_sur_cautionnement"
+    },
+    oc_caut_notion: {
+        title: "Notion",
+        info: "La caution s'engage envers le créancier à répondre accessoirement de la dette. <br><br><strong>Spécificité : son caractère accessoire.</strong> Il dépend de l'existence de la dette principale. La nullité de l'engagement principal entraîne la nullité du cautionnement.",
+        children: [],
+        parent: "oc_sur_cautionnement"
+    },
+    oc_caut_effets: {
+        title: "Les effets",
+        info: "La caution donne une garantie de solvabilité.<br><br><strong>Subrogation :</strong> La caution qui a désintéressé le créancier est <strong>subrogée aux droits de celui-ci</strong> (le paiement transfère la créance à la caution), lui offrant un droit de recours contre le débiteur.",
+        children: [],
+        parent: "oc_sur_cautionnement"
+    },
+    oc_sur_portefort: {
+        title: "Le contrat de porte-fort",
+        info: "Garantie indépendante (art. 111 CO).",
+        children: ["oc_pf_notion", "oc_pf_effets", "cp_portefort_cata"],
+        parent: "oc_suretes"
+    },
+    cp_portefort_cata: {
+        title: "Cas pratique III : Charlie et Cata SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie vend ses actions de Cata SA à son ami Romain en lui garantissant qu'elles lui verseront un dividende annuel de plus de 8%. Cependant, Cata SA ne verse que 2% de dividendes.</p>
+            <p class="cas-pratique-question">Comment qualifier l'engagement de Charlie ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'un <strong>contrat de porte-fort</strong> (Charlie promet le fait d'un tiers, la société Cata SA).</p>
+                <p>Puisque le tiers (Cata SA) ne réalise pas l'événement promis, Charlie devra payer des dommages-intérêts à Romain (art. 111 CO).</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_sur_portefort"
+    },
+    oc_pf_notion: {
+        title: "Notion",
+        info: "Engagement <strong>indépendant</strong> par lequel on promet de réparer le dommage si un débiteur/tiers ne s'exécute pas. Implique la garantie du fait d'autrui. <br><br>Contrairement au cautionnement, il n'est <strong>soumis à aucune règle de forme</strong>. En cas de doute d'interprétation, le juge penchera pour le cautionnement (plus protecteur).",
+        children: [],
+        parent: "oc_sur_portefort"
+    },
+    oc_pf_effets: {
+        title: "Les effets",
+        info: "N'a aucun effet pour le tiers. Oblige le promettant (le porte-fort) à verser des dommages-intérêts à son cocontractant si le tiers ne s'exécute pas.",
+        children: [],
+        parent: "oc_sur_portefort"
+    },
+
+    // ==========================================
+    // LA SUBROGATION
+    // ==========================================
     oc_subrogation: {
         title: "La subrogation",
-        info: "Le transfert légal de la créance.",
-        children: [], parent: "obligations_contractuelles_titre10"
+        info: "La subrogation est le <strong>transfert légal de la créance</strong> (art. 110 CO). Le paiement n'éteint pas la créance, mais la transfère du créancier à un tiers. Exemples : la caution qui paie, ou le tiers qui paie le créancier pour libérer un gage.",
+        children: ["cp_subrogation_guillaume"],
+        parent: "obligations_contractuelles_titre10"
+    },
+    cp_subrogation_guillaume: {
+        title: "Cas pratique IV : Le frère de Charlie",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Suite à l'affaire précédente, Charlie doit de l'argent à Romain. Guillaume, le frère de Charlie, s'acquitte de la dette de Charlie envers Romain. Charlie avait averti Romain de cet arrangement.</p>
+            <p class="cas-pratique-question">Que se passe-t-il juridiquement ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>C'est un cas de <strong>subrogation légale</strong> (art. 110 ch. 2 CO). Un tiers (Guillaume) paie le créancier (Romain), et le créancier a été prévenu par le débiteur (Charlie).</p>
+                <p>La dette n'est pas éteinte : Guillaume devient le nouveau créancier de Charlie à la place de Romain.</p>
+            </div>
+        </div>`,
+        children: [], parent: "oc_subrogation"
     },
 
     // --- 11. LA RESPONSABILITÉ CIVILE ---
@@ -1454,221 +2531,1518 @@ const courseData = {
         ],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // NOTION
+    // ==========================================
     rc_notion: {
         title: "Notion",
-        info: "3 conditions générales : préjudice, causalité, illicéité + titre (faute ou loi).",
-        children: [], parent: "rc_titre11"
+        info: "La responsabilité désigne l'obligation faite à un sujet de droit de réparer le préjudice causé à autrui. <br><br>Au sens étroit, elle désigne l'obligation de réparer un dommage résultant d'un acte illicite. Elle a alors pour synonyme les expressions de <strong>responsabilité délictuelle</strong> et de <strong>responsabilité extracontractuelle</strong>.<br><br>Toute responsabilité civile suppose <strong>trois conditions générales</strong> (préjudice, rapport de causalité, illicéité) ainsi qu'un titre de responsabilité (la faute ou la loi).",
+        children: [],
+        parent: "rc_titre11"
     },
-    
+
+    // ==========================================
+    // LE PRÉJUDICE
+    // ==========================================
     rc_prejudice: {
         title: "Le préjudice",
-        info: "Dommage (perte effective / gain manqué) et Tort moral.",
-        children: [], parent: "rc_titre11"
+        info: "Toute prétention délictuelle suppose une <strong>péjoration de la situation de la victime</strong>. Le préjudice est une catégorie générique regroupant le dommage et le tort moral.",
+        children: ["rc_prej_dommage", "rc_prej_tortmoral"],
+        parent: "rc_titre11"
     },
-    
+    rc_prej_dommage: {
+        title: "Le dommage",
+        info: "C'est la diminution de valeur du patrimoine d'une personne qui se produit sans la volonté de celle-ci.",
+        children: ["rc_dom_notion", "rc_dom_types"],
+        parent: "rc_prejudice"
+    },
+    rc_dom_notion: {
+        title: "Notion",
+        info: "Le dommage se calcule en faisant la différence entre l'état actuel du patrimoine et son état hypothétique sans l'acte dommageable. C'est la <strong>théorie de la différence</strong>.<br><br>Le dommage est une <strong>notion exclusivement patrimoniale</strong> (la valeur affective n'entre pas en considération).",
+        children: [],
+        parent: "rc_prej_dommage"
+    },
+    rc_dom_types: {
+        title: "Les types de dommage",
+        info: "Distinctions des différentes formes que peut prendre le dommage patrimonial.",
+        children: ["rc_typ_pertegain", "rc_typ_corpmat"],
+        parent: "rc_prej_dommage"
+    },
+    rc_typ_pertegain: {
+        title: "La perte effective et le gain manqué",
+        info: "<ul><li><strong>La perte effective :</strong> diminution effective de la fortune nette (l'actif diminue ou le passif augmente).</li><li><strong>Le gain manqué :</strong> perte d'un gain futur que la victime aurait réalisé sans l'acte dommageable.</li></ul>",
+        children: [],
+        parent: "rc_dom_types"
+    },
+    rc_typ_corpmat: {
+        title: "Le dommage corporel, matériel et les autres dommages",
+        info: "<ul><li><strong>Dommage corporel :</strong> résulte d'une atteinte à l'intégrité physique de la victime (ex: frais médicaux).</li><li><strong>Dommage matériel :</strong> découle d'une atteinte à un objet. Il y a dommage matériel lorsqu'une personne subit la destruction d'une chose <strong>dont elle est propriétaire</strong>.</li><li><strong>Autres dommages (purement patrimonial ou économique) :</strong> tous les dommages qui ne sont ni corporels ni matériels (ex: perte d'exploitation).</li></ul>",
+        children: [],
+        parent: "rc_dom_types"
+    },
+    rc_prej_tortmoral: {
+        title: "Le tort moral",
+        info: "Le tort moral désigne les <strong>souffrances physiques ou psychiques</strong> que ressent la victime à la suite d'une atteinte à sa personnalité (ex: chagrin consécutif au décès d'un proche, douleur d'une blessure).",
+        children: [],
+        parent: "rc_prejudice"
+    },
+
+    // ==========================================
+    // LE RAPPORT DE CAUSALITÉ
+    // ==========================================
     rc_causalite: {
         title: "Le rapport de causalité",
-        info: "Naturelle et adéquate. Interruption possible.",
-        children: [], parent: "rc_titre11"
+        info: "L'exigence d'un lien de cause à effet entre le comportement de l'auteur et le préjudice.",
+        children: ["rc_caus_nat", "rc_caus_adeq", "rc_caus_int"],
+        parent: "rc_titre11"
     },
-    
+    rc_caus_nat: {
+        title: "La causalité naturelle",
+        info: "D'un point de vue logique, constitue la cause d'un événement <strong>tout fait sans lequel l'événement ne se serait pas produit</strong>.",
+        children: [],
+        parent: "rc_causalite"
+    },
+    rc_caus_adeq: {
+        title: "La causalité adéquate",
+        info: "Pour limiter l'extension illimitée de la responsabilité, la jurisprudence utilise la causalité adéquate. Un fait est une cause adéquate si, <strong>d'après le cours ordinaire des choses et l'expérience de la vie</strong>, ce fait était propre à entraîner un résultat du genre de celui qui s'est produit.",
+        children: [],
+        parent: "rc_causalite"
+    },
+    rc_caus_int: {
+        title: "L'interruption du lien de causalité",
+        info: "Une cause adéquate cesse de l'être lorsqu'une autre cause apparaît à tel point prépondérante qu'elle rejette la première à l'arrière-plan. On distingue trois faits interruptifs :<br><ul><li><strong>La force majeure.</strong></li><li><strong>La faute grave de la victime.</strong></li><li><strong>La faute grave d'un tiers.</strong></li></ul>",
+        children: [],
+        parent: "rc_causalite"
+    },
+
+    // ==========================================
+    // L'ILLICÉITÉ
+    // ==========================================
     rc_illiceite: {
         title: "L'illicéité",
-        info: "Par résultat (droit absolu) ou comportement (norme protectrice). Faits justificatifs.",
-        children: [], parent: "rc_titre11"
+        info: "La transgression d'une norme protégeant autrui.",
+        children: ["rc_ill_notion", "rc_ill_res", "rc_ill_comp", "rc_ill_faits"],
+        parent: "rc_titre11"
     },
-    
+    rc_ill_notion: {
+        title: "Notion",
+        info: "L'illicéité consiste en la transgression d'une norme de comportement appliquant défense de nuire à autrui. Elle prend deux formes : par le résultat ou par le comportement.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_res: {
+        title: "L'illicéité par le résultat",
+        info: "Lorsque le préjudice résulte de l'atteinte à un <strong>droit subjectif absolu</strong> (intégrité corporelle, propriété, droits réels), il est <strong>d'emblée illicite</strong> sans qu'il soit nécessaire d'examiner le comportement de l'auteur.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_comp: {
+        title: "L'illicéité par le comportement",
+        info: "Lorsque le dommage est purement patrimonial (pas d'atteinte à un droit absolu), l'illicéité n'est donnée que si l'auteur a transgressé une <strong>norme protectrice</strong> dont la finalité est de protéger la victime contre ce genre de préjudice.",
+        children: [],
+        parent: "rc_illiceite"
+    },
+    rc_ill_faits: {
+        title: "Les faits justificatifs",
+        info: "Un comportement a priori illicite peut devenir licite grâce à cinq faits justificatifs :<br><ul><li><strong>Le consentement de la victime.</strong></li><li><strong>La légitime défense.</strong></li><li><strong>L'état de nécessité.</strong></li><li><strong>La défense personnelle.</strong></li><li><strong>Le devoir de fonction</strong> (exercice autorisé de la puissance publique).</li></ul>",
+        children: [],
+        parent: "rc_illiceite"
+    },
+
+    // ==========================================
+    // LA FAUTE (SUBJECTIVE)
+    // ==========================================
     rc_faute: {
         title: "La faute, condition de la responsabilité subjective",
-        info: "Manquement de la volonté. Intention ou négligence.",
-        children: [], parent: "rc_titre11"
+        info: "Élément central de la responsabilité basée sur le comportement (Art. 41 CO).",
+        children: ["rc_fau_notion", "rc_fau_gravite", "cp_ski"],
+        parent: "rc_titre11"
     },
-    
+    cp_ski: {
+        title: "Cas pratique : Charlie & le ski",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie veut battre un record de vitesse à ski sur une piste qui croise un chemin de randonnée. Il sait qu'il risque de créer un accident mais se dit qu'avec un peu de chance il n'y aura personne. Il percute un randonneur (lésions graves, iPhone et lunettes cassés).</p>
+            <p class="cas-pratique-question">Charlie est-il responsable civilement ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Vérifions les 4 conditions de la responsabilité subjective (art. 41 CO) :</p>
+                <ol>
+                    <li><strong>Préjudice :</strong> Lésions corporelles, frais médicaux, gain manqué, dommage matériel (lunettes, iPhone).</li>
+                    <li><strong>Causalité :</strong> Naturelle et adéquate.</li>
+                    <li><strong>Illicéité :</strong> Atteinte à un droit absolu (intégrité corporelle + propriété). Illicéité par résultat.</li>
+                    <li><strong>Faute :</strong> Il connaissait les risques et les a acceptés (Dol éventuel).</li>
+                </ol>
+                <p>Charlie devra réparer l'intégralité du dommage subi par le randonneur.</p>
+            </div>
+        </div>`,
+        children: [], parent: "rc_faute"
+    },
+    rc_fau_notion: {
+        title: "Notion",
+        info: "La faute se définit comme un <strong>manquement de la volonté aux devoirs imposés par l'ordre juridique</strong>.<br><br>Elle comprend :<br><ul><li>Un <strong>élément objectif</strong> : déviation du comportement exigé par rapport à une personne consciencieuse et raisonnable.</li><li>Un <strong>élément subjectif</strong> : intention ou négligence.</li></ul><br>En pratique, la jurisprudence recourt à une <strong>notion objectivée de la faute</strong> et écarte les motifs d'excuses purement personnels (ex: stress, fatigue).",
+        children: [],
+        parent: "rc_faute"
+    },
+    rc_fau_gravite: {
+        title: "Gravité",
+        info: "On distingue trois degrés : <strong>faute grave (ou lourde), faute légère, et faute moyenne</strong>. Une faute légère peut entraîner une réduction de la réparation, tandis qu'une faute grave de la victime/tiers peut interrompre le lien de causalité.",
+        children: [],
+        parent: "rc_faute"
+    },
+
+    // ==========================================
+    // LA RESPONSABILITÉ OBJECTIVE
+    // ==========================================
     rc_objective: {
         title: "La responsabilité objective",
-        info: "Indépendante de la faute. Employeur (preuves libératoires), Ouvrage, Produits (LRFP).",
-        children: [], parent: "rc_titre11"
+        info: "Responsabilités indépendantes de toute faute personnelle de l'auteur.",
+        children: ["rc_obj_notion", "rc_obj_employeur", "rc_obj_ouvrage", "rc_obj_produits"],
+        parent: "rc_titre11"
     },
-    
+    rc_obj_notion: {
+        title: "Notion",
+        info: "Certaines dispositions instituent des responsabilités sans faute. On distingue :<br><ul><li><strong>Les responsabilités objectives simples :</strong> reposent sur la violation présumée d'un <strong>devoir de diligence</strong> (ex: l'employeur).</li><li><strong>Les responsabilités objectives aggravées :</strong> reposent sur le <strong>risque inhérent</strong> à certaines activités (ne supposent même pas la violation d'un devoir de diligence).</li></ul>",
+        children: [],
+        parent: "rc_objective"
+    },
+    rc_obj_employeur: {
+        title: "La responsabilité de l'employeur",
+        info: "L'employeur répond du fait de ses auxiliaires (dès qu'il y a <strong>lien de subordination</strong>) s'ils commettent un acte illicite dans l'exercice de leur travail (art. 55 CO).<br><br>Il dispose de <strong>deux preuves libératoires</strong> :<br><ul><li>Faire la triple preuve de la diligence dans le choix, l'instruction et la surveillance de l'auxiliaire.</li><li>Établir l'absence de lien de causalité.</li></ul>",
+        children: [],
+        parent: "rc_objective"
+    },
+    rc_obj_ouvrage: {
+        title: "La responsabilité du propriétaire d'ouvrage",
+        info: "Le propriétaire d'un ouvrage (objet créé/disposé par la main de l'homme et rattaché au sol) est responsable si le préjudice est la conséquence d'un <strong>défaut de l'ouvrage</strong> (art. 58 CO).",
+        children: ["cp_plongeoir"],
+        parent: "rc_objective"
+    },
+    cp_plongeoir: {
+        title: "Cas pratique : Charlie et le plongeoir",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>La commune de Cully construit un plongeoir dans le lac, mais l'eau n'y fait même pas un mètre de profondeur. Charlie saute, se brise la jambe (frais médicaux + perte de gain pendant 6 semaines).</p>
+            <p class="cas-pratique-question">La commune est-elle responsable ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit de la <strong>responsabilité objective du propriétaire d'ouvrage (art. 58 CO)</strong>.</p>
+                <p>La commune est propriétaire. Le plongeoir est un ouvrage. Il y a un <strong>défaut de l'ouvrage</strong> car le plongeoir n'offre pas la sécurité suffisante pour l'usage auquel il est destiné. Le comportement de Charlie (sauter d'un plongeoir) correspond à un usage normal, sa faute concomitante n'interrompt pas le lien de causalité.</p>
+                <p>La commune devra indemniser Charlie.</p>
+            </div>
+        </div>`,
+        children: [], parent: "rc_obj_ouvrage"
+    },
+    rc_obj_produits: {
+        title: "La responsabilité du fait des produits",
+        info: "Le producteur répond, indépendamment de toute faute, des dommages corporels causés par un <strong>produit défectueux</strong> (qui n'offre pas la sécurité à laquelle on est en droit de s'attendre). Régi par la LRFP.<br><br>Pour les dommages matériels, la victime doit supporter une <strong>franchise de 900 CHF</strong> pour éviter la multiplication des petits litiges.",
+        children: [],
+        parent: "rc_objective"
+    },
+
+    // ==========================================
+    // LA RÉPARATION DU PRÉJUDICE
+    // ==========================================
     rc_reparation: {
         title: "La réparation du préjudice",
-        info: "Réduction possible selon la gravité. Cas de lésions ou décès.",
-        children: [], parent: "rc_titre11"
+        info: "Manières dont le dommage est compensé en justice.",
+        children: ["rc_rep_modes", "rc_rep_etendue", "rc_rep_cas"],
+        parent: "rc_titre11"
     },
-    
+    rc_rep_modes: {
+        title: "Les modes de réparation",
+        info: "Le juge a le choix entre la <strong>réparation en nature</strong> ou la <strong>réparation en argent</strong>. En pratique, les tribunaux optent dans la grande majorité des cas pour la réparation en argent.",
+        children: [],
+        parent: "rc_reparation"
+    },
+    rc_rep_etendue: {
+        title: "L'étendue de la réparation",
+        info: "En principe, l'auteur doit réparer l'intégralité du préjudice. Toutefois, le juge peut réduire l'indemnité selon certains <strong>facteurs de réduction</strong> :<br><ul><li>La légèreté de la faute de l'auteur.</li><li>La faute concomitante de la victime.</li><li>Le consentement de la victime.</li><li>La gêne du responsable.</li></ul>",
+        children: [],
+        parent: "rc_reparation"
+    },
+    rc_rep_cas: {
+        title: "Cas particuliers de réparation",
+        info: "La loi encadre spécifiquement les indemnités en cas d'atteinte aux personnes.",
+        children: ["rc_cas_lesions", "rc_cas_deces"],
+        parent: "rc_reparation"
+    },
+    rc_cas_lesions: {
+        title: "L'indemnité en cas de lésions corporelles",
+        info: "Comprend quatre postes : le remboursement des frais de traitement, l'indemnité pour incapacité de travail, l'indemnité pour atteinte à l'avenir économique, et l'indemnité pour tort moral (art. 46 et 47 CO).",
+        children: [],
+        parent: "rc_rep_cas"
+    },
+    rc_cas_deces: {
+        title: "L'indemnité en cas de décès de la victime",
+        info: "Accorde à de tierces personnes le droit de réclamer la réparation du préjudice qu'elles subissent par ricochet. Comprend : dommage antérieur au décès, frais d'inhumation, <strong>perte de soutien</strong>, et tort moral (art. 45 et 47 CO).",
+        children: [],
+        parent: "rc_rep_cas"
+    },
+
+    // ==========================================
+    // LA PLURALITÉ DE RESPONSABLES
+    // ==========================================
     rc_pluralite: {
         title: "La pluralité de responsables",
-        info: "Solidarité parfaite (faute commune) ou imparfaite (titres différents).",
-        children: [], parent: "rc_titre11"
+        info: "Lorsque plusieurs personnes sont tenues de réparer un même préjudice, la loi prévoit deux cas de figure (art. 50 et 51 CO) :<br><ul><li><strong>La solidarité parfaite :</strong> Les auteurs ont causé le préjudice par une faute commune (activité/entreprise commune).</li><li><strong>La solidarité imparfaite :</strong> Les auteurs répondent du préjudice à des titres différents (ex: un contractuel, un délictuel).</li></ul><br>Dans les deux cas, la victime peut agir <strong>pour le tout contre chacun</strong>. En interne, l'ordre de recours est : d'abord le responsable délictuel, puis le contractuel, enfin l'objectif.",
+        children: [],
+        parent: "rc_titre11"
     },
-    
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
     rc_prescription: {
-        title: "La prescription (RC)",
-        info: "Relatif 3 ans. Absolu 10 ans (20 ans si mort/lésion).",
-        children: [], parent: "rc_titre11"
+        title: "La prescription",
+        info: "L'action délictuelle (art. 60 CO) est soumise à des délais spécifiques :<br><ul><li>Un <strong>délai relatif de trois ans</strong> (dès la connaissance du préjudice et de l'auteur).</li><li>Un <strong>délai absolu de dix ans</strong> (dès la survenance du fait dommageable).</li><li>Un <strong>délai absolu de vingt ans en cas de mort d'homme ou de lésions corporelles</strong>.</li></ul>",
+        children: ["cp_manifestation"],
+        parent: "rc_titre11"
+    },
+    cp_manifestation: {
+        title: "Cas pratique : Charlie et la manifestation (Prescription)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Lors d'une manifestation, 5 casseurs détruisent la vitrine du magasin de Charlie (dizaines de milliers de CHF de dommage). Charlie découvre l'identité des coupables 13 ans plus tard.</p>
+            <p class="cas-pratique-question">La créance est-elle prescrite ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Les casseurs forment une <strong>solidarité parfaite</strong> (art. 50 CO). Le délai de prescription pour une RC est en principe de 10 ans absolu.</p>
+                <p>Cependant, l'art. 60 al. 2 CO prévoit que si l'acte est punissable pénalement d'un délai plus long, c'est le délai pénal qui s'applique. L'infraction de dommages à la propriété (considérable) au sens pénal se prescrit par <strong>15 ans</strong> (art. 97 CP).</p>
+                <p><strong>Conclusion :</strong> L'action de Charlie n'est pas prescrite (13 ans < 15 ans).</p>
+            </div>
+        </div>`,
+        children: [], parent: "rc_prescription"
     },
 
     // --- 12. LA RESPONSABILITÉ CONTRACTUELLE ---
     rc_contractuelle_titre12: {
         title: "12. La responsabilité contractuelle",
-        info: "Obligation de réparer le préjudice causé par la violation d'un contrat (Art. 97 à 101 CO).",
-        children: ["rcc_notion", "rcc_conditions", "rcc_prescription"],
+        info: "Ce titre traite de l'obligation de réparer le préjudice causé par la violation d'un contrat (Art. 97 à 101 CO).",
+        children: ["rcc_notion", "rcc_sources", "rcc_conditions", "rcc_reparation", "rcc_prescription"],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // NOTION
+    // ==========================================
     rcc_notion: {
         title: "Notion",
-        info: "Les parties sont liées par une relation juridique préalable.",
-        children: [], parent: "rc_contractuelle_titre12"
+        info: "Alors que la responsabilité civile vise la violation d'un devoir général, la responsabilité contractuelle s'applique lors de la <strong>violation d'une obligation contractuelle</strong>.<br><br>Elle se définit comme l'ensemble des règles qui impose au débiteur l'obligation de réparer le préjudice causé au créancier par la violation de ses obligations contractuelles.<br><br>La différence majeure avec la responsabilité civile extracontractuelle est que <strong>les parties sont liées par une relation juridique préalable</strong>.",
+        children: [],
+        parent: "rc_contractuelle_titre12"
     },
-    
+
+    // ==========================================
+    // LES SOURCES
+    // ==========================================
+    rcc_sources: {
+        title: "Les sources de la responsabilité contractuelle",
+        info: "La responsabilité contractuelle est régie par deux types de sources :<br><ul><li><strong>Les règles contractuelles :</strong> celles qui proviennent du contrat liant le débiteur et le créancier. C'est la première source applicable.</li><li><strong>Les règles légales :</strong> composées de règles générales (art. 97 à 101 CO) ou spéciales (partie spéciale du CO ou lois spéciales).</li></ul>",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LES CONDITIONS
+    // ==========================================
     rcc_conditions: {
-        title: "Les conditions",
-        info: "Quatre conditions cumulatives. <strong>La faute est présumée.</strong>",
-        children: [], parent: "rc_contractuelle_titre12"
+        title: "Les conditions de la responsabilité contractuelle",
+        info: "Selon l'art. 97 al. 1 CO, la responsabilité contractuelle exige la réalisation de <strong>quatre conditions cumulatives</strong> :<br><ol><li><strong>Un préjudice :</strong> Conséquences de l'inexécution sur le patrimoine du créancier (s'interprète comme en RC extracontractuelle).</li><li><strong>La violation du contrat :</strong> Condition remplie lorsque le débiteur a violé ses obligations contractuelles.</li><li><strong>Un rapport de causalité :</strong> Lien de causalité naturelle et adéquate entre la violation de l'obligation et le préjudice.</li><li><strong>Une faute :</strong> Manquement de la volonté aux devoirs imposés par le contrat. <strong>Particularité cruciale : la faute est présumée</strong> (art. 97 al. 1 CO). C'est au débiteur de prouver qu'il n'a commis aucune faute pour se libérer.</li></ol>",
+        children: ["cp_marcel_banque"],
+        parent: "rc_contractuelle_titre12"
     },
-    
+    cp_marcel_banque: {
+        title: "Cas pratique : Charlie & Prizebank SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie demande à Prizebank SA de vendre ses actions (qui valent 10'000.-). La banque oublie. Le lendemain, l'action s'effondre. Le surlendemain, la banque n'ayant toujours pas vendu, les actions ne valent plus que 100.-.</p>
+            <p class="cas-pratique-question">Sur quelle base Charlie peut-il récupérer ses 9'900.- ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Charlie agira sur la base de la <strong>Responsabilité contractuelle (art. 97 CO)</strong> car ils sont liés par un contrat de gestion de fortune.</p>
+                <ol>
+                    <li><strong>Préjudice :</strong> Gain manqué de CHF 9'900.-</li>
+                    <li><strong>Violation :</strong> La banque n'a pas exécuté l'ordre (inexécution).</li>
+                    <li><strong>Causalité :</strong> L'oubli de la banque a directement causé la perte.</li>
+                    <li><strong>Faute :</strong> Présumée. Prizebank a manqué de diligence (négligence).</li>
+                </ol>
+                <p>Charlie a 10 ans pour agir en justice (art. 127 CO).</p>
+            </div>
+        </div>`,
+        children: [], parent: "rcc_conditions"
+    },
+
+    // ==========================================
+    // LA RÉPARATION DU PRÉJUDICE
+    // ==========================================
+    rcc_reparation: {
+        title: "La réparation du préjudice",
+        info: "Lorsque les conditions sont remplies, le débiteur est tenu de réparer le préjudice causé.<br><br>La réparation consistera soit en une <strong>somme d'argent</strong> (capital ou rente), soit en une <strong>réparation en nature</strong> (art. 43 CO). L'indemnité due se substitue à la prestation initiale et est fixée conformément aux principes qui régissent la responsabilité civile (renvoi de l'art. 99 al. 3 CO).",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
     rcc_prescription: {
         title: "La prescription",
-        info: "Délai ordinaire de 10 ans. 5 ans pour loyers/artisans/médecins.",
-        children: [], parent: "rc_contractuelle_titre12"
+        info: "Le délai général qui s'applique à l'action en responsabilité contractuelle est un <strong>délai ordinaire de dix ans</strong> (art. 127 CO).",
+        children: ["rcc_presc_exceptions"],
+        parent: "rc_contractuelle_titre12"
+    },
+    rcc_presc_exceptions: {
+        title: "Les exceptions",
+        info: "Il existe deux exceptions principales :<br><ul><li><strong>Art. 128 CO :</strong> Un délai spécial plus court de <strong>cinq ans</strong> s'applique pour les redevances périodiques, les prestations d'entretien et pour certaines prestations courantes (ex: factures des artisans, honoraires des médecins).</li><li><strong>Art. 128a CO :</strong> En cas de <strong>mort d'homme ou de lésions corporelles</strong> résultant d'une faute contractuelle, l'action se prescrit par un <strong>délai relatif de trois ans</strong> (dès connaissance du dommage) et, dans tous les cas, par un <strong>délai absolu de vingt ans</strong> (dès que le fait dommageable s'est produit ou a cessé).</li></ul>",
+        children: [],
+        parent: "rcc_prescription"
     },
 
     // --- 13. L'ENRICHISSEMENT ILLÉGITIME ---
     enrichissement_illegitime_titre13: {
         title: "13. L'enrichissement illégitime",
-        info: "Restituer un avantage patrimonial acquis sans cause juridique valable (art. 62 à 67 CO).",
-        children: ["ei_notion", "ei_conditions", "ei_restitution", "ei_prescription"],
+        info: "Ce titre traite de l'obligation légale de restituer un avantage patrimonial acquis sans cause juridique valable aux dépens d'autrui (art. 62 à 67 CO).",
+        children: ["ei_notion", "ei_conditions", "ei_repetition_indu", "ei_restitution", "ei_prescription"],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // NOTION
+    // ==========================================
     ei_notion: {
         title: "Notion",
-        info: "Règles subsidiaires.",
-        children: [], parent: "enrichissement_illegitime_titre13"
+        info: "<strong>Si une personne bénéficie sans cause valable d’une augmentation de son patrimoine aux dépens d’autrui, celui-ci se voit reconnaître par l’ordre juridique une créance en restitution contre l’enrichi</strong> (art. 62 al. 1 CO).<br><br>Comme cette créance a son fondement directement dans la loi, l’enrichissement illégitime est une <strong>source légale d’obligation</strong>.",
+        children: [],
+        parent: "enrichissement_illegitime_titre13"
     },
-    
+
+    // ==========================================
+    // LES CONDITIONS
+    // ==========================================
     ei_conditions: {
-        title: "Les conditions",
-        info: "Enrichissement, appauvrissement, connexité, absence de cause valable.",
-        children: [], parent: "enrichissement_illegitime_titre13"
+        title: "Les conditions de l'enrichissement illégitime",
+        info: "Pour invoquer l'enrichissement illégitime (art. 62 CO), quatre conditions cumulatives doivent être réunies.",
+        children: ["ei_cond_enrichissement", "ei_cond_appauvrissement", "ei_cond_causalite", "ei_cond_absence_cause"],
+        parent: "enrichissement_illegitime_titre13"
     },
-    
+    ei_cond_enrichissement: {
+        title: "L'enrichissement du défendeur",
+        info: "<strong>L’enrichissement consiste dans la différence entre l’état actuel du patrimoine de l’enrichi et son montant, par hypothèse inférieur, sans le déplacement de valeur.</strong><br><br>Il peut prendre plusieurs formes :<br><ul><li><strong>L’augmentation du patrimoine</strong></li><li><strong>La non-diminution du patrimoine</strong></li></ul>",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_appauvrissement: {
+        title: "L'appauvrissement du demandeur",
+        info: "<strong>L’appauvrissement consiste dans la différence entre l’état actuel du patrimoine de l’appauvri et son montant, par hypothèse supérieur, sans le déplacement de valeur.</strong><br><br>Il peut consister en une diminution du patrimoine (perte effective) ou une non-augmentation (gain manqué). <br><br><strong>L’appauvrissement peut résulter d'une attribution de l’appauvri à l’enrichi.</strong> C'est le cas le plus fréquent. Il peut également découler d'un acte de l'enrichi, d'un tiers, ou d'un fait de la nature.",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_causalite: {
+        title: "Le rapport de causalité (ou connexité)",
+        info: "Le rapport de causalité entre la diminution du patrimoine d'une personne et l'enrichissement de l'autre est <strong>donné dès lors que l’enrichissement de l’un n’a pas pu se produire sans l’appauvrissement de l’autre.</strong>",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_absence_cause: {
+        title: "L'absence de cause valable",
+        info: "<strong>L’absence de cause valable se caractérise comme le manque d’une base obligatoire au transfert patrimonial.</strong><br><br>L'art. 62 al. 2 CO envisage trois hypothèses :<br><ul><li><strong>L’enrichissement sans cause valable</strong></li><li><strong>L’enrichissement en vertu d’une cause qui ne s’est pas réalisée</strong></li><li><strong>L'enrichissement en vertu d'une cause qui a cessé d'exister</strong></li></ul>",
+        children: [],
+        parent: "ei_conditions"
+    },
+
+    // ==========================================
+    // LA RÉPÉTITION DE L'INDU
+    // ==========================================
+    ei_repetition_indu: {
+        title: "La répétition de l'indu",
+        info: "<strong>La répétition de l'indu désigne l'hypothèse particulière où l'appauvri a lui-même effectué la prestation</strong> (art. 63 et 66 CO).<br><br>Cette action présente certaines particularités par rapport à l'action générale :<br><ul><li><strong>L'erreur sur l'existence de la dette lors de l'exécution</strong></li><li><strong>L'exécution ne doit pas concerner une obligation imparfaite</strong></li><li><strong>Les prestations ne doivent pas poursuivre un but illicite ou immoral</strong></li></ul>",
+        children: ["cp_dettes_yvan"],
+        parent: "enrichissement_illegitime_titre13"
+    },
+    cp_dettes_yvan: {
+        title: "Cas pratique : Charlie et ses dettes envers Yvan",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Par mégarde, Charlie verse une grosse somme d'argent sur le compte de son ami Yvan, alors qu'il n'avait plus aucune dette envers lui.</p>
+            <p class="cas-pratique-question">Peut-il récupérer la somme ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>C'est un cas de <strong>Répétition de l'indu (art. 63 CO)</strong>, forme spécifique de l'enrichissement illégitime.</p>
+                <p>Conditions : Appauvrissement de Charlie, Enrichissement d'Yvan, Causalité entre les deux, et Absence de cause valable (il ne lui devait plus rien).</p>
+                <p>Conditions supplémentaires (art. 63) : Charlie était dans l'erreur, ce n'est pas un don immoral. Charlie peut exiger restitution.</p>
+            </div>
+        </div>`,
+        children: [], parent: "ei_repetition_indu"
+    },
+
+    // ==========================================
+    // LA RESTITUTION
+    // ==========================================
     ei_restitution: {
         title: "La restitution",
-        info: "Remboursement des impenses (nécessaires, utiles).",
-        children: [], parent: "enrichissement_illegitime_titre13"
+        info: "Règles encadrant la manière et l'étendue selon lesquelles l'enrichi doit rendre l'avantage acquis.",
+        children: ["ei_rest_mode", "ei_rest_etendue", "ei_rest_impenses"],
+        parent: "enrichissement_illegitime_titre13"
     },
-    
+    ei_rest_mode: {
+        title: "Le mode de restitution",
+        info: "<strong>La restitution a lieu soit en nature soit, si la restitution en nature est impossible, en argent.</strong> En pratique, la restitution en argent est la plus fréquente. <br><br>Cependant, lorsque l'enrichi détient encore la chose qui lui a été transférée, l'appauvri dispose généralement de <strong>l'action réelle en revendication</strong>.",
+        children: [],
+        parent: "ei_restitution"
+    },
+    ei_rest_etendue: {
+        title: "L'étendue de la restitution",
+        info: "Afin d'effacer les conséquences d'un déplacement patrimonial injustifié, <strong>la restitution est limitée par un double plafond soit l'appauvrissement du demandeur et l'enrichissement du défendeur</strong> (art. 64 CO). <br><br>Pour le reste, l'étendue de la restitution dépend de la bonne foi ou de la mauvaise foi de l'enrichi.",
+        children: [],
+        parent: "ei_restitution"
+    },
+    ei_rest_impenses: {
+        title: "Le remboursement des impenses",
+        info: "<strong>Le remboursement des impenses faites par l’enrichi signifie le remboursement que doit effectuer l’appauvri à l’enrichi pour les dépenses faites par l’enrichi en faveur d’une chose appartenant à l’appauvri</strong> (ex: frais d'entretien) (art. 65 CO).<br><br>L'art. 65 CO distingue trois catégories :<br><ul><li><strong>Les impenses nécessaires. Elles donnent toujours droit au remboursement intégral</strong> (art. 65 al. 1 CO).</li><li><strong>Les impenses utiles. L'étendue du remboursement dépend de la bonne ou de la mauvaise foi de l'enrichi</strong> (art. 65 al. 1 CO).</li><li><strong>Les impenses voluptuaires ou somptuaires. Elles ne donnent droit à aucun remboursement</strong> (art. 65 al. 2 CO).</li></ul>",
+        children: [],
+        parent: "ei_restitution"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
     ei_prescription: {
-        title: "La prescription (EI)",
-        info: "Relatif 3 ans, Absolu 10 ans.",
-        children: [], parent: "enrichissement_illegitime_titre13"
+        title: "La prescription",
+        info: "L'action en enrichissement illégitime (art. 67 CO) est subordonnée à un double délai de prescription :<br><ul><li><strong>Le délai relatif de 3 ans</strong>, qui court dès que l'appauvri connaît suffisamment la personne de l'enrichi, le montant de son enrichissement et l'absence de cause valable au transfert.</li><li><strong>Le délai absolu de 10 ans</strong>, qui commence à courir dès l'exigibilité de la créance.</li></ul>",
+        children: [],
+        parent: "enrichissement_illegitime_titre13"
     },
 
     // --- 14. LES MODALITÉS DES OBLIGATIONS ---
     modalites_obligations_titre14: {
         title: "14. Les modalités des obligations",
-        info: "Situation où une obligation s'écarte du modèle de base.",
+        info: "Ce titre aborde les situations où une obligation s'écarte du modèle de base, que ce soit par le nombre de sujets impliqués (pluralité de débiteurs ou créanciers) ou par des conditions et clauses spécifiques.",
         children: [
-            "mo_pluralite_debiteurs", "mo_pluralite_creanciers", "mo_obligations_conditionnelles", "mo_clause_arrhes_dedit"
+            "mo_pluralite_debiteurs", 
+            "mo_pluralite_creanciers", 
+            "mo_obligations_conditionnelles", 
+            "mo_clause_arrhes_dedit"
         ],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // LA PLURALITÉ DE DÉBITEURS
+    // ==========================================
     mo_pluralite_debiteurs: {
         title: "La pluralité de débiteurs",
-        info: "Solidarité passive (ne se présume pas).",
-        children: [], parent: "modalites_obligations_titre14"
+        info: "Situation où une seule et même obligation compte plusieurs débiteurs (dette plurale).",
+        children: ["mo_pd_notion", "mo_pd_solidarite_passive"],
+        parent: "modalites_obligations_titre14"
     },
-    
+    mo_pd_notion: {
+        title: "Notion",
+        info: "La pluralité de débiteurs peut revêtir plusieurs formes :<br><ul><li><strong>Les débiteurs partiels :</strong> Chaque débiteur doit une partie de la prestation totale.</li><li><strong>Les débiteurs collectifs :</strong> Plusieurs personnes sont débitrices, mais elles doivent toutes exécuter ensemble.</li><li><strong>Les débiteurs pour le tout :</strong> Le créancier peut rechercher chacun des débiteurs pour l'ensemble de la dette.</li></ul>",
+        children: [],
+        parent: "mo_pluralite_debiteurs"
+    },
+    mo_pd_solidarite_passive: {
+        title: "La solidarité passive",
+        info: "Mécanisme très protecteur pour le créancier face à de multiples débiteurs.",
+        children: ["mo_pd_sp_notion", "mo_pd_sp_effets", "mo_pd_sp_recours", "cp_cormoran_solidarite"],
+        parent: "mo_pluralite_debiteurs"
+    },
+    cp_cormoran_solidarite: {
+        title: "Cas pratique : Administrateurs de Cormoran SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie, Fanny et Florian, les trois administrateurs de Cormoran SA, sont condamnés à payer CHF 500'000.- pour négligence grave dans leur gestion.</p>
+            <p class="cas-pratique-question">Comment fonctionne le paiement de cette somme ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>C'est un cas de <strong>Solidarité passive</strong>. Ils répondent d'un dommage causé par un comportement commun.</p>
+                <p>Le créancier peut réclamer la totalité à un seul administrateur. Le paiement total par l'un libérera les deux autres. Ensuite, un recours interne entre les co-débiteurs aura lieu.</p>
+            </div>
+        </div>`,
+        children: [], parent: "mo_pd_solidarite_passive"
+    },
+    mo_pd_sp_notion: {
+        title: "Notion",
+        info: "Il y a solidarité passive lorsque <strong>le créancier peut exiger de chaque débiteur la prestation totale et que la prestation faite par l'un des débiteurs libère les autres</strong>.<br><br>Il est très important de noter que <strong>la solidarité passive ne se présume pas</strong>. Elle découle soit d'un contrat (accord entre le créancier et les débiteurs), soit de la loi.",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+    mo_pd_sp_effets: {
+        title: "Les effets",
+        info: "La solidarité n'aggrave pas la situation des débiteurs (chacun est comme s'il était l'unique débiteur). Un co-débiteur ne peut aggraver la situation des autres.<br><br>En matière de libération :<br><ul><li><strong>En cas de libération par paiement ou par compensation, la dette est éteinte et tous les débiteurs solidaires sont libérés.</strong></li><li>En cas de libération d'un co-débiteur pour une autre cause (ex: remise de dette), sa libération ne profite aux autres que dans la mesure indiquée par les circonstances.</li></ul>",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+    mo_pd_sp_recours: {
+        title: "Le recours entre co-débiteurs",
+        info: "L'institution de la solidarité règle les rapports externes (créancier/débiteurs). La répartition du poids de la dette entre les co-obligés (rapports internes) est réglée par le <strong>recours</strong>.<br><br>L'existence et l'étendue du recours sont régies dans l'ordre par le contrat liant les co-obligés, les dispositions légales, puis les règles subsidiaires. <strong>Le recours de celui qui a indemnisé le créancier se prescrit par trois ans</strong> (art. 139 CO).",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+
+    // ==========================================
+    // LA PLURALITÉ DE CRÉANCIERS
+    // ==========================================
     mo_pluralite_creanciers: {
         title: "La pluralité de créanciers",
-        info: "Solidarité active.",
-        children: [], parent: "modalites_obligations_titre14"
+        info: "Situation où une même obligation bénéficie à plusieurs créanciers.",
+        children: ["mo_pc_notion", "mo_pc_solidarite_active"],
+        parent: "modalites_obligations_titre14"
     },
-    
+    mo_pc_notion: {
+        title: "Notion",
+        info: "De même qu'il y a plusieurs formes de débiteurs, on distingue :<br><ul><li><strong>Les créanciers partiels :</strong> Chacun ne peut exiger qu'une partie de la prestation.</li><li><strong>Les créanciers collectifs :</strong> Ils doivent faire valoir la créance ensemble.</li><li><strong>Les créanciers pour le tout :</strong> Chacun est autorisé à faire valoir la créance de manière intégrale et indépendante.</li></ul>",
+        children: [],
+        parent: "mo_pluralite_creanciers"
+    },
+    mo_pc_solidarite_active: {
+        title: "La solidarité active",
+        info: "Règles applicables lorsque n'importe quel créancier peut réclamer la totalité.",
+        children: ["mo_pc_sa_notion", "mo_pc_sa_effets", "cp_beaubeton"],
+        parent: "mo_pluralite_creanciers"
+    },
+    cp_beaubeton: {
+        title: "Cas pratique : Charlie et Beaubéton SA (Compte joint)",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie, Pierre et Paul ouvrent un compte-joint à la banque. Pierre et Paul sont inatteignables. Charlie veut retirer les fonds seul.</p>
+            <p class="cas-pratique-question">Peut-il le faire ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Le compte-joint crée une <strong>Solidarité active</strong> (art. 150 CO).</p>
+                <p>Chaque titulaire est créancier solidaire de la banque. La banque peut valablement se libérer en payant tout à un seul. Charlie peut donc retirer l'intégralité seul.</p>
+            </div>
+        </div>`,
+        children: [], parent: "mo_pc_solidarite_active"
+    },
+    mo_pc_sa_notion: {
+        title: "Notion",
+        info: "Dans la solidarité active, <strong>chaque créancier peut exiger la totalité de la prestation et le débiteur se libère à l'égard de tous en faisant sa prestation à l'un d'eux</strong>.",
+        children: [],
+        parent: "mo_pc_solidarite_active"
+    },
+    mo_pc_sa_effets: {
+        title: "Effets",
+        info: "Le débiteur peut choisir le créancier auquel il fera la prestation, à moins qu'il n'ait été poursuivi par l'un d'eux. Le créancier ayant reçu la prestation peut être tenu d'en reverser une partie aux autres selon leurs arrangements internes.",
+        children: [],
+        parent: "mo_pc_solidarite_active"
+    },
+
+    // ==========================================
+    // LES OBLIGATIONS CONDITIONNELLES
+    // ==========================================
     mo_obligations_conditionnelles: {
         title: "Les obligations conditionnelles",
-        info: "Événement incertain. Suspensive ou Résolutoire.",
-        children: [], parent: "modalites_obligations_titre14"
+        info: "Régies par les art. 151 à 157 CO, elles lient l'effet juridique à un événement futur.",
+        children: [
+            "mo_oc_notion", 
+            "mo_oc_categories", 
+            "mo_oc_admissibilite", 
+            "mo_oc_nonavenement", 
+            "mo_oc_effets_suspensive", 
+            "mo_oc_effets_resolutoire",
+            "cp_cormoran_conditions"
+        ],
+        parent: "modalites_obligations_titre14"
     },
-    
+    cp_cormoran_conditions: {
+        title: "Cas pratique : Les conditions de Cormoran SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Contrat avec deux clauses : 1. "Si les dividendes passent sous 0.5%, Charlie vend 20 actions à CHF 100.-" 2. "Charlie cède l'usufruit jusqu'à ce que la société soit cotée en bourse".</p>
+            <p class="cas-pratique-question">Identifiez les types de conditions.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Clause 1 : <strong>Condition suspensive.</strong> Les effets du contrat sont suspendus et naîtront uniquement si les dividendes chutent.</p>
+                <p>Clause 2 : <strong>Condition résolutoire.</strong> Le contrat produit ses effets immédiatement, mais s'éteindra automatiquement le jour où la société entrera en bourse.</p>
+            </div>
+        </div>`,
+        children: [], parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_notion: {
+        title: "Notion",
+        info: "La condition est un <strong>événement futur incertain dont dépend un effet juridique</strong>. Elle se distingue du terme par le caractère incertain de sa survenance.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_categories: {
+        title: "Les catégories",
+        info: "Il existe deux sortes principales de conditions : <strong>la condition suspensive et la condition résolutoire</strong>. Selon l'objet, on distingue aussi la condition casuelle, potestative ou mixte.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_admissibilite: {
+        title: "Admissibilité des conditions",
+        info: "En principe, tous les contrats peuvent être conditionnels. Toutefois, la plupart des actes du droit de la famille ne le sont pas. <strong>La condition ne saurait être illicite ou contraire aux mœurs</strong>, sinon l'obligation qui en dépend est nulle.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_nonavenement: {
+        title: "Non-avènement et empêchement frauduleux",
+        info: "La condition n'est pas réalisée si l'événement ne s'est pas produit dans le temps convenu. Par une fiction, la loi assimile à l'avènement de la condition le cas où <strong>une partie empêche l'accomplissement contrairement aux règles de la bonne foi</strong>.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_effets_suspensive: {
+        title: "Effets de la condition suspensive",
+        info: "Avant l'avènement de la condition, le rapport est en suspens. Le contrat est obligatoire mais les parties n'ont qu'une <strong>expectative</strong> pour leurs droits. <strong>L'obligation n'est pas exigible</strong>.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_effets_resolutoire: {
+        title: "Effets de la condition résolutoire",
+        info: "Avant l'avènement de la condition, <strong>l'acte produit tous ses effets comme s'il était pur et simple</strong>. La prestation est exigible, le débiteur doit s'exécuter et la prescription court. L'avènement de la condition anéantit les effets du contrat.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+
+    // ==========================================
+    // CLAUSE PÉNALE, ARRHES ET DÉDIT
+    // ==========================================
     mo_clause_arrhes_dedit: {
         title: "La clause pénale, les arrhes et le dédit",
-        info: "Clause pénale: Juge doit réduire si excessif. Dédit réel (restitué au double).",
-        children: [], parent: "modalites_obligations_titre14"
+        info: "Clauses accessoires visant à sécuriser l'exécution ou aménager une sortie du contrat.",
+        children: ["mo_cad_clause_penale", "mo_cad_arrhes", "mo_cad_dedit", "cp_new_tech"],
+        parent: "modalites_obligations_titre14"
+    },
+    cp_new_tech: {
+        title: "Cas pratique : Contrat New Tech Sàrl",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Achat d'un brevet à 10 M CHF. Clause 1 : "200'000 CHF remis à la signature, à déduire du prix". Clause 2 : "New Tech peut se départir en payant 250'000 CHF".</p>
+            <p class="cas-pratique-question">Qualifier ces deux clauses.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Clause 1 : C'est un <strong>acompte</strong> et non un dédit réel.</p>
+                <p>Clause 2 : C'est une <strong>clause pénale résolutoire (dédit consensuel)</strong>. L'argent n'a pas été versé d'avance. Seul le débiteur désigné par la clause (New Tech) a la liberté d'annuler en payant cette somme.</p>
+            </div>
+        </div>`,
+        children: [], parent: "mo_clause_arrhes_dedit"
+    },
+    mo_cad_clause_penale: {
+        title: "La clause pénale",
+        info: "Convention accessoire par laquelle le débiteur promet <strong>le versement d'une somme d'argent pour l'éventualité d'une inexécution totale ou partielle, ou d'une exécution tardive ou défectueuse</strong> (art. 160 à 163 CO).<br><br>Elle peut être alternative ou cumulative. Elle est indépendante du dommage effectif subi par le créancier. Toutefois, <strong>le juge doit réduire la peine conventionnelle excessive</strong>.",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
+    },
+    mo_cad_arrhes: {
+        title: "Les arrhes",
+        info: "Les arrhes consistent en une somme d'argent qu'une partie remet à l'autre lors de la conclusion d'un contrat, <strong>à titre purement probatoire ou à titre d'acompte</strong> (art. 158 CO).",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
+    },
+    mo_cad_dedit: {
+        title: "Le dédit",
+        info: "C'est le droit pour chacune des parties de <strong>se départir du contrat en payant une certaine somme</strong>. <br><br>S'il y a eu versement (dédit réel) : <strong>celui qui a versé la somme peut se départir du contrat en l'abandonnant, celui qui l'a reçue en la restituant au double</strong>. <br><br>Il y a une présomption contre le dédit : la remise d'argent lors de la conclusion fait présumer l'existence d'arrhes, et non d'un dédit.",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
     },
 
     // --- 15. LA TRANSMISSION DES OBLIGATIONS ---
     transmission_obligations_titre15: {
         title: "15. La transmission des obligations",
-        info: "Transfert à un tiers (Cession / Reprise).",
+        info: "Tant le côté actif de l’obligation, la créance, que le côté passif de l’obligation, la dette, peuvent être transférés à un tiers. Dans le premier cas, on parle de cession de créance, dans le second de reprise de dette.",
         children: ["to_cession_creance", "to_reprise_dette"],
         parent: "root"
     },
-    
+
+    // ==========================================
+    // LA CESSION DE CRÉANCE
+    // ==========================================
     to_cession_creance: {
         title: "La cession de créance",
-        info: "Ne nécessite aucune intervention du débiteur. Forme écrite obligatoire.",
-        children: [], parent: "transmission_obligations_titre15"
+        info: "Règles applicables au transfert du côté actif de l'obligation (art. 164 à 174 CO).",
+        children: ["to_cc_notion", "to_cc_forme", "to_cc_effets", "cp_cession_creance"],
+        parent: "transmission_obligations_titre15"
     },
-    
+    cp_cession_creance: {
+        title: "Cas pratique : Charlie et la société de recouvrement",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Cormoran SA a des impayés. Charlie signe un contrat écrit cédant ses créances à une entreprise de recouvrement pour 70% de leur valeur, payés cash.</p>
+            <p class="cas-pratique-question">Quid du consentement des clients débiteurs ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>C'est une <strong>Cession de créance</strong> (art. 164 CO). La forme écrite est respectée.</p>
+                <p>Les parties <strong>n'ont pas besoin d'avertir ou d'obtenir l'accord des débiteurs</strong> cédés. Toutefois, s'ils ne sont pas prévenus et qu'ils paient Cormoran SA, ils seront valablement libérés.</p>
+            </div>
+        </div>`,
+        children: [], parent: "to_cession_creance"
+    },
+    to_cc_notion: {
+        title: "Notion",
+        info: "La cession de créance est le <strong>contrat passé entre le créancier (le cédant) et un tiers (le cessionnaire) en vertu duquel le cessionnaire devient le titulaire de la créance à la place du cédant</strong>.<br><br>Il est fondamental de noter que la cession de créance <strong>ne nécessite aucune intervention du débiteur</strong> (art. 164 al. 1 CO). <br><br>Pour pouvoir être cédée, la créance doit être <strong>cessible</strong> (l'incessibilité peut résulter de la loi, de la convention ou de la nature de l'affaire) et suffisamment déterminée.",
+        children: [],
+        parent: "to_cession_creance"
+    },
+    to_cc_forme: {
+        title: "Forme",
+        info: "La loi exige la <strong>forme écrite</strong> (art. 165 al. 1 CO). L’acte écrit doit couvrir tous les points essentiels du contrat, à savoir la créance cédée, la personne du cessionnaire et la volonté de céder la créance.",
+        children: [],
+        parent: "to_cession_creance"
+    },
+    to_cc_effets: {
+        title: "Effets",
+        info: "La cession déploie des effets à deux niveaux distincts.",
+        children: ["to_cce_cedant_cessionnaire", "to_cce_cessionnaire_debiteur"],
+        parent: "to_cession_creance"
+    },
+    to_cce_cedant_cessionnaire: {
+        title: "Entre le cédant et le cessionnaire",
+        info: "Du fait de la cession, <strong>le cessionnaire devient créancier en lieu et place du cédant</strong>. Le cédant doit lui remettre le titre de créance et les moyens de preuve existants. <br><br>Si la cession a lieu à titre onéreux, le cédant <strong>répond de l’existence de la créance lors de la cession</strong>. Si elle a lieu à titre gratuit, il n'assume aucune garantie.",
+        children: [],
+        parent: "to_cc_effets"
+    },
+    to_cce_cessionnaire_debiteur: {
+        title: "Entre le cessionnaire et le débiteur",
+        info: "Le débiteur <strong>n’a pas besoin de donner son accord à la cession ni même d’être avisé</strong>. Sa situation ne doit pas être aggravée.<br><br>Deux règles essentielles s'appliquent :<br><ul><li>Avant que la cession ne lui ait été notifiée, le débiteur qui paie <strong>de bonne foi entre les mains du cédant est libéré</strong> (art. 167 CO). Après notification, il doit payer au cessionnaire.</li><li><strong>Le débiteur cédé conserve tous les moyens qu’il avait contre le cédant</strong> au moment où il a pris connaissance de la cession (ex: nullité, prescription).</li></ul>",
+        children: [],
+        parent: "to_cc_effets"
+    },
+
+    // ==========================================
+    // LA REPRISE DE DETTE
+    // ==========================================
     to_reprise_dette: {
         title: "La reprise de dette",
-        info: "Reprise interne vs externe. Reprise cumulative (adjonction d'un débiteur).",
-        children: [], parent: "transmission_obligations_titre15"
+        info: "Règles applicables au transfert du côté passif de l'obligation (art. 175 à 183 CO).",
+        children: [
+            "to_rd_notion", 
+            "to_rd_forme", 
+            "to_rd_effets", 
+            "to_rd_patrimoine", 
+            "to_rd_cumulative",
+            "cp_reprise_1",
+            "cp_reprise_2"
+        ],
+        parent: "transmission_obligations_titre15"
+    },
+    cp_reprise_1: {
+        title: "Cas pratique 1 : Charlie et son amie Manon",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie doit 700'000 CHF à Architectes SA. Sans le sou, il demande de l'aide à son amie Manon pour régler cette dette en cadeau.</p>
+            <p class="cas-pratique-question">Comment organiser cela juridiquement ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il faut une <strong>Reprise de dette interne</strong> entre Charlie et Manon (qui devra revêtir la forme écrite d'une promesse de donner car c'est un cadeau).</p>
+                <p>Ensuite, Manon doit conclure un contrat de <strong>Reprise de dette externe</strong> avec Architectes SA (le créancier). Ce n'est qu'avec leur accord que Charlie sera définitivement libéré et que Manon deviendra la seule débitrice.</p>
+            </div>
+        </div>`,
+        children: [], parent: "to_reprise_dette"
+    },
+    cp_reprise_2: {
+        title: "Cas pratique 2 : Jacques rachète Cormoran SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Jacques accepte de reprendre à son nom certaines dettes de Cormoran SA envers ses fournisseurs et s'engage à les avertir. Il réfléchit aussi à reprendre tout le patrimoine de la société.</p>
+            <p class="cas-pratique-question">Validité de ces opérations ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p><strong>Reprise de dettes individuelles :</strong> L'avertissement ne suffit pas. Il faut un accord (exprès ou tacite) de chaque créancier pour que la reprise devienne externe.</p>
+                <p><strong>Reprise du patrimoine entier :</strong> La loi impose de respecter les règles de la Loi sur la Fusion (LFus, art. 181 CO). La reprise entraînera le transfert des dettes sans besoin de l'accord de chaque créancier, mais Cormoran restera solidairement responsable pendant un certain temps.</p>
+            </div>
+        </div>`,
+        children: [], parent: "to_reprise_dette"
+    },
+    to_rd_notion: {
+        title: "Notion",
+        info: "Lorsque la loi parle de la reprise de dette, elle envisage en réalité deux choses distinctes :<br><ol><li><strong>L’engagement pris par un tiers envers le débiteur de le libérer de sa dette (reprise de dette interne)</strong> (art. 175 CO).</li><li><strong>Le contrat entre le tiers et le créancier par lequel celui-ci accepte que le tiers devienne débiteur de l’obligation (reprise de dette externe)</strong> (art. 176 à 183 CO).</li></ol>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_forme: {
+        title: "Forme",
+        info: "Le contrat de reprise de dette interne obéit en principe aux règles ordinaires sur la formation du contrat. <br><br>Le contrat de reprise de dette externe n'est également <strong>soumis au respect d’aucune forme particulière</strong>, bien qu'il obéisse à quelques dispositions spéciales du CO.",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_effets: {
+        title: "Effets",
+        info: "Dans la reprise de dette externe, <strong>le reprenant devient débiteur en lieu et place de l’ancien débiteur</strong>. Le créancier a donc un nouveau débiteur.<br><br>Il n'y a pas novation. De plus :<br><ul><li><strong>Les droits accessoires subsistent et accompagnent la dette</strong>.</li><li>Le reprenant est placé dans la <strong>même situation juridique</strong> que l’ancien débiteur.</li></ul>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_patrimoine: {
+        title: "La reprise d'un patrimoine ou d'une entreprise",
+        info: "Lorsqu'une entreprise ou un patrimoine sont repris dans leur ensemble, il est impossible de demander le consentement de chaque créancier (régi par la LFus et l'art. 181 CO).<br><br>Le système cherche à concilier les intérêts en instituant deux caractéristiques :<br><ul><li><strong>Le transfert de la dette sans reprise de dette externe.</strong></li><li><strong>La responsabilité solidaire de l’ancien débiteur.</strong></li></ul>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_cumulative: {
+        title: "La reprise cumulative de dette",
+        info: "La reprise cumulative de dette est le <strong>contrat entre le créancier et un tiers en vertu duquel celui-ci devient solidairement responsable de la dette</strong>.<br><br>À la différence de la reprise de dette normale (privative), elle n'entraîne pas un changement de débiteur mais <strong>l'adjonction d’un second débiteur</strong> au débiteur originel. Elle est admissible en vertu de l'autonomie contractuelle et est un contrat informel.",
+        children: [],
+        parent: "to_reprise_dette"
     },
 
     // --- 16. L'EXÉCUTION DES OBLIGATIONS ---
     exec_obligations_titre16: {
         title: "16. L'exécution des obligations",
-        info: "Lieu, Moment, Preuve, et Demeure.",
-        children: ["eo_lieu_moment", "eo_demeure_creancier", "eo_demeure_debiteur"],
+        info: "Ce titre traite de l'accomplissement de la prestation due par le débiteur au créancier, de ses modalités pratiques, et des conséquences en cas de retard de l'une ou l'autre des parties.",
+        children: [
+            "eo_lieu", 
+            "eo_moment", 
+            "eo_argent", 
+            "eo_interets", 
+            "eo_preuve", 
+            "eo_demeure_creancier", 
+            "eo_demeure_debiteur"
+        ],
         parent: "root"
     },
-    
-    eo_lieu_moment: {
-        title: "Lieu et Moment",
-        info: "Dettes portables vs quérables. Exécution immédiate = principe. Contrats bilatéraux (exception d'inexécution).",
-        children: [], parent: "exec_obligations_titre16"
+
+    // ==========================================
+    // LE LIEU DE L'EXÉCUTION
+    // ==========================================
+    eo_lieu: {
+        title: "Le lieu de l'exécution",
+        info: "Détermine l'endroit physique où la prestation doit être effectuée.",
+        children: ["eo_lieu_notion", "eo_lieu_determination", "cp_lieu_farma"],
+        parent: "exec_obligations_titre16"
     },
-    
+    cp_lieu_farma: {
+        title: "Cas pratique : Cormoran SA & les produits alimentaires",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Farma SA (siège à Lucerne) vend des graines à Cormoran SA (siège à Moudon). Le stock est physiquement à Moudon lors de l'accord. Le contrat ne mentionne pas de lieu de livraison. Farma informe que les graines sont à dispo à Lucerne.</p>
+            <p class="cas-pratique-question">Où doit se faire la livraison ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Pour une dette de chose déterminée (corps certain), la loi supplétive indique que le lieu est celui où se trouve la chose lors de la conclusion du contrat (art. 74 CO).</p>
+                <p><strong>Conclusion :</strong> La livraison doit se faire à Moudon.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_lieu"
+    },
+    eo_lieu_notion: {
+        title: "Notion",
+        info: "Le lieu de l'exécution est l'endroit où une prestation doit être accomplie (art. 74 CO), c'est-à-dire <strong>le lieu où le débiteur doit faire le dernier acte en son pouvoir pour s'exécuter</strong>. Il détermine certaines modalités (comme la monnaie de paiement) mais ne détermine pas le juge compétent.<br><br>Il est nécessaire de distinguer :<br><ul><li><strong>Les dettes « portables » :</strong> ce sont les dettes d'une somme d'argent.</li><li><strong>Les dettes « quérables » :</strong> ce sont les dettes d'une chose déterminée.</li></ul>",
+        children: [],
+        parent: "eo_lieu"
+    },
+    eo_lieu_determination: {
+        title: "Détermination",
+        info: "La détermination relève <strong>primairement de la volonté des parties</strong>. À défaut, la loi (art. 74 CO) fixe des règles supplétives selon qu'il s'agisse de dettes d'argent, de choses déterminées, d'autres dettes, ou de dettes comportant expédition.",
+        children: [],
+        parent: "eo_lieu"
+    },
+
+    // ==========================================
+    // LE MOMENT DE L'EXÉCUTION
+    // ==========================================
+    eo_moment: {
+        title: "Le moment de l'exécution",
+        info: "Règles régissant le moment où la prestation doit être fournie (art. 75 à 83 CO).",
+        children: ["eo_mom_exigibilite", "eo_mom_immediate_diff", "eo_mom_interdependance", "eo_mom_composes"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_mom_exigibilite: {
+        title: "L'exigibilité et l'exécutabilité",
+        info: "<ul><li><strong>L'exigibilité :</strong> désigne le moment à partir duquel le créancier <strong>peut exiger la prestation</strong> (au besoin par une poursuite ou action). Elle permet de mettre en demeure, constitue le point de départ de la prescription et est une condition de la compensation.</li><li><strong>L'exécutabilité :</strong> désigne le moment à partir duquel le débiteur <strong>peut effectuer sa prestation avec effet libératoire</strong>. Dès ce moment, le créancier qui refuse de recevoir est en demeure.</li></ul><br>L'exigibilité et l'exécutabilité ne coïncident pas forcément (une dette peut être exécutable avant d'être exigible).",
+        children: [],
+        parent: "eo_moment"
+    },
+    eo_mom_immediate_diff: {
+        title: "L'exécution immédiate et l'exécution différée",
+        info: "<strong>L'exécution immédiate est le principe</strong> (art. 75 CO).<br><br>L'exécution différée (ou à terme) est l'exception. Le terme est un <strong>événement futur dont la survenance est certaine</strong> (qui se distingue de la <em>condition</em> dont la survenance est incertaine).",
+        children: [],
+        parent: "eo_moment"
+    },
+    eo_mom_interdependance: {
+        title: "L'interdépendance des prestations",
+        info: "Dans les contrats bilatéraux (art. 82 et 83 CO).",
+        children: ["eo_mom_int_inexecution", "eo_mom_int_insolvabilite"],
+        parent: "eo_moment"
+    },
+    eo_mom_int_inexecution: {
+        title: "Exception d'inexécution",
+        info: "Dans les contrats synallagmatiques, <strong>les prestations doivent en principe être exécutées trait pour trait</strong>. Si le créancier n'a pas exécuté ou offert d'exécuter sa propre prestation, le débiteur peut <strong>refuser d'exécuter la sienne</strong> (art. 82 CO).",
+        children: [],
+        parent: "eo_mom_interdependance"
+    },
+    eo_mom_int_insolvabilite: {
+        title: "Exception d'insolvabilité",
+        info: "Si une partie est au bénéfice d'un terme mais que <strong>l'autre est devenue insolvable</strong>, la partie dont les droits sont mis en péril peut <strong>refuser d'exécuter sa propre prestation jusqu'à ce que l'exécution de l'obligation de l'autre ait été garantie</strong> (art. 83 CO).",
+        children: [],
+        parent: "eo_mom_interdependance"
+    },
+    eo_mom_composes: {
+        title: "Le problème des contrats composés",
+        info: "Un contrat composé est un <strong>groupe de contrats formellement distincts mais entre lesquels il existe un lien économique ou psychologique</strong>. Si les contrats sont dans un rapport d'échange, on applique par analogie les règles de l'interdépendance, de la demeure et de l'impossibilité.",
+        children: [],
+        parent: "eo_moment"
+    },
+
+    // ==========================================
+    // LA DETTE D'ARGENT
+    // ==========================================
+    eo_argent: {
+        title: "La dette d'argent",
+        info: "Règles spécifiques au paiement de sommes d'argent.",
+        children: ["eo_arg_monnaie", "eo_arg_imputation", "eo_arg_modes", "cp_argent_farma"],
+        parent: "exec_obligations_titre16"
+    },
+    cp_argent_farma: {
+        title: "Cas pratique : Cormoran SA, Euros et Intérêts",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Farma SA exige un taux d'intérêt de 12% pour retard de paiement, sans que cela n'ait été conclu. Charlie panique et veut aller payer immédiatement en Euros au siège de Farma.</p>
+            <p class="cas-pratique-question">Charlie doit-il payer 12% et peut-il payer en euros ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p><strong>Monnaie :</strong> Une dette en Suisse sans précision doit être payée en <strong>monnaie du pays (CHF)</strong> (art. 84 CO). Farma peut refuser les Euros.</p>
+                <p><strong>Intérêts :</strong> En l'absence d'accord contractuel, le taux légal pour les intérêts moratoires s'applique. Il est de <strong>5%</strong> (art. 104 CO). Farma ne peut pas imposer 12% unilatéralement.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_argent"
+    },
+    eo_arg_monnaie: {
+        title: "La monnaie de paiement",
+        info: "La devise utilisée pour se libérer de la dette.",
+        children: ["eo_arg_mon_chf", "eo_arg_mon_etrangere"],
+        parent: "eo_argent"
+    },
+    eo_arg_mon_chf: {
+        title: "La dette libellée en francs suisses",
+        info: "Le paiement d'une dette ayant pour objet une somme d'argent se fait en <strong>monnaie du pays</strong> (art. 84 al. 1 CO).",
+        children: [],
+        parent: "eo_arg_monnaie"
+    },
+    eo_arg_mon_etrangere: {
+        title: "La dette libellée en monnaie étrangère",
+        info: "Le débiteur peut <strong>se libérer en francs suisses selon le cours du jour de l'échéance</strong>, sauf si le contraire a été stipulé (ex: clause valeur effective, art. 84 al. 2 CO).",
+        children: [],
+        parent: "eo_arg_monnaie"
+    },
+    eo_arg_imputation: {
+        title: "L'imputation des paiements",
+        info: "Le débiteur <strong>ne peut imputer le paiement sur le capital s'il est en retard pour les intérêts et les frais</strong> (art. 85 al. 1 CO). En cas de pluralité de dettes, c'est le débiteur qui peut préciser la dette qu'il entend acquitter.",
+        children: [],
+        parent: "eo_argent"
+    },
+    eo_arg_modes: {
+        title: "Les modes de paiement particuliers",
+        info: "Le paiement se fait en monnaie du pays (en espèces). Comme les dettes d'argent sont portables, <strong>le débiteur n'est libéré que lorsque le montant est à disposition du créancier sur son compte</strong>.",
+        children: [],
+        parent: "eo_argent"
+    },
+
+    // ==========================================
+    // LA DETTE D'INTÉRÊTS
+    // ==========================================
+    eo_interets: {
+        title: "La dette d'intérêts",
+        info: "Règles relatives aux intérêts (art. 73 CO).",
+        children: ["eo_int_notion", "eo_int_taux", "eo_int_nature"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_int_notion: {
+        title: "Notion",
+        info: "L'intérêt est la <strong>compensation pécuniaire due au créancier pour le capital dont celui-ci est privé</strong>. Elle peut avoir pour source le contrat ou la loi.",
+        children: [],
+        parent: "eo_interets"
+    },
+    eo_int_taux: {
+        title: "Le taux d'intérêt",
+        info: "Fixé en première ligne par la convention (intérêts conventionnels) avec deux limites : la <strong>prohibition de l'anatocisme</strong> (intérêts composés) et les dispositions de droit public.<br><br>À défaut d'accord, le taux est fixé par l'usage ou la loi. <strong>À titre subsidiaire, la loi fixe le taux d'intérêt à 5 %</strong> (art. 73 al. 1 CO).",
+        children: [],
+        parent: "eo_interets"
+    },
+    eo_int_nature: {
+        title: "Nature de la dette d'intérêts",
+        info: "C'est <strong>l'accessoire de la dette principale</strong>. Si une quittance est donnée pour le capital, les intérêts sont présumés payés. Toutefois, la créance d'intérêt est <strong>cessible indépendamment</strong> de la créance principale.",
+        children: [],
+        parent: "eo_interets"
+    },
+
+    // ==========================================
+    // LA PREUVE DE L'EXÉCUTION
+    // ==========================================
+    eo_preuve: {
+        title: "La preuve de l'exécution",
+        info: "Moyens légaux pour le débiteur de prouver qu'il s'est acquitté de sa dette.",
+        children: ["eo_pre_quittance", "eo_pre_titre"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_pre_quittance: {
+        title: "La remise d'une quittance",
+        info: "Une quittance est une <strong>déclaration écrite du créancier par laquelle il reconnaît avoir reçu une prestation déterminée</strong>. Le débiteur peut exiger sa remise même pour une prestation partielle.",
+        children: [],
+        parent: "eo_preuve"
+    },
+    eo_pre_titre: {
+        title: "La restitution ou mention sur le titre",
+        info: "S'il s'est <strong>entièrement acquitté</strong>, le débiteur peut exiger la restitution du titre, ce qui fait <strong>présumer l'extinction de la dette</strong>. En cas de paiement partiel, il peut uniquement exiger la <strong>mention du paiement sur le titre</strong>.",
+        children: [],
+        parent: "eo_preuve"
+    },
+
+    // ==========================================
+    // LA DEMEURE DU CRÉANCIER
+    // ==========================================
     eo_demeure_creancier: {
         title: "La demeure du créancier",
-        info: "Le créancier refuse de recevoir. Assumation des risques de la chose.",
-        children: [], parent: "exec_obligations_titre16"
+        info: "Situation où le créancier refuse de recevoir la prestation (art. 91 à 96 CO).",
+        children: ["eo_dc_notion", "eo_dc_conditions", "eo_dc_effets", "cp_pommes_sequoia"],
+        parent: "exec_obligations_titre16"
     },
-    
+    cp_pommes_sequoia: {
+        title: "Cas pratique : Charlie & les Pommes Sequoia",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie commande 500 pommes à Sequoia SA. Un mois plus tard, Charlie n'a toujours pas indiqué le lieu et la date de livraison, empêchant Sequoia d'exécuter son obligation.</p>
+            <p class="cas-pratique-question">Que se passe-t-il pour Charlie ? Que peut faire Sequoia ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Charlie a violé son devoir d'incombance. Il est en <strong>Demeure du créancier</strong>.</p>
+                <p>Sequoia SA ne pouvant pas consigner des denrées périssables, elle devra sommer le créancier, obtenir l'autorisation du juge et <strong>vendre le stock</strong> pour se protéger (art. 92 CO).</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_demeure_creancier"
+    },
+    eo_dc_notion: {
+        title: "Notion",
+        info: "Le créancier est tenu de prêter son concours (actes préparatoires). Ce devoir n'est pas une véritable obligation mais une <strong>incombance</strong>. Le débiteur ne peut en exiger l'exécution, mais le créancier encourt un <strong>désavantage juridique appelé la demeure du créancier</strong>.",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+    eo_dc_conditions: {
+        title: "Conditions",
+        info: "Trois conditions (art. 91 CO) :<br><ol><li><strong>L'offre effective de la prestation.</strong></li><li><strong>La violation de ses devoirs par le créancier.</strong></li><li><strong>L'absence de motif légitime.</strong></li></ol>",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+    eo_dc_effets: {
+        title: "Les effets",
+        info: "La demeure du créancier <strong>exclut la demeure du débiteur</strong>. Selon les cas, le débiteur a le <strong>droit de consigner, le droit de vendre ou le droit de se départir du contrat</strong>.<br><br>Il est fondamental de retenir qu'à partir de ce moment, <strong>c'est le créancier qui assume les risques de la chose</strong>. Si elle périt, il ne pourra pas rechercher le débiteur.",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+
+    // ==========================================
+    // LA DEMEURE DU DÉBITEUR
+    // ==========================================
     eo_demeure_debiteur: {
         title: "La demeure du débiteur",
-        info: "Retard. Demeure simple vs Demeure qualifiée (délai de grâce nécessaire, résolution possible).",
-        children: [], parent: "exec_obligations_titre16"
+        info: "Retard dans l'exécution de la prestation due.",
+        children: ["eo_dd_notion", "eo_dd_simple", "eo_dd_qualifiee", "cp_demeure_farma"],
+        parent: "exec_obligations_titre16"
+    },
+    cp_demeure_farma: {
+        title: "Cas pratique : La demeure de Cormoran SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Cormoran reçoit des croquettes mais ne paie pas. Farma SA envoie un courrier fixant un délai au 31 mai pour payer. Le 31 mai passe, rien n'est payé. </p>
+            <p class="cas-pratique-question">Que peut faire Farma ? Et si Cormoran n'avait pas payé car Farma refusait de lui donner son IBAN ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Cormoran est en <strong>demeure qualifiée</strong> (Délai de grâce fixé et échu). Farma peut réclamer l'exécution + dommages, ou renoncer à l'exécution pour des DI positifs, ou se départir du contrat.</p>
+                <p><em>Variante IBAN :</em> Si Farma refuse de donner son IBAN, elle ne prête pas son concours. C'est la <strong>demeure du créancier</strong>. La demeure du créancier exclut la demeure du débiteur, Cormoran ne serait donc pas en tort.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_demeure_debiteur"
+    },
+    eo_dd_notion: {
+        title: "Notion",
+        info: "C'est la situation défavorable dans laquelle se trouve le débiteur en <strong>retard dans l'exécution</strong>. À la différence de l'inexécution, <strong>la demeure est une situation provisoire</strong> qui peut encore déboucher sur l'exécution.",
+        children: [],
+        parent: "eo_demeure_debiteur"
+    },
+    eo_dd_simple: {
+        title: "La demeure simple",
+        info: "Applicable à tous les contrats (art. 102 à 106 CO).",
+        children: ["eo_dds_conditions", "eo_dds_interpellation", "eo_dds_effets"],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_conditions: {
+        title: "Conditions",
+        info: "Quatre conditions (art. 102 al. 1 CO) :<br><ol><li><strong>L'exigibilité de l'obligation.</strong></li><li><strong>L'échéance :</strong> fixée par contrat ou par interpellation.</li><li><strong>L'inexécution de l'obligation.</strong></li><li><strong>L'absence de motif justificatif.</strong></li></ol>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_interpellation: {
+        title: "L'interpellation",
+        info: "C'est une <strong>sommation de s'exécuter</strong> faite par le créancier au débiteur.<br><br>Exceptions à l'exigence d'interpellation (art. 108 CO) :<br><ul><li>Obligation assortie d'un <strong>terme comminatoire</strong>.</li><li>Le débiteur a manifesté sa <strong>ferme volonté de ne pas s'exécuter</strong>.</li><li>Le débiteur empêche intentionnellement l'interpellation de l'atteindre.</li></ul>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_effets: {
+        title: "Les effets",
+        info: "La demeure ne suppose pas en soi une faute, mais certains effets la requièrent.<br><ul><li><strong>Intérêts moratoires :</strong> dus <strong>indépendamment de toute faute</strong>.</li><li><strong>Responsabilité aggravée :</strong> il doit des dommages-intérêts supplémentaires et encourt une <strong>responsabilité pour le cas fortuit uniquement s'il est fautif</strong>.</li></ul>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dd_qualifiee: {
+        title: "La demeure qualifiée",
+        info: "Dans les contrats synallagmatiques (art. 107 à 109 CO).",
+        children: ["eo_ddq_conditions", "eo_ddq_effets"],
+        parent: "eo_dd_qualifiee"
+    },
+    eo_ddq_conditions: {
+        title: "Conditions",
+        info: "Trois conditions supplémentaires s'appliquent :<br><ol><li><strong>La demeure du débiteur</strong> (simple).</li><li><strong>L'inexécution dans le délai de grâce :</strong> le créancier doit avoir fixé un <strong>délai supplémentaire</strong> (sauf si l'attitude du débiteur ou le terme fixe rend cela inutile, art. 108 CO).</li><li><strong>La déclaration immédiate.</strong></li></ol>",
+        children: [],
+        parent: "eo_dd_qualifiee"
+    },
+    eo_ddq_effets: {
+        title: "Les effets",
+        info: "Si les conditions sont remplies, le créancier a le choix entre trois possibilités :<br><ol><li><strong>L'exécution du contrat en nature.</strong></li><li><strong>L'exécution sous forme de dommages-intérêts positifs.</strong></li><li><strong>La résolution du contrat</strong> (avec dommages-intérêts négatifs si le débiteur est en faute).</li></ol>",
+        children: [],
+        parent: "eo_dd_qualifiee"
     },
 
     // --- 17. L'EXTINCTION DES OBLIGATIONS ---
     extinction_obligations_titre17: {
         title: "17. L'extinction des obligations",
-        info: "Causes d'extinction hors exécution.",
+        info: "Ce titre aborde les différentes causes qui mettent fin à une obligation, libérant ainsi le débiteur et éteignant le droit de créance.",
         children: [
-            "eo_ext_causes"
+            "eo_notion", 
+            "eo_remise", 
+            "eo_novation", 
+            "eo_confusion", 
+            "eo_impossibilite", 
+            "eo_compensation", 
+            "eo_prescription", 
+            "eo_rapports"
         ],
         parent: "root"
     },
-    
-    eo_ext_causes: {
-        title: "Les différentes causes",
-        info: "Remise de dette (contrat). Novation (présomption contre). Confusion (réunion des qualités). Impossibilité subséquente. Compensation. Prescription.",
-        children: [], parent: "extinction_obligations_titre17"
+
+    // ==========================================
+    // NOTION
+    // ==========================================
+    eo_notion: {
+        title: "Notion",
+        info: "Constitue une cause d'extinction tout fait qui, en vertu de la loi, met fin à l'obligation.<br><br><strong>La cause ordinaire d'extinction des obligations est l'exécution.</strong> Toutefois, les obligations peuvent s'éteindre sans qu'il y ait eu exécution.<br><br>On distingue :<br><ul><li><strong>Les causes volontaires :</strong> l'exécution, la remise de dette, la novation, la compensation.</li><li><strong>Les causes involontaires :</strong> l'impossibilité subséquente, la confusion, la prescription.</li></ul><br>L'extinction a pour effet que <strong>le créancier ne peut plus en demander l'exécution et que le débiteur n'est plus tenu d'effectuer la prestation</strong>.",
+        children: [],
+        parent: "extinction_obligations_titre17"
+    },
+
+    // ==========================================
+    // LA REMISE DE DETTE
+    // ==========================================
+    eo_remise: {
+        title: "La remise de dette",
+        info: "Mécanisme prévu à l'art. 115 CO.",
+        children: ["eo_remise_notion", "eo_remise_cond", "cp_ext_remise"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_remise: {
+        title: "Cas pratique 1 : Farma SA passe l'éponge",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Farma SA décide d'annuler une ancienne facture de 20 sacs pour remercier Cormoran SA de sa fidélité.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une <strong>Remise de dette</strong> (art. 115 CO). Elle n'est soumise à aucune exigence de forme.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_remise"
+    },
+    eo_remise_notion: {
+        title: "Notion",
+        info: "La remise de dette est le <strong>contrat entre le débiteur et le créancier par lequel ce dernier annule ou réduit la dette</strong>.<br><br>Lorsque les parties annulent seulement une partie, on parle de <strong>remise de dette partielle</strong>. Le contrat de remise de dette peut être conditionnel.",
+        children: [],
+        parent: "eo_remise"
+    },
+    eo_remise_cond: {
+        title: "Conditions",
+        info: "C'est un <strong>contrat informel</strong>, même si la naissance de l'obligation remise nécessitait une forme particulière. <br><br>S'agissant d'un acte de disposition, le créancier doit <strong>avoir le pouvoir de disposer de la créance</strong>, et l'acte doit <strong>reposer sur une cause</strong>.",
+        children: [],
+        parent: "eo_remise"
+    },
+
+    // ==========================================
+    // LA NOVATION
+    // ==========================================
+    eo_novation: {
+        title: "La novation",
+        info: "Mécanisme prévu aux art. 116 et 117 CO.",
+        children: ["eo_nov_notion", "eo_nov_cond", "eo_nov_effets", "eo_nov_compte", "cp_ext_novation"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_novation: {
+        title: "Cas pratique 2 : Le changement de facture",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Cormoran ajoute 50 sacs à une commande existante de 500 sacs. Farma annule la première facture de CHF 250'000.- et en envoie une nouvelle consolidée de CHF 275'000.-.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une <strong>Novation</strong> (art. 116 CO). Attention, la novation ne se présume pas, la volonté de nover doit être claire. L'ancienne dette est éteinte, remplacée par la nouvelle.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_novation"
+    },
+    eo_nov_notion: {
+        title: "Notion",
+        info: "La novation est le <strong>contrat par lequel les parties éteignent la créance originale et y substituent une créance nouvelle</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_cond: {
+        title: "Conditions",
+        info: "La novation est un <strong>contrat informel</strong> qui suppose l'existence d'une <strong>créance valable</strong>. <br><br>Il est très important de noter que <strong>la loi pose une présomption contre la novation</strong> (art. 116 al. 1 CO).",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_effets: {
+        title: "Les effets",
+        info: "La novation entraîne <strong>l'extinction de la dette primitive</strong>. Toutes les exceptions que le débiteur pouvait tirer de la créance novée et <strong>tous les accessoires (sûretés réelles et personnelles) disparaissent</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_compte: {
+        title: "Le cas particulier du compte-courant",
+        info: "Contrat (art. 117 CO) par lequel deux personnes s'engagent à porter en compte leurs créances réciproques, à <strong>ne pas les faire valoir immédiatement et de façon indépendante, mais de les compenser périodiquement</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+
+    // ==========================================
+    // LA CONFUSION
+    // ==========================================
+    eo_confusion: {
+        title: "La confusion",
+        info: "Mécanisme prévu à l'art. 118 CO.",
+        children: ["eo_conf_notion", "eo_conf_cond", "eo_conf_effets", "cp_ext_confusion"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_confusion: {
+        title: "Cas pratique 3 : La Fusion Farma / Cormoran",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Farma SA et Cormoran SA décident de fusionner avant que la dette ne soit payée.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Il s'agit d'une <strong>Confusion</strong> (art. 118 CO). Le créancier et le débiteur ne forment plus qu'une seule entité, la dette s'éteint.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_confusion"
+    },
+    eo_conf_notion: {
+        title: "Notion",
+        info: "La confusion est la <strong>réunion dans la même personne des qualités de créancier et de débiteur</strong> (art. 118 al. 1 CO).",
+        children: [],
+        parent: "eo_confusion"
+    },
+    eo_conf_cond: {
+        title: "Conditions",
+        info: "Trois conditions : <strong>l'identité de l'obligation</strong>, <strong>l'identité de créancier et du débiteur</strong>, et <strong>l'absence d'un autre créancier ou débiteur</strong>.",
+        children: [],
+        parent: "eo_confusion"
+    },
+    eo_conf_effets: {
+        title: "Les effets",
+        info: "L'effet extinctif ne se produit pas si la créance est grevée d'un gage ou d'un usufruit. <br><br>Même s'il se produit, <strong>l'effet extinctif de la confusion n'est pas définitif</strong>. La dette renaît si l'identité entre le créancier et le débiteur vient à cesser (art. 118 al. 2 CO).",
+        children: [],
+        parent: "eo_confusion"
+    },
+
+    // ==========================================
+    // L'IMPOSSIBILITÉ SUBSÉQUENTE
+    // ==========================================
+    eo_impossibilite: {
+        title: "L'impossibilité subséquente",
+        info: "Mécanisme prévu à l'art. 119 CO.",
+        children: ["eo_imp_notion", "eo_imp_cond", "eo_imp_effets", "cp_ext_impossibilite_1", "cp_ext_impossibilite_2"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_impossibilite_1: {
+        title: "Cas pratique 4.1 : La peinture de Vallotton",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Charlie achète une peinture à Paul. Charlie "oublie" d'aller la chercher l'après-midi comme convenu. La nuit, la maison de Paul brûle accidentellement avec la peinture.</p>
+            <p class="cas-pratique-question">Charlie peut-il récupérer son argent ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>L'impossibilité est objective et non fautive pour le débiteur (Paul). L'obligation s'éteint (art. 119 CO).</p>
+                <p>MAIS, l'impossibilité est ici <strong>imputable au créancier</strong>, car Charlie était en demeure (il devait la prendre l'après-midi). C'est lui qui assume les risques. <strong>Il ne récupérera pas son argent</strong>.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_impossibilite"
+    },
+    cp_ext_impossibilite_2: {
+        title: "Cas pratique 4.2 : L'incendie chez Farma SA",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Farma prépare 550 sacs individualisés dans des camions. La nuit avant la livraison, un incendie détruit tout.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Si la chose est de genre, le risque passe à l'acquéreur quand elle est individualisée ET expédiée (dessaisi) (art. 185 CO).</p>
+                <p>Les camions n'étant pas encore partis de Farma SA, Farma n'est pas dessaisie. Farma supporte donc le risque et la perte de la marchandise.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_impossibilite"
+    },
+    eo_imp_notion: {
+        title: "Notion",
+        info: "Il y a impossibilité subséquente lorsque, <strong>postérieurement à la naissance de l'obligation, des circonstances surviennent qui en empêchent l'exécution</strong>.",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+    eo_imp_cond: {
+        title: "Conditions",
+        info: "Quatre conditions (art. 119 CO) :<br><ol><li><strong>L'impossibilité de la prestation.</strong></li><li><strong>Une impossibilité subséquente.</strong></li><li><strong>Une impossibilité objective.</strong></li><li><strong>Une impossibilité non fautive.</strong></li></ol>",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+    eo_imp_effets: {
+        title: "Les effets",
+        info: "Elle entraîne <strong>l'extinction de l'obligation qui en est affectée</strong>. Dans les contrats synallagmatiques, elle entraîne également <strong>l'extinction de l'obligation réciproque</strong>, conformément au principe de l'échange.<br><br>Exceptions : le transfert légal ou conventionnel des risques au créancier, et l'impossibilité imputable au créancier.",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+
+    // ==========================================
+    // LA COMPENSATION
+    // ==========================================
+    eo_compensation: {
+        title: "La compensation",
+        info: "Mécanisme prévu aux art. 120 à 126 CO.",
+        children: ["eo_comp_notion", "eo_comp_cond", "eo_comp_effets", "cp_ext_compensation"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_compensation: {
+        title: "Cas pratique 5 : Les dettes croisées",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Cormoran doit CHF 275'000.- à Farma. Mais Farma doit CHF 200'000.- à Cormoran pour une licence.</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>Les conditions de la <strong>Compensation</strong> sont réunies (art. 120 CO). L'une des parties doit en faire la déclaration. Après compensation, Cormoran devra seulement CHF 75'000.-.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_compensation"
+    },
+    eo_comp_notion: {
+        title: "Notion",
+        info: "La compensation est <strong>l'extinction d'une dette par le sacrifice d'une créance que le débiteur a contre son créancier</strong>.<br><br>Elle suppose deux obligations : la créance compensée (la dette du compensant) et la créance compensante (la créance du compensant).",
+        children: [],
+        parent: "eo_compensation"
+    },
+    eo_comp_cond: {
+        title: "Les conditions",
+        info: "Quatre conditions matérielles :<br><ol><li><strong>La réciprocité des créances.</strong></li><li><strong>L'identité des prestations dues.</strong></li><li><strong>L'exigibilité de la créance compensante.</strong></li><li><strong>L'absence d'une cause d'exclusion.</strong></li></ol><br>Même réunies, la compensation n'est pas automatique : il faut <strong>une déclaration de volonté du compensant</strong> (art. 124 al. 1 CO), qui constitue l'exercice d'un droit formateur résolutoire.",
+        children: [],
+        parent: "eo_compensation"
+    },
+    eo_comp_effets: {
+        title: "Les effets",
+        info: "Éteint les deux créances. Si les montants diffèrent, <strong>l'effet extinctif ne se produit qu'à concurrence du montant le plus faible</strong> (art. 124 al. 2 CO). La plus faible est totalement éteinte, l'autre simplement réduite.",
+        children: [],
+        parent: "eo_compensation"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
+    eo_prescription: {
+        title: "La prescription",
+        info: "Mécanisme prévu aux art. 127 à 142 CO.",
+        children: ["eo_presc_notion", "eo_presc_delai", "eo_presc_effets", "cp_ext_prescription"],
+        parent: "extinction_obligations_titre17"
+    },
+    cp_ext_prescription: {
+        title: "Cas pratique 6 : La reconnaissance tardive",
+        info: `<div class="cas-pratique">
+            <h4>Situation</h4>
+            <p>Délai de paiement au 1er janvier 2012. En 2014, Cormoran signe une reconnaissance de dette. En 2022, toujours pas payé. La dette est-elle prescrite ?</p>
+            <button class="toggle-answer-btn" onclick="const res = this.nextElementSibling; if(res.style.display === 'none') { res.style.display = 'block'; this.textContent = 'Masquer la réponse'; } else { res.style.display = 'none'; this.textContent = 'Afficher la réponse'; }">Afficher la réponse</button>
+            <div class="answer-box" style="display: none;">
+                <p>La prescription contractuelle est de 10 ans. Elle courait initialement de 2012 à 2022.</p>
+                <p>Cependant, la reconnaissance de dette en 2014 a provoqué une <strong>interruption</strong> (art. 135 CO). Un nouveau délai de 10 ans a commencé, courant donc jusqu'en <strong>2024</strong>. En 2022, la dette n'est pas prescrite.</p>
+            </div>
+        </div>`,
+        children: [], parent: "eo_prescription"
+    },
+    eo_presc_notion: {
+        title: "Notion",
+        info: "Institution qui permet au débiteur de <strong>paralyser le droit d'action lié à une créance par suite de l'écoulement du temps</strong>. En principe, toutes les créances se prescrivent, mais <strong>certaines créances sont imprescriptibles</strong> (ex: créances garanties par gage immobilier).",
+        children: [],
+        parent: "eo_prescription"
+    },
+    eo_presc_delai: {
+        title: "Le délai de prescription",
+        info: "Règles régissant le calcul du temps de prescription.",
+        children: [
+            "eo_pdel_duree", 
+            "eo_pdel_depart", 
+            "eo_pdel_suspension", 
+            "eo_pdel_interruption", 
+            "eo_pdel_prolongation", 
+            "eo_pdel_renonciation"
+        ],
+        parent: "eo_prescription"
+    },
+    eo_pdel_duree: {
+        title: "La durée",
+        info: "Le <strong>délai général est de 10 ans</strong> (art. 127 CO).<br><br>Quatre exceptions majeures :<br><ul><li><strong>5 ans</strong> (art. 128 CO) pour loyers, artisans, médecins/avocats.</li><li><strong>3 ans (relatif) et 20 ans (absolu)</strong> en cas de mort/lésions par faute contractuelle (art. 128a CO).</li><li>Créances délictuelles (art. 60 CO) : <strong>3 ans (relatif) et 10/20 ans (absolu)</strong>.</li><li>Enrichissement illégitime (art. 67 CO) : <strong>3 ans (relatif) et 10 ans (absolu)</strong>.</li></ul><br>En vertu de l'art. 129 CO, <strong>il est interdit de modifier conventionnellement ces délais, qui sont impératifs</strong>.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_depart: {
+        title: "Le point de départ",
+        info: "En principe, <strong>la prescription court dès l'exigibilité de la créance</strong> (art. 130 al. 1 CO). Exceptions pour les créances délictuelles et d'enrichissement illégitime, où le délai relatif ne part que lorsque la personne connaît son droit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_suspension: {
+        title: "La suspension",
+        info: "Pendant sa durée, <strong>la prescription ne court pas</strong>. Si le délai n'a jamais couru, il commence après la cause. S'il a déjà couru, <strong>il s'arrête et continue dès que la cause disparaît</strong>. <br><br>Causes : dépendance, impossibilité de faire valoir en Suisse, inventaire de succession, ou discussions extrajudiciaires convenues par écrit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_interruption: {
+        title: "L'interruption",
+        info: "A pour effet de <strong>faire courir un nouveau délai</strong>. De même durée sauf si la créance est reconnue dans un titre/jugement, où <strong>le nouveau délai est toujours de 10 ans</strong>. Provoquée par la <strong>reconnaissance de dette</strong> du débiteur ou des <strong>actes d'exécution forcée</strong> du créancier.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_prolongation: {
+        title: "La prolongation",
+        info: "À titre exceptionnel, l'art. 63 CPC <strong>accorde un délai supplémentaire d'un mois</strong> au créancier qui a agi à temps mais dont l'acte est irrecevable/retiré, si la prescription s'est écoulée dans l'intervalle.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_renonciation: {
+        title: "La renonciation",
+        info: "<strong>La renonciation anticipée est nulle</strong>. Cependant, le débiteur peut <strong>renoncer à soulever l'exception de prescription</strong>, à chaque fois pour 10 ans au plus, à compter du début du délai (art. 141 CO). Cette renonciation doit être faite par écrit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_presc_effets: {
+        title: "Les effets",
+        info: "À proprement parler, ce n'est pas une cause d'extinction absolue : <strong>elle confère seulement au débiteur une exception lui permettant de paralyser la créance</strong>, qui continue d'exister sous forme d'obligation imparfaite.",
+        children: [],
+        parent: "eo_prescription"
+    },
+
+    // ==========================================
+    // L'EXTINCTION DES RAPPORTS D'OBLIGATION
+    // ==========================================
+    eo_rapports: {
+        title: "L'extinction des rapports d'obligation",
+        info: "La fin de la relation globale entre les parties.",
+        children: ["eo_rap_notion", "eo_rap_imprevision"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_rap_notion: {
+        title: "Notion",
+        info: "En principe, les contrats <strong>ne prennent fin que par la correcte exécution des obligations réciproques</strong>.<br><br>La cause ordinaire dépend de la durée :<br><ul><li><strong>Durée déterminée :</strong> expiration de la durée convenue.</li><li><strong>Durée indéterminée :</strong> résiliation unilatérale par l'une des parties.</li></ul>Les causes extraordinaires empêchent le déroulement normal.",
+        children: [],
+        parent: "eo_rapports"
+    },
+    eo_rap_imprevision: {
+        title: "La théorie de l'imprévision",
+        info: "Normalement, le contrat s'applique malgré un changement (<strong>principe de la fidélité contractuelle</strong>). Exceptionnellement, le contrat peut être adapté : c'est la <strong>théorie de l'imprévision (clausula rebus sic stantibus)</strong>.<br><br>En l'absence de clause, le juge peut intervenir si deux conditions sont réunies : le <strong>caractère imprévisible du changement</strong> et une <strong>disproportion importante entre les prestations</strong>.",
+        children: [],
+        parent: "eo_rapports"
     }
-
 };
-
-// ============================================
-// APP LOGIC
-// ============================================
-
+// [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
 const mainContent = document.getElementById('main-content');
 const breadcrumb = document.getElementById('breadcrumb');
 const searchBar = document.getElementById('searchBar');
@@ -1755,7 +4129,7 @@ function renderTopic(id, pushHistory = true) {
 
     path.forEach((p, index) => {
         bcHtml += ` <span class="breadcrumb-separator">/</span> `;
-        // Rend chaque élément du chemin cliquable
+        // Rend chaque élément du chemin cliquable, même le dernier (au cas où)
         if (index === path.length - 1) {
             bcHtml += `<span class="breadcrumb-current" onclick="renderTopic('${p.id}')" style="cursor: pointer;">${p.title}</span>`;
         } else {
@@ -1765,7 +4139,7 @@ function renderTopic(id, pushHistory = true) {
 
     breadcrumb.innerHTML = bcHtml;
 
-    let html = ``; 
+    let html = ``; // Start empty
 
     // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT (TOUT EN HAUT) ---
     if (id !== 'root' && id !== 'bibliographie') {
@@ -1777,32 +4151,44 @@ function renderTopic(id, pushHistory = true) {
             let prevId = null;
             let nextId = null;
 
+            // Déterminer le Sujet Précédent
             if (currentIndex > 0) {
+                // S'il y a un frère avant
                 prevId = parentTopic.children[currentIndex - 1];
             } else {
+                // Sinon on remonte au parent
                 prevId = parentId;
             }
 
+            // Déterminer le Sujet Suivant
             if (topic.children && topic.children.length > 0) {
+                // S'il a des enfants, on descend dans le premier enfant
                 nextId = topic.children[0];
             } else if (currentIndex < parentTopic.children.length - 1) {
+                // S'il n'a pas d'enfant mais un frère après
                 nextId = parentTopic.children[currentIndex + 1];
             } else {
+                // S'il n'a pas d'enfant, pas de frère après -> On est à la fin du chapitre/section.
+                // On va chercher le prochain titre principal dans l'arbre.
                 let tempParentId = parentId;
+                let tempCurrentId = id;
                 
+                // Remonter jusqu'à trouver un parent qui a un frère suivant
                 while(tempParentId && tempParentId !== 'root') {
                     let gpTopic = courseData[courseData[tempParentId].parent];
                     if(gpTopic && gpTopic.children) {
                         let pIndex = gpTopic.children.indexOf(tempParentId);
                         if(pIndex < gpTopic.children.length - 1) {
                             nextId = gpTopic.children[pIndex + 1];
-                            break; 
+                            break; // On a trouvé le prochain grand titre
                         }
                     }
+                    tempCurrentId = tempParentId;
                     tempParentId = courseData[tempParentId].parent;
                 }
             }
 
+            // Génération du HTML pour les boutons
             if (prevId || nextId) {
                 html += `<div class="navigation-buttons" style="margin-top: 0; margin-bottom: 20px; padding-top: 0; border-top: none; border-bottom: 2px solid var(--border); padding-bottom: 20px;">`;
                 
@@ -1813,7 +4199,7 @@ function renderTopic(id, pushHistory = true) {
                             ${courseData[prevId].title}
                         </div>`;
                 } else {
-                    html += `<div></div>`; 
+                    html += `<div></div>`; // Espace vide pour flexbox
                 }
 
                 if (nextId) {
@@ -1857,17 +4243,19 @@ function renderTopic(id, pushHistory = true) {
 
     mainContent.innerHTML = html;
     
-    // 4. Sur mobile, fermer le menu automatiquement
+    // 4. Sur mobile, fermer le menu automatiquement après un clic
     const sidebar = document.getElementById('sidebar');
     if (sidebar.classList.contains('active')) {
         toggleMobileSidebar();
     }
 
+    // 5. Remonter en haut de la page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// --- GESTION DU BOUTON RETOUR ---
+// --- GESTION DU BOUTON RETOUR DU NAVIGATEUR/TÉLÉPHONE ---
 window.addEventListener('popstate', (event) => {
+    // Si l'historique contient un ID sauvegardé, on l'affiche sans repousser dans l'historique
     if (event.state && event.state.topicId) {
         renderTopic(event.state.topicId, false);
     } else {
@@ -1900,10 +4288,13 @@ searchBar.addEventListener('input', (e) => {
         </div>`;
 });
 
+// --- LANCEMENT INITIAL DE L'APPLICATION ---
 renderSidebar();
 
+// Vérifie si on a rechargé la page sur un sujet précis (via l'URL ?topic=...)
 const urlParams = new URLSearchParams(window.location.search);
 const initialTopic = urlParams.get('topic') || 'root';
 
+// Remplace l'état initial pour que le tout premier bouton retour fonctionne bien
 history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
-renderTopic(initialTopic, false);
+renderTopic(initialTopic, false)
