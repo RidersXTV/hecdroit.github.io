@@ -16,7 +16,7 @@ const courseData = {
 
     // --- BRANCHE PRINCIPALE 1.1 : LES FONDEMENTS DU DROIT ---
     fondements_droit: {
-        title: "Section 1 : Les fondements du droit",
+        title: "Les fondements du droit",
         info: "Pour pouvoir exercer ses fonctions, à savoir assurer un équilibre entre des intérêts opposés et organiser la vie en communauté, le droit doit remplir trois sortes de conditions : il doit être sûr, émaner d'un pouvoir social et correspondre à une idée de justice.",
         children: ["def_fonctions", "securite_droit", "pouvoir_social", "idee_justice"],
         parent: "notion"
@@ -24,7 +24,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.1.1
     def_fonctions: {
-        title: "Chapitre 1 : Définition et fonctions",
+        title: "Définition et fonctions",
         info: "Le droit est le système normatif englobant toutes les règles de droit obligatoires, soit l'ensemble des règles de conduite imposées aux personnes physiques et morales par un pouvoir que personnifie l'État. <br><br>Le droit a deux fonctions principales :<br><ul><li><strong>Une fonction pacificatrice :</strong> freiner les appétits égoïstes et assurer la coexistence pacifique entre les individus.</li><li><strong>Une fonction organisatrice :</strong> établir un ordre social fondé sur l'équilibre des divers intérêts.</li></ul>",
         children: [],
         parent: "fondements_droit"
@@ -32,7 +32,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.1.2
     securite_droit: {
-        title: "Chapitre 2 : La sécurité du droit",
+        title: "La sécurité du droit",
         info: "Les personnes soumises au droit doivent toujours avoir la possibilité de le connaître pour pouvoir se conformer à ses normes ; il s'agit de la sécurité du droit. En règle générale, le droit écrit correspond le mieux à cette idée de clarté et de prévisibilité.<br><br>La sécurité du droit implique plusieurs exigences :<br><ul><li>Le principe de la <strong>non-rétroactivité des lois</strong> et l'existence de règles transitoires.</li><li>L'institution de la <strong>prescription</strong>, c'est-à-dire l'extinction d'un droit, d'une obligation ou d'une action par l'effet de l'écoulement du temps.</li></ul><br>Ces éléments garantissent l'équilibre entre les intérêts opposés (c'est l'effet préventif).",
         children: [],
         parent: "fondements_droit"
@@ -40,7 +40,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.1.3
     pouvoir_social: {
-        title: "Chapitre 3 : L'émanation d'un pouvoir social",
+        title: "L'émanation d'un pouvoir social",
         info: "Le droit doit émaner d'un pouvoir social. L'ordre social suppose l'existence d'une autorité habilitée et apte à imposer les normes établies, à les faire exécuter et à infliger des sanctions. <br><br>Dans une société correspondant à un État de droit, c'est l'État qui, à lui seul, assure le fonctionnement de la justice.",
         children: [],
         parent: "fondements_droit"
@@ -48,7 +48,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.1.4
     idee_justice: {
-        title: "Chapitre 4 : La conformité à l'idée de justice",
+        title: "La conformité à l'idée de justice",
         info: "Le droit doit correspondre à une idée de justice. On distingue deux approches :<br><ul><li><strong>La justice commutative :</strong> se rapporte aux droits fondamentaux qui appartiennent à chaque être humain de façon égale sans que l'on tienne compte de l'origine, de la race ou de la religion (ex: liberté de conscience).</li><li><strong>La justice distributive :</strong> implique que l'on tienne compte de certaines différences qui existent entre les individus dans leur rapport avec la société (ex: impôts proportionnels aux revenus).</li></ul><br>Il est à noter que l'ordre juridique est le fruit de la pensée humaine et qu'il ne doit pas être immuable, mais doit s'adapter continuellement aux conditions changeantes de la vie.",
         children: [],
         parent: "fondements_droit"
@@ -56,7 +56,7 @@ const courseData = {
 
     // --- BRANCHE PRINCIPALE 1.2 : LES DIFFÉRENTS SENS DU MOT DROIT ---
     sens_droit: {
-        title: "Section 2 : Les différents sens du mot droit",
+        title: "Les différents sens du mot droit",
         info: "Le terme de « droit » recouvre deux notions fondamentales : le droit au sens objectif et le droit au sens subjectif.",
         children: ["droit_objectif", "droit_subjectif"],
         parent: "notion"
@@ -64,7 +64,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.2.1
     droit_objectif: {
-        title: "Chapitre 1 : Le droit au sens objectif",
+        title: "Le droit au sens objectif",
         info: "Le droit au sens objectif est un ensemble de règles obligatoires (ou de normes), générales et abstraites, indiquant ce qui doit être fait dans un cas donné, édictées ou reconnues par un organe officiel, régissant l'organisation et le déroulement des relations sociales et dont le respect est assuré par des moyens de contrainte organisés par l'État.<br><br>Dans ce cadre, on distingue :<br><ul><li>Le <strong>droit naturel</strong> : règles universelles et immuables conformes à la nature humaine.</li><li>Le <strong>droit positif</strong> : règles en vigueur dans un État, à un moment donné.</li></ul>",
         children: [],
         parent: "sens_droit"
@@ -72,7 +72,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.2.2
     droit_subjectif: {
-        title: "Chapitre 2 : Le droit au sens subjectif",
+        title: "Le droit au sens subjectif",
         info: "Le droit au sens subjectif est une faculté, une prérogative attachée à une certaine personne et protégée par l'ordre juridique existant. C'est la faculté appartenant à un sujet de droit de faire ou d'exiger quelque chose (sujet actif) ou d'être obligée à quelque chose (sujet passif).<br><br>On distingue deux catégories :<br><ul><li><strong>Les droits réels ou absolus :</strong> droits qui peuvent être exercés à l'égard de toute tierce personne (ex: le droit de propriété).</li><li><strong>Les droits relatifs ou personnels :</strong> droits qui ne peuvent être exercés qu'à l'encontre de certaines personnes bien déterminées (ex: l'obligation ou droit de créance découlant d'un contrat).</li></ul><br>Un droit subjectif ne peut exister que dans la mesure où le droit objectif le consacre et permet d'en obtenir le respect.",
         children: [],
         parent: "sens_droit"
@@ -88,7 +88,7 @@ const courseData = {
 
     // --- BRANCHE PRINCIPALE 2.1 ---
     definition_sujets: {
-        title: "1. Définition et notion",
+        title: "Définition et notion",
         info: "Un sujet de droit est soit le titulaire de droits subjectifs qui peut faire valoir les prérogatives qui en découlent (le créancier), soit la personne qui est obligée du fait de ces droits subjectifs (le débiteur). <br><br>Il est important de noter que les choses ne peuvent être en soi que l'objet d'un droit subjectif, elles sont un moyen et non un but en soi.",
         children: [],
         parent: "sujets"
@@ -96,7 +96,7 @@ const courseData = {
 
     // --- BRANCHE PRINCIPALE 2.2 ---
     jouissance_exercice_droits: {
-        title: "2. La jouissance et l'exercice des droits civils",
+        title: "La jouissance et l'exercice des droits civils",
         info: "Il est fondamental de distinguer la jouissance de l'exercice des droits civils :<br><br><ul><li><strong>La jouissance des droits civils (capacité juridique) :</strong> C'est la capacité d'être sujet de droit. Toute personne a une aptitude égale à devenir sujet de droits et d'obligations. Cette faculté, indépendante de l'âge ou des facultés mentales, commence à la naissance et finit par la mort.</li><li><strong>L'exercice des droits civils :</strong> C'est la capacité de s'engager juridiquement, d'acquérir des droits et pouvoir s'obliger par ses propres actes. Ne possède l'exercice des droits civils que la personne majeure et capable de discernement.</li></ul><br>Le <strong>discernement</strong> se définit comme étant la capacité intellectuelle présumée chez toute personne physique qui n'est pas atteinte de déficience mentale, de troubles psychiques, d'ivresse ou d'autres causes semblables, temporaires ou définitives, l'empêchant d'agir raisonnablement.",
         children: [],
         parent: "sujets"
@@ -104,7 +104,7 @@ const courseData = {
 
     // --- BRANCHE PRINCIPALE 2.3 ---
     personne_morale_entreprise: {
-        title: "3. La personne morale et l'entreprise",
+        title: "La personne morale et l'entreprise",
         info: "L'être humain cherche souvent à atteindre des buts qui dépassent les forces d'une personne individuelle, formant ainsi des groupements.<br><br><ul><li><strong>La personne morale (ou juridique) :</strong> Ce sont des entités, comme des groupements de personnes (ex: association, société de capitaux) ou des masses de biens (ex: fondation), qui peuvent devenir, à certaines conditions, sujets de droits et d'obligations.</li><li><strong>L'entreprise :</strong> La notion de personne morale doit être distinguée de celle d'entreprise. L'entreprise peut être définie comme étant une activité économique indépendante exercée en vue d'un revenu régulier.</li></ul><br>En pratique, la notion d'entreprise peut désigner l'activité commerciale exploitée par une personne morale (ex: société anonyme) ou par une ou plusieurs personnes physiques (ex: entreprise individuelle, société en nom collectif).",
         children: [],
         parent: "sujets"
@@ -128,7 +128,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.1
     caractere_general_abstrait: {
-        title: "1. Le caractère général et abstrait",
+        title: "Le caractère général et abstrait",
         info: "Par essence, la règle de droit est générale et abstraite. <br><br><ul><li>Elle est <strong>générale</strong>, en ce sens qu'elle vise un nombre indéterminé de personnes.</li><li>Elle est <strong>abstraite</strong> dans la mesure où elle s'applique à un nombre indéterminé de situations.</li></ul><br>La règle de droit doit donc être formulée de telle manière qu'elle puisse viser le plus de situations possibles, sans pour autant être trop générale et, par conséquent, trop vague, ce qui nuirait à la sécurité du droit.",
         children: [],
         parent: "caracteristiques_regle"
@@ -136,7 +136,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.2
     structure_double: {
-        title: "2. La structure double",
+        title: "La structure double",
         info: "Sur le plan de sa structure, la règle de droit comprend deux éléments, elle est bipartite :<br><br><ol><li>D'une part, elle comprend un <strong>point de départ</strong>. Ce sont les conditions, l'hypothèse, les faits ou les éléments dont la réalisation entraîne l'application de la règle.</li><li>D'autre part, elle emporte un <strong>effet juridique</strong>, soit la conséquence que la règle de droit attache à la réalisation des faits ou conditions d'application.</li></ol><br>Cette double structure se rencontre non seulement dans la règle abstraite, mais aussi dans l'application au cas concret (il y a une partie « fait » et une partie « droit » dans tout jugement).",
         children: [],
         parent: "caracteristiques_regle"
@@ -144,7 +144,7 @@ const courseData = {
 
     // SOUS-BRANCHE 1.3
     caractere_obligatoire: {
-        title: "3. Le caractère obligatoire",
+        title: "Le caractère obligatoire",
         info: "La troisième caractéristique, qui est de loin la plus importante, est le caractère obligatoire de la règle de droit, accompagné de la menace de sanction ou de la sanction elle-même. <br><br>La sanction, qui est la conséquence attachée par le droit à la violation d'une règle juridique, poursuit deux buts essentiels :<br><ul><li>Un but de <strong>prévention et de punition</strong> : inciter les justiciables à suivre les règles de droit.</li><li>Un but de <strong>réparation</strong> : réparer les effets d'une conduite contraire au droit.</li></ul>",
         children: [],
         parent: "caracteristiques_regle"
