@@ -4298,3 +4298,25 @@ const initialTopic = urlParams.get('topic') || 'root';
 // Remplace l'état initial pour que le tout premier bouton retour fonctionne bien
 history.replaceState({ topicId: initialTopic }, courseData[initialTopic]?.title || "Accueil", "?topic=" + initialTopic);
 renderTopic(initialTopic, false)
+
+const ACADEMIC_PASSWORD = "HEC_DROIT_2026"; // Changez ceci par le mot de passe de votre choix
+
+function checkPassword() {
+    const input = document.getElementById('password-input').value;
+    const errorMsg = document.getElementById('auth-error');
+    const overlay = document.getElementById('auth-overlay');
+
+    if (input === ACADEMIC_PASSWORD) {
+        overlay.style.display = 'none';
+        sessionStorage.setItem('isAuth', 'true');
+    } else {
+        errorMsg.style.display = 'block';
+    }
+}
+
+// Vérification au chargement de la page
+window.onload = function() {
+    if (sessionStorage.getItem('isAuth') === 'true') {
+        document.getElementById('auth-overlay').style.display = 'none';
+    }
+};
