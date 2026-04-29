@@ -3,7 +3,7 @@ const courseData = {
     root: {
         title: "Sommaire Général",
         info: "Sélectionnez une des grandes branches du cours de Droit de l'entreprise pour commencer vos révisions.",
-        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11"]
+        children: ["notion", "sujets", "regle", "sources", "divisions", "public", "droit_prive_pt7", "droit_obligations", "sources_obligations_titre9", "obligations_contractuelles_titre10", "rc_titre11", "rc_contractuelle_titre12", "enrichissement_illegitime_titre13", "modalites_obligations_titre14", "transmission_obligations_titre15", "exec_obligations_titre16", "extinction_obligations_titre17"]
     },
     
     // --- 1. NOTION ET FONCTIONS DU DROIT ---
@@ -1997,6 +1997,952 @@ const courseData = {
         info: "L'action délictuelle (art. 60 CO) est soumise à des délais spécifiques :<br><ul><li>Un <strong>délai relatif de trois ans</strong> (dès la connaissance du préjudice et de l'auteur).</li><li>Un <strong>délai absolu de dix ans</strong> (dès la survenance du fait dommageable).</li><li>Un <strong>délai absolu de vingt ans en cas de mort d'homme ou de lésions corporelles</strong>.</li></ul>",
         children: [],
         parent: "rc_titre11"
+    },
+
+    // --- 12. LA RESPONSABILITÉ CONTRACTUELLE ---
+    rc_contractuelle_titre12: {
+        title: "12. La responsabilité contractuelle",
+        info: "Ce titre traite de l'obligation de réparer le préjudice causé par la violation d'un contrat (Art. 97 à 101 CO).",
+        children: ["rcc_notion", "rcc_sources", "rcc_conditions", "rcc_reparation", "rcc_prescription"],
+        parent: "root"
+    },
+
+    // ==========================================
+    // NOTION
+    // ==========================================
+    rcc_notion: {
+        title: "Notion",
+        info: "Alors que la responsabilité civile vise la violation d'un devoir général, la responsabilité contractuelle s'applique lors de la <strong>violation d'une obligation contractuelle</strong>.<br><br>Elle se définit comme l'ensemble des règles qui impose au débiteur l'obligation de réparer le préjudice causé au créancier par la violation de ses obligations contractuelles.<br><br>La différence majeure avec la responsabilité civile extracontractuelle est que <strong>les parties sont liées par une relation juridique préalable</strong>.",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LES SOURCES
+    // ==========================================
+    rcc_sources: {
+        title: "Les sources de la responsabilité contractuelle",
+        info: "La responsabilité contractuelle est régie par deux types de sources :<br><ul><li><strong>Les règles contractuelles :</strong> celles qui proviennent du contrat liant le débiteur et le créancier. C'est la première source applicable.</li><li><strong>Les règles légales :</strong> composées de règles générales (art. 97 à 101 CO) ou spéciales (partie spéciale du CO ou lois spéciales).</li></ul>",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LES CONDITIONS
+    // ==========================================
+    rcc_conditions: {
+        title: "Les conditions de la responsabilité contractuelle",
+        info: "Selon l'art. 97 al. 1 CO, la responsabilité contractuelle exige la réalisation de <strong>quatre conditions cumulatives</strong> :<br><ol><li><strong>Un préjudice :</strong> Conséquences de l'inexécution sur le patrimoine du créancier (s'interprète comme en RC extracontractuelle).</li><li><strong>La violation du contrat :</strong> Condition remplie lorsque le débiteur a violé ses obligations contractuelles.</li><li><strong>Un rapport de causalité :</strong> Lien de causalité naturelle et adéquate entre la violation de l'obligation et le préjudice.</li><li><strong>Une faute :</strong> Manquement de la volonté aux devoirs imposés par le contrat. <strong>Particularité cruciale : la faute est présumée</strong> (art. 97 al. 1 CO). C'est au débiteur de prouver qu'il n'a commis aucune faute pour se libérer.</li></ol>",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LA RÉPARATION DU PRÉJUDICE
+    // ==========================================
+    rcc_reparation: {
+        title: "La réparation du préjudice",
+        info: "Lorsque les conditions sont remplies, le débiteur est tenu de réparer le préjudice causé.<br><br>La réparation consistera soit en une <strong>somme d'argent</strong> (capital ou rente), soit en une <strong>réparation en nature</strong> (art. 43 CO). L'indemnité due se substitue à la prestation initiale et est fixée conformément aux principes qui régissent la responsabilité civile (renvoi de l'art. 99 al. 3 CO).",
+        children: [],
+        parent: "rc_contractuelle_titre12"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
+    rcc_prescription: {
+        title: "La prescription",
+        info: "Le délai général qui s'applique à l'action en responsabilité contractuelle est un <strong>délai ordinaire de dix ans</strong> (art. 127 CO).",
+        children: ["rcc_presc_exceptions"],
+        parent: "rc_contractuelle_titre12"
+    },
+    rcc_presc_exceptions: {
+        title: "Les exceptions",
+        info: "Il existe deux exceptions principales :<br><ul><li><strong>Art. 128 CO :</strong> Un délai spécial plus court de <strong>cinq ans</strong> s'applique pour les redevances périodiques, les prestations d'entretien et pour certaines prestations courantes (ex: factures des artisans, honoraires des médecins).</li><li><strong>Art. 128a CO :</strong> En cas de <strong>mort d'homme ou de lésions corporelles</strong> résultant d'une faute contractuelle, l'action se prescrit par un <strong>délai relatif de trois ans</strong> (dès connaissance du dommage) et, dans tous les cas, par un <strong>délai absolu de vingt ans</strong> (dès que le fait dommageable s'est produit ou a cessé).</li></ul>",
+        children: [],
+        parent: "rcc_prescription"
+    },
+
+    // --- 13. L'ENRICHISSEMENT ILLÉGITIME ---
+    enrichissement_illegitime_titre13: {
+        title: "13. L'enrichissement illégitime",
+        info: "Ce titre traite de l'obligation légale de restituer un avantage patrimonial acquis sans cause juridique valable aux dépens d'autrui (art. 62 à 67 CO).",
+        children: ["ei_notion", "ei_conditions", "ei_repetition_indu", "ei_restitution", "ei_prescription"],
+        parent: "root"
+    },
+
+    // ==========================================
+    // NOTION
+    // ==========================================
+    ei_notion: {
+        title: "Notion",
+        info: "<strong>Si une personne bénéficie sans cause valable d’une augmentation de son patrimoine aux dépens d’autrui, celui-ci se voit reconnaître par l’ordre juridique une créance en restitution contre l’enrichi</strong> (art. 62 al. 1 CO).<br><br>Comme cette créance a son fondement directement dans la loi, l’enrichissement illégitime est une <strong>source légale d’obligation</strong>.",
+        children: [],
+        parent: "enrichissement_illegitime_titre13"
+    },
+
+    // ==========================================
+    // LES CONDITIONS
+    // ==========================================
+    ei_conditions: {
+        title: "Les conditions de l'enrichissement illégitime",
+        info: "Pour invoquer l'enrichissement illégitime (art. 62 CO), quatre conditions cumulatives doivent être réunies.",
+        children: ["ei_cond_enrichissement", "ei_cond_appauvrissement", "ei_cond_causalite", "ei_cond_absence_cause"],
+        parent: "enrichissement_illegitime_titre13"
+    },
+    ei_cond_enrichissement: {
+        title: "L'enrichissement du défendeur",
+        info: "<strong>L’enrichissement consiste dans la différence entre l’état actuel du patrimoine de l’enrichi et son montant, par hypothèse inférieur, sans le déplacement de valeur.</strong><br><br>Il peut prendre plusieurs formes :<br><ul><li><strong>L’augmentation du patrimoine</strong></li><li><strong>La non-diminution du patrimoine</strong></li></ul>",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_appauvrissement: {
+        title: "L'appauvrissement du demandeur",
+        info: "<strong>L’appauvrissement consiste dans la différence entre l’état actuel du patrimoine de l’appauvri et son montant, par hypothèse supérieur, sans le déplacement de valeur.</strong><br><br>Il peut consister en une diminution du patrimoine (perte effective) ou une non-augmentation (gain manqué). <br><br><strong>L’appauvrissement peut résulter d'une attribution de l’appauvri à l’enrichi.</strong> C'est le cas le plus fréquent. Il peut également découler d'un acte de l'enrichi, d'un tiers, ou d'un fait de la nature.",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_causalite: {
+        title: "Le rapport de causalité (ou connexité)",
+        info: "Le rapport de causalité entre la diminution du patrimoine d'une personne et l'enrichissement de l'autre est <strong>donné dès lors que l’enrichissement de l’un n’a pas pu se produire sans l’appauvrissement de l’autre.</strong>",
+        children: [],
+        parent: "ei_conditions"
+    },
+    ei_cond_absence_cause: {
+        title: "L'absence de cause valable",
+        info: "<strong>L’absence de cause valable se caractérise comme le manque d’une base obligatoire au transfert patrimonial.</strong><br><br>L'art. 62 al. 2 CO envisage trois hypothèses :<br><ul><li><strong>L’enrichissement sans cause valable</strong></li><li><strong>L’enrichissement en vertu d’une cause qui ne s’est pas réalisée</strong></li><li><strong>L'enrichissement en vertu d'une cause qui a cessé d'exister</strong></li></ul>",
+        children: [],
+        parent: "ei_conditions"
+    },
+
+    // ==========================================
+    // LA RÉPÉTITION DE L'INDU
+    // ==========================================
+    ei_repetition_indu: {
+        title: "La répétition de l'indu",
+        info: "<strong>La répétition de l'indu désigne l'hypothèse particulière où l'appauvri a lui-même effectué la prestation</strong> (art. 63 et 66 CO).<br><br>Cette action présente certaines particularités par rapport à l'action générale :<br><ul><li><strong>L'erreur sur l'existence de la dette lors de l'exécution</strong></li><li><strong>L'exécution ne doit pas concerner une obligation imparfaite</strong></li><li><strong>Les prestations ne doivent pas poursuivre un but illicite ou immoral</strong></li></ul>",
+        children: [],
+        parent: "enrichissement_illegitime_titre13"
+    },
+
+    // ==========================================
+    // LA RESTITUTION
+    // ==========================================
+    ei_restitution: {
+        title: "La restitution",
+        info: "Règles encadrant la manière et l'étendue selon lesquelles l'enrichi doit rendre l'avantage acquis.",
+        children: ["ei_rest_mode", "ei_rest_etendue", "ei_rest_impenses"],
+        parent: "enrichissement_illegitime_titre13"
+    },
+    ei_rest_mode: {
+        title: "Le mode de restitution",
+        info: "<strong>La restitution a lieu soit en nature soit, si la restitution en nature est impossible, en argent.</strong> En pratique, la restitution en argent est la plus fréquente. <br><br>Cependant, lorsque l'enrichi détient encore la chose qui lui a été transférée, l'appauvri dispose généralement de <strong>l'action réelle en revendication</strong>.",
+        children: [],
+        parent: "ei_restitution"
+    },
+    ei_rest_etendue: {
+        title: "L'étendue de la restitution",
+        info: "Afin d'effacer les conséquences d'un déplacement patrimonial injustifié, <strong>la restitution est limitée par un double plafond soit l'appauvrissement du demandeur et l'enrichissement du défendeur</strong> (art. 64 CO). <br><br>Pour le reste, l'étendue de la restitution dépend de la bonne foi ou de la mauvaise foi de l'enrichi.",
+        children: [],
+        parent: "ei_restitution"
+    },
+    ei_rest_impenses: {
+        title: "Le remboursement des impenses",
+        info: "<strong>Le remboursement des impenses faites par l’enrichi signifie le remboursement que doit effectuer l’appauvri à l’enrichi pour les dépenses faites par l’enrichi en faveur d’une chose appartenant à l’appauvri</strong> (ex: frais d'entretien) (art. 65 CO).<br><br>L'art. 65 CO distingue trois catégories :<br><ul><li><strong>Les impenses nécessaires. Elles donnent toujours droit au remboursement intégral</strong> (art. 65 al. 1 CO).</li><li><strong>Les impenses utiles. L'étendue du remboursement dépend de la bonne ou de la mauvaise foi de l'enrichi</strong> (art. 65 al. 1 CO).</li><li><strong>Les impenses voluptuaires ou somptuaires. Elles ne donnent droit à aucun remboursement</strong> (art. 65 al. 2 CO).</li></ul>",
+        children: [],
+        parent: "ei_restitution"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
+    ei_prescription: {
+        title: "La prescription",
+        info: "L'action en enrichissement illégitime (art. 67 CO) est subordonnée à un double délai de prescription :<br><ul><li><strong>Le délai relatif de 3 ans</strong>, qui court dès que l'appauvri connaît suffisamment la personne de l'enrichi, le montant de son enrichissement et l'absence de cause valable au transfert.</li><li><strong>Le délai absolu de 10 ans</strong>, qui commence à courir dès l'exigibilité de la créance.</li></ul>",
+        children: [],
+        parent: "enrichissement_illegitime_titre13"
+    },
+
+    // --- 14. LES MODALITÉS DES OBLIGATIONS ---
+    modalites_obligations_titre14: {
+        title: "14. Les modalités des obligations",
+        info: "Ce titre aborde les situations où une obligation s'écarte du modèle de base, que ce soit par le nombre de sujets impliqués (pluralité de débiteurs ou créanciers) ou par des conditions et clauses spécifiques.",
+        children: [
+            "mo_pluralite_debiteurs", 
+            "mo_pluralite_creanciers", 
+            "mo_obligations_conditionnelles", 
+            "mo_clause_arrhes_dedit"
+        ],
+        parent: "root"
+    },
+
+    // ==========================================
+    // LA PLURALITÉ DE DÉBITEURS
+    // ==========================================
+    mo_pluralite_debiteurs: {
+        title: "La pluralité de débiteurs",
+        info: "Situation où une seule et même obligation compte plusieurs débiteurs (dette plurale).",
+        children: ["mo_pd_notion", "mo_pd_solidarite_passive"],
+        parent: "modalites_obligations_titre14"
+    },
+    mo_pd_notion: {
+        title: "Notion",
+        info: "La pluralité de débiteurs peut revêtir plusieurs formes :<br><ul><li><strong>Les débiteurs partiels :</strong> Chaque débiteur doit une partie de la prestation totale.</li><li><strong>Les débiteurs collectifs :</strong> Plusieurs personnes sont débitrices, mais elles doivent toutes exécuter ensemble.</li><li><strong>Les débiteurs pour le tout :</strong> Le créancier peut rechercher chacun des débiteurs pour l'ensemble de la dette.</li></ul>",
+        children: [],
+        parent: "mo_pluralite_debiteurs"
+    },
+    mo_pd_solidarite_passive: {
+        title: "La solidarité passive",
+        info: "Mécanisme très protecteur pour le créancier face à de multiples débiteurs.",
+        children: ["mo_pd_sp_notion", "mo_pd_sp_effets", "mo_pd_sp_recours"],
+        parent: "mo_pluralite_debiteurs"
+    },
+    mo_pd_sp_notion: {
+        title: "Notion",
+        info: "Il y a solidarité passive lorsque <strong>le créancier peut exiger de chaque débiteur la prestation totale et que la prestation faite par l'un des débiteurs libère les autres</strong>.<br><br>Il est très important de noter que <strong>la solidarité passive ne se présume pas</strong>. Elle découle soit d'un contrat (accord entre le créancier et les débiteurs), soit de la loi.",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+    mo_pd_sp_effets: {
+        title: "Les effets",
+        info: "La solidarité n'aggrave pas la situation des débiteurs (chacun est comme s'il était l'unique débiteur). Un co-débiteur ne peut aggraver la situation des autres.<br><br>En matière de libération :<br><ul><li><strong>En cas de libération par paiement ou par compensation, la dette est éteinte et tous les débiteurs solidaires sont libérés.</strong></li><li>En cas de libération d'un co-débiteur pour une autre cause (ex: remise de dette), sa libération ne profite aux autres que dans la mesure indiquée par les circonstances.</li></ul>",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+    mo_pd_sp_recours: {
+        title: "Le recours entre co-débiteurs",
+        info: "L'institution de la solidarité règle les rapports externes (créancier/débiteurs). La répartition du poids de la dette entre les co-obligés (rapports internes) est réglée par le <strong>recours</strong>.<br><br>L'existence et l'étendue du recours sont régies dans l'ordre par le contrat liant les co-obligés, les dispositions légales, puis les règles subsidiaires. <strong>Le recours de celui qui a indemnisé le créancier se prescrit par trois ans</strong> (art. 139 CO).",
+        children: [],
+        parent: "mo_pd_solidarite_passive"
+    },
+
+    // ==========================================
+    // LA PLURALITÉ DE CRÉANCIERS
+    // ==========================================
+    mo_pluralite_creanciers: {
+        title: "La pluralité de créanciers",
+        info: "Situation où une même obligation bénéficie à plusieurs créanciers.",
+        children: ["mo_pc_notion", "mo_pc_solidarite_active"],
+        parent: "modalites_obligations_titre14"
+    },
+    mo_pc_notion: {
+        title: "Notion",
+        info: "De même qu'il y a plusieurs formes de débiteurs, on distingue :<br><ul><li><strong>Les créanciers partiels :</strong> Chacun ne peut exiger qu'une partie de la prestation.</li><li><strong>Les créanciers collectifs :</strong> Ils doivent faire valoir la créance ensemble.</li><li><strong>Les créanciers pour le tout :</strong> Chacun est autorisé à faire valoir la créance de manière intégrale et indépendante.</li></ul>",
+        children: [],
+        parent: "mo_pluralite_creanciers"
+    },
+    mo_pc_solidarite_active: {
+        title: "La solidarité active",
+        info: "Règles applicables lorsque n'importe quel créancier peut réclamer la totalité.",
+        children: ["mo_pc_sa_notion", "mo_pc_sa_effets"],
+        parent: "mo_pluralite_creanciers"
+    },
+    mo_pc_sa_notion: {
+        title: "Notion",
+        info: "Dans la solidarité active, <strong>chaque créancier peut exiger la totalité de la prestation et le débiteur se libère à l'égard de tous en faisant sa prestation à l'un d'eux</strong>.",
+        children: [],
+        parent: "mo_pc_solidarite_active"
+    },
+    mo_pc_sa_effets: {
+        title: "Effets",
+        info: "Le débiteur peut choisir le créancier auquel il fera la prestation, à moins qu'il n'ait été poursuivi par l'un d'eux. Le créancier ayant reçu la prestation peut être tenu d'en reverser une partie aux autres selon leurs arrangements internes.",
+        children: [],
+        parent: "mo_pc_solidarite_active"
+    },
+
+    // ==========================================
+    // LES OBLIGATIONS CONDITIONNELLES
+    // ==========================================
+    mo_obligations_conditionnelles: {
+        title: "Les obligations conditionnelles",
+        info: "Régies par les art. 151 à 157 CO, elles lient l'effet juridique à un événement futur.",
+        children: [
+            "mo_oc_notion", 
+            "mo_oc_categories", 
+            "mo_oc_admissibilite", 
+            "mo_oc_nonavenement", 
+            "mo_oc_effets_suspensive", 
+            "mo_oc_effets_resolutoire"
+        ],
+        parent: "modalites_obligations_titre14"
+    },
+    mo_oc_notion: {
+        title: "Notion",
+        info: "La condition est un <strong>événement futur incertain dont dépend un effet juridique</strong>. Elle se distingue du terme par le caractère incertain de sa survenance.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_categories: {
+        title: "Les catégories",
+        info: "Il existe deux sortes principales de conditions : <strong>la condition suspensive et la condition résolutoire</strong>. Selon l'objet, on distingue aussi la condition casuelle, potestative ou mixte.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_admissibilite: {
+        title: "Admissibilité des conditions",
+        info: "En principe, tous les contrats peuvent être conditionnels. Toutefois, la plupart des actes du droit de la famille ne le sont pas. <strong>La condition ne saurait être illicite ou contraire aux mœurs</strong>, sinon l'obligation qui en dépend est nulle.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_nonavenement: {
+        title: "Non-avènement et empêchement frauduleux",
+        info: "La condition n'est pas réalisée si l'événement ne s'est pas produit dans le temps convenu. Par une fiction, la loi assimile à l'avènement de la condition le cas où <strong>une partie empêche l'accomplissement contrairement aux règles de la bonne foi</strong>.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_effets_suspensive: {
+        title: "Effets de la condition suspensive",
+        info: "Avant l'avènement de la condition, le rapport est en suspens. Le contrat est obligatoire mais les parties n'ont qu'une <strong>expectative</strong> pour leurs droits. <strong>L'obligation n'est pas exigible</strong>.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+    mo_oc_effets_resolutoire: {
+        title: "Effets de la condition résolutoire",
+        info: "Avant l'avènement de la condition, <strong>l'acte produit tous ses effets comme s'il était pur et simple</strong>. La prestation est exigible, le débiteur doit s'exécuter et la prescription court. L'avènement de la condition anéantit les effets du contrat.",
+        children: [],
+        parent: "mo_obligations_conditionnelles"
+    },
+
+    // ==========================================
+    // CLAUSE PÉNALE, ARRHES ET DÉDIT
+    // ==========================================
+    mo_clause_arrhes_dedit: {
+        title: "La clause pénale, les arrhes et le dédit",
+        info: "Clauses accessoires visant à sécuriser l'exécution ou aménager une sortie du contrat.",
+        children: ["mo_cad_clause_penale", "mo_cad_arrhes", "mo_cad_dedit"],
+        parent: "modalites_obligations_titre14"
+    },
+    mo_cad_clause_penale: {
+        title: "La clause pénale",
+        info: "Convention accessoire par laquelle le débiteur promet <strong>le versement d'une somme d'argent pour l'éventualité d'une inexécution totale ou partielle, ou d'une exécution tardive ou défectueuse</strong> (art. 160 à 163 CO).<br><br>Elle peut être alternative ou cumulative. Elle est indépendante du dommage effectif subi par le créancier. Toutefois, <strong>le juge doit réduire la peine conventionnelle excessive</strong>.",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
+    },
+    mo_cad_arrhes: {
+        title: "Les arrhes",
+        info: "Les arrhes consistent en une somme d'argent qu'une partie remet à l'autre lors de la conclusion d'un contrat, <strong>à titre purement probatoire ou à titre d'acompte</strong> (art. 158 CO).",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
+    },
+    mo_cad_dedit: {
+        title: "Le dédit",
+        info: "C'est le droit pour chacune des parties de <strong>se départir du contrat en payant une certaine somme</strong>. <br><br>S'il y a eu versement (dédit réel) : <strong>celui qui a versé la somme peut se départir du contrat en l'abandonnant, celui qui l'a reçue en la restituant au double</strong>. <br><br>Il y a une présomption contre le dédit : la remise d'argent lors de la conclusion fait présumer l'existence d'arrhes, et non d'un dédit.",
+        children: [],
+        parent: "mo_clause_arrhes_dedit"
+    },
+
+    // --- 15. LA TRANSMISSION DES OBLIGATIONS ---
+    transmission_obligations_titre15: {
+        title: "15. La transmission des obligations",
+        info: "Tant le côté actif de l’obligation, la créance, que le côté passif de l’obligation, la dette, peuvent être transférés à un tiers. Dans le premier cas, on parle de cession de créance, dans le second de reprise de dette.",
+        children: ["to_cession_creance", "to_reprise_dette"],
+        parent: "root"
+    },
+
+    // ==========================================
+    // LA CESSION DE CRÉANCE
+    // ==========================================
+    to_cession_creance: {
+        title: "La cession de créance",
+        info: "Règles applicables au transfert du côté actif de l'obligation (art. 164 à 174 CO).",
+        children: ["to_cc_notion", "to_cc_forme", "to_cc_effets"],
+        parent: "transmission_obligations_titre15"
+    },
+    to_cc_notion: {
+        title: "Notion",
+        info: "La cession de créance est le <strong>contrat passé entre le créancier (le cédant) et un tiers (le cessionnaire) en vertu duquel le cessionnaire devient le titulaire de la créance à la place du cédant</strong>.<br><br>Il est fondamental de noter que la cession de créance <strong>ne nécessite aucune intervention du débiteur</strong> (art. 164 al. 1 CO). <br><br>Pour pouvoir être cédée, la créance doit être <strong>cessible</strong> (l'incessibilité peut résulter de la loi, de la convention ou de la nature de l'affaire) et suffisamment déterminée.",
+        children: [],
+        parent: "to_cession_creance"
+    },
+    to_cc_forme: {
+        title: "Forme",
+        info: "La loi exige la <strong>forme écrite</strong> (art. 165 al. 1 CO). L’acte écrit doit couvrir tous les points essentiels du contrat, à savoir la créance cédée, la personne du cessionnaire et la volonté de céder la créance.",
+        children: [],
+        parent: "to_cession_creance"
+    },
+    to_cc_effets: {
+        title: "Effets",
+        info: "La cession déploie des effets à deux niveaux distincts.",
+        children: ["to_cce_cedant_cessionnaire", "to_cce_cessionnaire_debiteur"],
+        parent: "to_cession_creance"
+    },
+    to_cce_cedant_cessionnaire: {
+        title: "Entre le cédant et le cessionnaire",
+        info: "Du fait de la cession, <strong>le cessionnaire devient créancier en lieu et place du cédant</strong>. Le cédant doit lui remettre le titre de créance et les moyens de preuve existants. <br><br>Si la cession a lieu à titre onéreux, le cédant <strong>répond de l’existence de la créance lors de la cession</strong>. Si elle a lieu à titre gratuit, il n'assume aucune garantie.",
+        children: [],
+        parent: "to_cc_effets"
+    },
+    to_cce_cessionnaire_debiteur: {
+        title: "Entre le cessionnaire et le débiteur",
+        info: "Le débiteur <strong>n’a pas besoin de donner son accord à la cession ni même d’être avisé</strong>. Sa situation ne doit pas être aggravée.<br><br>Deux règles essentielles s'appliquent :<br><ul><li>Avant que la cession ne lui ait été notifiée, le débiteur qui paie <strong>de bonne foi entre les mains du cédant est libéré</strong> (art. 167 CO). Après notification, il doit payer au cessionnaire.</li><li><strong>Le débiteur cédé conserve tous les moyens qu’il avait contre le cédant</strong> au moment où il a pris connaissance de la cession (ex: nullité, prescription).</li></ul>",
+        children: [],
+        parent: "to_cc_effets"
+    },
+
+    // ==========================================
+    // LA REPRISE DE DETTE
+    // ==========================================
+    to_reprise_dette: {
+        title: "La reprise de dette",
+        info: "Règles applicables au transfert du côté passif de l'obligation (art. 175 à 183 CO).",
+        children: [
+            "to_rd_notion", 
+            "to_rd_forme", 
+            "to_rd_effets", 
+            "to_rd_patrimoine", 
+            "to_rd_cumulative"
+        ],
+        parent: "transmission_obligations_titre15"
+    },
+    to_rd_notion: {
+        title: "Notion",
+        info: "Lorsque la loi parle de la reprise de dette, elle envisage en réalité deux choses distinctes :<br><ol><li><strong>L’engagement pris par un tiers envers le débiteur de le libérer de sa dette (reprise de dette interne)</strong> (art. 175 CO).</li><li><strong>Le contrat entre le tiers et le créancier par lequel celui-ci accepte que le tiers devienne débiteur de l’obligation (reprise de dette externe)</strong> (art. 176 à 183 CO).</li></ol>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_forme: {
+        title: "Forme",
+        info: "Le contrat de reprise de dette interne obéit en principe aux règles ordinaires sur la formation du contrat. <br><br>Le contrat de reprise de dette externe n'est également <strong>soumis au respect d’aucune forme particulière</strong>, bien qu'il obéisse à quelques dispositions spéciales du CO.",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_effets: {
+        title: "Effets",
+        info: "Dans la reprise de dette externe, <strong>le reprenant devient débiteur en lieu et place de l’ancien débiteur</strong>. Le créancier a donc un nouveau débiteur.<br><br>Il n'y a pas novation. De plus :<br><ul><li><strong>Les droits accessoires subsistent et accompagnent la dette</strong>.</li><li>Le reprenant est placé dans la <strong>même situation juridique</strong> que l’ancien débiteur.</li></ul>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_patrimoine: {
+        title: "La reprise d'un patrimoine ou d'une entreprise",
+        info: "Lorsqu'une entreprise ou un patrimoine sont repris dans leur ensemble, il est impossible de demander le consentement de chaque créancier (régi par la LFus et l'art. 181 CO).<br><br>Le système cherche à concilier les intérêts en instituant deux caractéristiques :<br><ul><li><strong>Le transfert de la dette sans reprise de dette externe.</strong></li><li><strong>La responsabilité solidaire de l’ancien débiteur.</strong></li></ul>",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+    to_rd_cumulative: {
+        title: "La reprise cumulative de dette",
+        info: "La reprise cumulative de dette est le <strong>contrat entre le créancier et un tiers en vertu duquel celui-ci devient solidairement responsable de la dette</strong>.<br><br>À la différence de la reprise de dette normale (privative), elle n'entraîne pas un changement de débiteur mais <strong>l'adjonction d’un second débiteur</strong> au débiteur originel. Elle est admissible en vertu de l'autonomie contractuelle et est un contrat informel.",
+        children: [],
+        parent: "to_reprise_dette"
+    },
+
+    // --- 16. L'EXÉCUTION DES OBLIGATIONS ---
+    exec_obligations_titre16: {
+        title: "16. L'exécution des obligations",
+        info: "Ce titre traite de l'accomplissement de la prestation due par le débiteur au créancier, de ses modalités pratiques, et des conséquences en cas de retard de l'une ou l'autre des parties.",
+        children: [
+            "eo_lieu", 
+            "eo_moment", 
+            "eo_argent", 
+            "eo_interets", 
+            "eo_preuve", 
+            "eo_demeure_creancier", 
+            "eo_demeure_debiteur"
+        ],
+        parent: "root"
+    },
+
+    // ==========================================
+    // LE LIEU DE L'EXÉCUTION
+    // ==========================================
+    eo_lieu: {
+        title: "Le lieu de l'exécution",
+        info: "Détermine l'endroit physique où la prestation doit être effectuée.",
+        children: ["eo_lieu_notion", "eo_lieu_determination"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_lieu_notion: {
+        title: "Notion",
+        info: "Le lieu de l'exécution est l'endroit où une prestation doit être accomplie (art. 74 CO), c'est-à-dire <strong>le lieu où le débiteur doit faire le dernier acte en son pouvoir pour s'exécuter</strong>. Il détermine certaines modalités (comme la monnaie de paiement) mais ne détermine pas le juge compétent.<br><br>Il est nécessaire de distinguer :<br><ul><li><strong>Les dettes « portables » :</strong> ce sont les dettes d'une somme d'argent.</li><li><strong>Les dettes « quérables » :</strong> ce sont les dettes d'une chose déterminée.</li></ul>",
+        children: [],
+        parent: "eo_lieu"
+    },
+    eo_lieu_determination: {
+        title: "Détermination",
+        info: "La détermination relève <strong>primairement de la volonté des parties</strong>. À défaut, la loi (art. 74 CO) fixe des règles supplétives selon qu'il s'agisse de dettes d'argent, de choses déterminées, d'autres dettes, ou de dettes comportant expédition.",
+        children: [],
+        parent: "eo_lieu"
+    },
+
+    // ==========================================
+    // LE MOMENT DE L'EXÉCUTION
+    // ==========================================
+    eo_moment: {
+        title: "Le moment de l'exécution",
+        info: "Règles régissant le moment où la prestation doit être fournie (art. 75 à 83 CO).",
+        children: ["eo_mom_exigibilite", "eo_mom_immediate_diff", "eo_mom_interdependance", "eo_mom_composes"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_mom_exigibilite: {
+        title: "L'exigibilité et l'exécutabilité",
+        info: "<ul><li><strong>L'exigibilité :</strong> désigne le moment à partir duquel le créancier <strong>peut exiger la prestation</strong> (au besoin par une poursuite ou action). Elle permet de mettre en demeure, constitue le point de départ de la prescription et est une condition de la compensation.</li><li><strong>L'exécutabilité :</strong> désigne le moment à partir duquel le débiteur <strong>peut effectuer sa prestation avec effet libératoire</strong>. Dès ce moment, le créancier qui refuse de recevoir est en demeure.</li></ul><br>L'exigibilité et l'exécutabilité ne coïncident pas forcément (une dette peut être exécutable avant d'être exigible).",
+        children: [],
+        parent: "eo_moment"
+    },
+    eo_mom_immediate_diff: {
+        title: "L'exécution immédiate et l'exécution différée",
+        info: "<strong>L'exécution immédiate est le principe</strong> (art. 75 CO).<br><br>L'exécution différée (ou à terme) est l'exception. Le terme est un <strong>événement futur dont la survenance est certaine</strong> (qui se distingue de la <em>condition</em> dont la survenance est incertaine).",
+        children: [],
+        parent: "eo_moment"
+    },
+    eo_mom_interdependance: {
+        title: "L'interdépendance des prestations",
+        info: "Dans les contrats bilatéraux (art. 82 et 83 CO).",
+        children: ["eo_mom_int_inexecution", "eo_mom_int_insolvabilite"],
+        parent: "eo_moment"
+    },
+    eo_mom_int_inexecution: {
+        title: "Exception d'inexécution",
+        info: "Dans les contrats synallagmatiques, <strong>les prestations doivent en principe être exécutées trait pour trait</strong>. Si le créancier n'a pas exécuté ou offert d'exécuter sa propre prestation, le débiteur peut <strong>refuser d'exécuter la sienne</strong> (art. 82 CO).",
+        children: [],
+        parent: "eo_mom_interdependance"
+    },
+    eo_mom_int_insolvabilite: {
+        title: "Exception d'insolvabilité",
+        info: "Si une partie est au bénéfice d'un terme mais que <strong>l'autre est devenue insolvable</strong>, la partie dont les droits sont mis en péril peut <strong>refuser d'exécuter sa propre prestation jusqu'à ce que l'exécution de l'obligation de l'autre ait été garantie</strong> (art. 83 CO).",
+        children: [],
+        parent: "eo_mom_interdependance"
+    },
+    eo_mom_composes: {
+        title: "Le problème des contrats composés",
+        info: "Un contrat composé est un <strong>groupe de contrats formellement distincts mais entre lesquels il existe un lien économique ou psychologique</strong>. Si les contrats sont dans un rapport d'échange, on applique par analogie les règles de l'interdépendance, de la demeure et de l'impossibilité.",
+        children: [],
+        parent: "eo_moment"
+    },
+
+    // ==========================================
+    // LA DETTE D'ARGENT
+    // ==========================================
+    eo_argent: {
+        title: "La dette d'argent",
+        info: "Règles spécifiques au paiement de sommes d'argent.",
+        children: ["eo_arg_monnaie", "eo_arg_imputation", "eo_arg_modes"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_arg_monnaie: {
+        title: "La monnaie de paiement",
+        info: "La devise utilisée pour se libérer de la dette.",
+        children: ["eo_arg_mon_chf", "eo_arg_mon_etrangere"],
+        parent: "eo_argent"
+    },
+    eo_arg_mon_chf: {
+        title: "La dette libellée en francs suisses",
+        info: "Le paiement d'une dette ayant pour objet une somme d'argent se fait en <strong>monnaie du pays</strong> (art. 84 al. 1 CO).",
+        children: [],
+        parent: "eo_arg_monnaie"
+    },
+    eo_arg_mon_etrangere: {
+        title: "La dette libellée en monnaie étrangère",
+        info: "Le débiteur peut <strong>se libérer en francs suisses selon le cours du jour de l'échéance</strong>, sauf si le contraire a été stipulé (ex: clause valeur effective, art. 84 al. 2 CO).",
+        children: [],
+        parent: "eo_arg_monnaie"
+    },
+    eo_arg_imputation: {
+        title: "L'imputation des paiements",
+        info: "Le débiteur <strong>ne peut imputer le paiement sur le capital s'il est en retard pour les intérêts et les frais</strong> (art. 85 al. 1 CO). En cas de pluralité de dettes, c'est le débiteur qui peut préciser la dette qu'il entend acquitter.",
+        children: [],
+        parent: "eo_argent"
+    },
+    eo_arg_modes: {
+        title: "Les modes de paiement particuliers",
+        info: "Le paiement se fait en monnaie du pays (en espèces). Comme les dettes d'argent sont portables, <strong>le débiteur n'est libéré que lorsque le montant est à disposition du créancier sur son compte</strong>.",
+        children: [],
+        parent: "eo_argent"
+    },
+
+    // ==========================================
+    // LA DETTE D'INTÉRÊTS
+    // ==========================================
+    eo_interets: {
+        title: "La dette d'intérêts",
+        info: "Règles relatives aux intérêts (art. 73 CO).",
+        children: ["eo_int_notion", "eo_int_taux", "eo_int_nature"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_int_notion: {
+        title: "Notion",
+        info: "L'intérêt est la <strong>compensation pécuniaire due au créancier pour le capital dont celui-ci est privé</strong>. Elle peut avoir pour source le contrat ou la loi.",
+        children: [],
+        parent: "eo_interets"
+    },
+    eo_int_taux: {
+        title: "Le taux d'intérêt",
+        info: "Fixé en première ligne par la convention (intérêts conventionnels) avec deux limites : la <strong>prohibition de l'anatocisme</strong> (intérêts composés) et les dispositions de droit public.<br><br>À défaut d'accord, le taux est fixé par l'usage ou la loi. <strong>À titre subsidiaire, la loi fixe le taux d'intérêt à 5 %</strong> (art. 73 al. 1 CO).",
+        children: [],
+        parent: "eo_interets"
+    },
+    eo_int_nature: {
+        title: "Nature de la dette d'intérêts",
+        info: "C'est <strong>l'accessoire de la dette principale</strong>. Si une quittance est donnée pour le capital, les intérêts sont présumés payés. Toutefois, la créance d'intérêt est <strong>cessible indépendamment</strong> de la créance principale.",
+        children: [],
+        parent: "eo_interets"
+    },
+
+    // ==========================================
+    // LA PREUVE DE L'EXÉCUTION
+    // ==========================================
+    eo_preuve: {
+        title: "La preuve de l'exécution",
+        info: "Moyens légaux pour le débiteur de prouver qu'il s'est acquitté de sa dette.",
+        children: ["eo_pre_quittance", "eo_pre_titre"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_pre_quittance: {
+        title: "La remise d'une quittance",
+        info: "Une quittance est une <strong>déclaration écrite du créancier par laquelle il reconnaît avoir reçu une prestation déterminée</strong>. Le débiteur peut exiger sa remise même pour une prestation partielle.",
+        children: [],
+        parent: "eo_preuve"
+    },
+    eo_pre_titre: {
+        title: "La restitution ou mention sur le titre",
+        info: "S'il s'est <strong>entièrement acquitté</strong>, le débiteur peut exiger la restitution du titre, ce qui fait <strong>présumer l'extinction de la dette</strong>. En cas de paiement partiel, il peut uniquement exiger la <strong>mention du paiement sur le titre</strong>.",
+        children: [],
+        parent: "eo_preuve"
+    },
+
+    // ==========================================
+    // LA DEMEURE DU CRÉANCIER
+    // ==========================================
+    eo_demeure_creancier: {
+        title: "La demeure du créancier",
+        info: "Situation où le créancier refuse de recevoir la prestation (art. 91 à 96 CO).",
+        children: ["eo_dc_notion", "eo_dc_conditions", "eo_dc_effets"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_dc_notion: {
+        title: "Notion",
+        info: "Le créancier est tenu de prêter son concours (actes préparatoires). Ce devoir n'est pas une véritable obligation mais une <strong>incombance</strong>. Le débiteur ne peut en exiger l'exécution, mais le créancier encourt un <strong>désavantage juridique appelé la demeure du créancier</strong>.",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+    eo_dc_conditions: {
+        title: "Conditions",
+        info: "Trois conditions (art. 91 CO) :<br><ol><li><strong>L'offre effective de la prestation.</strong></li><li><strong>La violation de ses devoirs par le créancier.</strong></li><li><strong>L'absence de motif légitime.</strong></li></ol>",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+    eo_dc_effets: {
+        title: "Les effets",
+        info: "La demeure du créancier <strong>exclut la demeure du débiteur</strong>. Selon les cas, le débiteur a le <strong>droit de consigner, le droit de vendre ou le droit de se départir du contrat</strong>.<br><br>Il est fondamental de retenir qu'à partir de ce moment, <strong>c'est le créancier qui assume les risques de la chose</strong>. Si elle périt, il ne pourra pas rechercher le débiteur.",
+        children: [],
+        parent: "eo_demeure_creancier"
+    },
+
+    // ==========================================
+    // LA DEMEURE DU DÉBITEUR
+    // ==========================================
+    eo_demeure_debiteur: {
+        title: "La demeure du débiteur",
+        info: "Retard dans l'exécution de la prestation due.",
+        children: ["eo_dd_notion", "eo_dd_simple", "eo_dd_qualifiee"],
+        parent: "exec_obligations_titre16"
+    },
+    eo_dd_notion: {
+        title: "Notion",
+        info: "C'est la situation défavorable dans laquelle se trouve le débiteur en <strong>retard dans l'exécution</strong>. À la différence de l'inexécution, <strong>la demeure est une situation provisoire</strong> qui peut encore déboucher sur l'exécution.",
+        children: [],
+        parent: "eo_demeure_debiteur"
+    },
+    eo_dd_simple: {
+        title: "La demeure simple",
+        info: "Applicable à tous les contrats (art. 102 à 106 CO).",
+        children: ["eo_dds_conditions", "eo_dds_interpellation", "eo_dds_effets"],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_conditions: {
+        title: "Conditions",
+        info: "Quatre conditions (art. 102 al. 1 CO) :<br><ol><li><strong>L'exigibilité de l'obligation.</strong></li><li><strong>L'échéance :</strong> fixée par contrat ou par interpellation.</li><li><strong>L'inexécution de l'obligation.</strong></li><li><strong>L'absence de motif justificatif.</strong></li></ol>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_interpellation: {
+        title: "L'interpellation",
+        info: "C'est une <strong>sommation de s'exécuter</strong> faite par le créancier au débiteur.<br><br>Exceptions à l'exigence d'interpellation (art. 108 CO) :<br><ul><li>Obligation assortie d'un <strong>terme comminatoire</strong>.</li><li>Le débiteur a manifesté sa <strong>ferme volonté de ne pas s'exécuter</strong>.</li><li>Le débiteur empêche intentionnellement l'interpellation de l'atteindre.</li></ul>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dds_effets: {
+        title: "Les effets",
+        info: "La demeure ne suppose pas en soi une faute, mais certains effets la requièrent.<br><ul><li><strong>Intérêts moratoires :</strong> dus <strong>indépendamment de toute faute</strong>.</li><li><strong>Responsabilité aggravée :</strong> il doit des dommages-intérêts supplémentaires et encourt une <strong>responsabilité pour le cas fortuit uniquement s'il est fautif</strong>.</li></ul>",
+        children: [],
+        parent: "eo_dd_simple"
+    },
+    eo_dd_qualifiee: {
+        title: "La demeure qualifiée",
+        info: "Dans les contrats synallagmatiques (art. 107 à 109 CO).",
+        children: ["eo_ddq_conditions", "eo_ddq_effets"],
+        parent: "eo_dd_qualifiee"
+    },
+    eo_ddq_conditions: {
+        title: "Conditions",
+        info: "Trois conditions supplémentaires s'appliquent :<br><ol><li><strong>La demeure du débiteur</strong> (simple).</li><li><strong>L'inexécution dans le délai de grâce :</strong> le créancier doit avoir fixé un <strong>délai supplémentaire</strong> (sauf si l'attitude du débiteur ou le terme fixe rend cela inutile, art. 108 CO).</li><li><strong>La déclaration immédiate.</strong></li></ol>",
+        children: [],
+        parent: "eo_dd_qualifiee"
+    },
+    eo_ddq_effets: {
+        title: "Les effets",
+        info: "Si les conditions sont remplies, le créancier a le choix entre trois possibilités :<br><ol><li><strong>L'exécution du contrat en nature.</strong></li><li><strong>L'exécution sous forme de dommages-intérêts positifs.</strong></li><li><strong>La résolution du contrat</strong> (avec dommages-intérêts négatifs si le débiteur est en faute).</li></ol>",
+        children: [],
+        parent: "eo_dd_qualifiee"
+    },
+
+    // --- 17. L'EXTINCTION DES OBLIGATIONS ---
+    extinction_obligations_titre17: {
+        title: "17. L'extinction des obligations",
+        info: "Ce titre aborde les différentes causes qui mettent fin à une obligation, libérant ainsi le débiteur et éteignant le droit de créance.",
+        children: [
+            "eo_notion", 
+            "eo_remise", 
+            "eo_novation", 
+            "eo_confusion", 
+            "eo_impossibilite", 
+            "eo_compensation", 
+            "eo_prescription", 
+            "eo_rapports"
+        ],
+        parent: "root"
+    },
+
+    // ==========================================
+    // NOTION
+    // ==========================================
+    eo_notion: {
+        title: "Notion",
+        info: "Constitue une cause d'extinction tout fait qui, en vertu de la loi, met fin à l'obligation.<br><br><strong>La cause ordinaire d'extinction des obligations est l'exécution.</strong> Toutefois, les obligations peuvent s'éteindre sans qu'il y ait eu exécution.<br><br>On distingue :<br><ul><li><strong>Les causes volontaires :</strong> l'exécution, la remise de dette, la novation, la compensation.</li><li><strong>Les causes involontaires :</strong> l'impossibilité subséquente, la confusion, la prescription.</li></ul><br>L'extinction a pour effet que <strong>le créancier ne peut plus en demander l'exécution et que le débiteur n'est plus tenu d'effectuer la prestation</strong>.",
+        children: [],
+        parent: "extinction_obligations_titre17"
+    },
+
+    // ==========================================
+    // LA REMISE DE DETTE
+    // ==========================================
+    eo_remise: {
+        title: "La remise de dette",
+        info: "Mécanisme prévu à l'art. 115 CO.",
+        children: ["eo_remise_notion", "eo_remise_cond"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_remise_notion: {
+        title: "Notion",
+        info: "La remise de dette est le <strong>contrat entre le débiteur et le créancier par lequel ce dernier annule ou réduit la dette</strong>.<br><br>Lorsque les parties annulent seulement une partie, on parle de <strong>remise de dette partielle</strong>. Le contrat de remise de dette peut être conditionnel.",
+        children: [],
+        parent: "eo_remise"
+    },
+    eo_remise_cond: {
+        title: "Conditions",
+        info: "C'est un <strong>contrat informel</strong>, même si la naissance de l'obligation remise nécessitait une forme particulière. <br><br>S'agissant d'un acte de disposition, le créancier doit <strong>avoir le pouvoir de disposer de la créance</strong>, et l'acte doit <strong>reposer sur une cause</strong>.",
+        children: [],
+        parent: "eo_remise"
+    },
+
+    // ==========================================
+    // LA NOVATION
+    // ==========================================
+    eo_novation: {
+        title: "La novation",
+        info: "Mécanisme prévu aux art. 116 et 117 CO.",
+        children: ["eo_nov_notion", "eo_nov_cond", "eo_nov_effets", "eo_nov_compte"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_nov_notion: {
+        title: "Notion",
+        info: "La novation est le <strong>contrat par lequel les parties éteignent la créance originale et y substituent une créance nouvelle</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_cond: {
+        title: "Conditions",
+        info: "La novation est un <strong>contrat informel</strong> qui suppose l'existence d'une <strong>créance valable</strong>. <br><br>Il est très important de noter que <strong>la loi pose une présomption contre la novation</strong> (art. 116 al. 1 CO).",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_effets: {
+        title: "Les effets",
+        info: "La novation entraîne <strong>l'extinction de la dette primitive</strong>. Toutes les exceptions que le débiteur pouvait tirer de la créance novée et <strong>tous les accessoires (sûretés réelles et personnelles) disparaissent</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+    eo_nov_compte: {
+        title: "Le cas particulier du compte-courant",
+        info: "Contrat (art. 117 CO) par lequel deux personnes s'engagent à porter en compte leurs créances réciproques, à <strong>ne pas les faire valoir immédiatement et de façon indépendante, mais de les compenser périodiquement</strong>.",
+        children: [],
+        parent: "eo_novation"
+    },
+
+    // ==========================================
+    // LA CONFUSION
+    // ==========================================
+    eo_confusion: {
+        title: "La confusion",
+        info: "Mécanisme prévu à l'art. 118 CO.",
+        children: ["eo_conf_notion", "eo_conf_cond", "eo_conf_effets"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_conf_notion: {
+        title: "Notion",
+        info: "La confusion est la <strong>réunion dans la même personne des qualités de créancier et de débiteur</strong> (art. 118 al. 1 CO).",
+        children: [],
+        parent: "eo_confusion"
+    },
+    eo_conf_cond: {
+        title: "Conditions",
+        info: "Trois conditions : <strong>l'identité de l'obligation</strong>, <strong>l'identité de créancier et du débiteur</strong>, et <strong>l'absence d'un autre créancier ou débiteur</strong>.",
+        children: [],
+        parent: "eo_confusion"
+    },
+    eo_conf_effets: {
+        title: "Les effets",
+        info: "L'effet extinctif ne se produit pas si la créance est grevée d'un gage ou d'un usufruit. <br><br>Même s'il se produit, <strong>l'effet extinctif de la confusion n'est pas définitif</strong>. La dette renaît si l'identité entre le créancier et le débiteur vient à cesser (art. 118 al. 2 CO).",
+        children: [],
+        parent: "eo_confusion"
+    },
+
+    // ==========================================
+    // L'IMPOSSIBILITÉ SUBSÉQUENTE
+    // ==========================================
+    eo_impossibilite: {
+        title: "L'impossibilité subséquente",
+        info: "Mécanisme prévu à l'art. 119 CO.",
+        children: ["eo_imp_notion", "eo_imp_cond", "eo_imp_effets"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_imp_notion: {
+        title: "Notion",
+        info: "Il y a impossibilité subséquente lorsque, <strong>postérieurement à la naissance de l'obligation, des circonstances surviennent qui en empêchent l'exécution</strong>.",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+    eo_imp_cond: {
+        title: "Conditions",
+        info: "Quatre conditions (art. 119 CO) :<br><ol><li><strong>L'impossibilité de la prestation.</strong></li><li><strong>Une impossibilité subséquente.</strong></li><li><strong>Une impossibilité objective.</strong></li><li><strong>Une impossibilité non fautive.</strong></li></ol>",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+    eo_imp_effets: {
+        title: "Les effets",
+        info: "Elle entraîne <strong>l'extinction de l'obligation qui en est affectée</strong>. Dans les contrats synallagmatiques, elle entraîne également <strong>l'extinction de l'obligation réciproque</strong>, conformément au principe de l'échange.<br><br>Exceptions : le transfert légal ou conventionnel des risques au créancier, et l'impossibilité imputable au créancier.",
+        children: [],
+        parent: "eo_impossibilite"
+    },
+
+    // ==========================================
+    // LA COMPENSATION
+    // ==========================================
+    eo_compensation: {
+        title: "La compensation",
+        info: "Mécanisme prévu aux art. 120 à 126 CO.",
+        children: ["eo_comp_notion", "eo_comp_cond", "eo_comp_effets"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_comp_notion: {
+        title: "Notion",
+        info: "La compensation est <strong>l'extinction d'une dette par le sacrifice d'une créance que le débiteur a contre son créancier</strong>.<br><br>Elle suppose deux obligations : la créance compensée (la dette du compensant) et la créance compensante (la créance du compensant).",
+        children: [],
+        parent: "eo_compensation"
+    },
+    eo_comp_cond: {
+        title: "Les conditions",
+        info: "Quatre conditions matérielles :<br><ol><li><strong>La réciprocité des créances.</strong></li><li><strong>L'identité des prestations dues.</strong></li><li><strong>L'exigibilité de la créance compensante.</strong></li><li><strong>L'absence d'une cause d'exclusion.</strong></li></ol><br>Même réunies, la compensation n'est pas automatique : il faut <strong>une déclaration de volonté du compensant</strong> (art. 124 al. 1 CO), qui constitue l'exercice d'un droit formateur résolutoire.",
+        children: [],
+        parent: "eo_compensation"
+    },
+    eo_comp_effets: {
+        title: "Les effets",
+        info: "Éteint les deux créances. Si les montants diffèrent, <strong>l'effet extinctif ne se produit qu'à concurrence du montant le plus faible</strong> (art. 124 al. 2 CO). La plus faible est totalement éteinte, l'autre simplement réduite.",
+        children: [],
+        parent: "eo_compensation"
+    },
+
+    // ==========================================
+    // LA PRESCRIPTION
+    // ==========================================
+    eo_prescription: {
+        title: "La prescription",
+        info: "Mécanisme prévu aux art. 127 à 142 CO.",
+        children: ["eo_presc_notion", "eo_presc_delai", "eo_presc_effets"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_presc_notion: {
+        title: "Notion",
+        info: "Institution qui permet au débiteur de <strong>paralyser le droit d'action lié à une créance par suite de l'écoulement du temps</strong>. En principe, toutes les créances se prescrivent, mais <strong>certaines créances sont imprescriptibles</strong> (ex: créances garanties par gage immobilier).",
+        children: [],
+        parent: "eo_prescription"
+    },
+    eo_presc_delai: {
+        title: "Le délai de prescription",
+        info: "Règles régissant le calcul du temps de prescription.",
+        children: [
+            "eo_pdel_duree", 
+            "eo_pdel_depart", 
+            "eo_pdel_suspension", 
+            "eo_pdel_interruption", 
+            "eo_pdel_prolongation", 
+            "eo_pdel_renonciation"
+        ],
+        parent: "eo_prescription"
+    },
+    eo_pdel_duree: {
+        title: "La durée",
+        info: "Le <strong>délai général est de 10 ans</strong> (art. 127 CO).<br><br>Quatre exceptions majeures :<br><ul><li><strong>5 ans</strong> (art. 128 CO) pour loyers, artisans, médecins/avocats.</li><li><strong>3 ans (relatif) et 20 ans (absolu)</strong> en cas de mort/lésions par faute contractuelle (art. 128a CO).</li><li>Créances délictuelles (art. 60 CO) : <strong>3 ans (relatif) et 10/20 ans (absolu)</strong>.</li><li>Enrichissement illégitime (art. 67 CO) : <strong>3 ans (relatif) et 10 ans (absolu)</strong>.</li></ul><br>En vertu de l'art. 129 CO, <strong>il est interdit de modifier conventionnellement ces délais, qui sont impératifs</strong>.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_depart: {
+        title: "Le point de départ",
+        info: "En principe, <strong>la prescription court dès l'exigibilité de la créance</strong> (art. 130 al. 1 CO). Exceptions pour les créances délictuelles et d'enrichissement illégitime, où le délai relatif ne part que lorsque la personne connaît son droit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_suspension: {
+        title: "La suspension",
+        info: "Pendant sa durée, <strong>la prescription ne court pas</strong>. Si le délai n'a jamais couru, il commence après la cause. S'il a déjà couru, <strong>il s'arrête et continue dès que la cause disparaît</strong>. <br><br>Causes : dépendance, impossibilité de faire valoir en Suisse, inventaire de succession, ou discussions extrajudiciaires convenues par écrit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_interruption: {
+        title: "L'interruption",
+        info: "A pour effet de <strong>faire courir un nouveau délai</strong>. De même durée sauf si la créance est reconnue dans un titre/jugement, où <strong>le nouveau délai est toujours de 10 ans</strong>. Provoquée par la <strong>reconnaissance de dette</strong> du débiteur ou des <strong>actes d'exécution forcée</strong> du créancier.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_prolongation: {
+        title: "La prolongation",
+        info: "À titre exceptionnel, l'art. 63 CPC <strong>accorde un délai supplémentaire d'un mois</strong> au créancier qui a agi à temps mais dont l'acte est irrecevable/retiré, si la prescription s'est écoulée dans l'intervalle.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_pdel_renonciation: {
+        title: "La renonciation",
+        info: "<strong>La renonciation anticipée est nulle</strong>. Cependant, le débiteur peut <strong>renoncer à soulever l'exception de prescription</strong>, à chaque fois pour 10 ans au plus, à compter du début du délai (art. 141 CO). Cette renonciation doit être faite par écrit.",
+        children: [],
+        parent: "eo_presc_delai"
+    },
+    eo_presc_effets: {
+        title: "Les effets",
+        info: "À proprement parler, ce n'est pas une cause d'extinction absolue : <strong>elle confère seulement au débiteur une exception lui permettant de paralyser la créance</strong>, qui continue d'exister sous forme d'obligation imparfaite.",
+        children: [],
+        parent: "eo_prescription"
+    },
+
+    // ==========================================
+    // L'EXTINCTION DES RAPPORTS D'OBLIGATION
+    // ==========================================
+    eo_rapports: {
+        title: "L'extinction des rapports d'obligation",
+        info: "La fin de la relation globale entre les parties.",
+        children: ["eo_rap_notion", "eo_rap_imprevision"],
+        parent: "extinction_obligations_titre17"
+    },
+    eo_rap_notion: {
+        title: "Notion",
+        info: "En principe, les contrats <strong>ne prennent fin que par la correcte exécution des obligations réciproques</strong>.<br><br>La cause ordinaire dépend de la durée :<br><ul><li><strong>Durée déterminée :</strong> expiration de la durée convenue.</li><li><strong>Durée indéterminée :</strong> résiliation unilatérale par l'une des parties.</li></ul>Les causes extraordinaires empêchent le déroulement normal.",
+        children: [],
+        parent: "eo_rapports"
+    },
+    eo_rap_imprevision: {
+        title: "La théorie de l'imprévision",
+        info: "Normalement, le contrat s'applique malgré un changement (<strong>principe de la fidélité contractuelle</strong>). Exceptionnellement, le contrat peut être adapté : c'est la <strong>théorie de l'imprévision (clausula rebus sic stantibus)</strong>.<br><br>En l'absence de clause, le juge peut intervenir si deux conditions sont réunies : le <strong>caractère imprévisible du changement</strong> et une <strong>disproportion importante entre les prestations</strong>.",
+        children: [],
+        parent: "eo_rapports"
     }
 };
 // [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
