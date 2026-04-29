@@ -131,7 +131,7 @@ const courseData = {
     // --- 3. LA RÈGLE DE DROIT ---
     regle: {
         title: "3. La règle de droit",
-        info: "La règle de droit est une norme générale et abstraite qui énonce de manière contraignante ce qui doit être et qui bénéficie de la sanction étatique dans l'hypothèse où elle n'est pas respectée[cite: 5].",
+        info: "La règle de droit est une norme générale et abstraite qui énonce de manière contraignante ce qui doit être et qui bénéficie de la sanction étatique dans l'hypothèse où elle n'est pas respectée.",
         children: ["caracteristiques_regle", "nature_regles"],
         parent: "root"
     },
@@ -139,7 +139,7 @@ const courseData = {
     // --- 1ÈRE BRANCHE PRINCIPALE : LES CARACTÉRISTIQUES ---
     caracteristiques_regle: {
         title: "Définition et caractéristiques",
-        info: "Les caractéristiques de la règle de droit sont au nombre de trois[cite: 5]. Elles permettent de structurer et d'imposer la règle au sein de la société.",
+        info: "Les caractéristiques de la règle de droit sont au nombre de trois. Elles permettent de structurer et d'imposer la règle au sein de la société.",
         children: ["caractere_general_abstrait", "structure_double", "caractere_obligatoire"],
         parent: "regle"
     },
@@ -147,7 +147,7 @@ const courseData = {
     // SOUS-BRANCHE 1.1
     caractere_general_abstrait: {
         title: "1. Le caractère général et abstrait",
-        info: "Par essence, la règle de droit est générale et abstraite[cite: 5]. <br><br><ul><li>Elle est <strong>générale</strong>, en ce sens qu'elle vise un nombre indéterminé de personnes[cite: 5].</li><li>Elle est <strong>abstraite</strong> dans la mesure où elle s'applique à un nombre indéterminé de situations[cite: 5].</li></ul><br>La règle de droit doit donc être formulée de telle manière qu'elle puisse viser le plus de situations possibles, sans pour autant être trop générale et, par conséquent, trop vague, ce qui nuirait à la sécurité du droit[cite: 5].",
+        info: "Par essence, la règle de droit est générale et abstraite. <br><br><ul><li>Elle est <strong>générale</strong>, en ce sens qu'elle vise un nombre indéterminé de personnes.</li><li>Elle est <strong>abstraite</strong> dans la mesure où elle s'applique à un nombre indéterminé de situations.</li></ul><br>La règle de droit doit donc être formulée de telle manière qu'elle puisse viser le plus de situations possibles, sans pour autant être trop générale et, par conséquent, trop vague, ce qui nuirait à la sécurité du droit.",
         children: [],
         parent: "caracteristiques_regle"
     },
@@ -155,7 +155,7 @@ const courseData = {
     // SOUS-BRANCHE 1.2
     structure_double: {
         title: "2. La structure double",
-        info: "Sur le plan de sa structure, la règle de droit comprend deux éléments, elle est bipartite[cite: 5] :<br><br><ol><li>D'une part, elle comprend un <strong>point de départ</strong>. Ce sont les conditions, l'hypothèse, les faits ou les éléments dont la réalisation entraîne l'application de la règle[cite: 5].</li><li>D'autre part, elle emporte un <strong>effet juridique</strong>, soit la conséquence que la règle de droit attache à la réalisation des faits ou conditions d'application[cite: 5].</li></ol><br>Cette double structure se rencontre non seulement dans la règle abstraite, mais aussi dans l'application au cas concret (il y a une partie « fait » et une partie « droit » dans tout jugement)[cite: 5].",
+        info: "Sur le plan de sa structure, la règle de droit comprend deux éléments, elle est bipartite :<br><br><ol><li>D'une part, elle comprend un <strong>point de départ</strong>. Ce sont les conditions, l'hypothèse, les faits ou les éléments dont la réalisation entraîne l'application de la règle.</li><li>D'autre part, elle emporte un <strong>effet juridique</strong>, soit la conséquence que la règle de droit attache à la réalisation des faits ou conditions d'application.</li></ol><br>Cette double structure se rencontre non seulement dans la règle abstraite, mais aussi dans l'application au cas concret (il y a une partie « fait » et une partie « droit » dans tout jugement).",
         children: [],
         parent: "caracteristiques_regle"
     },
@@ -163,7 +163,7 @@ const courseData = {
     // SOUS-BRANCHE 1.3
     caractere_obligatoire: {
         title: "3. Le caractère obligatoire",
-        info: "La troisième caractéristique, qui est de loin la plus importante, est le caractère obligatoire de la règle de droit, accompagné de la menace de sanction ou de la sanction elle-même[cite: 5]. <br><br>La sanction, qui est la conséquence attachée par le droit à la violation d'une règle juridique, poursuit deux buts essentiels[cite: 5] :<br><ul><li>Un but de <strong>prévention et de punition</strong> : inciter les justiciables à suivre les règles de droit[cite: 5].</li><li>Un but de <strong>réparation</strong> : réparer les effets d'une conduite contraire au droit[cite: 5].</li></ul>",
+        info: "La troisième caractéristique, qui est de loin la plus importante, est le caractère obligatoire de la règle de droit, accompagné de la menace de sanction ou de la sanction elle-même. <br><br>La sanction, qui est la conséquence attachée par le droit à la violation d'une règle juridique, poursuit deux buts essentiels :<br><ul><li>Un but de <strong>prévention et de punition</strong> : inciter les justiciables à suivre les règles de droit.</li><li>Un but de <strong>réparation</strong> : réparer les effets d'une conduite contraire au droit.</li></ul>",
         children: [],
         parent: "caracteristiques_regle"
     },
@@ -171,7 +171,7 @@ const courseData = {
     // --- 2ÈME BRANCHE PRINCIPALE : NATURE ET EXEMPLES ---
     nature_regles: {
         title: "Nature des règles et exemples",
-        info: "Les règles de droit ne sont pas toutes de même nature[cite: 5]. <br><br><ul><li><strong>Règles impératives :</strong> Règles auxquelles il n'est pas permis de déroger, même par convention, ou qu'il n'est pas licite d'éluder[cite: 5]. Elles doivent être respectées par tous[cite: 5].</li><li><strong>Règles dispositives :</strong> Elles sont édictées dans les mêmes conditions mais ne s'appliquent que si les particuliers n'en ont pas décidé autrement[cite: 5]. Elles peuvent suppléer à la volonté des parties[cite: 5].</li><li><strong>Règles semi-impératives :</strong> Règles auxquelles on ne peut déroger qu'en faveur de l'une des parties, généralement la plus faible (ex: droit du travail)[cite: 5].</li></ul>",
+        info: "Les règles de droit ne sont pas toutes de même nature. <br><br><ul><li><strong>Règles impératives :</strong> Règles auxquelles il n'est pas permis de déroger, même par convention, ou qu'il n'est pas licite d'éluder. Elles doivent être respectées par tous.</li><li><strong>Règles dispositives :</strong> Elles sont édictées dans les mêmes conditions mais ne s'appliquent que si les particuliers n'en ont pas décidé autrement. Elles peuvent suppléer à la volonté des parties.</li><li><strong>Règles semi-impératives :</strong> Règles auxquelles on ne peut déroger qu'en faveur de l'une des parties, généralement la plus faible (ex: droit du travail).</li></ul>",
         children: [],
         parent: "regle"
     },
