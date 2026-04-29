@@ -131,81 +131,49 @@ const courseData = {
     // --- 3. LA RÈGLE DE DROIT ---
     regle: {
         title: "3. La règle de droit",
-        info: "La règle de droit est une règle de conduite humaine dont le respect est assuré par l’autorité publique. Elle se distingue des autres règles (morales, religieuses) par son caractère coercitif.",
-        children: ["caracteres_regle", "structure_double", "nature_regle"],
+        info: "La règle de droit est une norme générale et abstraite qui énonce de manière contraignante ce qui doit être et qui bénéficie de la sanction étatique dans l'hypothèse où elle n'est pas respectée[cite: 5].",
+        children: ["caracteristiques_regle", "nature_regles"],
         parent: "root"
     },
 
-    // SOUS-BRANCHE : CARACTÈRES
-    caracteres_regle: {
-        title: "Caractères de la règle de droit",
-        info: "Pour remplir sa fonction d'organisation sociale, la règle doit présenter quatre caractéristiques fondamentales.",
-        children: ["regle_generale_detail", "regle_abstraite_detail", "regle_obligatoire_detail", "regle_coercitive_detail"],
+    // --- 1ÈRE BRANCHE PRINCIPALE : LES CARACTÉRISTIQUES ---
+    caracteristiques_regle: {
+        title: "Définition et caractéristiques",
+        info: "Les caractéristiques de la règle de droit sont au nombre de trois[cite: 5]. Elles permettent de structurer et d'imposer la règle au sein de la société.",
+        children: ["caractere_general_abstrait", "structure_double", "caractere_obligatoire"],
         parent: "regle"
     },
-    regle_generale_detail: {
-        title: "Générale",
-        info: "La règle est <strong>générale</strong> car elle ne s'adresse pas à un individu nommé, mais à toutes les personnes qui se trouvent ou se trouveront dans la situation qu'elle prévoit. Elle garantit l'égalité de traitement.",
+
+    // SOUS-BRANCHE 1.1
+    caractere_general_abstrait: {
+        title: "1. Le caractère général et abstrait",
+        info: "Par essence, la règle de droit est générale et abstraite[cite: 5]. <br><br><ul><li>Elle est <strong>générale</strong>, en ce sens qu'elle vise un nombre indéterminé de personnes[cite: 5].</li><li>Elle est <strong>abstraite</strong> dans la mesure où elle s'applique à un nombre indéterminé de situations[cite: 5].</li></ul><br>La règle de droit doit donc être formulée de telle manière qu'elle puisse viser le plus de situations possibles, sans pour autant être trop générale et, par conséquent, trop vague, ce qui nuirait à la sécurité du droit[cite: 5].",
         children: [],
-        parent: "caracteres_regle"
-    },
-    regle_abstraite_detail: {
-        title: "Abstraite",
-        info: "La règle est <strong>abstraite</strong> car elle s'applique à un nombre indéterminé de situations futures.",
-        children: [],
-        parent: "caracteres_regle"
-    },
-    regle_obligatoire_detail: {
-        title: "Obligatoire",
-        info: "La règle de droit n'est pas un simple conseil ; elle est une <strong>prescription</strong>. Elle ordonne de faire, de ne pas faire ou de permettre quelque chose.",
-        children: [],
-        parent: "caracteres_regle"
-    },
-    regle_coercitive_detail: {
-        title: "Coercitive",
-        info: "Le respect de la règle est garanti par l'État. Si la règle est transgressée, l'autorité publique peut sanctionner son auteur, au besoin par la force.",
-        children: [],
-        parent: "caracteres_regle"
+        parent: "caracteristiques_regle"
     },
 
-    // SOUS-BRANCHE : LA STRUCTURE DOUBLE (Nouveau)
+    // SOUS-BRANCHE 1.2
     structure_double: {
-        title: "La structure double",
-        info: "Toute règle de droit obéit à une structure logique à deux éléments fondamentaux.",
-        children: ["etat_de_fait", "consequence_juridique"],
-        parent: "regle"
-    },
-    etat_de_fait: {
-        title: "L'état de fait (L'hypothèse)",
-        info: "C'est la proposition conditionnelle. Il s'agit des conditions qui doivent être remplies (la situation de fait) pour que la règle s'applique. <br><br><em>Exemple (Art. 41 CO) : 'Celui qui cause sans droit un dommage à autrui...'</em>",
+        title: "2. La structure double",
+        info: "Sur le plan de sa structure, la règle de droit comprend deux éléments, elle est bipartite[cite: 5] :<br><br><ol><li>D'une part, elle comprend un <strong>point de départ</strong>. Ce sont les conditions, l'hypothèse, les faits ou les éléments dont la réalisation entraîne l'application de la règle[cite: 5].</li><li>D'autre part, elle emporte un <strong>effet juridique</strong>, soit la conséquence que la règle de droit attache à la réalisation des faits ou conditions d'application[cite: 5].</li></ol><br>Cette double structure se rencontre non seulement dans la règle abstraite, mais aussi dans l'application au cas concret (il y a une partie « fait » et une partie « droit » dans tout jugement)[cite: 5].",
         children: [],
-        parent: "structure_double"
-    },
-    consequence_juridique: {
-        title: "La conséquence juridique",
-        info: "C'est l'effet prévu par la loi lorsque les conditions de l'état de fait sont réalisées. <br><br><em>Exemple (suite Art. 41 CO) : '...est tenu de le réparer.'</em>",
-        children: [],
-        parent: "structure_double"
+        parent: "caracteristiques_regle"
     },
 
-    // SOUS-BRANCHE : NATURE (FORCE OBLIGATOIRE)
-    nature_regle: {
-        title: "Nature des règles",
-        info: "Selon l'importance de l'intérêt protégé, la règle s'impose avec plus ou moins de force à la volonté des particuliers.",
-        children: ["regle_imperative_complet", "regle_dispositive_complet"],
+    // SOUS-BRANCHE 1.3
+    caractere_obligatoire: {
+        title: "3. Le caractère obligatoire",
+        info: "La troisième caractéristique, qui est de loin la plus importante, est le caractère obligatoire de la règle de droit, accompagné de la menace de sanction ou de la sanction elle-même[cite: 5]. <br><br>La sanction, qui est la conséquence attachée par le droit à la violation d'une règle juridique, poursuit deux buts essentiels[cite: 5] :<br><ul><li>Un but de <strong>prévention et de punition</strong> : inciter les justiciables à suivre les règles de droit[cite: 5].</li><li>Un but de <strong>réparation</strong> : réparer les effets d'une conduite contraire au droit[cite: 5].</li></ul>",
+        children: [],
+        parent: "caracteristiques_regle"
+    },
+
+    // --- 2ÈME BRANCHE PRINCIPALE : NATURE ET EXEMPLES ---
+    nature_regles: {
+        title: "Nature des règles et exemples",
+        info: "Les règles de droit ne sont pas toutes de même nature[cite: 5]. <br><br><ul><li><strong>Règles impératives :</strong> Règles auxquelles il n'est pas permis de déroger, même par convention, ou qu'il n'est pas licite d'éluder[cite: 5]. Elles doivent être respectées par tous[cite: 5].</li><li><strong>Règles dispositives :</strong> Elles sont édictées dans les mêmes conditions mais ne s'appliquent que si les particuliers n'en ont pas décidé autrement[cite: 5]. Elles peuvent suppléer à la volonté des parties[cite: 5].</li><li><strong>Règles semi-impératives :</strong> Règles auxquelles on ne peut déroger qu'en faveur de l'une des parties, généralement la plus faible (ex: droit du travail)[cite: 5].</li></ul>",
+        children: [],
         parent: "regle"
-    },
-    regle_imperative_complet: {
-        title: "Règle Impérative (Droit impératif)",
-        info: "Règle à laquelle on ne peut <span class='highlight'>absolument pas déroger</span> par convention contraire. <br> <strong>Exemple :</strong> L'Art. 129 CO qui interdit de modifier par avance les délais de prescription.",
-        children: [],
-        parent: "nature_regle"
-    },
-    regle_dispositive_complet: {
-        title: "Règle Dispositive (Droit supplétif)",
-        info: "Règle à laquelle les parties <span class='success'>peuvent déroger</span>. <br> Elle ne s'applique que si les parties n'ont rien prévu d'autre. <br> <strong>Exemple :</strong> L'Art. 189 CO (frais de délivrance à la charge du vendeur, sauf accord contraire).",
-        children: [],
-        parent: "nature_regle"
     },
     // --- 4. LES SOURCES DU DROIT (Structure en Arbre Exhaustive) ---
     sources: {
