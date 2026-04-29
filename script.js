@@ -1575,7 +1575,7 @@ const courseData = {
     droit_obligations: {
         title: "8. Le droit des obligations",
         info: "Cette branche fondamentale du droit privé régit les relations juridiques entre créanciers et débiteurs. Elle est principalement codifiée dans le Code des obligations (CO).",
-        children: ["ob_definition", "ob_prestation", "ob_sources", "cp_paris"],
+        children: ["ob_definition", "ob_prestation", "ob_sources"],
         parent: "root"
     },
 
@@ -1598,7 +1598,7 @@ const courseData = {
     ob_definition: {
         title: "Définition et notion d'obligation",
         info: "Au sens juridique, une obligation est un <span class='highlight'>lien juridique</span> entre deux personnes au moins.<br><br>Dans cette relation bilatérale, on distingue :<br><ul><li><strong>Le créancier :</strong> C'est la partie active. Il est celui qui a le <strong>droit d'exiger</strong> l'exécution de la prestation (il détient une <em>créance</em>).</li><li><strong>Le débiteur :</strong> C'est la partie passive. Il est celui qui a le <strong>devoir d'exécuter</strong> la prestation (il a une <em>dette</em> envers le créancier).</li></ul>",
-        children: [],
+        children: ["cp_paris"],
         parent: "droit_obligations"
     },
 
