@@ -2965,6 +2965,14 @@ const sidebarContent = document.getElementById('sidebar-content');
 // --- FONCTION POUR GÉNÉRER LA BARRE LATÉRALE ---
 function renderSidebar() {
     let html = `<ul class="nav-list">`;
+    
+    // Ajout manuel de l'Accueil tout en haut
+    html += `<li class="nav-item">
+                <div class="nav-header no-children" id="nav-root">
+                    <span class="nav-title" onclick="renderTopic('root')">🏠 Accueil</span>
+                </div>
+             </li>`;
+
     const mainBranches = courseData['root'].children;
     mainBranches.forEach(branchId => {
         const branch = courseData[branchId];
@@ -2974,44 +2982,7 @@ function renderSidebar() {
     sidebarContent.innerHTML = html;
 }
 
-function createSidebarItem(id, item) {
-    let html = `<li class="nav-item">`;
-    if (item.children && item.children.length > 0) {
-        html += `<div class="nav-header" id="nav-${id}">
-                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
-                    <span class="toggle-btn" onclick="toggleSubmenu(this, event)">▼</span>
-                 </div>`;
-        html += `<ul class="sub-nav-list hidden">`;
-        item.children.forEach(childId => {
-            const child = courseData[childId];
-            if (child) html += createSidebarItem(childId, child);
-        });
-        html += `</ul>`;
-    } else {
-        html += `<div class="nav-header no-children" id="nav-${id}">
-                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
-                 </div>`;
-    }
-    html += `</li>`;
-    return html;
-}
-
-function toggleSubmenu(btn, event) {
-    event.stopPropagation();
-    const submenu = btn.parentElement.nextElementSibling;
-    if (submenu) {
-        submenu.classList.toggle('hidden');
-        btn.textContent = submenu.classList.contains('hidden') ? '▼' : '▲';
-    }
-}
-
-// --- GESTION DU MENU MOBILE ---
-function toggleMobileSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-}
+// ... garde createSidebarItem et toggleSubmenu tels quels ...
 
 // --- FONCTION POUR AFFICHER LE CONTENU CENTRAL ---
 function renderTopic(id, pushHistory = true) {
@@ -3022,7 +2993,7 @@ function renderTopic(id, pushHistory = true) {
         history.pushState({ topicId: id }, topic.title, "?topic=" + id);
     }
 
-    // 2. Mise à jour du fil d'Ariane interactive
+    // 2. Mise à jour du fil d'Ariane interactif
     let path = [];
     let currentId = id;
 
@@ -3035,8 +3006,9 @@ function renderTopic(id, pushHistory = true) {
 
     path.forEach((p, index) => {
         bcHtml += ` <span class="breadcrumb-separator">/</span> `;
+        // Rend chaque élément du chemin cliquable, même le dernier (au cas où)
         if (index === path.length - 1) {
-            bcHtml += `<span class="breadcrumb-current">${p.title}</span>`;
+            bcHtml += `<span class="breadcrumb-current" onclick="renderTopic('${p.id}')" style="cursor: pointer;">${p.title}</span>`;
         } else {
             bcHtml += `<span class="breadcrumb-link" onclick="renderTopic('${p.id}')">${p.title}</span>`;
         }
@@ -3044,7 +3016,7 @@ function renderTopic(id, pushHistory = true) {
 
     breadcrumb.innerHTML = bcHtml;
 
-    // 3. Génération du HTML principal
+    // 3. Génération du HTML principal (Titre et Info)
     let html = `
         <div class="info-box">
             <h2>${topic.title}</h2>
@@ -3052,22 +3024,7 @@ function renderTopic(id, pushHistory = true) {
         </div>
     `;
 
-    if (topic.children && topic.children.length > 0) {
-        html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
-        topic.children.forEach(childId => {
-            const child = courseData[childId];
-            if (child) {
-                html += `
-                    <div class="branch-button" onclick="renderTopic('${childId}')">
-                        ${child.title}
-                    </div>
-                `;
-            }
-        });
-        html += `</div>`;
-    }
-
-    // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT ---
+    // --- LOGIQUE POUR LES BOUTONS PRÉCÉDENT / SUIVANT (Désormais EN HAUT) ---
     if (id !== 'root' && id !== 'bibliographie') {
         const parentId = topic.parent;
         const parentTopic = courseData[parentId];
@@ -3093,11 +3050,31 @@ function renderTopic(id, pushHistory = true) {
             } else if (currentIndex < parentTopic.children.length - 1) {
                 // S'il n'a pas d'enfant mais un frère après
                 nextId = parentTopic.children[currentIndex + 1];
+            } else {
+                // S'il n'a pas d'enfant, pas de frère après -> On est à la fin du chapitre/section.
+                // On va chercher le prochain titre principal dans l'arbre.
+                let tempParentId = parentId;
+                let tempCurrentId = id;
+                
+                // Remonter jusqu'à trouver un parent qui a un frère suivant
+                while(tempParentId && tempParentId !== 'root') {
+                    let gpTopic = courseData[courseData[tempParentId].parent];
+                    if(gpTopic && gpTopic.children) {
+                        let pIndex = gpTopic.children.indexOf(tempParentId);
+                        if(pIndex < gpTopic.children.length - 1) {
+                            nextId = gpTopic.children[pIndex + 1];
+                            break; // On a trouvé le prochain grand titre
+                        }
+                    }
+                    tempCurrentId = tempParentId;
+                    tempParentId = courseData[tempParentId].parent;
+                }
             }
 
             // Génération du HTML pour les boutons
             if (prevId || nextId) {
-                html += `<div class="navigation-buttons">`;
+                // Ajout d'une marge en bas pour séparer de la section "Explorer"
+                html += `<div class="navigation-buttons" style="margin-top: 0; margin-bottom: 30px; border-top: none; border-bottom: 2px solid var(--border); padding-bottom: 20px;">`;
                 
                 if (prevId && prevId !== 'root') {
                     html += `
@@ -3122,6 +3099,22 @@ function renderTopic(id, pushHistory = true) {
                 html += `</div>`;
             }
         }
+    }
+
+    // --- SOUS-BRANCHES ("Explorer :") (Désormais EN BAS) ---
+    if (topic.children && topic.children.length > 0) {
+        html += `<h3 style="color: var(--secondary);">Explorer :</h3><div class="sub-branches-grid">`;
+        topic.children.forEach(childId => {
+            const child = courseData[childId];
+            if (child) {
+                html += `
+                    <div class="branch-button" onclick="renderTopic('${childId}')">
+                        ${child.title}
+                    </div>
+                `;
+            }
+        });
+        html += `</div>`;
     }
 
     mainContent.innerHTML = html;
