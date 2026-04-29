@@ -176,3 +176,24 @@ header p { margin: 0; color: #bee3f8; font-size: 0.9em; }
     #app-container { padding: 0 15px; margin-top: 15px; }
     #main-content { padding: 20px; }
 }
+/* Style pour les liens du fil d'Ariane */
+.breadcrumb-link {
+    cursor: pointer;
+    color: var(--secondary);
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: var(--text-muted);
+    margin: 0 5px;
+}
+
+.breadcrumb-current {
+    color: var(--text-main);
+    font-weight: bold;
+}
