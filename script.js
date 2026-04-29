@@ -3126,14 +3126,6 @@ function renderTopic(id, pushHistory = true) {
 
     mainContent.innerHTML = html;
     
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar.classList.contains('active')) {
-        toggleMobileSidebar();
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-    
     // 4. Sur mobile, fermer le menu automatiquement après un clic
     const sidebar = document.getElementById('sidebar');
     if (sidebar.classList.contains('active')) {
