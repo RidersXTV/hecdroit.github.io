@@ -2955,8 +2955,6 @@ const courseData = {
     }
 };
 // [ ... GARDE TON OBJET courseData ENTIER ICI ... ]
-// }; <-- Fin de ton objet courseData
-
 const mainContent = document.getElementById('main-content');
 const breadcrumb = document.getElementById('breadcrumb');
 const searchBar = document.getElementById('searchBar');
@@ -2982,7 +2980,44 @@ function renderSidebar() {
     sidebarContent.innerHTML = html;
 }
 
-// ... garde createSidebarItem et toggleSubmenu tels quels ...
+function createSidebarItem(id, item) {
+    let html = `<li class="nav-item">`;
+    if (item.children && item.children.length > 0) {
+        html += `<div class="nav-header" id="nav-${id}">
+                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
+                    <span class="toggle-btn" onclick="toggleSubmenu(this, event)">▼</span>
+                 </div>`;
+        html += `<ul class="sub-nav-list hidden">`;
+        item.children.forEach(childId => {
+            const child = courseData[childId];
+            if (child) html += createSidebarItem(childId, child);
+        });
+        html += `</ul>`;
+    } else {
+        html += `<div class="nav-header no-children" id="nav-${id}">
+                    <span class="nav-title" onclick="renderTopic('${id}')">${item.title}</span>
+                 </div>`;
+    }
+    html += `</li>`;
+    return html;
+}
+
+function toggleSubmenu(btn, event) {
+    event.stopPropagation();
+    const submenu = btn.parentElement.nextElementSibling;
+    if (submenu) {
+        submenu.classList.toggle('hidden');
+        btn.textContent = submenu.classList.contains('hidden') ? '▼' : '▲';
+    }
+}
+
+// --- GESTION DU MENU MOBILE ---
+function toggleMobileSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
 
 // --- FONCTION POUR AFFICHER LE CONTENU CENTRAL ---
 function renderTopic(id, pushHistory = true) {
